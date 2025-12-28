@@ -1,0 +1,4497 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Diagnostics.CodeAnalysis",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "ConstantExpectedAttribute": {
+        "title": "ConstantExpectedAttribute",
+        "type": "object",
+        "description": "Indicates that the specified method parameter expects a constant.",
+        "properties": {
+          "Min": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "Max": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ConstantExpectedAttribute"
+            },
+            "overloads": {
+              "825f1fd8": {
+                "name": "Equals",
+                "overloadId": "825f1fd8",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "f8c543eb-8eb0-432d-9268-981e5c854ebb"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "aabaabba-d195-4440-a17d-f7a55bdea5c5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ConstantExpectedAttribute"
+            },
+            "overloads": {
+              "0b02bf5e": {
+                "name": "GetHashCode",
+                "overloadId": "0b02bf5e",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ac2f2f02-7848-421c-9041-050debfa1e33",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ConstantExpectedAttribute"
+            },
+            "overloads": {
+              "57a124d0": {
+                "name": "Match",
+                "overloadId": "57a124d0",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "f200f278-706e-4c14-92bd-3cad4a8a2240"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "09faae47-ff98-4450-b2b9-6ef67e339129",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ConstantExpectedAttribute"
+            },
+            "overloads": {
+              "bf570c6e": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "bf570c6e",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f31c1fef-0093-4ac9-a948-a953bdb31d49",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ConstantExpectedAttribute"
+            },
+            "overloads": {
+              "e4c4b8da": {
+                "name": "GetType",
+                "overloadId": "e4c4b8da",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c8ae8a25-4533-4c0e-acc9-6c87a139b214",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ConstantExpectedAttribute"
+            },
+            "overloads": {
+              "78c1d87f": {
+                "name": "ToString",
+                "overloadId": "78c1d87f",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d8baa5ce-7c00-4822-8fb5-6f2581562dee",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "DynamicallyAccessedMemberTypes": {
+        "title": "DynamicallyAccessedMemberTypes",
+        "type": "integer",
+        "description": "Specifies the types of members that are dynamically accessed.\n             This enumeration has a  attribute that allows a bitwise combination of its member values.",
+        "enum": [
+          0,
+          1,
+          3,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096,
+          8192,
+          16388,
+          32784,
+          32792,
+          65600,
+          65632,
+          131328,
+          263168,
+          263680,
+          528384,
+          530432,
+          1048579,
+          1064967,
+          2097280,
+          2228608,
+          -1
+        ],
+        "x-enum-names": [
+          "None",
+          "PublicParameterlessConstructor",
+          "PublicConstructors",
+          "NonPublicConstructors",
+          "PublicMethods",
+          "NonPublicMethods",
+          "PublicFields",
+          "NonPublicFields",
+          "PublicNestedTypes",
+          "NonPublicNestedTypes",
+          "PublicProperties",
+          "NonPublicProperties",
+          "PublicEvents",
+          "NonPublicEvents",
+          "Interfaces",
+          "NonPublicConstructorsWithInherited",
+          "NonPublicMethodsWithInherited",
+          "AllMethods",
+          "NonPublicFieldsWithInherited",
+          "AllFields",
+          "NonPublicNestedTypesWithInherited",
+          "NonPublicPropertiesWithInherited",
+          "AllProperties",
+          "NonPublicEventsWithInherited",
+          "AllEvents",
+          "PublicConstructorsWithInherited",
+          "AllConstructors",
+          "PublicNestedTypesWithInherited",
+          "AllNestedTypes",
+          "All"
+        ],
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "DynamicallyAccessedMembersAttribute": {
+        "title": "DynamicallyAccessedMembersAttribute",
+        "type": "object",
+        "description": "Indicates that certain members on a specified  are accessed dynamically, for example, through .",
+        "properties": {
+          "MemberTypes": {
+            "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DynamicallyAccessedMemberTypes"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DynamicallyAccessedMembersAttribute"
+            },
+            "overloads": {
+              "8db766ef": {
+                "name": "Equals",
+                "overloadId": "8db766ef",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "4e310e91-452f-488d-b57d-7f490d5d54b5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5e5d6d69-8101-464c-9eff-818310897420",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DynamicallyAccessedMembersAttribute"
+            },
+            "overloads": {
+              "1563da9d": {
+                "name": "GetHashCode",
+                "overloadId": "1563da9d",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7165c566-fd75-40a0-92ee-cd7bb773c8eb",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DynamicallyAccessedMembersAttribute"
+            },
+            "overloads": {
+              "c631553b": {
+                "name": "Match",
+                "overloadId": "c631553b",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "656f98a1-97f6-48a0-82de-e0f2f84158a0"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "31479df5-9aa2-4953-94bf-56fe5b42a760",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DynamicallyAccessedMembersAttribute"
+            },
+            "overloads": {
+              "244475dd": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "244475dd",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "35b0665b-81a4-4f26-99c9-06ef2036e6e3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DynamicallyAccessedMembersAttribute"
+            },
+            "overloads": {
+              "858e9555": {
+                "name": "GetType",
+                "overloadId": "858e9555",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e2a60163-2467-4eb3-b731-142d61220f54",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DynamicallyAccessedMembersAttribute"
+            },
+            "overloads": {
+              "89c6a194": {
+                "name": "ToString",
+                "overloadId": "89c6a194",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "50fde1c6-9706-4bf7-a34d-776e7e73ca65",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ExcludeFromCodeCoverageAttribute": {
+        "title": "ExcludeFromCodeCoverageAttribute",
+        "type": "object",
+        "description": "Specifies that the attributed code should be excluded from code coverage information.",
+        "properties": {
+          "Justification": {
+            "type": "string"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ExcludeFromCodeCoverageAttribute"
+            },
+            "overloads": {
+              "acac28d8": {
+                "name": "Equals",
+                "overloadId": "acac28d8",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "b71bb760-3ecb-40dd-88f4-226c64e86620"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "b498bb56-85d2-4e93-8ff4-e0e672e17128",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ExcludeFromCodeCoverageAttribute"
+            },
+            "overloads": {
+              "e6fc9a9e": {
+                "name": "GetHashCode",
+                "overloadId": "e6fc9a9e",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "fb810f67-4977-48d2-be6e-3c42a5d6054d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ExcludeFromCodeCoverageAttribute"
+            },
+            "overloads": {
+              "50ec89dc": {
+                "name": "Match",
+                "overloadId": "50ec89dc",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "8eddbb38-45e0-4632-94a0-3edc2074a436"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4cf0c93a-02c2-4f92-9d46-f798aaa11115",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ExcludeFromCodeCoverageAttribute"
+            },
+            "overloads": {
+              "e93e28cb": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "e93e28cb",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "67dc6dd0-cdcd-4d99-a69d-229b82c5e751",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ExcludeFromCodeCoverageAttribute"
+            },
+            "overloads": {
+              "c9bd207c": {
+                "name": "GetType",
+                "overloadId": "c9bd207c",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3afeb9b7-7e55-4441-b0ec-2518067ab775",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ExcludeFromCodeCoverageAttribute"
+            },
+            "overloads": {
+              "a15a529b": {
+                "name": "ToString",
+                "overloadId": "a15a529b",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b731533a-3eb8-497c-ac4d-3d2777a0955c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ExperimentalAttribute": {
+        "title": "ExperimentalAttribute",
+        "type": "object",
+        "description": "Indicates that an API is experimental and it may change in the future.",
+        "properties": {
+          "DiagnosticId": {
+            "type": "string"
+          },
+          "Message": {
+            "type": "string"
+          },
+          "UrlFormat": {
+            "type": "string"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ExperimentalAttribute"
+            },
+            "overloads": {
+              "c6a811cf": {
+                "name": "Equals",
+                "overloadId": "c6a811cf",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "15a16d15-acc6-49e5-88f5-ce3bf327b93d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "fc552e3e-013d-4576-b640-20163477b0d1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ExperimentalAttribute"
+            },
+            "overloads": {
+              "87108b62": {
+                "name": "GetHashCode",
+                "overloadId": "87108b62",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "9a8cdf94-d9cb-4c92-be85-17ce45d8d0a5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ExperimentalAttribute"
+            },
+            "overloads": {
+              "4fbcfb68": {
+                "name": "Match",
+                "overloadId": "4fbcfb68",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "604041f6-ecd1-460c-a1cd-27ce8e9cfea4"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "46e239cc-b255-49c4-a1a7-9a21a120b810",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ExperimentalAttribute"
+            },
+            "overloads": {
+              "91fa863f": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "91fa863f",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a9e8c864-f56f-4a25-92cf-0021f35330e0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ExperimentalAttribute"
+            },
+            "overloads": {
+              "058a0925": {
+                "name": "GetType",
+                "overloadId": "058a0925",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "10e7cb23-4520-4da6-b8f7-30142c3fa74c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/ExperimentalAttribute"
+            },
+            "overloads": {
+              "e9139506": {
+                "name": "ToString",
+                "overloadId": "e9139506",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b683a802-053e-42e3-be6a-594396bb6a58",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "FeatureGuardAttribute": {
+        "title": "FeatureGuardAttribute",
+        "type": "object",
+        "description": "Indicates that the specified public static Boolean read-only property\n        guards access to the specified feature.",
+        "properties": {
+          "FeatureType": {
+            "$ref": "System#/components/schemas/Type"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/FeatureGuardAttribute"
+            },
+            "overloads": {
+              "7426642e": {
+                "name": "Equals",
+                "overloadId": "7426642e",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "7d64c5ca-b76c-46d0-ae38-e5f8c71c3dbc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "acd3d62d-ba67-4b25-b34f-f00532fd3553",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/FeatureGuardAttribute"
+            },
+            "overloads": {
+              "d4e2f820": {
+                "name": "GetHashCode",
+                "overloadId": "d4e2f820",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "08d61029-b110-478f-aefd-6187a6d4773c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/FeatureGuardAttribute"
+            },
+            "overloads": {
+              "c0abad8c": {
+                "name": "Match",
+                "overloadId": "c0abad8c",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "d5a96180-e41a-4cc9-9300-f5cb2fc7860b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "131316be-014a-4c98-98c5-521b769ba526",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/FeatureGuardAttribute"
+            },
+            "overloads": {
+              "ce41f608": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "ce41f608",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "892982e8-4a8c-401b-9b98-d14f5545bd9b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/FeatureGuardAttribute"
+            },
+            "overloads": {
+              "fdb26eed": {
+                "name": "GetType",
+                "overloadId": "fdb26eed",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "675b441d-2f90-4e91-927b-3506e5ef7741",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/FeatureGuardAttribute"
+            },
+            "overloads": {
+              "50135bee": {
+                "name": "ToString",
+                "overloadId": "50135bee",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "16bdb46c-e642-46fb-983c-1da79360d7cc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "FeatureSwitchDefinitionAttribute": {
+        "title": "FeatureSwitchDefinitionAttribute",
+        "type": "object",
+        "description": "Indicates that the specified public static Boolean read-only property\n        corresponds to the feature switch specified by name.",
+        "properties": {
+          "SwitchName": {
+            "type": "string"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/FeatureSwitchDefinitionAttribute"
+            },
+            "overloads": {
+              "272aeb08": {
+                "name": "Equals",
+                "overloadId": "272aeb08",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "d9a7646f-aff1-4235-9c09-5fb2df403bba"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "108ef064-f0ec-4fea-8378-da115202d93c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/FeatureSwitchDefinitionAttribute"
+            },
+            "overloads": {
+              "85a1bd1b": {
+                "name": "GetHashCode",
+                "overloadId": "85a1bd1b",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "8d4cb798-1c7d-4ad8-9a1b-534747390ec1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/FeatureSwitchDefinitionAttribute"
+            },
+            "overloads": {
+              "ac0ea49a": {
+                "name": "Match",
+                "overloadId": "ac0ea49a",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "57ade963-4dd0-45f0-82de-6639d12529d2"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2fdc5e49-edeb-466c-adbf-789035b5dfd6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/FeatureSwitchDefinitionAttribute"
+            },
+            "overloads": {
+              "5e22ffdf": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "5e22ffdf",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "dfb2866b-ae4e-45f0-87e7-bf5401864c2c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/FeatureSwitchDefinitionAttribute"
+            },
+            "overloads": {
+              "a9786ec5": {
+                "name": "GetType",
+                "overloadId": "a9786ec5",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7b6dcb4d-6cd6-4970-a40d-58186fd85c82",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/FeatureSwitchDefinitionAttribute"
+            },
+            "overloads": {
+              "adee5af6": {
+                "name": "ToString",
+                "overloadId": "adee5af6",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "59439d50-e224-4e9a-8b22-54054f043854",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "AllowNullAttribute": {
+        "title": "AllowNullAttribute",
+        "type": "object",
+        "description": "Specifies that  is allowed as an input even if the corresponding type disallows it.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/AllowNullAttribute"
+            },
+            "overloads": {
+              "83d89cbf": {
+                "name": "Equals",
+                "overloadId": "83d89cbf",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "22bec4fc-0fb4-43ae-8e8d-32637aeab9fa"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "da12cd31-9c9e-4e4d-8f27-e8138f7f4223",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/AllowNullAttribute"
+            },
+            "overloads": {
+              "70f57169": {
+                "name": "GetHashCode",
+                "overloadId": "70f57169",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "aaebf0f2-562a-4232-9248-8e948471f4dc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/AllowNullAttribute"
+            },
+            "overloads": {
+              "858b48de": {
+                "name": "Match",
+                "overloadId": "858b48de",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "ad5d7166-373f-4090-93db-186b36ce00e0"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "19b9e469-e20b-4a93-950a-81703e5dc6a3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/AllowNullAttribute"
+            },
+            "overloads": {
+              "1cdf58bb": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "1cdf58bb",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "8bdd5c96-2525-47a6-892a-334593c92b8e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/AllowNullAttribute"
+            },
+            "overloads": {
+              "63a4df89": {
+                "name": "GetType",
+                "overloadId": "63a4df89",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "70735049-e906-4ebf-a4dd-40330956e590",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/AllowNullAttribute"
+            },
+            "overloads": {
+              "2bb32245": {
+                "name": "ToString",
+                "overloadId": "2bb32245",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c2730d28-e7f3-4171-88bf-e11a998e016d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "DisallowNullAttribute": {
+        "title": "DisallowNullAttribute",
+        "type": "object",
+        "description": "Specifies that  is disallowed as an input even if the corresponding type allows it.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DisallowNullAttribute"
+            },
+            "overloads": {
+              "47598ffe": {
+                "name": "Equals",
+                "overloadId": "47598ffe",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "74240c44-3451-4602-b3c1-dbb6b891456d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "93ab0a87-50f9-412c-a250-af8f13522c0b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DisallowNullAttribute"
+            },
+            "overloads": {
+              "22dd7f36": {
+                "name": "GetHashCode",
+                "overloadId": "22dd7f36",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ebe1996a-0a5e-4d8c-8d4f-6766c3db5745",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DisallowNullAttribute"
+            },
+            "overloads": {
+              "fe2fdde3": {
+                "name": "Match",
+                "overloadId": "fe2fdde3",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "22873fa1-4fda-4387-b6bc-ed56a759e5e7"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "095606b9-542f-4724-b789-33e2e9a96e3e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DisallowNullAttribute"
+            },
+            "overloads": {
+              "5a905807": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "5a905807",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7db67e57-9ac4-47f3-841e-3d4e84a4b397",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DisallowNullAttribute"
+            },
+            "overloads": {
+              "0cf84b9a": {
+                "name": "GetType",
+                "overloadId": "0cf84b9a",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "464d0bf8-775d-4c3c-a090-b1e21f06de28",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DisallowNullAttribute"
+            },
+            "overloads": {
+              "b6192131": {
+                "name": "ToString",
+                "overloadId": "b6192131",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b27dbdb2-2b11-4fb5-a760-cdffeb22ddde",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "MaybeNullAttribute": {
+        "title": "MaybeNullAttribute",
+        "type": "object",
+        "description": "Specifies that an output may be  even if the corresponding type disallows it.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MaybeNullAttribute"
+            },
+            "overloads": {
+              "bc13fd83": {
+                "name": "Equals",
+                "overloadId": "bc13fd83",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "146df3e0-d6b6-470a-ab0e-58f9dfead7c8"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2674bdd4-16d5-4bfb-98bb-317e76e565ff",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MaybeNullAttribute"
+            },
+            "overloads": {
+              "edcafa88": {
+                "name": "GetHashCode",
+                "overloadId": "edcafa88",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "58d4e50c-ab8d-4cc3-897e-8be903934d35",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MaybeNullAttribute"
+            },
+            "overloads": {
+              "c44a7d18": {
+                "name": "Match",
+                "overloadId": "c44a7d18",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "46179a4e-c90d-4413-a243-7cbc2ca15149"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "566fd581-4bdb-48b6-b530-1b9b0685c082",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MaybeNullAttribute"
+            },
+            "overloads": {
+              "a53aecce": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "a53aecce",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "cd566011-d2e2-4f50-8ea0-f9dda8a5d23a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MaybeNullAttribute"
+            },
+            "overloads": {
+              "85f13ee3": {
+                "name": "GetType",
+                "overloadId": "85f13ee3",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ad73d33e-1d3c-4813-befe-7c41c06fbb23",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MaybeNullAttribute"
+            },
+            "overloads": {
+              "181ea3f9": {
+                "name": "ToString",
+                "overloadId": "181ea3f9",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "53e3262a-c32b-41a5-9309-de3f85d9d900",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "NotNullAttribute": {
+        "title": "NotNullAttribute",
+        "type": "object",
+        "description": "Specifies that an output is not  even if the corresponding type allows it. Specifies that an input argument was not  when the call returns.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullAttribute"
+            },
+            "overloads": {
+              "e810e25f": {
+                "name": "Equals",
+                "overloadId": "e810e25f",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "c154bcff-1890-4b97-87bf-c6b02c655d51"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "130fe006-8c89-48f6-b7ac-b167f301f533",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullAttribute"
+            },
+            "overloads": {
+              "6af69f39": {
+                "name": "GetHashCode",
+                "overloadId": "6af69f39",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5b905549-b221-4ccf-bbca-25398dd5732c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullAttribute"
+            },
+            "overloads": {
+              "c16ffcfc": {
+                "name": "Match",
+                "overloadId": "c16ffcfc",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "4dca414e-acb1-4216-ab94-70c409100434"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "17db0039-4c98-453a-ae90-68950f935475",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullAttribute"
+            },
+            "overloads": {
+              "3d1507f0": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "3d1507f0",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b0919108-294a-4de1-b189-409c979bef16",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullAttribute"
+            },
+            "overloads": {
+              "84011fca": {
+                "name": "GetType",
+                "overloadId": "84011fca",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "48b22bf3-7d6c-4da0-8c4f-33537f9dec61",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullAttribute"
+            },
+            "overloads": {
+              "25b73844": {
+                "name": "ToString",
+                "overloadId": "25b73844",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "350254a5-c5a6-43c8-afae-b22223762d43",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "MaybeNullWhenAttribute": {
+        "title": "MaybeNullWhenAttribute",
+        "type": "object",
+        "description": "Specifies that when a method returns , the parameter may be  even if the corresponding type disallows it.",
+        "properties": {
+          "ReturnValue": {
+            "type": "boolean"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MaybeNullWhenAttribute"
+            },
+            "overloads": {
+              "19284b99": {
+                "name": "Equals",
+                "overloadId": "19284b99",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "0b65879e-3fce-4864-80f3-cdb2b40f8b40"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "bb2c419b-e258-4a0f-ac6c-5cb4d98c6bfd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MaybeNullWhenAttribute"
+            },
+            "overloads": {
+              "a1951581": {
+                "name": "GetHashCode",
+                "overloadId": "a1951581",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0405f656-7012-4aea-89f7-422a42b8a33b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MaybeNullWhenAttribute"
+            },
+            "overloads": {
+              "a92bcf05": {
+                "name": "Match",
+                "overloadId": "a92bcf05",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "8e9bd801-e35c-4bca-950b-acb05943ade8"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "bd33908b-1456-42d9-aae5-e948634bc5f4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MaybeNullWhenAttribute"
+            },
+            "overloads": {
+              "8b0a31a4": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "8b0a31a4",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "bccd3736-bfd6-42ca-b090-c17ba14678a3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MaybeNullWhenAttribute"
+            },
+            "overloads": {
+              "344c1aac": {
+                "name": "GetType",
+                "overloadId": "344c1aac",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "6d5c0426-1db5-435a-8239-1fd8f0ca7688",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MaybeNullWhenAttribute"
+            },
+            "overloads": {
+              "23413801": {
+                "name": "ToString",
+                "overloadId": "23413801",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5c0f0071-b9bd-4fe0-9aa0-9096ce24bbf4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "NotNullWhenAttribute": {
+        "title": "NotNullWhenAttribute",
+        "type": "object",
+        "description": "Specifies that when a method returns , the parameter will not be  even if the corresponding type allows it.",
+        "properties": {
+          "ReturnValue": {
+            "type": "boolean"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullWhenAttribute"
+            },
+            "overloads": {
+              "cc2e87ea": {
+                "name": "Equals",
+                "overloadId": "cc2e87ea",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "7c056df4-3044-4acd-9edf-32d17e6fadf8"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2a0e94c8-1a71-4abb-a3db-d67266f9bec1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullWhenAttribute"
+            },
+            "overloads": {
+              "35346dc5": {
+                "name": "GetHashCode",
+                "overloadId": "35346dc5",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "11c4e7e8-2ff1-497e-ad0b-3171c6d037f6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullWhenAttribute"
+            },
+            "overloads": {
+              "3efa0011": {
+                "name": "Match",
+                "overloadId": "3efa0011",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "1fb0ac37-9a54-4a32-bcc5-40a4925a1671"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "01b90112-6469-43d0-bb89-43bd3bf1d89a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullWhenAttribute"
+            },
+            "overloads": {
+              "9e2895a8": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "9e2895a8",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "735a9889-f54e-48c3-b8a9-6bc2b8e6e8e9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullWhenAttribute"
+            },
+            "overloads": {
+              "3b26db2a": {
+                "name": "GetType",
+                "overloadId": "3b26db2a",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5432da9d-5bdb-40e3-b4e4-2e75d91d4adf",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullWhenAttribute"
+            },
+            "overloads": {
+              "ff802a2a": {
+                "name": "ToString",
+                "overloadId": "ff802a2a",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b0df4c1a-1b3f-4320-ac87-03a004119c5b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "NotNullIfNotNullAttribute": {
+        "title": "NotNullIfNotNullAttribute",
+        "type": "object",
+        "description": "Specifies that the output will be non-null if the named parameter is non-null.",
+        "properties": {
+          "ParameterName": {
+            "type": "string"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullIfNotNullAttribute"
+            },
+            "overloads": {
+              "5d6fe9ce": {
+                "name": "Equals",
+                "overloadId": "5d6fe9ce",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "ef58d08e-5efb-47b4-a278-7f908853fd33"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6e99d190-0120-4df3-9f7b-7dd011fca562",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullIfNotNullAttribute"
+            },
+            "overloads": {
+              "593684ae": {
+                "name": "GetHashCode",
+                "overloadId": "593684ae",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4ce53ab9-287b-47ae-a2c4-527fa070c579",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullIfNotNullAttribute"
+            },
+            "overloads": {
+              "4cd71658": {
+                "name": "Match",
+                "overloadId": "4cd71658",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "b8f9a973-b628-4718-842b-0a27e12f37dc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a159b106-eb83-4fa2-ae67-ee7392221b4a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullIfNotNullAttribute"
+            },
+            "overloads": {
+              "bedc0ee9": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "bedc0ee9",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "27bb0747-e72c-4e47-bdb2-ed3dcf5264d5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullIfNotNullAttribute"
+            },
+            "overloads": {
+              "e6be7cbf": {
+                "name": "GetType",
+                "overloadId": "e6be7cbf",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e1577956-2958-4873-8d23-b385cf72be20",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/NotNullIfNotNullAttribute"
+            },
+            "overloads": {
+              "041e4c9a": {
+                "name": "ToString",
+                "overloadId": "041e4c9a",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7d81147d-6a45-42ec-aeee-2b74cbb81b9e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "DoesNotReturnAttribute": {
+        "title": "DoesNotReturnAttribute",
+        "type": "object",
+        "description": "Specifies that a method will never return under any circumstance.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DoesNotReturnAttribute"
+            },
+            "overloads": {
+              "b24a3bf6": {
+                "name": "Equals",
+                "overloadId": "b24a3bf6",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "410d5064-fbe4-452f-9183-247e95e2ba5b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2a13466f-7f9c-4770-8e11-c5f08d65ce7d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DoesNotReturnAttribute"
+            },
+            "overloads": {
+              "f85b7eee": {
+                "name": "GetHashCode",
+                "overloadId": "f85b7eee",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5bf14cb1-c1f3-43cb-96a3-c05ec18fe1f3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DoesNotReturnAttribute"
+            },
+            "overloads": {
+              "37d8223f": {
+                "name": "Match",
+                "overloadId": "37d8223f",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "d6811081-ce3f-45ab-a371-f9594431e2b0"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ba052928-aa55-4e49-8457-eb11f9c8a3da",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DoesNotReturnAttribute"
+            },
+            "overloads": {
+              "4a691a4e": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "4a691a4e",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "dd25bf57-150d-4c32-ac94-12994c90b131",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DoesNotReturnAttribute"
+            },
+            "overloads": {
+              "83055bef": {
+                "name": "GetType",
+                "overloadId": "83055bef",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "74466b8f-cbf1-4c72-863e-ca070047d1bc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DoesNotReturnAttribute"
+            },
+            "overloads": {
+              "74494ee9": {
+                "name": "ToString",
+                "overloadId": "74494ee9",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "819b2961-bbe8-47b3-93b5-082507fedf46",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "DoesNotReturnIfAttribute": {
+        "title": "DoesNotReturnIfAttribute",
+        "type": "object",
+        "description": "Specifies that the method will not return if the associated  parameter is passed the specified value.",
+        "properties": {
+          "ParameterValue": {
+            "type": "boolean"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DoesNotReturnIfAttribute"
+            },
+            "overloads": {
+              "996619da": {
+                "name": "Equals",
+                "overloadId": "996619da",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "7f8c2ae1-ca02-4086-ab75-fd2e5faf474f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "88861c04-4576-4ca6-894c-3ca566c219f2",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DoesNotReturnIfAttribute"
+            },
+            "overloads": {
+              "bc774d1c": {
+                "name": "GetHashCode",
+                "overloadId": "bc774d1c",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "eb70ca58-f895-40f3-adeb-ea97daf7e558",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DoesNotReturnIfAttribute"
+            },
+            "overloads": {
+              "c8653f43": {
+                "name": "Match",
+                "overloadId": "c8653f43",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "383db8d2-8fbc-4e81-8867-93a3692b7609"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4a7ba7dd-7f7d-49ad-a1a3-ae63a2250026",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DoesNotReturnIfAttribute"
+            },
+            "overloads": {
+              "94eaafd6": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "94eaafd6",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2625d415-fef7-4d45-be12-6eee49a20820",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DoesNotReturnIfAttribute"
+            },
+            "overloads": {
+              "8db52cc1": {
+                "name": "GetType",
+                "overloadId": "8db52cc1",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ff498c43-592d-42f1-8fad-fe3d3f7ff0ae",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/DoesNotReturnIfAttribute"
+            },
+            "overloads": {
+              "a581ea94": {
+                "name": "ToString",
+                "overloadId": "a581ea94",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "227dbda3-20f8-4dc9-8827-9949a767eff7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "MemberNotNullAttribute": {
+        "title": "MemberNotNullAttribute",
+        "type": "object",
+        "description": "Specifies that the method or property will ensure that the listed field and property members have values that aren\u0027t .",
+        "properties": {
+          "Members": {
+            "$ref": "System#/components/schemas/String[]"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MemberNotNullAttribute"
+            },
+            "overloads": {
+              "7e3ae10d": {
+                "name": "Equals",
+                "overloadId": "7e3ae10d",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "493f0744-13da-4dbe-8f80-b4aa401178a3"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ee73fe0c-85fc-4e03-92b2-6baec519c065",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MemberNotNullAttribute"
+            },
+            "overloads": {
+              "b0fc98c1": {
+                "name": "GetHashCode",
+                "overloadId": "b0fc98c1",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "87b8242f-42a9-409a-8e68-4d767713d823",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MemberNotNullAttribute"
+            },
+            "overloads": {
+              "582cd0f9": {
+                "name": "Match",
+                "overloadId": "582cd0f9",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "458cb28b-cd90-4ab3-85c1-cea0c8104ca1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "abf59e4d-862d-4c24-81b3-66e41fba3ab5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MemberNotNullAttribute"
+            },
+            "overloads": {
+              "398ec9ca": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "398ec9ca",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a2681dce-037a-4f02-85c6-ef0b250b3eae",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MemberNotNullAttribute"
+            },
+            "overloads": {
+              "1c8a60e7": {
+                "name": "GetType",
+                "overloadId": "1c8a60e7",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "af3e5bfe-f413-4a59-a00c-b846cbb58121",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MemberNotNullAttribute"
+            },
+            "overloads": {
+              "f0eaf1e8": {
+                "name": "ToString",
+                "overloadId": "f0eaf1e8",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "25ba2e16-9806-4d51-ad18-e6135e854870",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "MemberNotNullWhenAttribute": {
+        "title": "MemberNotNullWhenAttribute",
+        "type": "object",
+        "description": "Specifies that the method or property will ensure that the listed field and property members have non-null values when returning with the specified return value condition.",
+        "properties": {
+          "ReturnValue": {
+            "type": "boolean"
+          },
+          "Members": {
+            "$ref": "System#/components/schemas/String[]"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MemberNotNullWhenAttribute"
+            },
+            "overloads": {
+              "eda6b364": {
+                "name": "Equals",
+                "overloadId": "eda6b364",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "9145d87a-94a2-4eaa-aa33-75154b38ee1c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4b1a9ad3-4d1f-4adc-9fb0-a2f7a58fcef9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MemberNotNullWhenAttribute"
+            },
+            "overloads": {
+              "6e7ab4b9": {
+                "name": "GetHashCode",
+                "overloadId": "6e7ab4b9",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "9a7c0771-8d2c-4d93-88bd-5c006165cd4a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MemberNotNullWhenAttribute"
+            },
+            "overloads": {
+              "a151b267": {
+                "name": "Match",
+                "overloadId": "a151b267",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "47a34b2d-2633-4a3b-8b11-c299fbd3481b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8d630269-fef8-4503-a547-27cd1e0673a4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MemberNotNullWhenAttribute"
+            },
+            "overloads": {
+              "c3a58e10": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "c3a58e10",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a777e2e8-7338-48da-a282-84781294f9c2",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MemberNotNullWhenAttribute"
+            },
+            "overloads": {
+              "7e6bb0d2": {
+                "name": "GetType",
+                "overloadId": "7e6bb0d2",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "93ce9c47-0b13-482c-826b-1b550a41ceb9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/MemberNotNullWhenAttribute"
+            },
+            "overloads": {
+              "bab197cb": {
+                "name": "ToString",
+                "overloadId": "bab197cb",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5ef12006-c5f8-4333-b178-db82c4f17f60",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "UnscopedRefAttribute": {
+        "title": "UnscopedRefAttribute",
+        "type": "object",
+        "description": "Used to indicate a byref escapes and is not scoped.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/UnscopedRefAttribute"
+            },
+            "overloads": {
+              "1d21ea1f": {
+                "name": "Equals",
+                "overloadId": "1d21ea1f",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "54401666-78d0-4585-b5e3-1c524fe48fc8"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8c2d2100-5a85-4e51-bb2d-fafe19dd8dcd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/UnscopedRefAttribute"
+            },
+            "overloads": {
+              "7b9c70c9": {
+                "name": "GetHashCode",
+                "overloadId": "7b9c70c9",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2235eab5-431d-4755-b2b8-6203720efe92",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/UnscopedRefAttribute"
+            },
+            "overloads": {
+              "9e3e7c89": {
+                "name": "Match",
+                "overloadId": "9e3e7c89",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "87268aeb-6499-4689-bc1a-413a72c8fb1d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "32ae9dc3-ebf8-4253-97f7-3c863fb4370a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/UnscopedRefAttribute"
+            },
+            "overloads": {
+              "192581d2": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "192581d2",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5fd145e2-f983-4165-8237-2d6d989c3a17",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/UnscopedRefAttribute"
+            },
+            "overloads": {
+              "b092cc93": {
+                "name": "GetType",
+                "overloadId": "b092cc93",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0c2c4d0e-514c-41fa-a0a1-3202523aa3ad",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/UnscopedRefAttribute"
+            },
+            "overloads": {
+              "cccfcf8c": {
+                "name": "ToString",
+                "overloadId": "cccfcf8c",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7e747e3c-44ea-46b6-8d9d-53808bf98d44",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "RequiresAssemblyFilesAttribute": {
+        "title": "RequiresAssemblyFilesAttribute",
+        "type": "object",
+        "description": "Indicates that the specified member requires assembly files to be on disk.",
+        "properties": {
+          "Message": {
+            "type": "string"
+          },
+          "Url": {
+            "type": "string"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresAssemblyFilesAttribute"
+            },
+            "overloads": {
+              "03dc1b9c": {
+                "name": "Equals",
+                "overloadId": "03dc1b9c",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "bb11f6d7-53f8-42fd-bbde-706187190de1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0124c473-e363-49a9-9354-32a598f940ed",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresAssemblyFilesAttribute"
+            },
+            "overloads": {
+              "20568d0a": {
+                "name": "GetHashCode",
+                "overloadId": "20568d0a",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "52c4562e-e59e-442c-b086-c7cb835d2666",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresAssemblyFilesAttribute"
+            },
+            "overloads": {
+              "64cf1b2c": {
+                "name": "Match",
+                "overloadId": "64cf1b2c",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "5adc7872-4619-4c1d-be89-3276c525bf98"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "b13e8997-f9b1-4b3b-8696-379bb16deb07",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresAssemblyFilesAttribute"
+            },
+            "overloads": {
+              "7049e365": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "7049e365",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "bb7ee2cf-f10a-4f34-ab3c-6d4753b494aa",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresAssemblyFilesAttribute"
+            },
+            "overloads": {
+              "9f34ff3b": {
+                "name": "GetType",
+                "overloadId": "9f34ff3b",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e7ac8b85-f102-4986-a625-d62e0f536ed1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresAssemblyFilesAttribute"
+            },
+            "overloads": {
+              "560b0c69": {
+                "name": "ToString",
+                "overloadId": "560b0c69",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "948fd7ec-f599-4afb-a9f9-df3e6a76c587",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "RequiresDynamicCodeAttribute": {
+        "title": "RequiresDynamicCodeAttribute",
+        "type": "object",
+        "description": "Indicates that the specified method requires the ability to generate new code at runtime, for example through .",
+        "properties": {
+          "ExcludeStatics": {
+            "type": "boolean"
+          },
+          "Message": {
+            "type": "string"
+          },
+          "Url": {
+            "type": "string"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresDynamicCodeAttribute"
+            },
+            "overloads": {
+              "d7f42af2": {
+                "name": "Equals",
+                "overloadId": "d7f42af2",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "a14810c5-219e-4e2d-8121-9d9bb90098e5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6132f15f-b37b-42c7-a32f-8fea472a3430",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresDynamicCodeAttribute"
+            },
+            "overloads": {
+              "9b6d8066": {
+                "name": "GetHashCode",
+                "overloadId": "9b6d8066",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "9407cd5f-de47-4ea4-a437-6a97349585df",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresDynamicCodeAttribute"
+            },
+            "overloads": {
+              "0ca98568": {
+                "name": "Match",
+                "overloadId": "0ca98568",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "8953b4b7-3230-41e3-bf3c-509a99366baa"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "f5ccb83f-38e8-4b1e-aa8d-3631eea13d20",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresDynamicCodeAttribute"
+            },
+            "overloads": {
+              "cd201154": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "cd201154",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "bda7f9c1-2f94-456d-946a-ddc72d7bb60a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresDynamicCodeAttribute"
+            },
+            "overloads": {
+              "4280029b": {
+                "name": "GetType",
+                "overloadId": "4280029b",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "61102578-7a30-485b-8ce5-7465b2c68dcf",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresDynamicCodeAttribute"
+            },
+            "overloads": {
+              "27559dbc": {
+                "name": "ToString",
+                "overloadId": "27559dbc",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ba16486c-67f1-49fa-9fb1-4f3982b481f3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "RequiresUnreferencedCodeAttribute": {
+        "title": "RequiresUnreferencedCodeAttribute",
+        "type": "object",
+        "description": "Indicates that the specified method requires dynamic access to code that is not referenced statically, for example, through .",
+        "properties": {
+          "ExcludeStatics": {
+            "type": "boolean"
+          },
+          "Message": {
+            "type": "string"
+          },
+          "Url": {
+            "type": "string"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresUnreferencedCodeAttribute"
+            },
+            "overloads": {
+              "ba3ca0fd": {
+                "name": "Equals",
+                "overloadId": "ba3ca0fd",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "39f17c2f-4f65-44b6-8d59-84451ca5701f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "07e4e36d-efed-4b39-897f-880ee9d80d44",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresUnreferencedCodeAttribute"
+            },
+            "overloads": {
+              "9c176fde": {
+                "name": "GetHashCode",
+                "overloadId": "9c176fde",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3514a143-a7ab-4f1c-a786-a874fc96911d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresUnreferencedCodeAttribute"
+            },
+            "overloads": {
+              "712df85c": {
+                "name": "Match",
+                "overloadId": "712df85c",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "29cea3f1-0b32-41f5-81e2-533a222c6d19"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5a5a5c5d-dc20-4276-84e1-e28261ddd3a6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresUnreferencedCodeAttribute"
+            },
+            "overloads": {
+              "bb534597": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "bb534597",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0916b915-6b85-4e27-b667-6d3752f1586e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresUnreferencedCodeAttribute"
+            },
+            "overloads": {
+              "21a8af20": {
+                "name": "GetType",
+                "overloadId": "21a8af20",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "83ce6cd3-c999-46a2-a7ce-a2abfa7253d8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/RequiresUnreferencedCodeAttribute"
+            },
+            "overloads": {
+              "a002f9f3": {
+                "name": "ToString",
+                "overloadId": "a002f9f3",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "365c12d9-b37d-4152-b282-2ee9e71dc364",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SetsRequiredMembersAttribute": {
+        "title": "SetsRequiredMembersAttribute",
+        "type": "object",
+        "description": "Specifies that this constructor sets all required members for the current type, and callers do not need to set any required members themselves.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/SetsRequiredMembersAttribute"
+            },
+            "overloads": {
+              "71d97570": {
+                "name": "Equals",
+                "overloadId": "71d97570",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "28a7ab4e-c277-495c-b08c-4a40781d0079"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "02f1612a-00e7-43f7-b3e1-9de871d9279c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/SetsRequiredMembersAttribute"
+            },
+            "overloads": {
+              "08a584fb": {
+                "name": "GetHashCode",
+                "overloadId": "08a584fb",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4f07b4da-822b-498b-8417-254d2af16aee",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/SetsRequiredMembersAttribute"
+            },
+            "overloads": {
+              "b6245cbf": {
+                "name": "Match",
+                "overloadId": "b6245cbf",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "751f890f-335b-42e6-b66b-835d91025322"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "926d2bb4-d484-493d-ad5a-1bf7498ec036",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/SetsRequiredMembersAttribute"
+            },
+            "overloads": {
+              "6e3ecb34": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "6e3ecb34",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e8a53e71-7c8b-4ec5-9a78-5fa8601b5290",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/SetsRequiredMembersAttribute"
+            },
+            "overloads": {
+              "a4685feb": {
+                "name": "GetType",
+                "overloadId": "a4685feb",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f7a790cb-affb-4aae-817c-9b15a5bd5a38",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/SetsRequiredMembersAttribute"
+            },
+            "overloads": {
+              "4cb89720": {
+                "name": "ToString",
+                "overloadId": "4cb89720",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f1fb35a3-b446-4907-b2b0-96c313d795ea",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "StringSyntaxAttribute": {
+        "title": "StringSyntaxAttribute",
+        "type": "object",
+        "description": "Specifies the syntax used in a string.",
+        "properties": {
+          "Syntax": {
+            "type": "string"
+          },
+          "Arguments": {
+            "$ref": "System#/components/schemas/Object[]"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/StringSyntaxAttribute"
+            },
+            "overloads": {
+              "31b688b3": {
+                "name": "Equals",
+                "overloadId": "31b688b3",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "6271719a-7e24-433d-a21c-82f79dcfc9bc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "b15e9ed0-b461-49d9-98e6-2222c11be401",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/StringSyntaxAttribute"
+            },
+            "overloads": {
+              "b0178eb1": {
+                "name": "GetHashCode",
+                "overloadId": "b0178eb1",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5d005df2-ee0f-4eb5-b496-bd57dccac9bc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/StringSyntaxAttribute"
+            },
+            "overloads": {
+              "9e4c0211": {
+                "name": "Match",
+                "overloadId": "9e4c0211",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "1f3b1349-7e7f-4093-b7ed-ea820063c971"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2e3022fe-8c46-413e-ac70-a4cecac7bb42",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/StringSyntaxAttribute"
+            },
+            "overloads": {
+              "86eb980c": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "86eb980c",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "cfd4b8c6-2054-4bba-b99a-da1baee4551a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/StringSyntaxAttribute"
+            },
+            "overloads": {
+              "cb98699b": {
+                "name": "GetType",
+                "overloadId": "cb98699b",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a2c090d9-b1d9-4173-ad56-83aebeb0a850",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/StringSyntaxAttribute"
+            },
+            "overloads": {
+              "649c51be": {
+                "name": "ToString",
+                "overloadId": "649c51be",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c337406a-2f11-4896-8a5e-854b73b35677",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SuppressMessageAttribute": {
+        "title": "SuppressMessageAttribute",
+        "type": "object",
+        "description": "Suppresses reporting of a specific code analysis rule violation, allowing multiple suppressions on a single code artifact. Does not apply to compiler diagnostics.",
+        "properties": {
+          "Category": {
+            "type": "string"
+          },
+          "CheckId": {
+            "type": "string"
+          },
+          "Scope": {
+            "type": "string"
+          },
+          "Target": {
+            "type": "string"
+          },
+          "MessageId": {
+            "type": "string"
+          },
+          "Justification": {
+            "type": "string"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/SuppressMessageAttribute"
+            },
+            "overloads": {
+              "a33ce9c6": {
+                "name": "Equals",
+                "overloadId": "a33ce9c6",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "092ebe0d-6522-4937-ac10-7e3ff40fc02a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7ff42a0d-0a64-488c-b3ce-6b522daf36ec",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/SuppressMessageAttribute"
+            },
+            "overloads": {
+              "9bdca9d0": {
+                "name": "GetHashCode",
+                "overloadId": "9bdca9d0",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "cd656cba-c0b2-44ac-8779-945b113a847f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/SuppressMessageAttribute"
+            },
+            "overloads": {
+              "ff17f4e1": {
+                "name": "Match",
+                "overloadId": "ff17f4e1",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "6624ae9a-8b9c-485b-a762-2fad1e25c52e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7af4e8b7-6355-491b-9734-7ff23b9b3660",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/SuppressMessageAttribute"
+            },
+            "overloads": {
+              "b876dade": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "b876dade",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "835f81ca-0143-4e64-a978-1fb0575ae073",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/SuppressMessageAttribute"
+            },
+            "overloads": {
+              "9804abb1": {
+                "name": "GetType",
+                "overloadId": "9804abb1",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "8ead72ee-f909-4697-833b-e9e3229076c0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/SuppressMessageAttribute"
+            },
+            "overloads": {
+              "393c04bf": {
+                "name": "ToString",
+                "overloadId": "393c04bf",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "88884001-298a-464a-8493-a0e89742b674",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "UnconditionalSuppressMessageAttribute": {
+        "title": "UnconditionalSuppressMessageAttribute",
+        "type": "object",
+        "description": "Suppresses reporting of a specific rule violation, allowing multiple suppressions on a single code artifact.",
+        "properties": {
+          "Category": {
+            "type": "string"
+          },
+          "CheckId": {
+            "type": "string"
+          },
+          "Scope": {
+            "type": "string"
+          },
+          "Target": {
+            "type": "string"
+          },
+          "MessageId": {
+            "type": "string"
+          },
+          "Justification": {
+            "type": "string"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/UnconditionalSuppressMessageAttribute"
+            },
+            "overloads": {
+              "eb0068cf": {
+                "name": "Equals",
+                "overloadId": "eb0068cf",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "236ab862-64d1-4e7e-ac10-09edb3735183"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "79249924-bcee-4bb9-af36-4dea80dc0915",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/UnconditionalSuppressMessageAttribute"
+            },
+            "overloads": {
+              "81db0594": {
+                "name": "GetHashCode",
+                "overloadId": "81db0594",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "27311c6c-b911-475e-9580-ebcb86884266",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/UnconditionalSuppressMessageAttribute"
+            },
+            "overloads": {
+              "0427e7d2": {
+                "name": "Match",
+                "overloadId": "0427e7d2",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "ae2f9ed9-bf10-40be-9fcb-7a10cb4d0a18"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "bd7d3d21-5158-4895-8262-2f5165683e06",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/UnconditionalSuppressMessageAttribute"
+            },
+            "overloads": {
+              "ba9d531a": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "ba9d531a",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "27f9090a-7a57-4af1-970a-5eeae2b1b23c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/UnconditionalSuppressMessageAttribute"
+            },
+            "overloads": {
+              "d835b04f": {
+                "name": "GetType",
+                "overloadId": "d835b04f",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a16c5b7f-11bc-4144-a307-18e15c398fda",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.CodeAnalysis#/components/schemas/UnconditionalSuppressMessageAttribute"
+            },
+            "overloads": {
+              "bed2bcfc": {
+                "name": "ToString",
+                "overloadId": "bed2bcfc",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "9935223e-c47f-4832-84f8-a162e427162d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.CodeAnalysis",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

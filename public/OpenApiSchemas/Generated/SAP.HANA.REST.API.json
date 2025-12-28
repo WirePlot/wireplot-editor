@@ -1,0 +1,421 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SAP HANA REST API",
+    "version": "1.0.0",
+    "description": "API for interacting with SAP HANA resources"
+  },
+  "servers": [
+    {
+      "url": "https://api.sap.com/hana"
+    }
+  ],
+  "paths": {
+    "/instances": {
+      "get": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Retrieve all SAP HANA instances",
+        "operationId": "getInstances",
+        "responses": {
+          "200": {
+            "description": "A list of SAP HANA instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HanaInstancesList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - invalid query or parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized - authentication required or failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden - insufficient permissions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error - unexpected error on server",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/instances/{instanceId}": {
+      "get": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Retrieve a specific SAP HANA instance by ID",
+        "operationId": "getInstanceById",
+        "parameters": [
+          {
+            "name": "instanceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "System#/components/schemas/String"
+            },
+            "description": "The ID of the SAP HANA instance"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Details of the specified SAP HANA instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HanaInstance"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - invalid instanceId format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized - authentication required or failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden - insufficient permissions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found - no instance found with the given ID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error - unexpected error on server",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customers": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Invoke SAP Customers endpoint\n Typed REST call generated from OpenAPI contract.",
+        "operationId": "getCustomers",
+        "parameters": [
+          {
+            "name": "$top",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "System#/components/schemas/Int32"
+            },
+            "description": "Maximum number of records to return"
+          },
+          {
+            "name": "$skip",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "System#/components/schemas/Int32"
+            },
+            "description": "Number of records to skip"
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "System#/components/schemas/String"
+            },
+            "description": "OData-style filter expression"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of customers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomersODataResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customers/{customerId}": {
+      "get": {
+        "tags": [
+          "Customers"
+        ],
+        "summary": "Retrieve a customer by ID",
+        "operationId": "getCustomerById",
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "System#/components/schemas/String"
+            },
+            "description": "Customer ID (KUNNR)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Customer details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Customer not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HanaInstancesList": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/HanaInstance"
+        }
+      },
+      "HanaInstance": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "properties": {
+            "$ref": "#/components/schemas/HanaInstanceProperties"
+          }
+        }
+      },
+      "HanaInstanceProperties": {
+        "type": "object",
+        "properties": {
+          "provisioningState": {
+            "$ref": "#/components/schemas/ProvisioningState"
+          },
+          "hardwareType": {
+            "$ref": "#/components/schemas/HardwareType"
+          },
+          "osProfile": {
+            "$ref": "#/components/schemas/OsProfile"
+          }
+        }
+      },
+      "ProvisioningState": {
+        "type": "string",
+        "description": "Provisioning state of the SAP HANA instance"
+      },
+      "HardwareType": {
+        "type": "string",
+        "description": "Hardware type of the SAP HANA instance"
+      },
+      "OsProfile": {
+        "type": "object",
+        "properties": {
+          "computerName": {
+            "type": "string",
+            "description": "Computer name for the SAP HANA instance"
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "errorCode": {
+            "type": "string",
+            "description": "A short error code identifier"
+          },
+          "message": {
+            "type": "string",
+            "description": "Human-readable error message"
+          },
+          "details": {
+            "type": "string",
+            "description": "Additional details about the error"
+          }
+        },
+        "required": [
+          "errorCode",
+          "message"
+        ]
+      },
+      "CustomersODataResponse": {
+        "type": "object",
+        "properties": {
+          "@odata.context": {
+            "type": "string",
+            "example": "$metadata#Customers"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Customer"
+            }
+          }
+        },
+        "required": [
+          "value"
+        ]
+      },
+      "Customer": {
+        "type": "object",
+        "properties": {
+          "CustomerID": {
+            "type": "string",
+            "description": "SAP Customer Number (KUNNR)",
+            "example": "C1001"
+          },
+          "Name": {
+            "type": "string",
+            "description": "Customer name",
+            "example": "ACME GmbH"
+          },
+          "Country": {
+            "type": "string",
+            "description": "ISO country code",
+            "example": "DE"
+          },
+          "City": {
+            "type": "string",
+            "example": "Berlin"
+          },
+          "Street": {
+            "type": "string",
+            "example": "Hauptstrasse 12"
+          },
+          "PostalCode": {
+            "type": "string",
+            "example": "10115"
+          },
+          "VatNumber": {
+            "type": "string",
+            "example": "DE123456789"
+          },
+          "CreatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2023-05-12T10:15:00Z"
+          },
+          "ChangedAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2024-01-03T09:42:00Z"
+          }
+        },
+        "required": [
+          "CustomerID",
+          "Name",
+          "Country"
+        ]
+      }
+    }
+  }
+}

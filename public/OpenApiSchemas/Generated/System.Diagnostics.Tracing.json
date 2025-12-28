@@ -1,0 +1,3502 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Diagnostics.Tracing",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "EventActivityOptions": {
+        "title": "EventActivityOptions",
+        "type": "integer",
+        "description": "Specifies the tracking of activity start and stop events.",
+        "enum": [
+          0,
+          2,
+          4,
+          8
+        ],
+        "x-enum-names": [
+          "None",
+          "Disable",
+          "Recursive",
+          "Detachable"
+        ],
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventCounter": {
+        "title": "EventCounter",
+        "type": "object",
+        "description": "Provides the ability to collect statistics for very frequent events through the   class.",
+        "properties": {
+          "DisplayName": {
+            "type": "string"
+          },
+          "DisplayUnits": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "EventSource": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSource"
+          }
+        },
+        "x-methods": {
+          "WriteMetric": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCounter"
+            },
+            "overloads": {
+              "8d9998fa": {
+                "name": "WriteMetric",
+                "overloadId": "8d9998fa",
+                "methodKind": "instance",
+                "description": "Writes the metric if performance counters are on.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "number",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "5d867592-6278-4f2a-a434-c722e047d380"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0ef0dfba-881d-4e1e-8aac-953ce0fa1928",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              },
+              "ed49529d": {
+                "name": "WriteMetric",
+                "overloadId": "ed49529d",
+                "methodKind": "instance",
+                "description": "Writes the metric if performance counters are on.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "number",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "efae0002-6199-45cd-a32e-3e11ef07bc24"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7fcc0b98-567b-4681-9e9d-a106dcb4ec6c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCounter"
+            },
+            "overloads": {
+              "b28f7ed9": {
+                "name": "ToString",
+                "overloadId": "b28f7ed9",
+                "methodKind": "instance",
+                "description": "Returns a string representation of the current event counter instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c114f021-b92b-43ef-8c7e-dd20f650a228",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Dispose": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCounter"
+            },
+            "overloads": {
+              "1bfcff6a": {
+                "name": "Dispose",
+                "overloadId": "1bfcff6a",
+                "methodKind": "instance",
+                "description": "Removes the counter from the set that the  will report on.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "56063a6b-26ea-4ad1-ab03-df50b4ffae7d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "AddMetadata": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCounter"
+            },
+            "overloads": {
+              "aa8d7bb1": {
+                "name": "AddMetadata",
+                "overloadId": "aa8d7bb1",
+                "methodKind": "instance",
+                "description": "Adds key-value metadata to the counter that will be included as a part of the payload.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "fe153d03-e8a2-432c-b54c-a6ada6a0eea3"
+                    },
+                    {
+                      "type": "string",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "1d59fd39-6a94-44f1-9be9-39e1779b3d0f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "dc1af92f-cae0-45d9-a3da-5fc4df1cef81",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCounter"
+            },
+            "overloads": {
+              "bf22ab5f": {
+                "name": "GetType",
+                "overloadId": "bf22ab5f",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "079e0cf3-d045-4101-b6b8-8a36049acb6e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCounter"
+            },
+            "overloads": {
+              "ccc0463c": {
+                "name": "Equals",
+                "overloadId": "ccc0463c",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "92be0dac-8362-48ba-894a-dee9df05e770"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "50bea058-7962-4440-9235-dc24bf922a48",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCounter"
+            },
+            "overloads": {
+              "860df8cc": {
+                "name": "GetHashCode",
+                "overloadId": "860df8cc",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2a517597-4948-4fed-b617-1ded7dff46a6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventData": {
+        "title": "EventData",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventData"
+            },
+            "overloads": {
+              "22800cc8": {
+                "name": "Equals",
+                "overloadId": "22800cc8",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "b6e179ca-9c94-4315-8d1b-e335e1c02ef8"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "b7a2e413-311a-40ac-9184-b73d3aec2661",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventData"
+            },
+            "overloads": {
+              "6b9a6cee": {
+                "name": "GetHashCode",
+                "overloadId": "6b9a6cee",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5dd5cb28-2cde-4035-8c60-b057feb23018",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventData"
+            },
+            "overloads": {
+              "02026759": {
+                "name": "ToString",
+                "overloadId": "02026759",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e581ec62-9025-481b-b677-b4c1fbaf8390",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventData"
+            },
+            "overloads": {
+              "4ac33589": {
+                "name": "GetType",
+                "overloadId": "4ac33589",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d6aad482-ffdd-4bc6-8ba7-be54b40c354b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "WriteEventErrorCode": {
+        "title": "WriteEventErrorCode",
+        "type": "integer",
+        "description": null,
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "x-enum-names": [
+          "NoError",
+          "NoFreeBuffers",
+          "EventTooBig",
+          "NullInput",
+          "TooManyArgs",
+          "Other"
+        ],
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SessionInfo": {
+        "title": "SessionInfo",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/SessionInfo"
+            },
+            "overloads": {
+              "71516254": {
+                "name": "Equals",
+                "overloadId": "71516254",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "96becf44-324a-4a33-a373-826ab5527468"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "c2a83810-1853-4070-bd9f-b1975fe4756a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/SessionInfo"
+            },
+            "overloads": {
+              "3f4c333e": {
+                "name": "GetHashCode",
+                "overloadId": "3f4c333e",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "88cb3e53-d265-4b7a-be49-2f0c8b20e1b0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/SessionInfo"
+            },
+            "overloads": {
+              "b93a5c6c": {
+                "name": "ToString",
+                "overloadId": "b93a5c6c",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "583ec2b9-f2c3-47f3-8970-c106b40041ad",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/SessionInfo"
+            },
+            "overloads": {
+              "3cc90306": {
+                "name": "GetType",
+                "overloadId": "3cc90306",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "6cd9bc6f-fea6-4d2b-b32d-322050d3648b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventSource": {
+        "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSource",
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventSourcePrimitive": {
+        "title": "EventSourcePrimitive",
+        "type": "object",
+        "description": "Provides the ability to create events for event tracing across platforms.",
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourcePrimitive"
+            },
+            "overloads": {
+              "23a65b7d": {
+                "name": "Equals",
+                "overloadId": "23a65b7d",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "056d2949-8105-4e45-a6b0-249e9e4ba153"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "aea8d5a8-ebb4-4246-acae-0aa5a5e9c443",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourcePrimitive"
+            },
+            "overloads": {
+              "58086254": {
+                "name": "GetHashCode",
+                "overloadId": "58086254",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3cbc9391-c365-4d1b-929d-b25361490e98",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourcePrimitive"
+            },
+            "overloads": {
+              "5ac7f305": {
+                "name": "ToString",
+                "overloadId": "5ac7f305",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e7342003-d660-4a23-aa03-216e79d876f0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourcePrimitive"
+            },
+            "overloads": {
+              "8562e0b2": {
+                "name": "GetType",
+                "overloadId": "8562e0b2",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5d966351-7abf-45d9-ba45-c176ca68b788",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventSourceSettings": {
+        "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceSettings",
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventCommandEventArgs": {
+        "title": "EventCommandEventArgs",
+        "type": "object",
+        "description": "Provides the arguments for the  callback.",
+        "properties": {
+          "Command": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCommand"
+          },
+          "Arguments": {
+            "$ref": "System.Collections.Generic#/components/schemas/IDictionary\u00602"
+          }
+        },
+        "x-methods": {
+          "EnableEvent": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCommandEventArgs"
+            },
+            "overloads": {
+              "04e1b4b9": {
+                "name": "EnableEvent",
+                "overloadId": "04e1b4b9",
+                "methodKind": "instance",
+                "description": "Enables the event that has the specified identifier.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "eventId",
+                      "isOptional": false,
+                      "instanceGuid": "f534f4e5-b962-4acd-8944-12ccad94ea7d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "3954660b-be34-4e36-91dc-9f0973c0c5ef",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "DisableEvent": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCommandEventArgs"
+            },
+            "overloads": {
+              "ace27666": {
+                "name": "DisableEvent",
+                "overloadId": "ace27666",
+                "methodKind": "instance",
+                "description": "Disables the event that have the specified identifier.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "eventId",
+                      "isOptional": false,
+                      "instanceGuid": "a3587046-c170-4adb-83e5-344002a0b2d2"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a1115781-b28a-4148-967c-8f8807e67cef",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCommandEventArgs"
+            },
+            "overloads": {
+              "3414efb9": {
+                "name": "GetType",
+                "overloadId": "3414efb9",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2b309711-c1ba-4252-8bb0-8fc7538ff9cd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCommandEventArgs"
+            },
+            "overloads": {
+              "71fcacaa": {
+                "name": "ToString",
+                "overloadId": "71fcacaa",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "1b1344a6-8f0e-4a0e-b03b-ba5a34930da3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCommandEventArgs"
+            },
+            "overloads": {
+              "f0939e08": {
+                "name": "Equals",
+                "overloadId": "f0939e08",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "95211e3c-048d-4aff-ba55-82aca5334fdf"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "241ab07f-6a69-41e5-918c-28d1163b2b4c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCommandEventArgs"
+            },
+            "overloads": {
+              "de6265ee": {
+                "name": "GetHashCode",
+                "overloadId": "de6265ee",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d2ba6887-b6d6-4af8-92c4-a41208d18aca",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventSourceCreatedEventArgs": {
+        "title": "EventSourceCreatedEventArgs",
+        "type": "object",
+        "description": "Provides data for the  event.",
+        "properties": {
+          "EventSource": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSource"
+          }
+        },
+        "x-methods": {
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceCreatedEventArgs"
+            },
+            "overloads": {
+              "e31922fb": {
+                "name": "GetType",
+                "overloadId": "e31922fb",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d07b2bac-89db-4422-b129-10e88b3de678",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceCreatedEventArgs"
+            },
+            "overloads": {
+              "9ea939a0": {
+                "name": "ToString",
+                "overloadId": "9ea939a0",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "16b8b523-281c-46f4-bc1b-4108414f8429",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceCreatedEventArgs"
+            },
+            "overloads": {
+              "88228dc3": {
+                "name": "Equals",
+                "overloadId": "88228dc3",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "7fa2d614-99dc-409e-95aa-522810e3b755"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "961c30f7-ab0b-4336-9147-fcf25d2f87e0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceCreatedEventArgs"
+            },
+            "overloads": {
+              "9f348afd": {
+                "name": "GetHashCode",
+                "overloadId": "9f348afd",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0adcc9fa-3bd9-4b06-8847-4e0d794463c5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventSourceAttribute": {
+        "title": "EventSourceAttribute",
+        "type": "object",
+        "description": "Allows the event tracing for Windows (ETW) name to be defined independently of the name of the event source class.",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "Guid": {
+            "type": "string"
+          },
+          "LocalizationResources": {
+            "type": "string"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceAttribute"
+            },
+            "overloads": {
+              "341bca9a": {
+                "name": "Equals",
+                "overloadId": "341bca9a",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "d4937504-65e0-4ff8-9534-d1576305fd34"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "fe929352-e472-4374-846d-b4928c937221",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceAttribute"
+            },
+            "overloads": {
+              "be5a4e7c": {
+                "name": "GetHashCode",
+                "overloadId": "be5a4e7c",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "14335fda-20f3-4d1d-a641-b83505d6c092",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceAttribute"
+            },
+            "overloads": {
+              "4d5c5e2a": {
+                "name": "Match",
+                "overloadId": "4d5c5e2a",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "ff6474f2-762d-41b9-8145-1d85584f03ed"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d41c18c2-74aa-4102-b048-c0283e343ba8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceAttribute"
+            },
+            "overloads": {
+              "ce1e3f22": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "ce1e3f22",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "38af3afb-9dc7-4713-a050-bee6397ec217",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceAttribute"
+            },
+            "overloads": {
+              "516c2310": {
+                "name": "GetType",
+                "overloadId": "516c2310",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4c807f16-548a-43cc-b8ac-c8c07c67d5db",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceAttribute"
+            },
+            "overloads": {
+              "5a13584f": {
+                "name": "ToString",
+                "overloadId": "5a13584f",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "afee0aa9-b7f6-44cb-bf0f-bb3aa8c65a64",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventAttribute": {
+        "title": "EventAttribute",
+        "type": "object",
+        "description": "Specifies additional event schema information for an event.",
+        "properties": {
+          "EventId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Level": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventLevel"
+          },
+          "Keywords": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventKeywords"
+          },
+          "Opcode": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventOpcode"
+          },
+          "Task": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventTask"
+          },
+          "Channel": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventChannel"
+          },
+          "Version": {
+            "type": "object"
+          },
+          "Message": {
+            "type": "string"
+          },
+          "Tags": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventTags"
+          },
+          "ActivityOptions": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventActivityOptions"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventAttribute"
+            },
+            "overloads": {
+              "572b23bd": {
+                "name": "Equals",
+                "overloadId": "572b23bd",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "5e14c45b-27f3-4efd-abe3-2cd0166b8a88"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "bef23221-9cc9-4a2e-b303-ab5d4a6be88c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventAttribute"
+            },
+            "overloads": {
+              "5783e88f": {
+                "name": "GetHashCode",
+                "overloadId": "5783e88f",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "6ce3f15d-113c-434c-b95b-d15739c98202",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventAttribute"
+            },
+            "overloads": {
+              "cfe7172a": {
+                "name": "Match",
+                "overloadId": "cfe7172a",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "cb75b8cc-52c6-4d0a-b4f9-1244e4661493"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "25a91200-d740-473e-a752-b73423fa85f3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventAttribute"
+            },
+            "overloads": {
+              "a84d07d3": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "a84d07d3",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ebe8082e-014a-4801-be06-461e0cc245c4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventAttribute"
+            },
+            "overloads": {
+              "8c49e325": {
+                "name": "GetType",
+                "overloadId": "8c49e325",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a7722b18-141d-431d-9926-41b5296f41fa",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventAttribute"
+            },
+            "overloads": {
+              "db49ff63": {
+                "name": "ToString",
+                "overloadId": "db49ff63",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d568bc8f-ee88-464f-9ed4-363735205dc1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "NonEventAttribute": {
+        "title": "NonEventAttribute",
+        "type": "object",
+        "description": "Identifies a method that is not generating an event.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/NonEventAttribute"
+            },
+            "overloads": {
+              "80864f23": {
+                "name": "Equals",
+                "overloadId": "80864f23",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "c8748da7-390c-4843-96c6-dc594160af83"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5d39f013-c26b-4f1c-b9ec-acb52fba5a03",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/NonEventAttribute"
+            },
+            "overloads": {
+              "b4454381": {
+                "name": "GetHashCode",
+                "overloadId": "b4454381",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "08b7d944-b71d-40dc-a4e9-10186ea84519",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/NonEventAttribute"
+            },
+            "overloads": {
+              "a0c68665": {
+                "name": "Match",
+                "overloadId": "a0c68665",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "57d3737d-7b9e-4062-8f04-2ed9609abbc5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "70913d29-00df-4383-ba35-a73b4bd15de3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/NonEventAttribute"
+            },
+            "overloads": {
+              "793623c6": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "793623c6",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ce513e7a-6857-44fc-b51e-c36888dffd2d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/NonEventAttribute"
+            },
+            "overloads": {
+              "fb040b5f": {
+                "name": "GetType",
+                "overloadId": "fb040b5f",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ff12b5cd-cdd6-4652-99f0-039180c548a8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/NonEventAttribute"
+            },
+            "overloads": {
+              "57f458d4": {
+                "name": "ToString",
+                "overloadId": "57f458d4",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2452527a-c6e5-46d9-af9f-69eeb2676d17",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventCommand": {
+        "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCommand",
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventManifestOptions": {
+        "title": "EventManifestOptions",
+        "type": "integer",
+        "description": "Specifies how the ETW manifest for the event source is generated.",
+        "enum": [
+          0,
+          1,
+          2,
+          4,
+          8
+        ],
+        "x-enum-names": [
+          "None",
+          "Strict",
+          "AllCultures",
+          "OnlyIfNeededForRegistration",
+          "AllowEventSourceOverride"
+        ],
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventSourceException": {
+        "title": "EventSourceException",
+        "type": "object",
+        "description": "The exception that is thrown when an error occurs during event tracing for Windows (ETW).",
+        "properties": {
+          "TargetSite": {
+            "$ref": "System.Reflection#/components/schemas/MethodBase"
+          },
+          "Message": {
+            "type": "string"
+          },
+          "Data": {
+            "$ref": "System.Collections#/components/schemas/IDictionary"
+          },
+          "InnerException": {
+            "$ref": "System#/components/schemas/Exception"
+          },
+          "HelpLink": {
+            "type": "string"
+          },
+          "Source": {
+            "type": "string"
+          },
+          "HResult": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "StackTrace": {
+            "type": "string"
+          }
+        },
+        "x-methods": {
+          "GetBaseException": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceException"
+            },
+            "overloads": {
+              "a9a097ae": {
+                "name": "GetBaseException",
+                "overloadId": "a9a097ae",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns the  that is the root cause of one or more subsequent exceptions.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "1b42484e-8eb3-41bd-8ebd-4d8dc33495b4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Exception"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetObjectData": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceException"
+            },
+            "overloads": {
+              "8b990ef2": {
+                "name": "GetObjectData",
+                "overloadId": "8b990ef2",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, sets the  with information about the exception.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
+                      "name": "info",
+                      "isOptional": false,
+                      "instanceGuid": "29e0f710-6892-498c-9b6b-fbbfcc5c6f38"
+                    },
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
+                      "name": "context",
+                      "isOptional": false,
+                      "instanceGuid": "67b7d907-0ce9-4403-9613-ee035e867e04"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "77579ce3-8d7e-45a6-aa8a-c0905cac03ed",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceException"
+            },
+            "overloads": {
+              "1480d785": {
+                "name": "ToString",
+                "overloadId": "1480d785",
+                "methodKind": "instance",
+                "description": "Creates and returns a string representation of the current exception.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "de85fd97-45bd-460d-929d-9c39db689c03",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceException"
+            },
+            "overloads": {
+              "806d6917": {
+                "name": "GetType",
+                "overloadId": "806d6917",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4011144f-82f5-4bdd-a455-90aaa3f98c94",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceException"
+            },
+            "overloads": {
+              "7e41c3e8": {
+                "name": "Equals",
+                "overloadId": "7e41c3e8",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "37d9d6ff-caba-4d53-9685-49ce6c90e3ab"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "b40c87cf-4493-49e3-b507-3251d7a19716",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceException"
+            },
+            "overloads": {
+              "866b4094": {
+                "name": "GetHashCode",
+                "overloadId": "866b4094",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f05dd27d-e8ea-4c87-b0aa-10a73a9414ed",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "Keywords": {
+        "title": "Keywords",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Keywords"
+            },
+            "overloads": {
+              "0e218d11": {
+                "name": "GetType",
+                "overloadId": "0e218d11",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2af7e85c-bb4a-4f98-a17b-a95433c00f75",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Keywords"
+            },
+            "overloads": {
+              "2c6afa59": {
+                "name": "ToString",
+                "overloadId": "2c6afa59",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "bcc57949-e87c-470f-8034-031b1165568a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Keywords"
+            },
+            "overloads": {
+              "6ea02695": {
+                "name": "Equals",
+                "overloadId": "6ea02695",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "b58f1db4-50e0-43f2-a15a-72a53a103edf"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "618a1c25-4402-46e2-b69d-485be3d80a70",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Keywords"
+            },
+            "overloads": {
+              "add17433": {
+                "name": "GetHashCode",
+                "overloadId": "add17433",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "974734d6-9ab9-4aa9-81c1-7c120c4ee3fc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "Tasks": {
+        "title": "Tasks",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Tasks"
+            },
+            "overloads": {
+              "2db21c5b": {
+                "name": "GetType",
+                "overloadId": "2db21c5b",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "95ad3ab1-a7e1-4cd6-95f4-cee392cd74bc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Tasks"
+            },
+            "overloads": {
+              "5434e403": {
+                "name": "ToString",
+                "overloadId": "5434e403",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "8c5eb3eb-c331-4281-8b92-f3da32913275",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Tasks"
+            },
+            "overloads": {
+              "1f6b35ee": {
+                "name": "Equals",
+                "overloadId": "1f6b35ee",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "89b27da0-0a61-4273-9ebb-e609afb6d80e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "20dfb4f7-24e9-4d7f-92af-f72f7fdf72fa",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Tasks"
+            },
+            "overloads": {
+              "9ffe958f": {
+                "name": "GetHashCode",
+                "overloadId": "9ffe958f",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e162eca2-63a2-4ace-b506-f830458270d9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IncrementingEventCounter": {
+        "title": "IncrementingEventCounter",
+        "type": "object",
+        "description": "Provides a variant of  for variables that are ever-increasing, such as the number of exceptions in the runtime.",
+        "properties": {
+          "DisplayRateTimeScale": {
+            "$ref": "System#/components/schemas/TimeSpan"
+          },
+          "DisplayName": {
+            "type": "string"
+          },
+          "DisplayUnits": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "EventSource": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSource"
+          }
+        },
+        "x-methods": {
+          "Increment": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingEventCounter"
+            },
+            "overloads": {
+              "7f9fe7a0": {
+                "name": "Increment",
+                "overloadId": "7f9fe7a0",
+                "methodKind": "instance",
+                "description": "Adds a value to a running total that will be published by the counter at the next timer interval.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "number",
+                      "name": "increment",
+                      "isOptional": true,
+                      "instanceGuid": "68f53774-2d7d-403d-bf9a-88ba66de0ea0"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2f7b265d-6286-4572-9629-ddba533a377e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingEventCounter"
+            },
+            "overloads": {
+              "975eb278": {
+                "name": "ToString",
+                "overloadId": "975eb278",
+                "methodKind": "instance",
+                "description": "Returns a string representation of the current incrementing event counter instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "73368cd8-2797-4f92-b366-516c5288d91c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Dispose": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingEventCounter"
+            },
+            "overloads": {
+              "86692417": {
+                "name": "Dispose",
+                "overloadId": "86692417",
+                "methodKind": "instance",
+                "description": "Removes the counter from the set that the  will report on.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ea012f1c-b919-4ffb-ac27-b5d6f7f442a6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "AddMetadata": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingEventCounter"
+            },
+            "overloads": {
+              "c80dc2ae": {
+                "name": "AddMetadata",
+                "overloadId": "c80dc2ae",
+                "methodKind": "instance",
+                "description": "Adds key-value metadata to the counter that will be included as a part of the payload.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "74557dfb-627a-4448-89dd-44f16e743c3a"
+                    },
+                    {
+                      "type": "string",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "fc1478d4-d818-4d07-92ee-c5f569169dac"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ce5ddea0-a043-43c9-8151-839181837fc4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingEventCounter"
+            },
+            "overloads": {
+              "306b1dbe": {
+                "name": "GetType",
+                "overloadId": "306b1dbe",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0467b433-5ec7-4169-a4d2-9a623b150f7b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingEventCounter"
+            },
+            "overloads": {
+              "8984ae03": {
+                "name": "Equals",
+                "overloadId": "8984ae03",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "7881e13d-0dd0-4e7d-9fe8-46e33e5e6f61"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5033992b-893c-4535-9c8d-579e2ff92c13",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingEventCounter"
+            },
+            "overloads": {
+              "83596ee3": {
+                "name": "GetHashCode",
+                "overloadId": "83596ee3",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "067a5921-798d-43b8-8f84-4bb012bbc5e9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IncrementingPollingCounter": {
+        "title": "IncrementingPollingCounter",
+        "type": "object",
+        "description": "Provides a variant of  for variables that are ever-increasing, such as the number of exceptions in the runtime.",
+        "properties": {
+          "DisplayRateTimeScale": {
+            "$ref": "System#/components/schemas/TimeSpan"
+          },
+          "DisplayName": {
+            "type": "string"
+          },
+          "DisplayUnits": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "EventSource": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSource"
+          }
+        },
+        "x-methods": {
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingPollingCounter"
+            },
+            "overloads": {
+              "0928b669": {
+                "name": "ToString",
+                "overloadId": "0928b669",
+                "methodKind": "instance",
+                "description": "Returns a string representation of the current incrementing polling counter instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d55541c4-1b97-4873-81eb-3b97300dfd1d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Dispose": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingPollingCounter"
+            },
+            "overloads": {
+              "cccd0d0b": {
+                "name": "Dispose",
+                "overloadId": "cccd0d0b",
+                "methodKind": "instance",
+                "description": "Removes the counter from the set that the  will report on.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "025e9d51-0a18-4535-b1d6-2a17e2a9db50",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "AddMetadata": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingPollingCounter"
+            },
+            "overloads": {
+              "ab3810f5": {
+                "name": "AddMetadata",
+                "overloadId": "ab3810f5",
+                "methodKind": "instance",
+                "description": "Adds key-value metadata to the counter that will be included as a part of the payload.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "697ad9a9-70ca-4d59-8358-5d84f9c7af3c"
+                    },
+                    {
+                      "type": "string",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "6f0a2982-84e1-4ac1-8d62-2065c4e367a8"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "81932eb5-d3c6-4aac-8f3b-1e627ddf68e7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingPollingCounter"
+            },
+            "overloads": {
+              "d44ff25b": {
+                "name": "GetType",
+                "overloadId": "d44ff25b",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "8106f7b7-75bd-4c86-9641-5bb637fbae3a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingPollingCounter"
+            },
+            "overloads": {
+              "774d5cdc": {
+                "name": "Equals",
+                "overloadId": "774d5cdc",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "ff0a3064-a5d2-4c2e-b13d-34b974adbcfa"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "89e531a4-d853-48d7-9238-469f9f89fe0d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingPollingCounter"
+            },
+            "overloads": {
+              "18ae3262": {
+                "name": "GetHashCode",
+                "overloadId": "18ae3262",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "6fe1beb3-5a6e-445a-8e83-c1d0256b84f0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "Opcodes": {
+        "title": "Opcodes",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Opcodes"
+            },
+            "overloads": {
+              "31ce4648": {
+                "name": "GetType",
+                "overloadId": "31ce4648",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5b1b7e71-9c0a-4a9d-8d84-9fe0533545c3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Opcodes"
+            },
+            "overloads": {
+              "a77bd08e": {
+                "name": "ToString",
+                "overloadId": "a77bd08e",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "174f2e19-74ce-423d-bf66-a295f22149a9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Opcodes"
+            },
+            "overloads": {
+              "63f19983": {
+                "name": "Equals",
+                "overloadId": "63f19983",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "45f912b2-3d3b-4c19-b898-7b981d1b4d80"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "53bd7c15-2785-4ff7-b152-73a05f610032",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Opcodes"
+            },
+            "overloads": {
+              "112129bd": {
+                "name": "GetHashCode",
+                "overloadId": "112129bd",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "09db72f5-ca46-414f-a017-d177fd3234d7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ThreadAdjustmentReasonMap": {
+        "title": "ThreadAdjustmentReasonMap",
+        "type": "integer",
+        "description": null,
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "x-enum-names": [
+          "Warmup",
+          "Initializing",
+          "RandomMove",
+          "ClimbingMove",
+          "ChangePoint",
+          "Stabilizing",
+          "Starvation",
+          "ThreadTimedOut",
+          "CooperativeBlocking"
+        ],
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "PollingCounter": {
+        "title": "PollingCounter",
+        "type": "object",
+        "description": "Provides a variant of  that collects and calculates similar statistics as .",
+        "properties": {
+          "DisplayName": {
+            "type": "string"
+          },
+          "DisplayUnits": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "EventSource": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSource"
+          }
+        },
+        "x-methods": {
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/PollingCounter"
+            },
+            "overloads": {
+              "145e7544": {
+                "name": "ToString",
+                "overloadId": "145e7544",
+                "methodKind": "instance",
+                "description": "Returns a string representation of the current polling counter instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "1ee78f13-7a9e-4425-a64a-a62d8a9f3cb0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Dispose": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/PollingCounter"
+            },
+            "overloads": {
+              "93dca513": {
+                "name": "Dispose",
+                "overloadId": "93dca513",
+                "methodKind": "instance",
+                "description": "Removes the counter from the set that the  will report on.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "21a63750-b584-4595-ad7b-29f3e74cffb1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "AddMetadata": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/PollingCounter"
+            },
+            "overloads": {
+              "2a3ccf03": {
+                "name": "AddMetadata",
+                "overloadId": "2a3ccf03",
+                "methodKind": "instance",
+                "description": "Adds key-value metadata to the counter that will be included as a part of the payload.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "4dd19080-7c5b-447c-ba18-cfed22efb214"
+                    },
+                    {
+                      "type": "string",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "e5ae15df-c502-477a-afc9-9ce4e86ad875"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "30d32970-e67e-443a-8729-60c087e5de56",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/PollingCounter"
+            },
+            "overloads": {
+              "4fe194d8": {
+                "name": "GetType",
+                "overloadId": "4fe194d8",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f06a6746-b7e7-4a47-919f-c951a32ad12e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/PollingCounter"
+            },
+            "overloads": {
+              "c8504948": {
+                "name": "Equals",
+                "overloadId": "c8504948",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "d88fbbfd-5010-46a8-af5c-85cf4a64bd92"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5f04b4ee-c6cb-4182-bd6d-52d3913b6b93",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/PollingCounter"
+            },
+            "overloads": {
+              "4cfa5747": {
+                "name": "GetHashCode",
+                "overloadId": "4cfa5747",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "325c078d-5e87-461f-affe-ea9d8eb57b8f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventLevel": {
+        "$ref": "System.Diagnostics.Tracing#/components/schemas/EventLevel",
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventTask": {
+        "$ref": "System.Diagnostics.Tracing#/components/schemas/EventTask",
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventOpcode": {
+        "$ref": "System.Diagnostics.Tracing#/components/schemas/EventOpcode",
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventChannel": {
+        "$ref": "System.Diagnostics.Tracing#/components/schemas/EventChannel",
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventKeywords": {
+        "$ref": "System.Diagnostics.Tracing#/components/schemas/EventKeywords",
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventDataAttribute": {
+        "title": "EventDataAttribute",
+        "type": "object",
+        "description": "Specifies a type to be passed to the  method.",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventDataAttribute"
+            },
+            "overloads": {
+              "9be1ae0e": {
+                "name": "Equals",
+                "overloadId": "9be1ae0e",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "e14b151b-027c-472f-997a-4a266ad3fe2e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "23b16951-3403-4303-aed8-f9ac93d66eab",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventDataAttribute"
+            },
+            "overloads": {
+              "70ca139b": {
+                "name": "GetHashCode",
+                "overloadId": "70ca139b",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c01573ac-8926-4214-bf9e-cbf06d62b38a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventDataAttribute"
+            },
+            "overloads": {
+              "2a017ee1": {
+                "name": "Match",
+                "overloadId": "2a017ee1",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "469e80ed-71df-4416-a003-5f05f75386cf"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "226327c3-4ce2-4d1f-aaa9-e2273fb739e7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventDataAttribute"
+            },
+            "overloads": {
+              "19666bdd": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "19666bdd",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "05c095dd-87d3-4cdd-8f5a-a06a1389c8cb",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventDataAttribute"
+            },
+            "overloads": {
+              "daf0fb89": {
+                "name": "GetType",
+                "overloadId": "daf0fb89",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "9bbdf5aa-6738-4d6a-8801-889d12bec87f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventDataAttribute"
+            },
+            "overloads": {
+              "a30fa476": {
+                "name": "ToString",
+                "overloadId": "a30fa476",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e3e69f2e-ada4-44ce-a2e2-f5d9869a7389",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventFieldTags": {
+        "title": "EventFieldTags",
+        "type": "integer",
+        "description": "Specifies the user-defined tag that is placed on fields of user-defined types that are passed as  payloads through the .",
+        "enum": [
+          0
+        ],
+        "x-enum-names": [
+          "None"
+        ],
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventFieldAttribute": {
+        "title": "EventFieldAttribute",
+        "type": "object",
+        "description": "The  is placed on fields of user-defined types that are passed as  payloads.",
+        "properties": {
+          "Tags": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventFieldTags"
+          },
+          "Format": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventFieldFormat"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventFieldAttribute"
+            },
+            "overloads": {
+              "07b12b24": {
+                "name": "Equals",
+                "overloadId": "07b12b24",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "c7266f20-4f0f-4fb9-b358-45da75fbd167"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6e20c927-7bc6-4f79-9cdf-19b8e074b60d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventFieldAttribute"
+            },
+            "overloads": {
+              "4a89d998": {
+                "name": "GetHashCode",
+                "overloadId": "4a89d998",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c533d0bd-eba3-4e9b-822d-00b822cba565",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventFieldAttribute"
+            },
+            "overloads": {
+              "48350652": {
+                "name": "Match",
+                "overloadId": "48350652",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "d8386a61-1540-431b-88fd-0aa6c1c8d315"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "fbb3cf2b-7419-4163-81bf-b22cc2b9fd2d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventFieldAttribute"
+            },
+            "overloads": {
+              "094b57c5": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "094b57c5",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "1bc9eb2c-f1cd-4550-a4f3-2bcccadc2709",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventFieldAttribute"
+            },
+            "overloads": {
+              "0803c807": {
+                "name": "GetType",
+                "overloadId": "0803c807",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "43b1ae3a-a269-48c2-86f6-c1c7c01a9808",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventFieldAttribute"
+            },
+            "overloads": {
+              "fd2d2051": {
+                "name": "ToString",
+                "overloadId": "fd2d2051",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "994ffb92-1de8-43ae-9963-c731a7f54452",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventFieldFormat": {
+        "$ref": "System.Diagnostics.Tracing#/components/schemas/EventFieldFormat",
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventIgnoreAttribute": {
+        "title": "EventIgnoreAttribute",
+        "type": "object",
+        "description": "Specifies a property should be ignored when writing an event type with the  method.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventIgnoreAttribute"
+            },
+            "overloads": {
+              "fb3c455c": {
+                "name": "Equals",
+                "overloadId": "fb3c455c",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "1b7106e3-856e-4469-b062-2aecf7c77c16"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "cd76bfa9-acfa-4d36-9d3b-faaf31717f56",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventIgnoreAttribute"
+            },
+            "overloads": {
+              "a6f99047": {
+                "name": "GetHashCode",
+                "overloadId": "a6f99047",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c7d37c08-2bc9-4564-86a4-fcc48a238cca",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventIgnoreAttribute"
+            },
+            "overloads": {
+              "c6dc1d9b": {
+                "name": "Match",
+                "overloadId": "c6dc1d9b",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "d7fd91ed-dbe0-4aeb-9fb1-a5ec4d470894"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "36063b18-9610-4295-bcb5-4160ee636112",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventIgnoreAttribute"
+            },
+            "overloads": {
+              "d547a96d": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "d547a96d",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "cefba5d5-7dad-4863-b33b-c14be0619a9e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventIgnoreAttribute"
+            },
+            "overloads": {
+              "8848f84f": {
+                "name": "GetType",
+                "overloadId": "8848f84f",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "8db5ab37-1fde-4e02-95dd-0f00c9c781c1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventIgnoreAttribute"
+            },
+            "overloads": {
+              "94850100": {
+                "name": "ToString",
+                "overloadId": "94850100",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f27c2ad2-0ffa-4178-95fb-724b66f51d6d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventSourceOptions": {
+        "title": "EventSourceOptions",
+        "type": "object",
+        "description": "Specifies overrides of default event settings such as the log level, keywords and operation code when the  method is called.",
+        "properties": {
+          "Level": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventLevel"
+          },
+          "Opcode": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventOpcode"
+          },
+          "Keywords": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventKeywords"
+          },
+          "Tags": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventTags"
+          },
+          "ActivityOptions": {
+            "$ref": "System.Diagnostics.Tracing#/components/schemas/EventActivityOptions"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceOptions"
+            },
+            "overloads": {
+              "13d50812": {
+                "name": "Equals",
+                "overloadId": "13d50812",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "1a371f10-f1ac-487d-80a0-8b727e1707bc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2afa1004-1c7d-4ec6-bc3c-e149c1a1b0f3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceOptions"
+            },
+            "overloads": {
+              "deb10551": {
+                "name": "GetHashCode",
+                "overloadId": "deb10551",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5808f9cc-6283-4dad-9127-651231d02bf5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceOptions"
+            },
+            "overloads": {
+              "feb76fd5": {
+                "name": "ToString",
+                "overloadId": "feb76fd5",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4e3ed8a7-fee6-4327-87f6-86426363118c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceOptions"
+            },
+            "overloads": {
+              "f8e41dae": {
+                "name": "GetType",
+                "overloadId": "f8e41dae",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "9af02629-6683-4ada-9304-9dca03ea5111",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "Scalar": {
+        "title": "Scalar",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Scalar"
+            },
+            "overloads": {
+              "87aecc53": {
+                "name": "Equals",
+                "overloadId": "87aecc53",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "4b86b694-7fa5-45ef-bd5a-1f8857b72b5d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8a37df3c-5b5e-4f66-91de-f2c76dc97182",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Scalar"
+            },
+            "overloads": {
+              "bda64ef6": {
+                "name": "GetHashCode",
+                "overloadId": "bda64ef6",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "fb1a234f-c560-4355-b1e6-a8d578c2b9de",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Scalar"
+            },
+            "overloads": {
+              "b74d5dc6": {
+                "name": "ToString",
+                "overloadId": "b74d5dc6",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "54f953c9-76d3-4e10-bbc2-b24ebfe022fb",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Diagnostics.Tracing#/components/schemas/Scalar"
+            },
+            "overloads": {
+              "eb7aef1b": {
+                "name": "GetType",
+                "overloadId": "eb7aef1b",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "88a11214-6f23-487f-8ab2-e732dae325fd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "EventTags": {
+        "$ref": "System.Diagnostics.Tracing#/components/schemas/EventTags",
+        "x-namespace": "System.Diagnostics.Tracing",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

@@ -1,0 +1,504 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Text.Unicode",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "TryWriteInterpolatedStringHandler": {
+        "title": "TryWriteInterpolatedStringHandler",
+        "type": "object",
+        "description": "Provides static methods that convert chunked data between UTF-8 and UTF-16 encodings.",
+        "x-methods": {
+          "AppendLiteral": {
+            "owner": {
+              "$ref": "System.Text.Unicode#/components/schemas/TryWriteInterpolatedStringHandler"
+            },
+            "overloads": {
+              "c9d31184": {
+                "name": "AppendLiteral",
+                "overloadId": "c9d31184",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "e6ac520a-39cb-4974-909e-a9c3718ae8f1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "229cfed0-e27b-43f7-803b-8648407e1ea2",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "AppendFormatted": {
+            "owner": {
+              "$ref": "System.Text.Unicode#/components/schemas/TryWriteInterpolatedStringHandler"
+            },
+            "overloads": {
+              "b1f1e8b1": {
+                "name": "AppendFormatted",
+                "overloadId": "b1f1e8b1",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Text.Unicode#/components/schemas/T",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "c2a97baf-9cb5-45d5-aa73-ef32d7e698b5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a5378acb-567b-4552-b2ec-140aa5f5bbc3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "78448753": {
+                "name": "AppendFormatted",
+                "overloadId": "78448753",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Text.Unicode#/components/schemas/T",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "a6cd2935-2ff2-4072-a0ea-296f615d17ed"
+                    },
+                    {
+                      "type": "string",
+                      "name": "format",
+                      "isOptional": false,
+                      "instanceGuid": "c6d23f2f-10df-4bd4-83b4-f19fe93a8721"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "889c5393-4b1e-4b68-bb11-5e1f31e83718",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "28df2009": {
+                "name": "AppendFormatted",
+                "overloadId": "28df2009",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Text.Unicode#/components/schemas/T",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "48945af5-c14e-4f76-93d1-c59e77fc2ec5"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "alignment",
+                      "isOptional": false,
+                      "instanceGuid": "be61ec60-9d73-47be-8459-91c75ed4ad2e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "28b4be57-3f91-423e-92cc-4c7890fe0dbc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "f0f34a98": {
+                "name": "AppendFormatted",
+                "overloadId": "f0f34a98",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Text.Unicode#/components/schemas/T",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "5f01ee8c-ceb5-4a91-8cda-70d957c2b666"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "alignment",
+                      "isOptional": false,
+                      "instanceGuid": "3082bfaa-b9b6-4e63-814d-3b0431806c73"
+                    },
+                    {
+                      "type": "string",
+                      "name": "format",
+                      "isOptional": false,
+                      "instanceGuid": "a5804c2f-b58f-4291-a438-e2c1325427dd"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "09d7575d-6d41-4dec-a3fe-b97ae6b1d1ef",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "4b4e6848": {
+                "name": "AppendFormatted",
+                "overloadId": "4b4e6848",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "47c46927-5292-45bf-a0c6-62505b3b1c29"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6adf0caf-48a1-4963-9e24-938e0664ff1e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "9f708e08": {
+                "name": "AppendFormatted",
+                "overloadId": "9f708e08",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "37a5073f-cb82-4fcb-b644-1e1a4c22aea5"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "alignment",
+                      "isOptional": true,
+                      "instanceGuid": "6688efcb-6bc8-413f-af05-bec8d297d94b"
+                    },
+                    {
+                      "type": "string",
+                      "name": "format",
+                      "isOptional": true,
+                      "instanceGuid": "150670ec-a963-4c05-bbf7-def255a9d9cc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d28a5cba-0c5d-4446-a179-72dcf277c383",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "7f2d6eef": {
+                "name": "AppendFormatted",
+                "overloadId": "7f2d6eef",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "utf8Value",
+                      "isOptional": false,
+                      "instanceGuid": "ce37e7b4-1cb1-41f2-b017-9c0c39b3b92d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "998936ec-e6b8-4553-9cae-5ac14829a101",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "37af2334": {
+                "name": "AppendFormatted",
+                "overloadId": "37af2334",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "utf8Value",
+                      "isOptional": false,
+                      "instanceGuid": "5def0ec6-6194-45ee-97f4-7cc6d95a6af0"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "alignment",
+                      "isOptional": true,
+                      "instanceGuid": "e076e97d-6421-4bad-b845-4b8883992758"
+                    },
+                    {
+                      "type": "string",
+                      "name": "format",
+                      "isOptional": true,
+                      "instanceGuid": "5067a546-ce0a-489d-ad2a-ebdf1952aa7e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0637b889-7765-4776-a87b-bc8eaccf8cdf",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "b232dc2c": {
+                "name": "AppendFormatted",
+                "overloadId": "b232dc2c",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "e4265fc8-5c12-41e0-afa1-dd19f310fff0"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "1a6a14dd-43d5-4ae3-847f-67e42fa21411",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "feadd3ab": {
+                "name": "AppendFormatted",
+                "overloadId": "feadd3ab",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "450e57a0-7478-478f-9ea7-6d61f4206546"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "alignment",
+                      "isOptional": true,
+                      "instanceGuid": "97d3df1f-5d63-4e5d-bfca-69eec22b0710"
+                    },
+                    {
+                      "type": "string",
+                      "name": "format",
+                      "isOptional": true,
+                      "instanceGuid": "da38fd21-a676-4dad-a8af-b019369693e7"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "acaa0408-72bc-4abd-8282-1c16914e9d09",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "12ca99af": {
+                "name": "AppendFormatted",
+                "overloadId": "12ca99af",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "ebada58c-00e0-4363-b35b-bdc2ede334ce"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "alignment",
+                      "isOptional": true,
+                      "instanceGuid": "390de75c-1155-4908-851a-f37af086f53b"
+                    },
+                    {
+                      "type": "string",
+                      "name": "format",
+                      "isOptional": true,
+                      "instanceGuid": "8cb1af4c-510e-4f93-8432-20f5e1faa946"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2a23cf43-6511-43e8-badf-efb9ab44e575",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Text.Unicode#/components/schemas/TryWriteInterpolatedStringHandler"
+            },
+            "overloads": {
+              "7c98828c": {
+                "name": "Equals",
+                "overloadId": "7c98828c",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "60330d21-d453-453b-8d14-ad7d4ddd6666"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "3b600e04-731e-4c38-8553-75b2113c85cc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Text.Unicode#/components/schemas/TryWriteInterpolatedStringHandler"
+            },
+            "overloads": {
+              "fa32f58e": {
+                "name": "GetHashCode",
+                "overloadId": "fa32f58e",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e1b94117-e0bb-40d5-b0fa-050bbc682c52",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Text.Unicode#/components/schemas/TryWriteInterpolatedStringHandler"
+            },
+            "overloads": {
+              "947d7b1d": {
+                "name": "ToString",
+                "overloadId": "947d7b1d",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d603e85b-f348-46b2-b5aa-8248762d2a6c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Text.Unicode#/components/schemas/TryWriteInterpolatedStringHandler"
+            },
+            "overloads": {
+              "a0c5d88b": {
+                "name": "GetType",
+                "overloadId": "a0c5d88b",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4a4c5116-35cc-4db6-a0fc-1f9c84dddf1f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Text.Unicode",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

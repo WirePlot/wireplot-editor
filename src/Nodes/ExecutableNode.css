@@ -1,0 +1,44 @@
+.node-toolbar {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 2px solid rgba(107, 114, 128, 0.6);
+    border-radius: 8px;
+    background: rgba(107, 114, 128, 0.3);
+    color: white;
+    font-size: 14px;
+    backdrop-filter: blur(4px);
+    user-select: none;
+    cursor: grab;
+    white-space: pre-line;
+}
+
+.node-header {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: var(--font-size);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #020202;
+    background-image: radial-gradient(#12232c 1%, #5100c9 137%);
+    color: rgb(255, 255, 255);
+    justify-content: space-between;
+}
+
+.node-title {
+    margin-bottom: 2px;
+    vertical-align: middle;
+    padding-left: 5px;
+    margin-right: 40px;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.node-body {
+    display: flex;
+    justify-content: space-between;
+}

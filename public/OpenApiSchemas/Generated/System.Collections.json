@@ -1,0 +1,2308 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Collections",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "BitArray": {
+        "title": "BitArray",
+        "type": "object",
+        "description": "Manages a compact array of bit values, which are represented as Booleans, where  indicates that the bit is on (1) and  indicates the bit is off (0).",
+        "properties": {
+          "Length": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "SyncRoot": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "IsSynchronized": {
+            "type": "boolean"
+          },
+          "IsReadOnly": {
+            "type": "boolean"
+          }
+        },
+        "x-methods": {
+          "Get": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "f6e457bc": {
+                "name": "Get",
+                "overloadId": "f6e457bc",
+                "methodKind": "instance",
+                "description": "Gets the value of the bit at a specific position in the .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "index",
+                      "isOptional": false,
+                      "instanceGuid": "673b6ebe-de6e-4ed0-a984-ab87e7784f80"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4437b4d9-cca8-4deb-af45-1d7fa6635148",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Set": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "27d0ec41": {
+                "name": "Set",
+                "overloadId": "27d0ec41",
+                "methodKind": "instance",
+                "description": "Sets the bit at a specific position in the  to the specified value.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "index",
+                      "isOptional": false,
+                      "instanceGuid": "8867617d-b8cc-4ba3-b51c-0d2e240a21d4"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "de1a8d05-e19b-4301-8dd0-9cc7ed5b5710"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "1f58fb93-4f1a-4361-8247-7c90b08c334d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "SetAll": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "982dbda4": {
+                "name": "SetAll",
+                "overloadId": "982dbda4",
+                "methodKind": "instance",
+                "description": "Sets all bits in the  to the specified value.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "boolean",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "855d9d13-1b7b-4a7e-a2f0-77e862bc42e6"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "44676142-32fb-4fb5-a8f8-b2c86b372ce7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "And": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "1b99a531": {
+                "name": "And",
+                "overloadId": "1b99a531",
+                "methodKind": "instance",
+                "description": "Performs the bitwise AND operation between the elements of the current  object and the corresponding elements in the specified array. The current  object will be modified to store the result of the bitwise AND operation.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections#/components/schemas/BitArray",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "c6db52fa-b19a-4839-87e5-6f5f3ac78754"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "cbcdcd42-7b26-44aa-88c3-f3a0e7c325b2",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/BitArray"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Or": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "1d23a51c": {
+                "name": "Or",
+                "overloadId": "1d23a51c",
+                "methodKind": "instance",
+                "description": "Performs the bitwise OR operation between the elements of the current  object and the corresponding elements in the specified array. The current  object will be modified to store the result of the bitwise OR operation.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections#/components/schemas/BitArray",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "95e938cf-e9b9-4d9c-a357-852588e424fb"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "31b3a4d1-085b-4215-98ab-bf521ccbd122",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/BitArray"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Xor": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "2803f393": {
+                "name": "Xor",
+                "overloadId": "2803f393",
+                "methodKind": "instance",
+                "description": "Performs the bitwise exclusive OR operation between the elements of the current  object against the corresponding elements in the specified array. The current  object will be modified to store the result of the bitwise exclusive OR operation.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections#/components/schemas/BitArray",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "0bbcb36b-b052-43c3-9dc8-83ef6fd33649"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8e1832a1-0f61-4920-9d45-0aeeb88d1311",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/BitArray"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Not": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "e32edb76": {
+                "name": "Not",
+                "overloadId": "e32edb76",
+                "methodKind": "instance",
+                "description": "Inverts all the bit values in the current , so that elements set to  are changed to , and elements set to  are changed to .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "69030cad-27db-4058-9567-e0d214a37e3d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/BitArray"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "RightShift": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "5dbf5315": {
+                "name": "RightShift",
+                "overloadId": "5dbf5315",
+                "methodKind": "instance",
+                "description": "Shifts all the bit values of the current  to the right on  bits.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "count",
+                      "isOptional": false,
+                      "instanceGuid": "22322172-91d3-43e6-bde1-cf0cc4bec3b1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "faf5c73e-1ae5-4e76-af33-0e2b95f751f1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/BitArray"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "LeftShift": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "054110e4": {
+                "name": "LeftShift",
+                "overloadId": "054110e4",
+                "methodKind": "instance",
+                "description": "Shifts all the bit values of the current  to the left on  bits.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "count",
+                      "isOptional": false,
+                      "instanceGuid": "e9bcf258-3bbd-43f7-a66b-1274c2b97f8b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "f930da6e-2f06-4ccf-b21c-722d9388a995",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/BitArray"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "CopyTo": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "172b30e1": {
+                "name": "CopyTo",
+                "overloadId": "172b30e1",
+                "methodKind": "instance",
+                "description": "Copies the entire  to a compatible one-dimensional , starting at the specified index of the target array.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Array",
+                      "name": "array",
+                      "isOptional": false,
+                      "instanceGuid": "a999bffe-041b-4deb-8427-8f353be54c07"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "index",
+                      "isOptional": false,
+                      "instanceGuid": "0ed28ed7-1dc2-4207-81af-8bb844184391"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2cdb2879-6a19-4cc8-8f59-53a6d0d82bfe",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "HasAllSet": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "af60faba": {
+                "name": "HasAllSet",
+                "overloadId": "af60faba",
+                "methodKind": "instance",
+                "description": "Determines whether all bits in the  are set to .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "40f41147-565e-46e3-ab9f-96af43339897",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "HasAnySet": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "0af0b45b": {
+                "name": "HasAnySet",
+                "overloadId": "0af0b45b",
+                "methodKind": "instance",
+                "description": "Determines whether any bit in the  is set to .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0eb51963-c396-4d90-ac2f-d10c7fec134d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Clone": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "5d5ffa13": {
+                "name": "Clone",
+                "overloadId": "5d5ffa13",
+                "methodKind": "instance",
+                "description": "Creates a shallow copy of the .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7bfeba53-adb0-41c6-ba3d-4de1c9411c3c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Object"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "7d774ab9": {
+                "name": "GetEnumerator",
+                "overloadId": "7d774ab9",
+                "methodKind": "instance",
+                "description": "Returns an enumerator that iterates through the .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "789c103a-d5e9-4ad0-b8e4-d9a263497ec7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/IEnumerator"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "6418124e": {
+                "name": "GetType",
+                "overloadId": "6418124e",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "206c455e-6ed7-41aa-867c-c81f1c20a55a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "1c959980": {
+                "name": "ToString",
+                "overloadId": "1c959980",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b7efe46d-178a-4529-892e-0e6cf752893e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "ff731687": {
+                "name": "Equals",
+                "overloadId": "ff731687",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "c33441b7-310c-4dd7-9c60-5a361fe40d8e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "9282eb22-e727-4fbd-a818-d818937a3918",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/BitArray"
+            },
+            "overloads": {
+              "be29f466": {
+                "name": "GetHashCode",
+                "overloadId": "be29f466",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0ccc1611-0ba2-4f67-ad47-7e638dbe474e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "Comparer": {
+        "title": "Comparer",
+        "type": "object",
+        "description": "Compares two objects for equivalence, where string comparisons are case-sensitive.",
+        "x-methods": {
+          "GetObjectData": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Comparer"
+            },
+            "overloads": {
+              "086eba19": {
+                "name": "GetObjectData",
+                "overloadId": "086eba19",
+                "methodKind": "instance",
+                "description": "Populates a  object with the data required for serialization.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
+                      "name": "info",
+                      "isOptional": false,
+                      "instanceGuid": "66b619e6-00ea-4631-940e-479167ad8eac"
+                    },
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
+                      "name": "context",
+                      "isOptional": false,
+                      "instanceGuid": "e8d176f2-47de-45e4-b874-a8670b0a7023"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "961c8675-1c19-498c-a9cb-224ec7811c26",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Compare": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Comparer"
+            },
+            "overloads": {
+              "3d127040": {
+                "name": "Compare",
+                "overloadId": "3d127040",
+                "methodKind": "instance",
+                "description": "Performs a case-sensitive comparison of two objects of the same type and returns a value indicating whether one is less than, equal to, or greater than the other.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "a",
+                      "isOptional": false,
+                      "instanceGuid": "19126070-cb46-47e9-b384-903dec427265"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "b",
+                      "isOptional": false,
+                      "instanceGuid": "d4f6e66e-c748-4361-a796-7571e3a668a4"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "83379af3-05c1-4c4c-9b78-13e32ee90029",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Comparer"
+            },
+            "overloads": {
+              "bbb97678": {
+                "name": "GetType",
+                "overloadId": "bbb97678",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "fe6a8495-4891-4453-89d7-a24575543a59",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Comparer"
+            },
+            "overloads": {
+              "7466099e": {
+                "name": "ToString",
+                "overloadId": "7466099e",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2e0551e0-e8a2-447a-896e-8fd45fe36d50",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Comparer"
+            },
+            "overloads": {
+              "c276a12f": {
+                "name": "Equals",
+                "overloadId": "c276a12f",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "fc3dc01a-8560-4d3f-b4f4-caaf8f7c19f1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "9b483126-7497-4860-bef6-443455d959f7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Comparer"
+            },
+            "overloads": {
+              "f55e9384": {
+                "name": "GetHashCode",
+                "overloadId": "f55e9384",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5fc71047-b525-45ba-86ed-c8bd9ef92ef3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "DictionaryEntry": {
+        "title": "DictionaryEntry",
+        "type": "object",
+        "description": "Defines a dictionary key/value pair that can be set or retrieved.",
+        "properties": {
+          "Key": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "Value": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Deconstruct": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/DictionaryEntry"
+            },
+            "overloads": {
+              "e5adf328": {
+                "name": "Deconstruct",
+                "overloadId": "e5adf328",
+                "methodKind": "instance",
+                "description": "Deconstructs the current .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object\u0026",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "e68d37a7-c586-43d5-abfd-1c23bc39876f"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Object\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "e3734902-938c-475b-9497-b87b51fcd09b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "14e1a484-f059-4775-b579-38dde5adc7ba",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/DictionaryEntry"
+            },
+            "overloads": {
+              "1b1eec6e": {
+                "name": "ToString",
+                "overloadId": "1b1eec6e",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d469769b-8ce9-47df-afae-3d470539c293",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/DictionaryEntry"
+            },
+            "overloads": {
+              "ca4f2301": {
+                "name": "Equals",
+                "overloadId": "ca4f2301",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "0f4df65e-f210-411d-aad1-374f60b02af9"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7e869a73-d271-488a-95a8-75a6afcb9bee",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/DictionaryEntry"
+            },
+            "overloads": {
+              "ca50cd47": {
+                "name": "GetHashCode",
+                "overloadId": "ca50cd47",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "458d6438-5312-4664-8b18-f24f0d942c39",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/DictionaryEntry"
+            },
+            "overloads": {
+              "7ab263c6": {
+                "name": "GetType",
+                "overloadId": "7ab263c6",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4701e234-2f7d-42a1-a772-a10da414bd37",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "Hashtable": {
+        "title": "Hashtable",
+        "type": "object",
+        "description": "Represents a collection of key/value pairs that are organized based on the hash code of the key.",
+        "properties": {
+          "IsReadOnly": {
+            "type": "boolean"
+          },
+          "IsFixedSize": {
+            "type": "boolean"
+          },
+          "IsSynchronized": {
+            "type": "boolean"
+          },
+          "Keys": {
+            "$ref": "System.Collections#/components/schemas/ICollection"
+          },
+          "Values": {
+            "$ref": "System.Collections#/components/schemas/ICollection"
+          },
+          "SyncRoot": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "Count": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-methods": {
+          "Add": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "0a289f42": {
+                "name": "Add",
+                "overloadId": "0a289f42",
+                "methodKind": "instance",
+                "description": "Adds an element with the specified key and value into the .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "886625cb-8a99-4eea-9e35-1e07f7964ba7"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "17f89091-4ef3-418a-8966-6ab85b8a97a1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "f0690269-530e-488a-b66b-b058246251db",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Clear": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "ab8999ac": {
+                "name": "Clear",
+                "overloadId": "ab8999ac",
+                "methodKind": "instance",
+                "description": "Removes all elements from the .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3ce89c4a-3392-441b-a64d-f75b2cefd29e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Clone": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "049dea1f": {
+                "name": "Clone",
+                "overloadId": "049dea1f",
+                "methodKind": "instance",
+                "description": "Creates a shallow copy of the .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2fbf93c4-7285-4d01-85ea-0777dd34c026",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Object"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Contains": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "fbf6e278": {
+                "name": "Contains",
+                "overloadId": "fbf6e278",
+                "methodKind": "instance",
+                "description": "Determines whether the  contains a specific key.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "7dc0c841-e18a-4842-8de2-5c6eda133a79"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "066a633d-e032-45ea-b781-26e010d1b9ba",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ContainsKey": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "d335c73e": {
+                "name": "ContainsKey",
+                "overloadId": "d335c73e",
+                "methodKind": "instance",
+                "description": "Determines whether the  contains a specific key.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "c3cb39a3-053c-456d-ad21-185179abce35"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4549e5d9-eda9-4e6a-8688-05d35330f5cf",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ContainsValue": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "91ae51c0": {
+                "name": "ContainsValue",
+                "overloadId": "91ae51c0",
+                "methodKind": "instance",
+                "description": "Determines whether the  contains a specific value.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "ce93d31f-b312-4799-9227-7fbd81dc9e83"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8041d6c1-5575-4d5a-9cfd-4e113308e26a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "CopyTo": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "c0e62de0": {
+                "name": "CopyTo",
+                "overloadId": "c0e62de0",
+                "methodKind": "instance",
+                "description": "Copies the  elements to a one-dimensional  instance at the specified index.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Array",
+                      "name": "array",
+                      "isOptional": false,
+                      "instanceGuid": "9928616e-616d-4a27-8c7e-834936206424"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "arrayIndex",
+                      "isOptional": false,
+                      "instanceGuid": "09f2cffa-1881-4677-9f8f-7d7426b46fdc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5cbd6407-e2d4-4552-873a-c1a61072c4b5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "3a484425": {
+                "name": "GetEnumerator",
+                "overloadId": "3a484425",
+                "methodKind": "instance",
+                "description": "Returns an  that iterates through the .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a958e9f8-887c-4105-bad6-fb9603f9ce44",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/IDictionaryEnumerator"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Remove": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "197ddcb0": {
+                "name": "Remove",
+                "overloadId": "197ddcb0",
+                "methodKind": "instance",
+                "description": "Removes the element with the specified key from the .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "890921c6-1fbb-4134-8db7-bc8fdb17d60c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4ccf65f2-fc96-4025-b7ba-8805346ec893",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Synchronized": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "68f9cda0": {
+                "name": "Synchronized",
+                "overloadId": "68f9cda0",
+                "methodKind": "static",
+                "description": "Returns a synchronized (thread-safe) wrapper for the .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections#/components/schemas/Hashtable",
+                      "name": "table",
+                      "isOptional": false,
+                      "instanceGuid": "34218ad5-af16-4e4c-b684-c9937112c49f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "829b9a76-fd22-4852-9cbe-c73da3281fad",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/Hashtable"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetObjectData": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "932eb3e3": {
+                "name": "GetObjectData",
+                "overloadId": "932eb3e3",
+                "methodKind": "instance",
+                "description": "Implements the  interface and returns the data needed to serialize the .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
+                      "name": "info",
+                      "isOptional": false,
+                      "instanceGuid": "e671324f-db29-447b-805f-676e6f956323"
+                    },
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
+                      "name": "context",
+                      "isOptional": false,
+                      "instanceGuid": "04f77a0c-fe5e-4f95-995f-fe6d2cf563cc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "40286a7c-055d-478d-84c6-cb856a64d91e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "OnDeserialization": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "eba38242": {
+                "name": "OnDeserialization",
+                "overloadId": "eba38242",
+                "methodKind": "instance",
+                "description": "Implements the  interface and raises the deserialization event when the deserialization is complete.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "sender",
+                      "isOptional": false,
+                      "instanceGuid": "e0e3c3c3-490d-408f-9ed9-d77e1a8ed60a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "86dfb529-cc3d-47c0-be09-30e7b41b7144",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "a388439a": {
+                "name": "GetType",
+                "overloadId": "a388439a",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d8dd2729-9505-42c0-8f3e-18d34d85ce65",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "00dd0e03": {
+                "name": "ToString",
+                "overloadId": "00dd0e03",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4ecab633-5898-4ae8-9dd7-5278669b055c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "223bc329": {
+                "name": "Equals",
+                "overloadId": "223bc329",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "3c51f911-d517-42a3-83d0-96f1d99b6cb1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "f47f8749-3d9d-472b-bf28-e1e1d89d800b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/Hashtable"
+            },
+            "overloads": {
+              "3cf24b2a": {
+                "name": "GetHashCode",
+                "overloadId": "3cf24b2a",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f296ba45-3a06-47bd-a247-1a5aa9f91dc3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ICollection": {
+        "$ref": "System.Collections#/components/schemas/ICollection",
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IComparer": {
+        "title": "IComparer",
+        "type": "object",
+        "description": "Exposes a method that compares two objects.",
+        "x-methods": {
+          "Compare": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IComparer"
+            },
+            "overloads": {
+              "5dba4211": {
+                "name": "Compare",
+                "overloadId": "5dba4211",
+                "methodKind": "instance",
+                "description": "Compares two objects and returns a value indicating whether one is less than, equal to, or greater than the other.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "x",
+                      "isOptional": false,
+                      "instanceGuid": "78e986f9-f6b9-4c34-9d06-c367aab60df2"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "y",
+                      "isOptional": false,
+                      "instanceGuid": "2205f726-b6b4-411c-b151-e0a0c345cfb1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4c9b926a-0de6-4e11-b656-1f65f31462ea",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IDictionary": {
+        "title": "IDictionary",
+        "type": "object",
+        "description": "Represents a nongeneric collection of key/value pairs.",
+        "properties": {
+          "Keys": {
+            "$ref": "System.Collections#/components/schemas/ICollection"
+          },
+          "Values": {
+            "$ref": "System.Collections#/components/schemas/ICollection"
+          },
+          "IsReadOnly": {
+            "type": "boolean"
+          },
+          "IsFixedSize": {
+            "type": "boolean"
+          }
+        },
+        "x-methods": {
+          "Contains": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IDictionary"
+            },
+            "overloads": {
+              "9ce5b6ec": {
+                "name": "Contains",
+                "overloadId": "9ce5b6ec",
+                "methodKind": "instance",
+                "description": "Determines whether the  object contains an element with the specified key.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "21c4cae2-f539-464e-931d-75e3441a1464"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "247d5646-117b-4718-b615-34be4acfd99b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Add": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IDictionary"
+            },
+            "overloads": {
+              "7332616c": {
+                "name": "Add",
+                "overloadId": "7332616c",
+                "methodKind": "instance",
+                "description": "Adds an element with the provided key and value to the  object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "5459a7de-97e0-4a25-a840-0a290434fbd6"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "51aa92e0-cff1-43dd-bcfb-0b80732531b1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ce81b843-3f4e-4189-95d2-ea1268632bce",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Clear": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IDictionary"
+            },
+            "overloads": {
+              "1fa35cbb": {
+                "name": "Clear",
+                "overloadId": "1fa35cbb",
+                "methodKind": "instance",
+                "description": "Removes all elements from the  object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "cb83b48d-df95-4018-a613-74d4cf122887",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IDictionary"
+            },
+            "overloads": {
+              "0e4f0247": {
+                "name": "GetEnumerator",
+                "overloadId": "0e4f0247",
+                "methodKind": "instance",
+                "description": "Returns an  object for the  object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "256afa35-9d6f-4cbf-a6ea-d2814d29c2a2",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/IDictionaryEnumerator"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Remove": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IDictionary"
+            },
+            "overloads": {
+              "db298700": {
+                "name": "Remove",
+                "overloadId": "db298700",
+                "methodKind": "instance",
+                "description": "Removes the element with the specified key from the  object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "aa17d2a8-4667-4c2e-857f-21f5c92d50d1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "73f6300e-2300-4b74-874b-4c79a2072bd8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IDictionaryEnumerator": {
+        "title": "IDictionaryEnumerator",
+        "type": "object",
+        "description": "Enumerates the elements of a nongeneric dictionary.",
+        "properties": {
+          "Key": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "Value": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "Entry": {
+            "$ref": "System.Collections#/components/schemas/DictionaryEntry"
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IEnumerable": {
+        "title": "IEnumerable",
+        "type": "object",
+        "description": "Exposes an enumerator, which supports a simple iteration over a non-generic collection.",
+        "x-methods": {
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IEnumerable"
+            },
+            "overloads": {
+              "9a65c960": {
+                "name": "GetEnumerator",
+                "overloadId": "9a65c960",
+                "methodKind": "instance",
+                "description": "Returns an enumerator that iterates through a collection.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a10599d2-4b3c-4101-845b-cf805cb10607",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/IEnumerator"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IEnumerator": {
+        "title": "IEnumerator",
+        "type": "object",
+        "description": "Supports a simple iteration over a non-generic collection.",
+        "properties": {
+          "Current": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "MoveNext": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IEnumerator"
+            },
+            "overloads": {
+              "a5d70ea6": {
+                "name": "MoveNext",
+                "overloadId": "a5d70ea6",
+                "methodKind": "instance",
+                "description": "Advances the enumerator to the next element of the collection.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "944a38a5-e808-4e7a-8b70-a176be89c447",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Reset": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IEnumerator"
+            },
+            "overloads": {
+              "b6ec36b3": {
+                "name": "Reset",
+                "overloadId": "b6ec36b3",
+                "methodKind": "instance",
+                "description": "Sets the enumerator to its initial position, which is before the first element in the collection.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4c35e00a-8e0a-4883-84eb-5f00fcca1fc1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IEqualityComparer": {
+        "title": "IEqualityComparer",
+        "type": "object",
+        "description": "Defines methods to support the comparison of objects for equality.",
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IEqualityComparer"
+            },
+            "overloads": {
+              "59adb746": {
+                "name": "Equals",
+                "overloadId": "59adb746",
+                "methodKind": "instance",
+                "description": "Determines whether the specified objects are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "x",
+                      "isOptional": false,
+                      "instanceGuid": "196abb64-7982-4009-8fe9-68f6d29505fc"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "y",
+                      "isOptional": false,
+                      "instanceGuid": "ef2d8168-f81a-4541-a148-7925ce790a4a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4c6bf01f-b724-4bc7-b0b1-77e91ed089e2",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IEqualityComparer"
+            },
+            "overloads": {
+              "9f69fae0": {
+                "name": "GetHashCode",
+                "overloadId": "9f69fae0",
+                "methodKind": "instance",
+                "description": "Returns a hash code for the specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "aaf2c688-d03c-4e55-b2da-2ec74f8b00fe"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "e44702d9-ffb5-4944-90fb-f0b1e52d783b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IHashCodeProvider": {
+        "title": "IHashCodeProvider",
+        "type": "object",
+        "description": "Supplies a hash code for an object, using a custom hash function.",
+        "x-methods": {
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IHashCodeProvider"
+            },
+            "overloads": {
+              "01add7e3": {
+                "name": "GetHashCode",
+                "overloadId": "01add7e3",
+                "methodKind": "instance",
+                "description": "Returns a hash code for the specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "d13a71e5-1414-418d-abc2-c858b1954ab3"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2aebbb93-7024-44d2-a20b-b808ec41210c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IList": {
+        "$ref": "System.Collections#/components/schemas/IList",
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IStructuralComparable": {
+        "title": "IStructuralComparable",
+        "type": "object",
+        "description": "Supports the structural comparison of collection objects.",
+        "x-methods": {
+          "CompareTo": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IStructuralComparable"
+            },
+            "overloads": {
+              "b0e2a2c7": {
+                "name": "CompareTo",
+                "overloadId": "b0e2a2c7",
+                "methodKind": "instance",
+                "description": "Determines whether the current collection object precedes, occurs in the same position as, or follows another object in the sort order.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "other",
+                      "isOptional": false,
+                      "instanceGuid": "f85b0f5f-9b9e-469c-9e5e-2bc893b73d1c"
+                    },
+                    {
+                      "$ref": "System.Collections#/components/schemas/IComparer",
+                      "name": "comparer",
+                      "isOptional": false,
+                      "instanceGuid": "b11d2b03-436a-41a5-a2d4-58b2f57e76cf"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "aa1dcb69-e880-48b8-bbf0-033474bb6a2c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IStructuralEquatable": {
+        "title": "IStructuralEquatable",
+        "type": "object",
+        "description": "Defines methods to support the comparison of objects for structural equality.",
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IStructuralEquatable"
+            },
+            "overloads": {
+              "ffc80b2c": {
+                "name": "Equals",
+                "overloadId": "ffc80b2c",
+                "methodKind": "instance",
+                "description": "Determines whether an object is structurally equal to the current instance.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "other",
+                      "isOptional": false,
+                      "instanceGuid": "d2db4f5e-94fb-49a4-9411-24adb2d3f01b"
+                    },
+                    {
+                      "$ref": "System.Collections#/components/schemas/IEqualityComparer",
+                      "name": "comparer",
+                      "isOptional": false,
+                      "instanceGuid": "806114db-71a0-49f7-8f9f-cbea768077da"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0ae2976e-c062-4f15-907c-c06ad4b7cded",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/IStructuralEquatable"
+            },
+            "overloads": {
+              "e028a24d": {
+                "name": "GetHashCode",
+                "overloadId": "e028a24d",
+                "methodKind": "instance",
+                "description": "Returns a hash code for the current instance.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections#/components/schemas/IEqualityComparer",
+                      "name": "comparer",
+                      "isOptional": false,
+                      "instanceGuid": "8d0cfedd-4880-4b4a-ac31-637ecd135de9"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "101ccf81-cb4c-42e6-91ab-6f200a43a11f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ListDictionaryInternal": {
+        "title": "ListDictionaryInternal",
+        "type": "object",
+        "description": null,
+        "properties": {
+          "Count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Keys": {
+            "$ref": "System.Collections#/components/schemas/ICollection"
+          },
+          "IsReadOnly": {
+            "type": "boolean"
+          },
+          "IsFixedSize": {
+            "type": "boolean"
+          },
+          "IsSynchronized": {
+            "type": "boolean"
+          },
+          "SyncRoot": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "Values": {
+            "$ref": "System.Collections#/components/schemas/ICollection"
+          }
+        },
+        "x-methods": {
+          "Add": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/ListDictionaryInternal"
+            },
+            "overloads": {
+              "22b6e3f8": {
+                "name": "Add",
+                "overloadId": "22b6e3f8",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "77724c23-4c9f-4b65-b2c7-c52eedb360fb"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "2fd3271d-d1ec-49ae-9664-0f6ef8c1cc48"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "9b03710a-fbcf-445c-86e8-d68b73902c18",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Clear": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/ListDictionaryInternal"
+            },
+            "overloads": {
+              "81050331": {
+                "name": "Clear",
+                "overloadId": "81050331",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "112f9109-b0e2-44ec-80c0-c52c51c650f9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Contains": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/ListDictionaryInternal"
+            },
+            "overloads": {
+              "c9b4c698": {
+                "name": "Contains",
+                "overloadId": "c9b4c698",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "3f6700e5-4a28-421e-b66b-ed628e38d2e7"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "46105f5a-1519-470d-abfb-f96770fc04ac",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "CopyTo": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/ListDictionaryInternal"
+            },
+            "overloads": {
+              "81a9ff05": {
+                "name": "CopyTo",
+                "overloadId": "81a9ff05",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Array",
+                      "name": "array",
+                      "isOptional": false,
+                      "instanceGuid": "64cc890e-0a1b-4eea-817d-44aad753b337"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "index",
+                      "isOptional": false,
+                      "instanceGuid": "0986e3cc-7007-4d60-96f1-d6b79fecd1e9"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ea17f7d9-cc26-4e68-89d6-fc2392f45648",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/ListDictionaryInternal"
+            },
+            "overloads": {
+              "a4a0c5bb": {
+                "name": "GetEnumerator",
+                "overloadId": "a4a0c5bb",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "9f96fb0e-935c-4d89-9548-7a2bd8282c95",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/IDictionaryEnumerator"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Remove": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/ListDictionaryInternal"
+            },
+            "overloads": {
+              "d5734af6": {
+                "name": "Remove",
+                "overloadId": "d5734af6",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "19b7e1f4-2183-4d1d-a978-062f539bf49e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "606c448e-1c0a-4e1a-a368-8a98f43c3539",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/ListDictionaryInternal"
+            },
+            "overloads": {
+              "258cdbe2": {
+                "name": "GetType",
+                "overloadId": "258cdbe2",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "746650cb-3c5b-4df7-aae7-e3de63835634",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/ListDictionaryInternal"
+            },
+            "overloads": {
+              "25e4588d": {
+                "name": "ToString",
+                "overloadId": "25e4588d",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a7223648-88af-41c1-9a0e-d47e2bc9468b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/ListDictionaryInternal"
+            },
+            "overloads": {
+              "ab329d58": {
+                "name": "Equals",
+                "overloadId": "ab329d58",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "b2ce7499-46e1-4be3-b60d-eb9a63356699"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d6c14339-89e6-45a2-a353-9ccc838ca45a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Collections#/components/schemas/ListDictionaryInternal"
+            },
+            "overloads": {
+              "44f2fb79": {
+                "name": "GetHashCode",
+                "overloadId": "44f2fb79",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "8a54644f-6972-484a-80ed-475f595052ad",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

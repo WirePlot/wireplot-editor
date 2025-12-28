@@ -1,0 +1,1627 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Resources",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "IResourceReader": {
+        "title": "IResourceReader",
+        "type": "object",
+        "description": "Provides the base functionality for reading data from resource files.",
+        "x-methods": {
+          "Close": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/IResourceReader"
+            },
+            "overloads": {
+              "1c6b4bff": {
+                "name": "Close",
+                "overloadId": "1c6b4bff",
+                "methodKind": "instance",
+                "description": "Closes the resource reader after releasing any resources associated with it.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7167e07d-c5fb-4717-ab4f-e6fc1dc7fefb",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/IResourceReader"
+            },
+            "overloads": {
+              "6ae5c648": {
+                "name": "GetEnumerator",
+                "overloadId": "6ae5c648",
+                "methodKind": "instance",
+                "description": "Returns a dictionary enumerator of the resources for this reader.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "24ede7d9-06c0-412b-b36a-894975ee37be",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/IDictionaryEnumerator"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Resources",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "MissingSatelliteAssemblyException": {
+        "title": "MissingSatelliteAssemblyException",
+        "type": "object",
+        "description": "The exception that is thrown when the satellite assembly for the resources of the default culture is missing.",
+        "properties": {
+          "CultureName": {
+            "type": "string"
+          },
+          "TargetSite": {
+            "$ref": "System.Reflection#/components/schemas/MethodBase"
+          },
+          "Message": {
+            "type": "string"
+          },
+          "Data": {
+            "$ref": "System.Collections#/components/schemas/IDictionary"
+          },
+          "InnerException": {
+            "$ref": "System#/components/schemas/Exception"
+          },
+          "HelpLink": {
+            "type": "string"
+          },
+          "Source": {
+            "type": "string"
+          },
+          "HResult": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "StackTrace": {
+            "type": "string"
+          }
+        },
+        "x-methods": {
+          "GetBaseException": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/MissingSatelliteAssemblyException"
+            },
+            "overloads": {
+              "1aa0414d": {
+                "name": "GetBaseException",
+                "overloadId": "1aa0414d",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns the  that is the root cause of one or more subsequent exceptions.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "da98e16e-74f2-420f-b7ae-303206f341cc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Exception"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetObjectData": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/MissingSatelliteAssemblyException"
+            },
+            "overloads": {
+              "5a8f7203": {
+                "name": "GetObjectData",
+                "overloadId": "5a8f7203",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, sets the  with information about the exception.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
+                      "name": "info",
+                      "isOptional": false,
+                      "instanceGuid": "f4ef6b4c-9a32-48d1-a1d4-c4a18818fea7"
+                    },
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
+                      "name": "context",
+                      "isOptional": false,
+                      "instanceGuid": "aacb4eaa-2296-4884-9f3d-7f3f3c57038c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d1b2f531-4a11-4903-999f-430329f31fee",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/MissingSatelliteAssemblyException"
+            },
+            "overloads": {
+              "c3a14d0e": {
+                "name": "ToString",
+                "overloadId": "c3a14d0e",
+                "methodKind": "instance",
+                "description": "Creates and returns a string representation of the current exception.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0c8f6208-d21f-4a2c-a989-8f2a514a14ed",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/MissingSatelliteAssemblyException"
+            },
+            "overloads": {
+              "3a6d9f06": {
+                "name": "GetType",
+                "overloadId": "3a6d9f06",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "08a74502-1d2d-4f6d-ad55-e40d07cb4291",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/MissingSatelliteAssemblyException"
+            },
+            "overloads": {
+              "cc13360c": {
+                "name": "Equals",
+                "overloadId": "cc13360c",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "b08aaa15-2efd-4865-95dd-fe42232623b5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ef1d6eaf-f673-40aa-839c-0099659acf57",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/MissingSatelliteAssemblyException"
+            },
+            "overloads": {
+              "73f9f4b1": {
+                "name": "GetHashCode",
+                "overloadId": "73f9f4b1",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5982b71f-868c-4ee9-a68d-2f46adeee524",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Resources",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "NeutralResourcesLanguageAttribute": {
+        "title": "NeutralResourcesLanguageAttribute",
+        "type": "object",
+        "description": "Informs the resource manager of an app\u0027s default culture. This class cannot be inherited.",
+        "properties": {
+          "CultureName": {
+            "type": "string"
+          },
+          "Location": {
+            "$ref": "System.Resources#/components/schemas/UltimateResourceFallbackLocation"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/NeutralResourcesLanguageAttribute"
+            },
+            "overloads": {
+              "e951d291": {
+                "name": "Equals",
+                "overloadId": "e951d291",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "104902d2-7831-406b-951f-4e1c9e0d6398"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "cc01559e-9060-4d8d-b9b2-1147e01a203e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/NeutralResourcesLanguageAttribute"
+            },
+            "overloads": {
+              "ced60f4e": {
+                "name": "GetHashCode",
+                "overloadId": "ced60f4e",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c2e3d7ba-6632-48b4-b5ed-87bb4f000ab9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/NeutralResourcesLanguageAttribute"
+            },
+            "overloads": {
+              "fd0035c9": {
+                "name": "Match",
+                "overloadId": "fd0035c9",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "f079fae1-f191-4655-bec3-cabb0d6fe2a9"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "1fa8c94e-7cda-4e77-b399-1de795e4c5ac",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/NeutralResourcesLanguageAttribute"
+            },
+            "overloads": {
+              "4a349b4e": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "4a349b4e",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "9c96e1e0-9ab0-4210-97e7-040d7aa6a1d5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/NeutralResourcesLanguageAttribute"
+            },
+            "overloads": {
+              "5b087d99": {
+                "name": "GetType",
+                "overloadId": "5b087d99",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0c6fd2fb-a4b8-46c8-9e34-9bb71f356f25",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/NeutralResourcesLanguageAttribute"
+            },
+            "overloads": {
+              "2d1ab7b3": {
+                "name": "ToString",
+                "overloadId": "2d1ab7b3",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "24429824-607f-4e20-84d2-fbddc44a51cb",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Resources",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ResourceManager": {
+        "title": "ResourceManager",
+        "type": "object",
+        "description": "Represents a resource manager that provides convenient access to culture-specific resources at run time.",
+        "properties": {
+          "BaseName": {
+            "type": "string"
+          },
+          "IgnoreCase": {
+            "type": "boolean"
+          },
+          "ResourceSetType": {
+            "$ref": "System#/components/schemas/Type"
+          }
+        },
+        "x-methods": {
+          "ReleaseAllResources": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceManager"
+            },
+            "overloads": {
+              "5392a80a": {
+                "name": "ReleaseAllResources",
+                "overloadId": "5392a80a",
+                "methodKind": "instance",
+                "description": "Tells the resource manager to call the  method on all  objects and release all resources.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "dc352917-94eb-43a7-bb50-fb1024bcc66c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "CreateFileBasedResourceManager": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceManager"
+            },
+            "overloads": {
+              "58977146": {
+                "name": "CreateFileBasedResourceManager",
+                "overloadId": "58977146",
+                "methodKind": "static",
+                "description": "Returns a  object that searches a specific directory instead of an assembly manifest for resources.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "baseName",
+                      "isOptional": false,
+                      "instanceGuid": "723c5ee5-aa30-46f1-82f5-21ae50cee484"
+                    },
+                    {
+                      "type": "string",
+                      "name": "resourceDir",
+                      "isOptional": false,
+                      "instanceGuid": "2dc454da-7b4a-4f48-839f-1a68a95596ff"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Type",
+                      "name": "usingResourceSet",
+                      "isOptional": false,
+                      "instanceGuid": "37497e81-1adf-4321-9e04-707e6132d0ba"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "05c9ecb8-1460-4d05-8c18-d2b45de2295e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Resources#/components/schemas/ResourceManager"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetResourceSet": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceManager"
+            },
+            "overloads": {
+              "d76327cf": {
+                "name": "GetResourceSet",
+                "overloadId": "d76327cf",
+                "methodKind": "instance",
+                "description": "Retrieves the resource set for a particular culture.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Globalization#/components/schemas/CultureInfo",
+                      "name": "culture",
+                      "isOptional": false,
+                      "instanceGuid": "b8c207b6-61d6-44c0-94ac-17b112458401"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "createIfNotExists",
+                      "isOptional": false,
+                      "instanceGuid": "5100d863-2ccc-464b-9e3c-a8f6dd41dfc1"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "tryParents",
+                      "isOptional": false,
+                      "instanceGuid": "381e2ece-b564-45a1-9b06-b1e5ee1fbadd"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2f70b249-692c-45e7-bdd9-72dbd2661cc6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Resources#/components/schemas/ResourceSet"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetString": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceManager"
+            },
+            "overloads": {
+              "8ffbf577": {
+                "name": "GetString",
+                "overloadId": "8ffbf577",
+                "methodKind": "instance",
+                "description": "Returns the specified string resource for the specified culture or current UI culture.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "name",
+                      "isOptional": false,
+                      "instanceGuid": "3c3eea46-ddac-4095-ac0f-3ec574e51573"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7a861697-9d01-4c63-9fb3-4e9618ca0bba",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              },
+              "e299b7f8": {
+                "name": "GetString",
+                "overloadId": "e299b7f8",
+                "methodKind": "instance",
+                "description": "Returns the specified string resource for the specified culture or current UI culture.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "name",
+                      "isOptional": false,
+                      "instanceGuid": "7f16cb59-aff1-4c34-8a7d-70d7e639c800"
+                    },
+                    {
+                      "$ref": "System.Globalization#/components/schemas/CultureInfo",
+                      "name": "culture",
+                      "isOptional": false,
+                      "instanceGuid": "b2c6ed46-acd4-4f1e-903e-05666174b6dd"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "71b08a94-34b3-4d06-8e5f-7e2c86184212",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetObject": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceManager"
+            },
+            "overloads": {
+              "6324aec6": {
+                "name": "GetObject",
+                "overloadId": "6324aec6",
+                "methodKind": "instance",
+                "description": "Returns the value of the specified non-string resource for the current culture.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "name",
+                      "isOptional": false,
+                      "instanceGuid": "9a024442-3ae9-44ad-9aeb-97b4c4c15fce"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "efe67f57-10a7-4f6e-a2bc-98ba7c517325",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Object"
+                    }
+                  ]
+                }
+              },
+              "d22b3018": {
+                "name": "GetObject",
+                "overloadId": "d22b3018",
+                "methodKind": "instance",
+                "description": "Returns the value of the specified non-string resource for the current culture.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "name",
+                      "isOptional": false,
+                      "instanceGuid": "aedecdc2-88b9-41c2-8653-5ea104e319b9"
+                    },
+                    {
+                      "$ref": "System.Globalization#/components/schemas/CultureInfo",
+                      "name": "culture",
+                      "isOptional": false,
+                      "instanceGuid": "c0dd22e0-25bd-4882-b9c7-229bc52a7e38"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "05706049-a2e1-4e29-a3ab-92717ff91f0c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Object"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetStream": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceManager"
+            },
+            "overloads": {
+              "c967a3ce": {
+                "name": "GetStream",
+                "overloadId": "c967a3ce",
+                "methodKind": "instance",
+                "description": "Returns an unmanaged memory stream object from a specified resource.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "name",
+                      "isOptional": false,
+                      "instanceGuid": "d48dd44b-7f11-43d2-90f5-e91fa50f4e05"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8ebd6f69-67b3-4734-aab3-cd9cf9d3d349",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.IO#/components/schemas/UnmanagedMemoryStream"
+                    }
+                  ]
+                }
+              },
+              "9870b277": {
+                "name": "GetStream",
+                "overloadId": "9870b277",
+                "methodKind": "instance",
+                "description": "Returns an unmanaged memory stream object from a specified resource.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "name",
+                      "isOptional": false,
+                      "instanceGuid": "07e09910-7768-4f6a-83ab-c365c2d37c99"
+                    },
+                    {
+                      "$ref": "System.Globalization#/components/schemas/CultureInfo",
+                      "name": "culture",
+                      "isOptional": false,
+                      "instanceGuid": "8e835d64-ce72-4301-a153-e2e30e0f7742"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d479c419-57c2-4972-baac-5cb95e26451b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.IO#/components/schemas/UnmanagedMemoryStream"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceManager"
+            },
+            "overloads": {
+              "125dd89e": {
+                "name": "GetType",
+                "overloadId": "125dd89e",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5f5f6e34-e336-49ac-8e4c-376c6d647c0f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceManager"
+            },
+            "overloads": {
+              "ceac4363": {
+                "name": "ToString",
+                "overloadId": "ceac4363",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b0d7edf0-0f86-4724-9e16-749794a84ed9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceManager"
+            },
+            "overloads": {
+              "ea624a65": {
+                "name": "Equals",
+                "overloadId": "ea624a65",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "6435f767-bb32-4497-8a74-c36ccfc8ae2a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "f2f508d1-0bab-444b-b4ef-0b57ff681a21",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceManager"
+            },
+            "overloads": {
+              "b7a7cb5c": {
+                "name": "GetHashCode",
+                "overloadId": "b7a7cb5c",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e111853a-4e92-44ac-99b7-b6a89b626ca2",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Resources",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ResourceReader": {
+        "title": "ResourceReader",
+        "type": "object",
+        "description": "Enumerates the resources in a binary resources (.resources) file by reading sequential resource name/value pairs.",
+        "x-methods": {
+          "GetResourceData": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceReader"
+            },
+            "overloads": {
+              "bf76e2c1": {
+                "name": "GetResourceData",
+                "overloadId": "bf76e2c1",
+                "methodKind": "instance",
+                "description": "Retrieves the type name and data of a named resource from an open resource file or stream.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "resourceName",
+                      "isOptional": false,
+                      "instanceGuid": "2ef0b58b-d557-4fc9-953f-83d58f00934a"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/String\u0026",
+                      "name": "resourceType",
+                      "isOptional": false,
+                      "instanceGuid": "0e440a3e-2716-4e99-8b32-e19bb9203353"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Byte[]\u0026",
+                      "name": "resourceData",
+                      "isOptional": false,
+                      "instanceGuid": "40595911-8300-41ea-bd65-8f5746d2d423"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d9cd8bd5-d5e3-4c58-b81d-2af3f33f2533",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Close": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceReader"
+            },
+            "overloads": {
+              "512c2d9f": {
+                "name": "Close",
+                "overloadId": "512c2d9f",
+                "methodKind": "instance",
+                "description": "Releases all operating system resources associated with this  object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "dc860d7c-a566-482c-988d-cafbd06a28b9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Dispose": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceReader"
+            },
+            "overloads": {
+              "ad13e52e": {
+                "name": "Dispose",
+                "overloadId": "ad13e52e",
+                "methodKind": "instance",
+                "description": "Releases all resources used by the current instance of the  class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0b678911-b4e2-40fc-8e01-4b99199b8bd4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceReader"
+            },
+            "overloads": {
+              "95ba0f73": {
+                "name": "GetEnumerator",
+                "overloadId": "95ba0f73",
+                "methodKind": "instance",
+                "description": "Returns an enumerator for this  object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "eb23b965-6c9c-4841-b564-f4645d171707",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/IDictionaryEnumerator"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceReader"
+            },
+            "overloads": {
+              "3c1ccaea": {
+                "name": "GetType",
+                "overloadId": "3c1ccaea",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a877afe8-e156-4ac9-a027-8dffc15187aa",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceReader"
+            },
+            "overloads": {
+              "dd83727e": {
+                "name": "ToString",
+                "overloadId": "dd83727e",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5437abc6-caf2-4be0-862e-dba530bb3535",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceReader"
+            },
+            "overloads": {
+              "e74f3890": {
+                "name": "Equals",
+                "overloadId": "e74f3890",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "92bd07b8-cbb1-4537-b8ce-2186939d00ca"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "cd94e485-b935-4c32-9925-50ebef9c02f7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceReader"
+            },
+            "overloads": {
+              "5bd060fb": {
+                "name": "GetHashCode",
+                "overloadId": "5bd060fb",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "00067bcb-c5fc-40d5-aa59-303cdebfa7c0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Resources",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ResourceSet": {
+        "title": "ResourceSet",
+        "type": "object",
+        "description": "Stores all the resources localized for one particular culture, ignoring all other cultures, including any fallback rules.",
+        "x-methods": {
+          "Close": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceSet"
+            },
+            "overloads": {
+              "c4d642de": {
+                "name": "Close",
+                "overloadId": "c4d642de",
+                "methodKind": "instance",
+                "description": "Closes and releases any resources used by this .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "df2020a4-28ac-43c4-ac71-c55925257041",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Dispose": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceSet"
+            },
+            "overloads": {
+              "c6df47cf": {
+                "name": "Dispose",
+                "overloadId": "c6df47cf",
+                "methodKind": "instance",
+                "description": "Releases resources used by the current  instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "375ba66f-ef73-4aed-a0a9-84230380fcf4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetDefaultReader": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceSet"
+            },
+            "overloads": {
+              "ed0dc25b": {
+                "name": "GetDefaultReader",
+                "overloadId": "ed0dc25b",
+                "methodKind": "instance",
+                "description": "Returns the preferred resource reader class for this kind of .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "810b69cc-1ea8-4a2b-84b9-6a1d3b49d7c3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetDefaultWriter": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceSet"
+            },
+            "overloads": {
+              "f6ea1ad3": {
+                "name": "GetDefaultWriter",
+                "overloadId": "f6ea1ad3",
+                "methodKind": "instance",
+                "description": "Returns the preferred resource writer class for this kind of .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ec13c190-bd79-4a3a-9649-35f9b12f1cc0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceSet"
+            },
+            "overloads": {
+              "e7a0ee13": {
+                "name": "GetEnumerator",
+                "overloadId": "e7a0ee13",
+                "methodKind": "instance",
+                "description": "Returns an  that can iterate through the .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "8a4dfcd1-a464-462d-842a-7f5a4849504e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/IDictionaryEnumerator"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetString": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceSet"
+            },
+            "overloads": {
+              "45b22264": {
+                "name": "GetString",
+                "overloadId": "45b22264",
+                "methodKind": "instance",
+                "description": "Returns a  resource with a specified name.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "name",
+                      "isOptional": false,
+                      "instanceGuid": "c4b24f23-6d00-4c4d-b2ba-49bb2678821c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "59be47d7-ea18-415f-8356-de3af340ee8b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              },
+              "d65fcddb": {
+                "name": "GetString",
+                "overloadId": "d65fcddb",
+                "methodKind": "instance",
+                "description": "Returns a  resource with a specified name.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "name",
+                      "isOptional": false,
+                      "instanceGuid": "7cefc285-2854-4020-9260-1bc54558b062"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "ignoreCase",
+                      "isOptional": false,
+                      "instanceGuid": "a1e43981-8eb9-4fd2-bbab-e098e2cf2ca2"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "509e7200-0160-411e-875a-db510010e95d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetObject": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceSet"
+            },
+            "overloads": {
+              "93878054": {
+                "name": "GetObject",
+                "overloadId": "93878054",
+                "methodKind": "instance",
+                "description": "Returns a resource object with the specified name.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "name",
+                      "isOptional": false,
+                      "instanceGuid": "b83afc7e-5443-4181-acfa-171e24a7bf67"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2a641b83-0940-41a7-8f73-948978344341",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Object"
+                    }
+                  ]
+                }
+              },
+              "56d72899": {
+                "name": "GetObject",
+                "overloadId": "56d72899",
+                "methodKind": "instance",
+                "description": "Returns a resource object with the specified name.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "name",
+                      "isOptional": false,
+                      "instanceGuid": "65d284c8-f1cb-4321-9388-a314939b51f7"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "ignoreCase",
+                      "isOptional": false,
+                      "instanceGuid": "9c158ba2-e1de-489c-ac1a-2d1b2fdeddf8"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d74203b2-955c-41c3-86ee-7732639100ce",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Object"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceSet"
+            },
+            "overloads": {
+              "bc24d117": {
+                "name": "GetType",
+                "overloadId": "bc24d117",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7fa732a1-adf2-45de-9849-87c44d69228f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceSet"
+            },
+            "overloads": {
+              "b20a11bb": {
+                "name": "ToString",
+                "overloadId": "b20a11bb",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3cf8ea66-d211-4be8-97dc-ef8bdd1ebe23",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceSet"
+            },
+            "overloads": {
+              "34504e49": {
+                "name": "Equals",
+                "overloadId": "34504e49",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "5208e893-29ab-4d13-8434-e1cf04dd9e8d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ee950d43-0313-4eb4-99a0-d7b232de298d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/ResourceSet"
+            },
+            "overloads": {
+              "ca1471e4": {
+                "name": "GetHashCode",
+                "overloadId": "ca1471e4",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ef0b9d4f-1d2f-401e-9104-ae515e851cb5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Resources",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SatelliteContractVersionAttribute": {
+        "title": "SatelliteContractVersionAttribute",
+        "type": "object",
+        "description": "Instructs a  object to ask for a particular version of a satellite assembly.",
+        "properties": {
+          "Version": {
+            "type": "string"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/SatelliteContractVersionAttribute"
+            },
+            "overloads": {
+              "dd2a7c0e": {
+                "name": "Equals",
+                "overloadId": "dd2a7c0e",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "1ff944f0-456a-4552-84a3-3bc07557e9d5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "9eaf51f7-7d1a-4d6e-a896-76c3d3115d5e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/SatelliteContractVersionAttribute"
+            },
+            "overloads": {
+              "145913e3": {
+                "name": "GetHashCode",
+                "overloadId": "145913e3",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3b877fc3-26a9-457c-a2d0-222d97351ee4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/SatelliteContractVersionAttribute"
+            },
+            "overloads": {
+              "556c0464": {
+                "name": "Match",
+                "overloadId": "556c0464",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "5e035893-97a1-4a3c-9d67-fb95812012bc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "754bca59-4bfa-4889-8240-d2f13672996b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/SatelliteContractVersionAttribute"
+            },
+            "overloads": {
+              "001d610e": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "001d610e",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c6e20716-43a9-4838-adaa-176760268535",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/SatelliteContractVersionAttribute"
+            },
+            "overloads": {
+              "d420835c": {
+                "name": "GetType",
+                "overloadId": "d420835c",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "8936325a-b4e4-4dbf-9b11-a8e29d264409",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Resources#/components/schemas/SatelliteContractVersionAttribute"
+            },
+            "overloads": {
+              "13d0a954": {
+                "name": "ToString",
+                "overloadId": "13d0a954",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3f5b1c2a-e331-40c8-923c-4a43d04c887c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Resources",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "UltimateResourceFallbackLocation": {
+        "$ref": "System.Resources#/components/schemas/UltimateResourceFallbackLocation",
+        "x-namespace": "System.Resources",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

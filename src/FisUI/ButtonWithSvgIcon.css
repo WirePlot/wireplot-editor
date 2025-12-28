@@ -1,0 +1,46 @@
+.button-with-svg-icon {
+    color: var(--font-color);
+    border: 2px solid var(--background-color-brighter);
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    background-color: #2a3549;
+    outline: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-with-svg-icon:hover {
+    background-color: var(--background-color-hover);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.button-with-svg-icon:active {
+    background-color: var(--background-color-active);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.button-with-svg-icon-disabled {
+    color: var(--font-color);
+    border: 2px solid var(--background-color-brighter);
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0px;
+    width: 28px;
+    height: 28px;
+    background-color: #2a3549;
+    outline: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0.6;
+    cursor: not-allowed;
+}

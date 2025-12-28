@@ -1,0 +1,1013 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Collections.ObjectModel",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "ReadOnlyCollection\u00601": {
+        "title": "ReadOnlyCollection\u00601",
+        "type": "object",
+        "description": "Provides the base class for a generic read-only collection.",
+        "properties": {
+          "Count": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-methods": {
+          "Contains": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection\u00601"
+            },
+            "overloads": {
+              "f55299de": {
+                "name": "Contains",
+                "overloadId": "f55299de",
+                "methodKind": "instance",
+                "description": "Determines whether an element is in the .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.ObjectModel#/components/schemas/T",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "2476b958-ad9c-4dc2-bb3d-adf6857c76c5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "cd788bb2-566a-4105-9593-5dc8b3fe0a5a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "CopyTo": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection\u00601"
+            },
+            "overloads": {
+              "d61b5ad2": {
+                "name": "CopyTo",
+                "overloadId": "d61b5ad2",
+                "methodKind": "instance",
+                "description": "Copies the entire  to a compatible one-dimensional , starting at the specified index of the target array.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.ObjectModel#/components/schemas/T[]",
+                      "name": "array",
+                      "isOptional": false,
+                      "instanceGuid": "f81c690d-238d-45d5-a6a5-6de6a14e9812"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "index",
+                      "isOptional": false,
+                      "instanceGuid": "447cbfbc-6075-4b4c-8aed-cd8f17c1d7ea"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "38c85bc7-babc-4b58-adce-a3f8ca9c7890",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection\u00601"
+            },
+            "overloads": {
+              "03dee165": {
+                "name": "GetEnumerator",
+                "overloadId": "03dee165",
+                "methodKind": "instance",
+                "description": "Returns an enumerator that iterates through the .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e7291d18-cb71-4015-a922-28ad8196a755",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections.Generic#/components/schemas/IEnumerator\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IndexOf": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection\u00601"
+            },
+            "overloads": {
+              "00af0788": {
+                "name": "IndexOf",
+                "overloadId": "00af0788",
+                "methodKind": "instance",
+                "description": "Searches for the specified object and returns the zero-based index of the first occurrence within the entire .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.ObjectModel#/components/schemas/T",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "f813e48d-a81d-41e5-8758-db80f39c1380"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2482c927-d0af-45aa-a11e-345cc237b0f0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection\u00601"
+            },
+            "overloads": {
+              "49dffd40": {
+                "name": "GetType",
+                "overloadId": "49dffd40",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ad664f5d-1664-426e-b059-f9b42119ecae",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection\u00601"
+            },
+            "overloads": {
+              "1d754c71": {
+                "name": "ToString",
+                "overloadId": "1d754c71",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7e3afb35-f5e5-41f4-953d-3662781c496b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection\u00601"
+            },
+            "overloads": {
+              "484afb3c": {
+                "name": "Equals",
+                "overloadId": "484afb3c",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "afddca78-4987-4dd6-841c-8b4a0af430fd"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "e3bd1378-53d3-4805-987d-32a791305c34",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection\u00601"
+            },
+            "overloads": {
+              "ece5580f": {
+                "name": "GetHashCode",
+                "overloadId": "ece5580f",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0f1eb660-39c9-4f9e-a8d8-02f8084b5f30",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections.ObjectModel",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ReadOnlyCollection": {
+        "title": "ReadOnlyCollection",
+        "type": "object",
+        "description": "Provides static methods for read-only collections.",
+        "x-methods": {
+          "CreateCollection": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection"
+            },
+            "overloads": {
+              "a782463a": {
+                "name": "CreateCollection",
+                "overloadId": "a782463a",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "values",
+                      "isOptional": false,
+                      "instanceGuid": "a5b7d10a-27d6-44fb-894b-4b31f39a514e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "498087bb-997d-4887-88ca-217b00969c92",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "CreateSet": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection"
+            },
+            "overloads": {
+              "6e24c294": {
+                "name": "CreateSet",
+                "overloadId": "6e24c294",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "values",
+                      "isOptional": false,
+                      "instanceGuid": "92d45c3f-de08-49ad-adea-fe16abaea956"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "3e4f3a6d-55d2-43a8-bb92-d6f838169afe",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlySet\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection"
+            },
+            "overloads": {
+              "1e4bc5e8": {
+                "name": "GetType",
+                "overloadId": "1e4bc5e8",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3fa2e728-93bc-4a10-8f1f-42e03298d82e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection"
+            },
+            "overloads": {
+              "954d36d3": {
+                "name": "ToString",
+                "overloadId": "954d36d3",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "df83dfc4-dcb5-48ad-8b47-ca83c2571b07",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection"
+            },
+            "overloads": {
+              "b5308265": {
+                "name": "Equals",
+                "overloadId": "b5308265",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "19943402-6425-48db-8972-c91116380004"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4310a5f9-bdd7-4742-a7ec-d1d2a20cf1ca",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyCollection"
+            },
+            "overloads": {
+              "822f4a87": {
+                "name": "GetHashCode",
+                "overloadId": "822f4a87",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "37c23c28-cb6d-4355-9793-e60da32f2399",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections.ObjectModel",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ReadOnlyDictionary\u00602": {
+        "title": "ReadOnlyDictionary\u00602",
+        "type": "object",
+        "description": "Represents a read-only, generic collection of key/value pairs.",
+        "properties": {
+          "Keys": {
+            "$ref": "System.Collections.ObjectModel#/components/schemas/KeyCollection"
+          },
+          "Values": {
+            "$ref": "System.Collections.ObjectModel#/components/schemas/ValueCollection"
+          },
+          "Count": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-methods": {
+          "ContainsKey": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyDictionary\u00602"
+            },
+            "overloads": {
+              "abd95123": {
+                "name": "ContainsKey",
+                "overloadId": "abd95123",
+                "methodKind": "instance",
+                "description": "Determines whether the dictionary contains an element that has the specified key.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.ObjectModel#/components/schemas/TKey",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "bb389cbd-70be-40b7-8826-835c82ab5047"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0bcc4235-9dab-4a84-ac52-00542bcb23ce",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryGetValue": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyDictionary\u00602"
+            },
+            "overloads": {
+              "b0b18e70": {
+                "name": "TryGetValue",
+                "overloadId": "b0b18e70",
+                "methodKind": "instance",
+                "description": "Retrieves the value that is associated with the specified key.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.ObjectModel#/components/schemas/TKey",
+                      "name": "key",
+                      "isOptional": false,
+                      "instanceGuid": "e4d0efc1-2a6f-42d6-bf6c-894df98b5c37"
+                    },
+                    {
+                      "$ref": "System.Collections.ObjectModel#/components/schemas/TValue\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "524f233c-dc36-4da6-9740-512dfc3c6c7a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "18bfefa1-8117-40df-82db-94098ce65d4b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyDictionary\u00602"
+            },
+            "overloads": {
+              "eb538c97": {
+                "name": "GetEnumerator",
+                "overloadId": "eb538c97",
+                "methodKind": "instance",
+                "description": "Returns an enumerator that iterates through the .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3835edfa-584a-4891-856a-bdf5e4fc0455",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections.Generic#/components/schemas/IEnumerator\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyDictionary\u00602"
+            },
+            "overloads": {
+              "85875660": {
+                "name": "GetType",
+                "overloadId": "85875660",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "26ef7ada-5fd5-4a1b-8ada-f49b0ed21441",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyDictionary\u00602"
+            },
+            "overloads": {
+              "3013c8a8": {
+                "name": "ToString",
+                "overloadId": "3013c8a8",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b1148784-3e1a-41bf-8359-becbe1db75c9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyDictionary\u00602"
+            },
+            "overloads": {
+              "3bb09338": {
+                "name": "Equals",
+                "overloadId": "3bb09338",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "c8432bec-5fa0-4a3f-81c3-568f6395bf8c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "fc1972f3-0dc4-446a-b14d-91b0232425a5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlyDictionary\u00602"
+            },
+            "overloads": {
+              "8ebfc0a9": {
+                "name": "GetHashCode",
+                "overloadId": "8ebfc0a9",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d3514b11-deb4-44fd-98a8-11be6dccb2d7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections.ObjectModel",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "KeyCollection": {
+        "$ref": "System.Collections.ObjectModel#/components/schemas/KeyCollection",
+        "x-namespace": "System.Collections.ObjectModel",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ValueCollection": {
+        "$ref": "System.Collections.ObjectModel#/components/schemas/ValueCollection",
+        "x-namespace": "System.Collections.ObjectModel",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ReadOnlySet\u00601": {
+        "title": "ReadOnlySet\u00601",
+        "type": "object",
+        "description": "Represents a read-only, generic set of values.",
+        "properties": {
+          "Count": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-methods": {
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlySet\u00601"
+            },
+            "overloads": {
+              "e56b5323": {
+                "name": "GetEnumerator",
+                "overloadId": "e56b5323",
+                "methodKind": "instance",
+                "description": "Returns an enumerator that iterates through the collection.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "bd37ca27-073a-4d86-ab0a-59e7e0a82ddc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections.Generic#/components/schemas/IEnumerator\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Contains": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlySet\u00601"
+            },
+            "overloads": {
+              "2d2297a2": {
+                "name": "Contains",
+                "overloadId": "2d2297a2",
+                "methodKind": "instance",
+                "description": "Determines whether the  contains a specific value.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.ObjectModel#/components/schemas/T",
+                      "name": "item",
+                      "isOptional": false,
+                      "instanceGuid": "ad951cf7-3434-4de1-94b0-f0cb641cbcf7"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "b4e65217-f866-4ea8-869c-e11757c75c08",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsProperSubsetOf": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlySet\u00601"
+            },
+            "overloads": {
+              "35686589": {
+                "name": "IsProperSubsetOf",
+                "overloadId": "35686589",
+                "methodKind": "instance",
+                "description": "Determines whether the current set is a proper (strict) subset of a specified collection.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.Generic#/components/schemas/IEnumerable\u00601",
+                      "name": "other",
+                      "isOptional": false,
+                      "instanceGuid": "37891bf2-04b1-4394-a7ff-80d2c6ee759a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "3a3fd5ed-5254-48b4-8ada-6a162b1e1122",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsProperSupersetOf": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlySet\u00601"
+            },
+            "overloads": {
+              "b53f94a9": {
+                "name": "IsProperSupersetOf",
+                "overloadId": "b53f94a9",
+                "methodKind": "instance",
+                "description": "Determines whether the current set is a proper (strict) superset of a specified collection.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.Generic#/components/schemas/IEnumerable\u00601",
+                      "name": "other",
+                      "isOptional": false,
+                      "instanceGuid": "a8ddba7b-9ae8-4d4c-b727-342f5c1d9a6a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "e1b5136d-45c7-4e04-bbe0-2e9feaa913ba",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsSubsetOf": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlySet\u00601"
+            },
+            "overloads": {
+              "d85e6d04": {
+                "name": "IsSubsetOf",
+                "overloadId": "d85e6d04",
+                "methodKind": "instance",
+                "description": "Determines whether the current set is a subset of a specified collection.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.Generic#/components/schemas/IEnumerable\u00601",
+                      "name": "other",
+                      "isOptional": false,
+                      "instanceGuid": "9d63e30f-ea57-400f-83a8-988c893cd7d1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "21f1e3e8-8ed1-4ba1-966b-6f2ff711f719",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsSupersetOf": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlySet\u00601"
+            },
+            "overloads": {
+              "1d937628": {
+                "name": "IsSupersetOf",
+                "overloadId": "1d937628",
+                "methodKind": "instance",
+                "description": "Determines whether the current set is a super set of a specified collection.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.Generic#/components/schemas/IEnumerable\u00601",
+                      "name": "other",
+                      "isOptional": false,
+                      "instanceGuid": "2c49734a-218b-4ee0-b69e-409b51b67230"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0956f94a-e421-458b-93fe-c52c7d0f79fa",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Overlaps": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlySet\u00601"
+            },
+            "overloads": {
+              "2236afe2": {
+                "name": "Overlaps",
+                "overloadId": "2236afe2",
+                "methodKind": "instance",
+                "description": "Determines whether the current set overlaps with the specified collection.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.Generic#/components/schemas/IEnumerable\u00601",
+                      "name": "other",
+                      "isOptional": false,
+                      "instanceGuid": "dfa4ac9f-f4f3-486a-941a-1b3cbccbe651"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "258ccac5-d434-4215-8ff0-6a7a9b1dd2dc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "SetEquals": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlySet\u00601"
+            },
+            "overloads": {
+              "a084825c": {
+                "name": "SetEquals",
+                "overloadId": "a084825c",
+                "methodKind": "instance",
+                "description": "Determines whether the current set and the specified collection contain the same elements.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.Generic#/components/schemas/IEnumerable\u00601",
+                      "name": "other",
+                      "isOptional": false,
+                      "instanceGuid": "f4b52b39-c330-4c3f-a8b4-3b603682612a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "3f3fcf39-1ebf-4660-94ca-303227d93ede",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlySet\u00601"
+            },
+            "overloads": {
+              "cb7e51fb": {
+                "name": "GetType",
+                "overloadId": "cb7e51fb",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "defe6837-3981-4dc1-bbf5-ff35159b0c11",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlySet\u00601"
+            },
+            "overloads": {
+              "fee958b0": {
+                "name": "ToString",
+                "overloadId": "fee958b0",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d63933c5-f310-426e-8315-a2cd00c3dba2",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlySet\u00601"
+            },
+            "overloads": {
+              "65fb3954": {
+                "name": "Equals",
+                "overloadId": "65fb3954",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "39a27d0c-e3c1-4d6a-869a-493022a34b39"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "99bf46a5-0054-4e26-9876-f6b15eca118a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Collections.ObjectModel#/components/schemas/ReadOnlySet\u00601"
+            },
+            "overloads": {
+              "93f734ca": {
+                "name": "GetHashCode",
+                "overloadId": "93f734ca",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "fdc337ed-3488-4435-99fa-cff3340de688",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections.ObjectModel",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.property-content>*:nth-child(odd) {
+  background-color: var(--background-color-brighter);
+}
+
+.property-content>*:nth-child(even) {
+  background-color: var(--background-color-darker)
+}

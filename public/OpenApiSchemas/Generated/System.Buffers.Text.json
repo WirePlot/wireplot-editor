@@ -1,0 +1,2290 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Buffers.Text",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "Base64": {
+        "title": "Base64",
+        "type": "object",
+        "description": "Converts between binary data and UTF-8 encoded text that is represented in base 64.",
+        "x-methods": {
+          "EncodeToUtf8": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64"
+            },
+            "overloads": {
+              "c652672b": {
+                "name": "EncodeToUtf8",
+                "overloadId": "c652672b",
+                "methodKind": "static",
+                "description": "Encodes the span of binary data into UTF-8 encoded text represented as base 64.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "bytes",
+                      "isOptional": false,
+                      "instanceGuid": "b2ea4ccf-7ea9-4505-b67e-d67d329905e8"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "utf8",
+                      "isOptional": false,
+                      "instanceGuid": "25acb3da-5da2-4aad-a1a9-9e5645b03ad1"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "f9f6b378-8070-411d-88ee-b2cf9860551e"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "5fe073e4-d9b6-4b16-bff9-fee1faa362aa"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "isFinalBlock",
+                      "isOptional": true,
+                      "instanceGuid": "b7783fd0-70d5-4a9f-be91-9563451d20d2"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "01f57ab7-6079-4ba7-af53-b29ecc14d041",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/OperationStatus"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetMaxEncodedToUtf8Length": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64"
+            },
+            "overloads": {
+              "7d4677ad": {
+                "name": "GetMaxEncodedToUtf8Length",
+                "overloadId": "7d4677ad",
+                "methodKind": "static",
+                "description": "Returns the maximum length (in bytes) of the result if you were to encode binary data within a byte span with the specified length.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "length",
+                      "isOptional": false,
+                      "instanceGuid": "bda67a67-8826-4e6d-8275-3959db199378"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "73aadbec-2f79-4f1c-b7f2-36fddaa62bf8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "EncodeToUtf8InPlace": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64"
+            },
+            "overloads": {
+              "08a5980d": {
+                "name": "EncodeToUtf8InPlace",
+                "overloadId": "08a5980d",
+                "methodKind": "static",
+                "description": "Encodes the span of binary data (in-place) into UTF-8 encoded text represented as base 64. The encoded text output is larger than the binary data contained in the input (the operation inflates the data).",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "buffer",
+                      "isOptional": false,
+                      "instanceGuid": "23702a37-0d68-4e89-aef5-edd51623f359"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "dataLength",
+                      "isOptional": false,
+                      "instanceGuid": "0459b8f3-7911-4286-ba88-be81d28129ee"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "838bee55-ad14-43fe-8d5c-14036e6a5b44"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8db26394-8eec-44c9-8f5d-29920055e5f5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/OperationStatus"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "DecodeFromUtf8": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64"
+            },
+            "overloads": {
+              "f5ffba8d": {
+                "name": "DecodeFromUtf8",
+                "overloadId": "f5ffba8d",
+                "methodKind": "static",
+                "description": "Decodes the span of UTF-8 encoded text represented as base 64 into binary data. If the input is not a multiple of 4, it will decode as much as it can, to the closest multiple of 4.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "utf8",
+                      "isOptional": false,
+                      "instanceGuid": "81716bb4-5281-4f1b-abd6-9d805e85e29b"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "bytes",
+                      "isOptional": false,
+                      "instanceGuid": "4525d3f7-8bc1-4f7b-a8f2-5945ed8bd0f6"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "1331ff43-3e2b-40f1-8f67-8da7dd6b9d51"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "bb64a815-31b2-4ae2-8429-ff11bdc11f69"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "isFinalBlock",
+                      "isOptional": true,
+                      "instanceGuid": "106acd82-b39d-47fe-9839-f4145905d334"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0d5fe6b2-148d-41d0-a2d3-411c7d5dc643",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/OperationStatus"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetMaxDecodedFromUtf8Length": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64"
+            },
+            "overloads": {
+              "5b7d758c": {
+                "name": "GetMaxDecodedFromUtf8Length",
+                "overloadId": "5b7d758c",
+                "methodKind": "static",
+                "description": "Returns the maximum length (in bytes) of the result if you were to decode base-64 encoded text within a byte span with the specified length.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "length",
+                      "isOptional": false,
+                      "instanceGuid": "98d70c48-827d-4a2e-85f4-5c8f115b1c42"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "c794a338-ea06-40eb-9b85-c04324fabb5c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "DecodeFromUtf8InPlace": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64"
+            },
+            "overloads": {
+              "146dc55d": {
+                "name": "DecodeFromUtf8InPlace",
+                "overloadId": "146dc55d",
+                "methodKind": "static",
+                "description": "Decodes the span of UTF-8 encoded text in base 64 (in-place) into binary data. The decoded binary output is smaller than the text data contained in the input (the operation deflates the data). If the input is not a multiple of 4, the method will not decode any data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "buffer",
+                      "isOptional": false,
+                      "instanceGuid": "026a9013-e0af-46e1-a7a5-ccae331b748d"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "c3009ea3-333b-4afa-b74c-cc3222fcd611"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "35b295e6-092f-400f-ad06-7948f4d45c0f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/OperationStatus"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsValid": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64"
+            },
+            "overloads": {
+              "f556da29": {
+                "name": "IsValid",
+                "overloadId": "f556da29",
+                "methodKind": "static",
+                "description": "Validates that the specified span of UTF-8 text is comprised of valid base-64 encoded data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "base64Text",
+                      "isOptional": false,
+                      "instanceGuid": "4edaab5e-9996-49cc-ae51-2dfe0999e331"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "52227c22-b506-45d4-94e6-ccde6209d60a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "9e632079": {
+                "name": "IsValid",
+                "overloadId": "9e632079",
+                "methodKind": "static",
+                "description": "Validates that the specified span of UTF-8 text is comprised of valid base-64 encoded data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "base64Text",
+                      "isOptional": false,
+                      "instanceGuid": "aec7c5a5-8388-4210-87e9-c2c7ea4b1f2e"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "decodedLength",
+                      "isOptional": false,
+                      "instanceGuid": "9735eb29-dbbe-4e92-9c9f-6d259fb80154"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "215262cc-f4a6-4f67-bb11-3cf771a6f2bd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "79c45e94": {
+                "name": "IsValid",
+                "overloadId": "79c45e94",
+                "methodKind": "static",
+                "description": "Validates that the specified span of UTF-8 text is comprised of valid base-64 encoded data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "base64TextUtf8",
+                      "isOptional": false,
+                      "instanceGuid": "585c29f9-afc5-4e85-a170-767657be111d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2166ea35-5468-4305-9de4-7aaecbf4fc24",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "6850e4e9": {
+                "name": "IsValid",
+                "overloadId": "6850e4e9",
+                "methodKind": "static",
+                "description": "Validates that the specified span of UTF-8 text is comprised of valid base-64 encoded data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "base64TextUtf8",
+                      "isOptional": false,
+                      "instanceGuid": "96657ebc-af60-4ab4-a84c-f663fe200be8"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "decodedLength",
+                      "isOptional": false,
+                      "instanceGuid": "e9aab75f-3f3e-441a-9dff-35aa2d3f6d2e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "85cfed28-1e26-49bd-9ac5-a6cb6368cc97",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64"
+            },
+            "overloads": {
+              "819468f2": {
+                "name": "GetType",
+                "overloadId": "819468f2",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "11e1c125-bd14-425b-ab68-0670d7c1c02e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64"
+            },
+            "overloads": {
+              "42944487": {
+                "name": "ToString",
+                "overloadId": "42944487",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a78904ae-4306-41c7-88ad-331199503974",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64"
+            },
+            "overloads": {
+              "dd41210b": {
+                "name": "Equals",
+                "overloadId": "dd41210b",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "ddb9acd9-1dc5-45e4-bd5e-1dc5350e996c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "b1d9eaf6-4ee1-42dc-a9ef-08808ff25a46",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64"
+            },
+            "overloads": {
+              "bfe2ec05": {
+                "name": "GetHashCode",
+                "overloadId": "bfe2ec05",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "cba33f1b-6cf8-4e2c-88bd-9a5e2a8a4324",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers.Text",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "Base64Url": {
+        "title": "Base64Url",
+        "type": "object",
+        "description": "Converts between binary data and URL-safe ASCII encoded text that\u0027s represented in Base64Url characters.",
+        "x-methods": {
+          "GetMaxDecodedLength": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "5cdaa6c4": {
+                "name": "GetMaxDecodedLength",
+                "overloadId": "5cdaa6c4",
+                "methodKind": "static",
+                "description": "Returns the maximum length (in bytes) of the result if you were to decode base 64 encoded text from a span of size .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "base64Length",
+                      "isOptional": false,
+                      "instanceGuid": "beb7ac10-115d-492d-88aa-e80d3e81c2b1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "cd08b94e-0fda-40e9-9e9f-596c0da75e41",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "DecodeFromUtf8": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "80f88877": {
+                "name": "DecodeFromUtf8",
+                "overloadId": "80f88877",
+                "methodKind": "static",
+                "description": "Decodes the span of UTF-8 encoded text represented as Base64Url into binary data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "0d0e6af4-449b-4d75-a253-355d7e472563"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "83d416f7-a56f-410d-9934-f9c112ed6c04"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "3c273965-db53-46cf-91a6-6af66ff89100"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "eb440395-1b65-48e9-8586-7fb95f70ebfa"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "isFinalBlock",
+                      "isOptional": true,
+                      "instanceGuid": "62a8a42f-aa7c-41b8-abcd-3630f5866274"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "9ef5859c-dc9f-4867-a7e7-dc95beb77a2e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/OperationStatus"
+                    }
+                  ]
+                }
+              },
+              "62ab62e2": {
+                "name": "DecodeFromUtf8",
+                "overloadId": "62ab62e2",
+                "methodKind": "static",
+                "description": "Decodes the span of UTF-8 encoded text represented as Base64Url into binary data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "1579b5fc-0a1e-426e-bc8a-4a22738a9cb6"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "b260bba7-77f6-49a5-af6b-69dc758341d8"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8db570d4-f55e-4edc-b2e4-c77bbc0c1cf6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              },
+              "96ced928": {
+                "name": "DecodeFromUtf8",
+                "overloadId": "96ced928",
+                "methodKind": "static",
+                "description": "Decodes the span of UTF-8 encoded text represented as Base64Url into binary data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "9e022f73-5941-40d8-9e9d-8d8807c5cecc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "af20eb9b-3fe7-43f4-94ef-75fe45c3b388",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Byte[]"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "DecodeFromUtf8InPlace": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "6dbd007c": {
+                "name": "DecodeFromUtf8InPlace",
+                "overloadId": "6dbd007c",
+                "methodKind": "static",
+                "description": "Decodes the span of UTF-8 encoded text in Base64Url into binary data, in-place.The decoded binary output is smaller than the text data contained in the input (the operation deflates the data).",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "buffer",
+                      "isOptional": false,
+                      "instanceGuid": "7900bd15-fd6b-49eb-bd11-46d40f6f9f48"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ebd8d7ce-2bbd-4945-94db-9c53431028ee",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryDecodeFromUtf8": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "57b59be9": {
+                "name": "TryDecodeFromUtf8",
+                "overloadId": "57b59be9",
+                "methodKind": "static",
+                "description": "Decodes the span of UTF-8 encoded text represented as Base64Url into binary data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "6fd79762-b795-480d-a09d-bfe413f36a8a"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "04836d79-8e8c-4434-b7e3-2fce5429002a"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "ab6759e7-e55f-4c93-a650-6531631e4194"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5571c9e2-8db9-4266-836e-f1a0e9973ebd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "DecodeFromChars": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "18f0baf6": {
+                "name": "DecodeFromChars",
+                "overloadId": "18f0baf6",
+                "methodKind": "static",
+                "description": "Decodes the span of unicode ASCII chars represented as Base64Url into binary data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "0ab58322-a4e3-479e-9d5a-751a737691ca"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "674d6a71-b1e4-4e10-af89-f0987cbac111"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "charsConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "2dec0e3e-ab46-462e-8b63-fea0de7c7e9f"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "6ba299dd-5304-4539-8a23-143d011a2814"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "isFinalBlock",
+                      "isOptional": true,
+                      "instanceGuid": "e2535cfb-f382-4cfe-b0d8-9d0911833aaf"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "75e98641-776d-4212-8a75-d61f6cb75503",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/OperationStatus"
+                    }
+                  ]
+                }
+              },
+              "b2ff5613": {
+                "name": "DecodeFromChars",
+                "overloadId": "b2ff5613",
+                "methodKind": "static",
+                "description": "Decodes the span of unicode ASCII chars represented as Base64Url into binary data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "1a3ebf0e-7ca7-4142-b4f1-5d2ac50b0d59"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "60289097-53fc-4df8-8d8a-79007f3e9e4b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7b300ac4-adb9-484d-a6f0-54e634432722",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              },
+              "c80d9355": {
+                "name": "DecodeFromChars",
+                "overloadId": "c80d9355",
+                "methodKind": "static",
+                "description": "Decodes the span of unicode ASCII chars represented as Base64Url into binary data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "e6563e18-ba67-4d37-bf9f-7d9ba6a3b55a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "98922545-e5bd-45d5-8fe9-96eb8d973134",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Byte[]"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryDecodeFromChars": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "e1a74e9e": {
+                "name": "TryDecodeFromChars",
+                "overloadId": "e1a74e9e",
+                "methodKind": "static",
+                "description": "Decodes the span of Unicode ASCII chars represented as Base64Url into binary data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "733da7b1-b33b-44ed-9bd6-1e05e33fec08"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "293ce934-fe7e-4f7d-ae47-3b92f66f5cae"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "af6926f4-6312-4545-b39b-aba59b876819"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "f3f12b55-9c95-4511-9dac-318cae41bcad",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "EncodeToUtf8": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "8ccf421e": {
+                "name": "EncodeToUtf8",
+                "overloadId": "8ccf421e",
+                "methodKind": "static",
+                "description": "Encodes the span of binary data into UTF-8 encoded text represented as Base64Url.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "55437119-e1a6-415d-b189-37fdecaa7394"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "cbb34b61-e129-442d-b75c-5397db09a6ba"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "82074959-36e4-4d30-a7bb-047598cd8dce"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "19efad5e-37a9-4f7e-93c8-50b8398f34b3"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "isFinalBlock",
+                      "isOptional": true,
+                      "instanceGuid": "a24519da-204a-4ac2-a4c0-3d361089bb71"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "c90ee51d-c253-420e-a49a-c498507d6509",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/OperationStatus"
+                    }
+                  ]
+                }
+              },
+              "2201ef79": {
+                "name": "EncodeToUtf8",
+                "overloadId": "2201ef79",
+                "methodKind": "static",
+                "description": "Encodes the span of binary data into UTF-8 encoded text represented as Base64Url.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "97da0314-2381-4ece-9af3-0edf9895fc74"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "ebab96c8-6183-484b-8f70-814b44eb7d61"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "3891ef70-4543-4df6-8b61-1de97d21aeb1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              },
+              "763631c8": {
+                "name": "EncodeToUtf8",
+                "overloadId": "763631c8",
+                "methodKind": "static",
+                "description": "Encodes the span of binary data into UTF-8 encoded text represented as Base64Url.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "9ad246a8-3982-494e-ae7a-baf9a40f528c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ebf399cd-9bad-4d48-8ccd-94f6e3bdc983",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Byte[]"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetEncodedLength": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "2c884a00": {
+                "name": "GetEncodedLength",
+                "overloadId": "2c884a00",
+                "methodKind": "static",
+                "description": "Returns the length (in bytes) of the result if you were to encode binary data within a byte span of size .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "bytesLength",
+                      "isOptional": false,
+                      "instanceGuid": "814fcfbb-4c93-407c-ba98-b39ed6f7f6a5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "113025f9-90d4-49da-9d29-eb5446f26483",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "EncodeToChars": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "252824b2": {
+                "name": "EncodeToChars",
+                "overloadId": "252824b2",
+                "methodKind": "static",
+                "description": "Encodes the span of binary data into unicode ASCII chars represented as Base64Url.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "3b87b10d-a82b-413b-98dd-5a073934672f"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "896a2597-155c-4206-93d0-3f65c0487aac"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "dea4c07f-48d3-4b08-817c-7d4fab97f343"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "charsWritten",
+                      "isOptional": false,
+                      "instanceGuid": "6cb08ea1-92f2-4f9a-bf96-59a1519c0df0"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "isFinalBlock",
+                      "isOptional": true,
+                      "instanceGuid": "0b8995f4-bf52-4a74-bdf5-371b7605bfe5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6eb41409-ae76-4f3d-a02e-706ad7812f76",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/OperationStatus"
+                    }
+                  ]
+                }
+              },
+              "68bc8b01": {
+                "name": "EncodeToChars",
+                "overloadId": "68bc8b01",
+                "methodKind": "static",
+                "description": "Encodes the span of binary data into unicode ASCII chars represented as Base64Url.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "ea574aff-e9dd-4696-881d-6797f0044d50"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "71edadbc-0f4b-4b0b-83ed-e6e2cc08f5d1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a81dd999-b725-4642-8a1d-da8a57cb8436",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              },
+              "1e29efa6": {
+                "name": "EncodeToChars",
+                "overloadId": "1e29efa6",
+                "methodKind": "static",
+                "description": "Encodes the span of binary data into unicode ASCII chars represented as Base64Url.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "e60feb38-2b26-43e9-ba51-535ec13febcd"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "db538e19-9a05-4424-bac9-c95b866c1a0b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Char[]"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "EncodeToString": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "da49757c": {
+                "name": "EncodeToString",
+                "overloadId": "da49757c",
+                "methodKind": "static",
+                "description": "Encodes the span of binary data into Unicode string represented as Base64Url ASCII chars.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "1dd395be-1218-4bf1-8cff-573c1dcacfb9"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "134eec61-48d5-4462-8865-0227e133ca58",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryEncodeToChars": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "cc133c6f": {
+                "name": "TryEncodeToChars",
+                "overloadId": "cc133c6f",
+                "methodKind": "static",
+                "description": "Encodes the span of binary data into Unicode ASCII chars represented as Base64Url.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "f6c4df26-a831-49b9-9380-b9b4371af7c2"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "bd3fba3e-2687-4b2e-a968-213609190564"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "charsWritten",
+                      "isOptional": false,
+                      "instanceGuid": "0fc7dce9-bdad-4293-98ff-7148350dc474"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "32039304-5996-482b-b400-f97fae10f187",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryEncodeToUtf8": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "deceab5c": {
+                "name": "TryEncodeToUtf8",
+                "overloadId": "deceab5c",
+                "methodKind": "static",
+                "description": "Encodes the span of binary data into UTF-8 encoded chars represented as Base64Url.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "20bdf67e-99d2-41c8-ace0-132a31615568"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "9b69e1a9-45b7-4c11-ac70-c24ecdea2140"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "b63ae927-3959-4734-a962-0add8182ee9c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "e8369728-305d-45f3-96fe-921390ba2fe9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryEncodeToUtf8InPlace": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "5e9f9b16": {
+                "name": "TryEncodeToUtf8InPlace",
+                "overloadId": "5e9f9b16",
+                "methodKind": "static",
+                "description": "Encodes the span of binary data (in-place) into UTF-8 encoded text represented as base 64.The encoded text output is larger than the binary data contained in the input (the operation inflates the data).",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "buffer",
+                      "isOptional": false,
+                      "instanceGuid": "e9449f6c-4d4e-4d70-9ad5-a96b9ec65ed3"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "dataLength",
+                      "isOptional": false,
+                      "instanceGuid": "bdd64a18-c1c9-41d5-b206-09b91413c082"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "46ea0d0e-a05d-4308-b4d0-ceee4b6d4840"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "050d69e5-d0b1-41eb-954d-3d75f47c30bb",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsValid": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "482a3bc5": {
+                "name": "IsValid",
+                "overloadId": "482a3bc5",
+                "methodKind": "static",
+                "description": "Validates that the specified span of UTF-8 text is comprised of valid base-64 encoded data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "base64UrlText",
+                      "isOptional": false,
+                      "instanceGuid": "23003420-b479-45aa-b475-08c0418bcf69"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "9eff085b-bdc9-4b66-be10-9965ee1d74b0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "cacba04c": {
+                "name": "IsValid",
+                "overloadId": "cacba04c",
+                "methodKind": "static",
+                "description": "Validates that the specified span of UTF-8 text is comprised of valid base-64 encoded data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "base64UrlText",
+                      "isOptional": false,
+                      "instanceGuid": "368eea3f-446a-4072-a726-5bada04655ed"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "decodedLength",
+                      "isOptional": false,
+                      "instanceGuid": "fee1dcba-7822-4616-8123-8707f9d3d682"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ba74704d-beef-47e4-a3c3-d64a4a992076",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "7cc54060": {
+                "name": "IsValid",
+                "overloadId": "7cc54060",
+                "methodKind": "static",
+                "description": "Validates that the specified span of UTF-8 text is comprised of valid base-64 encoded data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "utf8Base64UrlText",
+                      "isOptional": false,
+                      "instanceGuid": "43bdf0fd-5c9e-4c23-bed1-2bdc5bd95821"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "e5118756-573c-48c5-8ecb-2c98a13894f8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "d3a554d3": {
+                "name": "IsValid",
+                "overloadId": "d3a554d3",
+                "methodKind": "static",
+                "description": "Validates that the specified span of UTF-8 text is comprised of valid base-64 encoded data.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "utf8Base64UrlText",
+                      "isOptional": false,
+                      "instanceGuid": "73920756-91cc-4c79-b700-c1280815ac00"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "decodedLength",
+                      "isOptional": false,
+                      "instanceGuid": "66369b94-46a4-4766-b8b4-8ce7b80900d0"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "e0009b78-54b1-40bd-8b8e-15e5f23741f6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "aed33c16": {
+                "name": "GetType",
+                "overloadId": "aed33c16",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ffdb3144-8c3b-465a-ab85-56847d95bc62",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "0298b5b3": {
+                "name": "ToString",
+                "overloadId": "0298b5b3",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "acbad178-f448-4b93-a917-528a3f89f5af",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "16a060b6": {
+                "name": "Equals",
+                "overloadId": "16a060b6",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "5a48cdae-4aef-4178-a785-6dca39e0bb5f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8afc2ce3-baf3-4a71-8a8d-eadcead3932c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
+            },
+            "overloads": {
+              "b0c61d0d": {
+                "name": "GetHashCode",
+                "overloadId": "b0c61d0d",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "11529e7f-b1be-4225-aa06-922a92e69cf3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers.Text",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "Utf8Parser": {
+        "title": "Utf8Parser",
+        "type": "object",
+        "description": "Provides static methods to parse Utf8 strings to common data types.",
+        "x-methods": {
+          "TryParse": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Utf8Parser"
+            },
+            "overloads": {
+              "e46a1c3f": {
+                "name": "TryParse",
+                "overloadId": "e46a1c3f",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "d6cda434-c531-42f2-9811-9d5d20fd0ead"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Boolean\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "eb1a5f1e-ee33-4de8-9871-956fac761966"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "7ab372ea-7b2f-4199-8b5a-bd51877ee841"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "f46d6858-4683-471d-84b1-46e353ea9a8f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8472e658-93a9-4d1c-b3c9-0270295cdc1d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "c7f13472": {
+                "name": "TryParse",
+                "overloadId": "c7f13472",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "e63bf4c6-bbf1-424e-ac6e-c9b7582f57fe"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/DateTime\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "a33703b7-4b70-4c81-8441-68d56f1214f1"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "2f483545-56b2-4c60-bdc4-7da8ebf8fcf7"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "dabe02c2-2808-49c4-82db-48b930910037"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "df15b5a5-5c41-477c-86a6-a5410eff2148",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "7796a36d": {
+                "name": "TryParse",
+                "overloadId": "7796a36d",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "79b0f448-25ee-4629-adc5-67a7b8c99890"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/DateTimeOffset\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "653dc325-6c27-4639-bd84-29efafd075ff"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "babae739-6d5d-4249-b4f3-cf1a81892c8f"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "11d0f9fc-2471-4e4b-91a1-20db672d141b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a4a8f84a-fe25-4139-8957-207537e04851",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "35d02f16": {
+                "name": "TryParse",
+                "overloadId": "35d02f16",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "9c599ae7-e36d-4974-8462-4f985752dc86"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Decimal\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "3f0a9c10-a37a-45fa-b786-690b86ca93bd"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "af381e0f-7233-4662-9c86-0dc00334dc49"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "a8a1075d-2c43-47ab-aeff-4665931654df"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "e6c9859f-5d95-4724-9c3e-48c352e35198",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "b000c280": {
+                "name": "TryParse",
+                "overloadId": "b000c280",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "3bdaa8c2-71eb-4a9b-9ed6-04647dc0eb72"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Single\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "622323d4-c021-49c5-bcf9-28306f80a2c8"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "f5bba653-929c-45cd-af12-43725978af1e"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "0c7ce345-f1d0-4841-a3ab-5749141cb828"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ddcd996d-51ec-4162-98cc-66c168f9a522",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "549c908a": {
+                "name": "TryParse",
+                "overloadId": "549c908a",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "d2685758-15d1-4a1c-af54-a79bae44a94d"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Double\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "14a3c268-b130-4a53-89a7-ffbfb01804fe"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "0f5ff9f2-56dc-4b91-9032-79ce4df6e87b"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "76b6d2d4-eb8b-4191-ad9b-4220a4330648"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7a906cb2-e9bd-48e1-b8a8-0e444b2c7765",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "9ef71308": {
+                "name": "TryParse",
+                "overloadId": "9ef71308",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "f1b684c5-a7f4-4f66-9f59-bb4deee2d1e9"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Guid\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "b53cf5db-8710-46b5-98ee-a7d0ccc99e47"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "802b5bbf-54d3-4e31-a47a-12a567668024"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "6fcf4917-d311-4236-9482-d8b84dce413c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "70d35a39-b13b-45ef-ab07-034476ff7215",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "83612592": {
+                "name": "TryParse",
+                "overloadId": "83612592",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "23d010d1-575f-4cdc-90ed-0d5d2d1ee936"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/SByte\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "25198dfd-d117-4cc7-8488-d9cdbf6de0fc"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "8abff051-9e99-433e-9ac7-c454840d66b4"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "75f9234a-9d93-41e4-8f11-4984af90e5f0"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "42aec894-b95f-4503-bbc8-f7f1e4056d1e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "0eae2dc5": {
+                "name": "TryParse",
+                "overloadId": "0eae2dc5",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "8a012745-d4fc-4574-84e6-df4e0361d6d4"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int16\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "98bcf5fb-ae02-4cbd-b605-072a99b337f1"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "e90ad8f4-055b-4dc9-bb10-271e7768f379"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "bfa8dca8-604b-47ae-9b58-db2dab835c6d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "b831e6a9-6473-4896-b7a6-529d6842cee1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "e2a31e03": {
+                "name": "TryParse",
+                "overloadId": "e2a31e03",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "0d1b7fd2-afe7-4c9a-90da-e74883fe93b5"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "d8c6dbcd-0fbd-4187-b0af-1bdaabbaa603"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "5d0264d6-38ee-4e7f-bcef-ebf6701fce35"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "5eba6012-e506-4e9e-96c9-692c6d773864"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "20530daa-95ae-4270-ac36-9e1e40ff207d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "d75073ab": {
+                "name": "TryParse",
+                "overloadId": "d75073ab",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "8a7f7f42-873c-41ed-915c-028fab44436a"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int64\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "5980f962-3c3b-4684-880f-6a43a868a6e8"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "d4965c3a-f54f-4378-99a6-0aa8d1d2fe4c"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "0064ad0c-17f3-40bc-be2a-0f697ce0a271"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "fec16e51-1d3e-4509-ba09-7e20f2b36ab4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "569aa3b0": {
+                "name": "TryParse",
+                "overloadId": "569aa3b0",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "88252346-3873-45ea-abfc-8a1cc9f38084"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Byte\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "eae4e17e-d1c3-445e-93f0-358d58d7c28e"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "9e1dd139-f561-48e8-9e12-ece9a85d5a79"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "2bf100b8-bc7c-4302-be24-4ca8d6b4a098"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "50574900-130a-40ed-8eef-53345b8074cc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "2a6bade7": {
+                "name": "TryParse",
+                "overloadId": "2a6bade7",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "5772ee49-3919-4fa0-a845-302620a58012"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/UInt16\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "5e66bb87-e955-4eda-a699-d50773cce285"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "d9f50664-9753-4110-b1f9-09e849f4bce7"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "2b4e0c75-0c4d-4ae2-9fe5-b01d4ca5044c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "91704e06-2ac7-416e-b75b-7b2f60d144db",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "e3de0e21": {
+                "name": "TryParse",
+                "overloadId": "e3de0e21",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "3aa230f5-01f0-47b1-b226-df4439b6a1d2"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/UInt32\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "d4952ecb-a333-4d21-87b9-410e6cba0467"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "15218528-c2dd-472a-be74-626e337a89ab"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "eabaa84c-4957-4c05-880d-0cfef513ea1a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "3a792f1f-0223-4062-8279-7d2602889b19",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "3ce1986c": {
+                "name": "TryParse",
+                "overloadId": "3ce1986c",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "3049b9cc-5935-46c0-ba32-5234ab46ab7e"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/UInt64\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "f5b7bf71-976f-43a9-b80c-6f65a12178f5"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "e58f04e1-a4ed-4980-ad24-bbaca6d7e3e4"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "9a56f6ae-434f-4218-8e97-0a3bbd073dab"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8150e6fb-b166-4add-9c4f-e0b5f1a354fa",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "1b4e700e": {
+                "name": "TryParse",
+                "overloadId": "1b4e700e",
+                "methodKind": "static",
+                "description": "Parses a  at the start of a Utf8 string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "source",
+                      "isOptional": false,
+                      "instanceGuid": "222290a8-960a-49c2-9ef3-2e481b1507d6"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/TimeSpan\u0026",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "3dce40b5-ae8c-492b-a39f-2babd99f6ce6"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesConsumed",
+                      "isOptional": false,
+                      "instanceGuid": "8e2c9c9a-ebf6-4f72-b463-d63b5a92a60f"
+                    },
+                    {
+                      "type": "string",
+                      "name": "standardFormat",
+                      "isOptional": true,
+                      "instanceGuid": "c23f850e-dfa6-44f8-9c5d-ca6197ac6541"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ebdb6840-a0d6-46b1-90ea-34adcb747fa4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Utf8Parser"
+            },
+            "overloads": {
+              "a9e16a28": {
+                "name": "GetType",
+                "overloadId": "a9e16a28",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3add2d0a-96e8-471f-bf15-859d31280ffb",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Utf8Parser"
+            },
+            "overloads": {
+              "ab20d0d8": {
+                "name": "ToString",
+                "overloadId": "ab20d0d8",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5c9e2cc4-cb20-457d-bad5-bd9aa739fa5e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Utf8Parser"
+            },
+            "overloads": {
+              "daa3bba0": {
+                "name": "Equals",
+                "overloadId": "daa3bba0",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "8b1c3fe9-84b9-4e3a-9275-3cb1b223278e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "92bfd7f6-f8df-49e5-9d52-aecfe172a356",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers.Text#/components/schemas/Utf8Parser"
+            },
+            "overloads": {
+              "20d500b4": {
+                "name": "GetHashCode",
+                "overloadId": "20d500b4",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ed68d32a-a9f1-4e7f-81e8-8356a622ddf4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers.Text",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+/* src/components/Input.css */
+.input {
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input:hover {
+    border-color: var(--background-color-hover-brighter);
+}

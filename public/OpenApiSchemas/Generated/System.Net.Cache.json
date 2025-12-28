@@ -1,0 +1,154 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Net.Cache",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "RequestCacheLevel": {
+        "title": "RequestCacheLevel",
+        "type": "integer",
+        "description": "Specifies caching behavior for resources obtained using  and its derived classes.",
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "x-enum-names": [
+          "Default",
+          "BypassCache",
+          "CacheOnly",
+          "CacheIfAvailable",
+          "Revalidate",
+          "Reload",
+          "NoCacheNoStore"
+        ],
+        "x-namespace": "System.Net.Cache",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "RequestCachePolicy": {
+        "title": "RequestCachePolicy",
+        "type": "object",
+        "description": "Defines an application\u0027s caching requirements for resources obtained by using  objects.",
+        "properties": {
+          "Level": {
+            "$ref": "System.Net.Cache#/components/schemas/RequestCacheLevel"
+          }
+        },
+        "x-methods": {
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net.Cache#/components/schemas/RequestCachePolicy"
+            },
+            "overloads": {
+              "0801184d": {
+                "name": "ToString",
+                "overloadId": "0801184d",
+                "methodKind": "instance",
+                "description": "Returns a string representation of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a889cb5c-1688-46a5-9b07-bf995b474738",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net.Cache#/components/schemas/RequestCachePolicy"
+            },
+            "overloads": {
+              "0d65f7cd": {
+                "name": "GetType",
+                "overloadId": "0d65f7cd",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f165b579-8b4e-4af9-8b63-0f567dad2560",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net.Cache#/components/schemas/RequestCachePolicy"
+            },
+            "overloads": {
+              "92f68a41": {
+                "name": "Equals",
+                "overloadId": "92f68a41",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "e84e883a-a500-4146-b4a0-b5cfc12e6e1e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6f3c67d9-d0f6-4ded-a949-57e166a6470e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net.Cache#/components/schemas/RequestCachePolicy"
+            },
+            "overloads": {
+              "e4d70bc8": {
+                "name": "GetHashCode",
+                "overloadId": "e4d70bc8",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "39378a5d-b8f8-4d42-b0ff-384abf0c918d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net.Cache",
+        "x-assembly": "System.Net.Primitives"
+      }
+    }
+  }
+}

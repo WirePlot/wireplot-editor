@@ -1,0 +1,52 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Configuration.Assemblies",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "AssemblyHashAlgorithm": {
+        "title": "AssemblyHashAlgorithm",
+        "type": "integer",
+        "description": "Specifies all the hash algorithms used for hashing files and for generating the strong name.",
+        "enum": [
+          0,
+          32771,
+          32772,
+          32780,
+          32781,
+          32782
+        ],
+        "x-enum-names": [
+          "None",
+          "MD5",
+          "SHA1",
+          "SHA256",
+          "SHA384",
+          "SHA512"
+        ],
+        "x-namespace": "System.Configuration.Assemblies",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "AssemblyVersionCompatibility": {
+        "title": "AssemblyVersionCompatibility",
+        "type": "integer",
+        "description": "Defines the different types of assembly version compatibility.",
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "x-enum-names": [
+          "SameMachine",
+          "SameProcess",
+          "SameDomain"
+        ],
+        "x-namespace": "System.Configuration.Assemblies",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

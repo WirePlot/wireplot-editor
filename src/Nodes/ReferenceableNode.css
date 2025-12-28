@@ -1,0 +1,17 @@
+.node-combined {
+    display: flex;
+    align-items: center;
+    padding: 2px 0px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    user-select: none;
+    cursor: grab;
+    justify-content: flex-end;
+    vertical-align: middle;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

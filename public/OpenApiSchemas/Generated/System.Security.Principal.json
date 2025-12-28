@@ -1,0 +1,113 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Security.Principal",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "IIdentity": {
+        "title": "IIdentity",
+        "type": "object",
+        "description": "Defines the basic functionality of an identity object.",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "AuthenticationType": {
+            "type": "string"
+          },
+          "IsAuthenticated": {
+            "type": "boolean"
+          }
+        },
+        "x-namespace": "System.Security.Principal",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IPrincipal": {
+        "title": "IPrincipal",
+        "type": "object",
+        "description": "Defines the basic functionality of a principal object.",
+        "properties": {
+          "Identity": {
+            "$ref": "System.Security.Principal#/components/schemas/IIdentity"
+          }
+        },
+        "x-methods": {
+          "IsInRole": {
+            "owner": {
+              "$ref": "System.Security.Principal#/components/schemas/IPrincipal"
+            },
+            "overloads": {
+              "1baf7640": {
+                "name": "IsInRole",
+                "overloadId": "1baf7640",
+                "methodKind": "instance",
+                "description": "Determines whether the current principal belongs to the specified role.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "role",
+                      "isOptional": false,
+                      "instanceGuid": "69d8e235-1309-4799-929f-f9520abf5ebc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7d233460-3367-4d77-80b3-3253a194fbbb",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security.Principal",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "PrincipalPolicy": {
+        "title": "PrincipalPolicy",
+        "type": "integer",
+        "description": "Specifies how principal and identity objects should be created for an application domain. The default is .",
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "x-enum-names": [
+          "UnauthenticatedPrincipal",
+          "NoPrincipal",
+          "WindowsPrincipal"
+        ],
+        "x-namespace": "System.Security.Principal",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "TokenImpersonationLevel": {
+        "title": "TokenImpersonationLevel",
+        "type": "integer",
+        "description": "Defines security impersonation levels. Security impersonation levels govern the degree to which a server process can act on behalf of a client process.",
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "x-enum-names": [
+          "None",
+          "Anonymous",
+          "Identification",
+          "Impersonation",
+          "Delegation"
+        ],
+        "x-namespace": "System.Security.Principal",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

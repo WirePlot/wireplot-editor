@@ -1,0 +1,149 @@
+:root {
+  --header-height: 0px;
+  --footer-height: 40px;
+  --font-size: 13px;
+  --font-color: #dee2e6;
+  --font-color-brighter: #f2f2f2;
+  --font-color-hover-brighter: #50b0ff;
+
+
+  --background-color-brighter: #292e33;
+  --background-color-middle:   #202428; 
+  --background-color-darker: #171a1d;
+  --background-color-focused: #0058a0;
+  --background-color-hover: #004d8b;
+  --background-color-active: #003b72;
+
+
+  --background-color-hover-brighter: #50b0ff;
+  --background-color-blurred-but-selected: #356286;
+  --node-color-hover: #ff6c47;
+  --node-color-selected: #ebb401;
+}
+
+#root {
+  margin: 0 auto;
+  overflow: hidden;
+  background: #272b2f;
+}
+
+.react-flow__controls-button {
+  background: rgb(42, 53, 73) !important;
+}
+
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0b0b0b;
+  color: #fff;
+}
+
+
+
+/* Focused and active */
+.react-flow__node.selectable:focus:active {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* Subtle elevation */
+}
+
+/* Hovered node */
+.react-flow__node.selectable:hover,
+.react-flow__node.draggable:hover {
+
+  border-color: var(--node-color-hover);
+  box-shadow: 0 0 0 3px var(--node-color-hover);
+}
+
+/* Selected node */
+.react-flow__node.selectable.selected {
+  border-color: var(--node-color-selected);
+  box-shadow: 0 0 0 3px var(--node-color-selected);
+}
+
+
+.grid-button {
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 0;
+  font-size: var(--font-size);
+}
+
+.grid-button-selected {
+  background: transparent;
+  text-decoration: none;
+  border-radius: 0;
+  font-size: var(--font-size);
+}
+
+
+
+.typed-edge path {
+  stroke: var(--edge-color, #999);
+  stroke-width: 3px;
+  transition: stroke 0.8s ease, stroke-width 0.6s ease;
+}
+
+
+.typed-edge:hover path {
+  stroke-width: 6px;
+  stroke: var(--edge-color-hover, #ccc);
+}
+
+
+.typed-edge.selected path {
+  stroke-width: 6px !important;
+  stroke: var(--edge-color-hover, #ccc) !important;
+}
+
+.react-flow__connection path {
+  stroke: var(--connection-color, red) !important;
+  stroke-width: 6px !important;
+}
+
+
+
+
+
+
+.grid-button-selected:hover {
+  background: var(--background-color-hover);
+}
+
+.btn-link:hover {
+  background: var(--background-color-hover) !important;
+}
+
+.btn-dark:hover {
+  background: var(--background-color-hover) !important;
+}
+
+
+
+
+
+
+
+/* Change the color of the scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6c757d;
+  /* Brighter gray color for the scrollbar thumb */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #adb5bd;
+  /* Even brighter gray for the hover effect */
+}
+
+::-webkit-scrollbar-track {
+  background: #495057;
+  /* Dark gray color for the scrollbar track */
+}

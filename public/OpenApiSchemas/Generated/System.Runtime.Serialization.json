@@ -1,0 +1,1838 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Runtime.Serialization",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "DeserializationToken": {
+        "title": "DeserializationToken",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "Dispose": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/DeserializationToken"
+            },
+            "overloads": {
+              "f141757b": {
+                "name": "Dispose",
+                "overloadId": "f141757b",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "65bd92d8-8eb4-43cb-87c5-76cf4c644c94",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/DeserializationToken"
+            },
+            "overloads": {
+              "d00d33c1": {
+                "name": "Equals",
+                "overloadId": "d00d33c1",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "5ee777e0-ce5a-4325-a9c9-069615c5fce6"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "b9360586-9c13-45eb-9594-59e584fd4cd6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/DeserializationToken"
+            },
+            "overloads": {
+              "c977a3b8": {
+                "name": "GetHashCode",
+                "overloadId": "c977a3b8",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "68e0f6fc-8b4a-4286-a499-21882ca1feec",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/DeserializationToken"
+            },
+            "overloads": {
+              "15bdc47a": {
+                "name": "ToString",
+                "overloadId": "15bdc47a",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "265e17f5-8210-4978-8d43-d223daf345b0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/DeserializationToken"
+            },
+            "overloads": {
+              "d1a50cda": {
+                "name": "GetType",
+                "overloadId": "d1a50cda",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b40bb7ce-a0a2-4a1c-9c54-9066373c7097",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IDeserializationCallback": {
+        "title": "IDeserializationCallback",
+        "type": "object",
+        "description": "Indicates that a class is to be notified when deserialization of the entire object graph has been completed. This interface is not called when you deserialize with .",
+        "x-methods": {
+          "OnDeserialization": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/IDeserializationCallback"
+            },
+            "overloads": {
+              "9718ade5": {
+                "name": "OnDeserialization",
+                "overloadId": "9718ade5",
+                "methodKind": "instance",
+                "description": "Runs when the entire object graph has been deserialized.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "sender",
+                      "isOptional": false,
+                      "instanceGuid": "ae908710-d2c7-419d-860c-0d3633b1c6a2"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "9800bf48-0a42-4c1c-8f88-1343d32726ce",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IObjectReference": {
+        "title": "IObjectReference",
+        "type": "object",
+        "description": "Indicates that the current interface implementer is a reference to another object.",
+        "x-methods": {
+          "GetRealObject": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/IObjectReference"
+            },
+            "overloads": {
+              "5c305a3a": {
+                "name": "GetRealObject",
+                "overloadId": "5c305a3a",
+                "methodKind": "instance",
+                "description": "Returns the real object that should be deserialized, rather than the object that the serialized stream specifies.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
+                      "name": "context",
+                      "isOptional": false,
+                      "instanceGuid": "d1fc97d8-6e93-4a7b-b007-41bd5f329631"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "246e9d55-f438-429d-ae96-d4ef2066cf28",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Object"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ISafeSerializationData": {
+        "title": "ISafeSerializationData",
+        "type": "object",
+        "description": "Enables serialization of custom exception data in security-transparent code.",
+        "x-methods": {
+          "CompleteDeserialization": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/ISafeSerializationData"
+            },
+            "overloads": {
+              "2023a8d3": {
+                "name": "CompleteDeserialization",
+                "overloadId": "2023a8d3",
+                "methodKind": "instance",
+                "description": "This method is called when the instance is deserialized.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "deserialized",
+                      "isOptional": false,
+                      "instanceGuid": "d399d5fb-66ed-43d3-9628-78c7c198799e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "c500e95d-7010-46e6-84ca-d2feaf60e569",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ISerializable": {
+        "title": "ISerializable",
+        "type": "object",
+        "description": "Allows an object to control its own serialization and deserialization through binary and XML serialization.",
+        "x-methods": {
+          "GetObjectData": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/ISerializable"
+            },
+            "overloads": {
+              "a88e51b5": {
+                "name": "GetObjectData",
+                "overloadId": "a88e51b5",
+                "methodKind": "instance",
+                "description": "Populates a  with the data needed to serialize the target object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
+                      "name": "info",
+                      "isOptional": false,
+                      "instanceGuid": "3e2f9583-3bae-41ca-ac4b-25bbb58329e2"
+                    },
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
+                      "name": "context",
+                      "isOptional": false,
+                      "instanceGuid": "3768e348-9a07-40af-bf6b-b48a8a715b5c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6c23f802-f27d-4e96-b5d2-390e3e10ac0a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "OnDeserializedAttribute": {
+        "title": "OnDeserializedAttribute",
+        "type": "object",
+        "description": "When applied to a method, specifies that the method is called immediately after deserialization of an object in an object graph. The order of deserialization relative to other objects in the graph is non-deterministic.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializedAttribute"
+            },
+            "overloads": {
+              "d6c9eac7": {
+                "name": "Equals",
+                "overloadId": "d6c9eac7",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "bffb8df1-e714-4c85-ae57-5ab6d8aaca08"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "768d25dd-9275-49bc-9542-4a818c7f5b4f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializedAttribute"
+            },
+            "overloads": {
+              "d0c879f7": {
+                "name": "GetHashCode",
+                "overloadId": "d0c879f7",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "396ece63-5b53-461b-91fa-e78ba4193c63",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializedAttribute"
+            },
+            "overloads": {
+              "2166a9fe": {
+                "name": "Match",
+                "overloadId": "2166a9fe",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "ed55228e-a51b-4ca3-8f76-b9a3c9393c69"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "cacde4ee-ef40-435c-810b-f4c404a0e684",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializedAttribute"
+            },
+            "overloads": {
+              "ff527ef5": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "ff527ef5",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5d2910eb-0c33-4914-a539-1ec4f914aa04",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializedAttribute"
+            },
+            "overloads": {
+              "5ba4449f": {
+                "name": "GetType",
+                "overloadId": "5ba4449f",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "60664f40-1e7c-4587-a372-0771f9cfd088",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializedAttribute"
+            },
+            "overloads": {
+              "fb6c629a": {
+                "name": "ToString",
+                "overloadId": "fb6c629a",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e7f7d47a-650f-4000-960b-30fc803d7674",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "OnDeserializingAttribute": {
+        "title": "OnDeserializingAttribute",
+        "type": "object",
+        "description": "When applied to a method, specifies that the method is called during deserialization of an object in an object graph. The order of deserialization relative to other objects in the graph is non-deterministic.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializingAttribute"
+            },
+            "overloads": {
+              "548d52f2": {
+                "name": "Equals",
+                "overloadId": "548d52f2",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "5ab018cd-a735-45b0-8c3c-ebcd013227d5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d370b64f-f2df-4744-a555-a44b46c16cbc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializingAttribute"
+            },
+            "overloads": {
+              "ab8c37c0": {
+                "name": "GetHashCode",
+                "overloadId": "ab8c37c0",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f75191a3-0b8b-4123-932b-980ccb40eda4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializingAttribute"
+            },
+            "overloads": {
+              "bb787ffb": {
+                "name": "Match",
+                "overloadId": "bb787ffb",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "3bfa0ba3-9ea3-4c8c-8298-b367e874592c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "06fd60ca-b61f-4d2d-bd88-b6be2e974865",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializingAttribute"
+            },
+            "overloads": {
+              "c6afad10": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "c6afad10",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a2016cba-935a-4e8c-9cf3-7e4f10b85983",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializingAttribute"
+            },
+            "overloads": {
+              "5c0d2bbf": {
+                "name": "GetType",
+                "overloadId": "5c0d2bbf",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b4a1beec-f25d-427b-81d9-9ad1e69cc783",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializingAttribute"
+            },
+            "overloads": {
+              "f52d9e5f": {
+                "name": "ToString",
+                "overloadId": "f52d9e5f",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4194321b-b11f-447d-b2f5-8c243a821ea4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "OnSerializedAttribute": {
+        "title": "OnSerializedAttribute",
+        "type": "object",
+        "description": "When applied to a method, specifies that the method is called after serialization of an object in an object graph. The order of serialization relative to other objects in the graph is non-deterministic.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializedAttribute"
+            },
+            "overloads": {
+              "dd58b4ba": {
+                "name": "Equals",
+                "overloadId": "dd58b4ba",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "54fca9af-d57d-475e-9745-c5c9b90641cf"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "09ff2148-debd-4039-9645-ec8dda64bcc6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializedAttribute"
+            },
+            "overloads": {
+              "60b9895f": {
+                "name": "GetHashCode",
+                "overloadId": "60b9895f",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "475af8af-75f5-4083-ac32-bffca2798538",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializedAttribute"
+            },
+            "overloads": {
+              "01297c83": {
+                "name": "Match",
+                "overloadId": "01297c83",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "72d3b9f1-cbed-419d-b761-7847e491a7a5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5d4126b7-4361-46b1-89d6-7667c6adbc15",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializedAttribute"
+            },
+            "overloads": {
+              "c5084332": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "c5084332",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "59714940-1cf0-4036-a62e-2350768b31c1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializedAttribute"
+            },
+            "overloads": {
+              "b8d1b52f": {
+                "name": "GetType",
+                "overloadId": "b8d1b52f",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f8f5a59e-9a50-48fe-b514-8e5a38bf284e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializedAttribute"
+            },
+            "overloads": {
+              "b5f1c53b": {
+                "name": "ToString",
+                "overloadId": "b5f1c53b",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "af17da00-0501-43f9-b429-9c626fe1f3b7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "OnSerializingAttribute": {
+        "title": "OnSerializingAttribute",
+        "type": "object",
+        "description": "When applied to a method, specifies that the method is called during serialization of an object in an object graph. The order of serialization relative to other objects in the graph is non-deterministic.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializingAttribute"
+            },
+            "overloads": {
+              "802014f1": {
+                "name": "Equals",
+                "overloadId": "802014f1",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "1ac166d5-75bc-454c-afd6-ea40c32c6218"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "1b012183-7f54-443b-a525-f2d169aa87a6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializingAttribute"
+            },
+            "overloads": {
+              "9bd24b74": {
+                "name": "GetHashCode",
+                "overloadId": "9bd24b74",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "284c834a-70ae-480a-92fc-9d9cae8d078b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializingAttribute"
+            },
+            "overloads": {
+              "ebc92553": {
+                "name": "Match",
+                "overloadId": "ebc92553",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "1af7372c-3bf6-4521-86e7-76a377b2cf00"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5ce7bcf7-63c0-4d3c-b0ec-505c8fdc0d73",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializingAttribute"
+            },
+            "overloads": {
+              "1439b05a": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "1439b05a",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "eb89f095-5933-48c3-9620-a632989d39d0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializingAttribute"
+            },
+            "overloads": {
+              "19835bf6": {
+                "name": "GetType",
+                "overloadId": "19835bf6",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "99a23d13-705f-449b-96b7-0da76659d7a4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializingAttribute"
+            },
+            "overloads": {
+              "0a4aaae6": {
+                "name": "ToString",
+                "overloadId": "0a4aaae6",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ce69d21e-6a1a-466b-9011-3cfcc8813db3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "OptionalFieldAttribute": {
+        "title": "OptionalFieldAttribute",
+        "type": "object",
+        "description": "Specifies that a field can be missing from a serialization stream so that the  and the  does not throw an exception.",
+        "properties": {
+          "VersionAdded": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OptionalFieldAttribute"
+            },
+            "overloads": {
+              "d3b5626f": {
+                "name": "Equals",
+                "overloadId": "d3b5626f",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "7af05a54-4265-4438-826b-a3e4830ebdf0"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "9f7e4df7-1abd-4290-a1c9-ade230c70bb2",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OptionalFieldAttribute"
+            },
+            "overloads": {
+              "586f2dd7": {
+                "name": "GetHashCode",
+                "overloadId": "586f2dd7",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b71cadce-3515-44c6-a64f-13ab282be8c5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OptionalFieldAttribute"
+            },
+            "overloads": {
+              "1afb49e4": {
+                "name": "Match",
+                "overloadId": "1afb49e4",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "1183f4eb-bc8f-45b4-bb9d-5ec1f01fe2f1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "e67570a8-fd83-482f-8ec5-5fdc65061c32",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OptionalFieldAttribute"
+            },
+            "overloads": {
+              "ee916cd6": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "ee916cd6",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "1172e343-fec0-4c72-8947-1acbdf160e02",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OptionalFieldAttribute"
+            },
+            "overloads": {
+              "ac72d1d3": {
+                "name": "GetType",
+                "overloadId": "ac72d1d3",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "894c90a1-20a0-4e3d-9a95-e7c870f054be",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/OptionalFieldAttribute"
+            },
+            "overloads": {
+              "84f83258": {
+                "name": "ToString",
+                "overloadId": "84f83258",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "78b20164-d217-4a68-94de-bdff0b679171",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SafeSerializationEventArgs": {
+        "title": "SafeSerializationEventArgs",
+        "type": "object",
+        "description": "Provides data for the  event.",
+        "properties": {
+          "StreamingContext": {
+            "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext"
+          }
+        },
+        "x-methods": {
+          "AddSerializedState": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SafeSerializationEventArgs"
+            },
+            "overloads": {
+              "97e490a8": {
+                "name": "AddSerializedState",
+                "overloadId": "97e490a8",
+                "methodKind": "instance",
+                "description": "Stores the state of the exception.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/ISafeSerializationData",
+                      "name": "serializedState",
+                      "isOptional": false,
+                      "instanceGuid": "51639035-8ac6-443f-8a31-91962786a4de"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "aa5ee3d8-4335-4d16-980c-2151a4e12043",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SafeSerializationEventArgs"
+            },
+            "overloads": {
+              "71a2c374": {
+                "name": "GetType",
+                "overloadId": "71a2c374",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7ca9a2f5-15dc-45ca-8a64-8e585330ba3a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SafeSerializationEventArgs"
+            },
+            "overloads": {
+              "89c3e793": {
+                "name": "ToString",
+                "overloadId": "89c3e793",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "de0af74f-ca5b-4ed8-87ec-b757ec6098d0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SafeSerializationEventArgs"
+            },
+            "overloads": {
+              "faebece4": {
+                "name": "Equals",
+                "overloadId": "faebece4",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "503f2882-c984-496f-b2d5-b37d9443ecdc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "226838df-bf7b-4687-9afd-2e692788b879",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SafeSerializationEventArgs"
+            },
+            "overloads": {
+              "211b2aef": {
+                "name": "GetHashCode",
+                "overloadId": "211b2aef",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ed94ad60-be3b-4c3c-bc6b-141a3cf9a17c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SerializationException": {
+        "title": "SerializationException",
+        "type": "object",
+        "description": "The exception thrown when an error occurs during serialization or deserialization.",
+        "properties": {
+          "TargetSite": {
+            "$ref": "System.Reflection#/components/schemas/MethodBase"
+          },
+          "Message": {
+            "type": "string"
+          },
+          "Data": {
+            "$ref": "System.Collections#/components/schemas/IDictionary"
+          },
+          "InnerException": {
+            "$ref": "System#/components/schemas/Exception"
+          },
+          "HelpLink": {
+            "type": "string"
+          },
+          "Source": {
+            "type": "string"
+          },
+          "HResult": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "StackTrace": {
+            "type": "string"
+          }
+        },
+        "x-methods": {
+          "GetBaseException": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationException"
+            },
+            "overloads": {
+              "14100dab": {
+                "name": "GetBaseException",
+                "overloadId": "14100dab",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns the  that is the root cause of one or more subsequent exceptions.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ea23ca3e-b8fd-4d50-86c9-ffa7660bca13",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Exception"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetObjectData": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationException"
+            },
+            "overloads": {
+              "2bd6fed8": {
+                "name": "GetObjectData",
+                "overloadId": "2bd6fed8",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, sets the  with information about the exception.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
+                      "name": "info",
+                      "isOptional": false,
+                      "instanceGuid": "5d0e5c97-d022-41c3-bf2d-f31394a60908"
+                    },
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
+                      "name": "context",
+                      "isOptional": false,
+                      "instanceGuid": "dd632e6b-ba59-462d-98e7-0f17e2ce17a1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "72f4e753-43f6-47a5-a47e-3be5f0796333",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationException"
+            },
+            "overloads": {
+              "656db95e": {
+                "name": "ToString",
+                "overloadId": "656db95e",
+                "methodKind": "instance",
+                "description": "Creates and returns a string representation of the current exception.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a39cc677-377b-4d5d-aa01-d0b2b3619ba9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationException"
+            },
+            "overloads": {
+              "fab30cfd": {
+                "name": "GetType",
+                "overloadId": "fab30cfd",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7d5fc454-eb1c-4f63-b593-6deba04bb439",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationException"
+            },
+            "overloads": {
+              "d12b57fb": {
+                "name": "Equals",
+                "overloadId": "d12b57fb",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "9bef7327-f82a-4e81-89f0-eff32b0ec278"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "049b6819-af8c-4239-a9b3-01dcb8c5ac29",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationException"
+            },
+            "overloads": {
+              "1424c78a": {
+                "name": "GetHashCode",
+                "overloadId": "1424c78a",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "aed51e02-d6a6-4259-8905-42d13394ef2e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SerializationInfo": {
+        "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SerializationEntry": {
+        "title": "SerializationEntry",
+        "type": "object",
+        "description": "Holds the value, , and name of a serialized object.",
+        "properties": {
+          "Value": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "ObjectType": {
+            "$ref": "System#/components/schemas/Type"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationEntry"
+            },
+            "overloads": {
+              "a88ff2a2": {
+                "name": "Equals",
+                "overloadId": "a88ff2a2",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "04327a68-a4d9-4f0b-864f-f9215e15c063"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8d26f870-3fe5-4385-a4c2-cc18c4de5e40",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationEntry"
+            },
+            "overloads": {
+              "5a4ffc5f": {
+                "name": "GetHashCode",
+                "overloadId": "5a4ffc5f",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ad1c4972-9a1d-4d54-b990-07a07cac7a3e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationEntry"
+            },
+            "overloads": {
+              "cc282263": {
+                "name": "ToString",
+                "overloadId": "cc282263",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "94a180ce-4504-4f68-8fdd-0603cf05b838",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationEntry"
+            },
+            "overloads": {
+              "efff02d2": {
+                "name": "GetType",
+                "overloadId": "efff02d2",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a05ec9aa-d971-41d3-8b76-b6ee283a4d6b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SerializationInfoEnumerator": {
+        "title": "SerializationInfoEnumerator",
+        "type": "object",
+        "description": "Provides a formatter-friendly mechanism for parsing the data in . This class cannot be inherited.",
+        "properties": {
+          "Current": {
+            "$ref": "System.Runtime.Serialization#/components/schemas/SerializationEntry"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Value": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "ObjectType": {
+            "$ref": "System#/components/schemas/Type"
+          }
+        },
+        "x-methods": {
+          "MoveNext": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfoEnumerator"
+            },
+            "overloads": {
+              "f980ed37": {
+                "name": "MoveNext",
+                "overloadId": "f980ed37",
+                "methodKind": "instance",
+                "description": "Updates the enumerator to the next item.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0f0a8d98-e387-4823-8041-2fcde712a761",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Reset": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfoEnumerator"
+            },
+            "overloads": {
+              "41ad7ef7": {
+                "name": "Reset",
+                "overloadId": "41ad7ef7",
+                "methodKind": "instance",
+                "description": "Resets the enumerator to the first item.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "8445ed50-7f08-4265-b53c-a5a73c093e1d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfoEnumerator"
+            },
+            "overloads": {
+              "c960e137": {
+                "name": "GetType",
+                "overloadId": "c960e137",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7089115f-e6e6-4c01-82ba-2983749addaf",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfoEnumerator"
+            },
+            "overloads": {
+              "e2c389d3": {
+                "name": "ToString",
+                "overloadId": "e2c389d3",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "11cfd81a-b653-4ea2-88e1-edb62bf614d8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfoEnumerator"
+            },
+            "overloads": {
+              "bd00922e": {
+                "name": "Equals",
+                "overloadId": "bd00922e",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "bbaba269-6b9b-4200-842a-b66d60d40632"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2e1edebd-35b3-40dc-9e58-cf06c64dd152",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfoEnumerator"
+            },
+            "overloads": {
+              "143300a6": {
+                "name": "GetHashCode",
+                "overloadId": "143300a6",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e735dd35-40af-4c56-9509-069a37ac6c4a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "StreamingContext": {
+        "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "StreamingContextStates": {
+        "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContextStates",
+        "x-namespace": "System.Runtime.Serialization",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

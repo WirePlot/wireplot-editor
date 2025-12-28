@@ -1,0 +1,926 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.IO.Enumeration",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "FileSystemEnumerator\u00601": {
+        "title": "FileSystemEnumerator\u00601",
+        "type": "object",
+        "description": "Enumerates the file system elements of the provided type that are being searched and filtered by a .",
+        "properties": {
+          "Current": {
+            "$ref": "System.IO.Enumeration#/components/schemas/TResult"
+          }
+        },
+        "x-methods": {
+          "Reset": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerator\u00601"
+            },
+            "overloads": {
+              "f29ad56a": {
+                "name": "Reset",
+                "overloadId": "f29ad56a",
+                "methodKind": "instance",
+                "description": "Always throws .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "9e910b31-f45f-4f00-ba7c-22f30b4a9dbf",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Dispose": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerator\u00601"
+            },
+            "overloads": {
+              "2d46efc6": {
+                "name": "Dispose",
+                "overloadId": "2d46efc6",
+                "methodKind": "instance",
+                "description": "Releases the resources used by the current instance of the  class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "bfe109b8-f64c-45c1-96d0-d21305e7eca8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "MoveNext": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerator\u00601"
+            },
+            "overloads": {
+              "302277d7": {
+                "name": "MoveNext",
+                "overloadId": "302277d7",
+                "methodKind": "instance",
+                "description": "Advances the enumerator to the next item of the .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f82dbdf7-0381-4dcf-97cc-9c10f53eb45c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerator\u00601"
+            },
+            "overloads": {
+              "7110af6f": {
+                "name": "GetType",
+                "overloadId": "7110af6f",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "80f3de18-9e66-4fb3-aabc-6c07916c9a18",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerator\u00601"
+            },
+            "overloads": {
+              "07c21e00": {
+                "name": "ToString",
+                "overloadId": "07c21e00",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4b0ea1b0-acc5-4909-96fa-a56c1060d97c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerator\u00601"
+            },
+            "overloads": {
+              "057c5ec1": {
+                "name": "Equals",
+                "overloadId": "057c5ec1",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "311a03f7-b182-4605-a278-46c6f5dded86"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4a43e817-646c-44c2-8486-ef531b86c792",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerator\u00601"
+            },
+            "overloads": {
+              "98ea9dd9": {
+                "name": "GetHashCode",
+                "overloadId": "98ea9dd9",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7b9454e6-c244-40f5-8180-fe4988771594",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.IO.Enumeration",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "FileSystemEnumerable\u00601": {
+        "title": "FileSystemEnumerable\u00601",
+        "type": "object",
+        "description": "Allows utilizing custom filter predicates and transform delegates for enumeration purposes.",
+        "properties": {
+          "ShouldIncludePredicate": {
+            "$ref": "System.IO.Enumeration#/components/schemas/FindPredicate"
+          },
+          "ShouldRecursePredicate": {
+            "$ref": "System.IO.Enumeration#/components/schemas/FindPredicate"
+          }
+        },
+        "x-methods": {
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerable\u00601"
+            },
+            "overloads": {
+              "a3f075a0": {
+                "name": "GetEnumerator",
+                "overloadId": "a3f075a0",
+                "methodKind": "instance",
+                "description": "Retrieves the enumerator for this type of result.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "9fc107a8-a1d6-416f-bdfa-0eec1008f25e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections.Generic#/components/schemas/IEnumerator\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerable\u00601"
+            },
+            "overloads": {
+              "1d8f483a": {
+                "name": "GetType",
+                "overloadId": "1d8f483a",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3507e078-a4e3-4e2c-a535-076fde30d124",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerable\u00601"
+            },
+            "overloads": {
+              "df829c51": {
+                "name": "ToString",
+                "overloadId": "df829c51",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "276a51a3-6f14-4bfe-8b3b-be70a03f503b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerable\u00601"
+            },
+            "overloads": {
+              "957653b4": {
+                "name": "Equals",
+                "overloadId": "957653b4",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "372c087a-6e16-4e3e-b9fc-9bfb6e1ae77e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "23b74708-3f33-4df2-b6d2-a759d7def0fd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerable\u00601"
+            },
+            "overloads": {
+              "e94eadde": {
+                "name": "GetHashCode",
+                "overloadId": "e94eadde",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7fb04ad7-3536-4b07-9feb-c35714fa770c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.IO.Enumeration",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "FindPredicate": {
+        "$ref": "System.IO.Enumeration#/components/schemas/FindPredicate",
+        "x-namespace": "System.IO.Enumeration",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "FindTransform": {
+        "title": "FindTransform",
+        "type": "object",
+        "description": "Allows utilizing custom filter predicates and transform delegates for enumeration purposes.",
+        "properties": {
+          "Target": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "Method": {
+            "$ref": "System.Reflection#/components/schemas/MethodInfo"
+          }
+        },
+        "x-methods": {
+          "Invoke": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FindTransform"
+            },
+            "overloads": {
+              "5244c8d9": {
+                "name": "Invoke",
+                "overloadId": "5244c8d9",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEntry\u0026",
+                      "name": "entry",
+                      "isOptional": false,
+                      "instanceGuid": "fb74bc70-27f9-42da-ae86-59c1261cd24c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6854d08f-b3cc-42a6-b3ff-53bec57cb97d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.IO.Enumeration#/components/schemas/TResult"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "BeginInvoke": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FindTransform"
+            },
+            "overloads": {
+              "cd788de1": {
+                "name": "BeginInvoke",
+                "overloadId": "cd788de1",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEntry\u0026",
+                      "name": "entry",
+                      "isOptional": false,
+                      "instanceGuid": "043d0cd2-f0a0-4b92-9fab-404a8f09f768"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/AsyncCallback",
+                      "name": "callback",
+                      "isOptional": false,
+                      "instanceGuid": "e3a52afd-e1ed-4680-8c51-c08cc709ca02"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "object",
+                      "isOptional": false,
+                      "instanceGuid": "20448bad-cd1f-4bd7-9890-75a343e6990a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "cccf064c-31d7-41a8-a32c-1ca6ac20d3c4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/IAsyncResult"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "EndInvoke": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FindTransform"
+            },
+            "overloads": {
+              "d74f4e65": {
+                "name": "EndInvoke",
+                "overloadId": "d74f4e65",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEntry\u0026",
+                      "name": "entry",
+                      "isOptional": false,
+                      "instanceGuid": "af513f99-9d30-4e3e-bfba-0ebafb2b2f72"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/IAsyncResult",
+                      "name": "result",
+                      "isOptional": false,
+                      "instanceGuid": "3442affc-5bd9-44cd-bb15-b0c3373d68a5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "b9d45960-7e61-4970-a15c-d372dd537144",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.IO.Enumeration#/components/schemas/TResult"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetObjectData": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FindTransform"
+            },
+            "overloads": {
+              "97633626": {
+                "name": "GetObjectData",
+                "overloadId": "97633626",
+                "methodKind": "instance",
+                "description": "Populates a  object with all the data needed to serialize this instance.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
+                      "name": "info",
+                      "isOptional": false,
+                      "instanceGuid": "ff16ffa2-8720-41f9-aad2-74f941447828"
+                    },
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
+                      "name": "context",
+                      "isOptional": false,
+                      "instanceGuid": "7212b0b0-90d3-4961-8dad-b3c98105b9b7"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4b7f9564-2e0b-4440-92ce-589307ea8d5d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FindTransform"
+            },
+            "overloads": {
+              "334b3d3c": {
+                "name": "Equals",
+                "overloadId": "334b3d3c",
+                "methodKind": "instance",
+                "description": "Determines whether this multicast delegate and the specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "37afc413-8524-40ee-a4a8-b3c76516044f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "aea4af36-89a9-4632-b9f5-81249c3779e8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetInvocationList": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FindTransform"
+            },
+            "overloads": {
+              "0054c4e4": {
+                "name": "GetInvocationList",
+                "overloadId": "0054c4e4",
+                "methodKind": "instance",
+                "description": "Returns the invocation list of this multicast delegate, in invocation order.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "39a414b5-0860-4c81-b878-00cecd7a16eb",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Delegate[]"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FindTransform"
+            },
+            "overloads": {
+              "db7b0b16": {
+                "name": "GetHashCode",
+                "overloadId": "db7b0b16",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "96e5b103-42bc-4cca-8cae-ed62a275e4cf",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Clone": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FindTransform"
+            },
+            "overloads": {
+              "04f1e77d": {
+                "name": "Clone",
+                "overloadId": "04f1e77d",
+                "methodKind": "instance",
+                "description": "Creates a shallow copy of the delegate.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7346d732-86bf-49b3-a8ca-5c2d4486eaf0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Object"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "DynamicInvoke": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FindTransform"
+            },
+            "overloads": {
+              "1a723c34": {
+                "name": "DynamicInvoke",
+                "overloadId": "1a723c34",
+                "methodKind": "instance",
+                "description": "Dynamically invokes (late-bound) the method represented by the current delegate.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object[]",
+                      "name": "args",
+                      "isOptional": false,
+                      "instanceGuid": "44e26eb1-f038-4192-a28b-ab54e18da31e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "36332bef-be94-477e-b025-a2a68f484351",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Object"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FindTransform"
+            },
+            "overloads": {
+              "732081df": {
+                "name": "GetType",
+                "overloadId": "732081df",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e3a99168-0f18-43d8-ab8b-5d42128775ec",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FindTransform"
+            },
+            "overloads": {
+              "7515dbca": {
+                "name": "ToString",
+                "overloadId": "7515dbca",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "77b9df5d-709c-482d-8e3f-ad58e462070d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.IO.Enumeration",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "FileSystemName": {
+        "title": "FileSystemName",
+        "type": "object",
+        "description": "Provides methods for matching file system names.",
+        "x-methods": {
+          "TranslateWin32Expression": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemName"
+            },
+            "overloads": {
+              "fd8c9610": {
+                "name": "TranslateWin32Expression",
+                "overloadId": "fd8c9610",
+                "methodKind": "static",
+                "description": "Translates the given Win32 expression. Change \u0027*\u0027 and \u0027?\u0027 to \u0027\u003C\u0027, \u0027\u003E\u0027 and \u0027\u0022\u0027 to match Win32 behavior.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "expression",
+                      "isOptional": false,
+                      "instanceGuid": "559dd598-7cec-4a7f-94a9-e0fbe4575237"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "73b93345-9504-4f17-bf09-091e2bed85c3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "MatchesWin32Expression": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemName"
+            },
+            "overloads": {
+              "08580012": {
+                "name": "MatchesWin32Expression",
+                "overloadId": "08580012",
+                "methodKind": "static",
+                "description": "Verifies if the given Win32 expression matches the given name. Supports the following wildcards: \u0027*\u0027, \u0027?\u0027, \u0027\u003C\u0027, \u0027\u003E\u0027, \u0027\u0022\u0027. The backslash character \u0027\\\\\u0027 escapes.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "expression",
+                      "isOptional": false,
+                      "instanceGuid": "91dab618-7a40-4eaf-9ed3-1f99ccf14037"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "name",
+                      "isOptional": false,
+                      "instanceGuid": "1cc80e15-93d4-4ebe-bab6-f7fa1854e449"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "ignoreCase",
+                      "isOptional": true,
+                      "instanceGuid": "e0045865-bb28-4e74-93ae-5fd3bec1ed7c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "b79b91d5-f471-45c0-9f61-40ee0ee7d6fa",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "MatchesSimpleExpression": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemName"
+            },
+            "overloads": {
+              "95fd6721": {
+                "name": "MatchesSimpleExpression",
+                "overloadId": "95fd6721",
+                "methodKind": "static",
+                "description": "Verifies if the given expression matches the given name. Supports the following wildcards: \u0027*\u0027 and \u0027?\u0027. The backslash character \u0027\\\\\u0027 escapes.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "expression",
+                      "isOptional": false,
+                      "instanceGuid": "80ee77ff-5224-42a5-8676-bc6091275fb3"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "name",
+                      "isOptional": false,
+                      "instanceGuid": "89d10741-087c-4627-aec4-2493a081351d"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "ignoreCase",
+                      "isOptional": true,
+                      "instanceGuid": "ab7de4aa-6387-443b-96bd-1e7a0019bf00"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4d99947a-f07d-41b9-b963-c29095cbb26f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemName"
+            },
+            "overloads": {
+              "6d2a05c1": {
+                "name": "GetType",
+                "overloadId": "6d2a05c1",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e164a444-306b-49c1-ad34-bd0c147689d9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemName"
+            },
+            "overloads": {
+              "9d98c6d8": {
+                "name": "ToString",
+                "overloadId": "9d98c6d8",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b7186929-f07c-4c38-ba29-ae772be6b917",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemName"
+            },
+            "overloads": {
+              "d929eb19": {
+                "name": "Equals",
+                "overloadId": "d929eb19",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "b7fdd336-f5f5-4126-bf6e-9d44536b2053"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "f5c8b8fc-e2fb-4d7e-aec3-8c6eb3b3413a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.IO.Enumeration#/components/schemas/FileSystemName"
+            },
+            "overloads": {
+              "943997c2": {
+                "name": "GetHashCode",
+                "overloadId": "943997c2",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "558d7f1a-5b8a-4f9b-beb3-00e653bc6245",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.IO.Enumeration",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

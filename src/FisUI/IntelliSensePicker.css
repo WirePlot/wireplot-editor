@@ -1,0 +1,85 @@
+.intellisense-picker {
+    background-color: var(--background-color-brighter);
+    color: var(--font-color);
+    border: 1px solid #444;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    max-height: 400px;
+    overflow-y: auto;
+    min-width: 500px;
+    padding: 4px 0;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+}
+
+.intellisense-group-label {
+    padding: 4px 8px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #333;
+    background: var(--background-color-darker);
+}
+
+.intellisense-option {
+    display: block;
+    padding: 3px 10px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.intellisense-option:hover {
+    background-color: var(--background-color-hover);
+}
+
+.method-return {
+    color: #4ec9b0; /* return typ - tyrkys */
+    font-weight: 500;
+}
+
+.method-name {
+    color: #dcdcaa; /* názov metódy - žltý ako v VS */
+    font-weight: 600;
+}
+
+.param {
+    color: #9cdcfe; /* typ parametra - modrý */
+}
+
+.method-params {
+    color: #cccccc; /* zátvorky a čiarky */
+}
+
+.method-kind {
+  font-size: 10px;
+  color: #aaa;
+  margin-left: 4px;
+}
+
+
+.intellisense-empty {
+    text-align: center;
+    padding: 10px;
+    opacity: 0.6;
+}
+
+
+.intellisense-tooltip {
+  position: fixed;
+  max-width: 280px;
+  background: rgba(25, 25, 25, 0.95);
+  color: #eee;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  z-index: 9999;
+  pointer-events: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+

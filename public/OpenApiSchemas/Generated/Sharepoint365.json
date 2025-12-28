@@ -1,0 +1,363 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Microsoft Graph SharePoint API",
+    "version": "1.0.0",
+    "description": "OpenAPI 3.0 specification for SharePoint REST operations via Microsoft Graph."
+  },
+  "servers": [
+    {
+      "url": "https://graph.microsoft.com/v1.0"
+    }
+  ],
+  "paths": {
+    "/sites/{siteId}/lists": {
+      "get": {
+        "tags": [
+          "SharePoint Lists"
+        ],
+        "summary": "Get lists in a SharePoint site",
+        "operationId": "getLists",
+        "parameters": [
+          {
+            "name": "siteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "The unique identifier of the SharePoint site"
+            }
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "OData filter query"
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Select properties to be returned"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A collection of lists",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListCollectionResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sites/{siteId}/lists/{listId}/items": {
+      "get": {
+        "tags": [
+          "SharePoint Lists"
+        ],
+        "summary": "Get items from a SharePoint list",
+        "operationId": "getListItems",
+        "parameters": [
+          {
+            "name": "siteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "listId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List items",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListItemCollectionResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "SharePoint Lists"
+        ],
+        "summary": "Create a new item in a SharePoint list (using query parameters)",
+        "operationId": "createListItem",
+        "parameters": [
+          {
+            "name": "siteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "listId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Title of the new list item"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Description of the new list item"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created list item",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListItem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "SharePoint Lists"
+        ],
+        "summary": "Update an existing item in a SharePoint list",
+        "operationId": "updateListItem",
+        "parameters": [
+          {
+            "name": "siteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "listId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "itemId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID of the item to update"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Updated title"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Updated description"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Updated list item",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListItem"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "SharePoint Lists"
+        ],
+        "summary": "Delete an item from a SharePoint list",
+        "operationId": "deleteListItem",
+        "parameters": [
+          {
+            "name": "siteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "listId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "itemId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID of the item to delete"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Item deleted successfully"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ListCollectionResponse": {
+        "type": "object",
+        "properties": {
+          "@odata.context": { "type": "string" },
+          "value": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/List" }
+          }
+        }
+      },
+      "List": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "displayName": { "type": "string" },
+          "createdDateTime": { "type": "string", "format": "date-time" },
+          "lastModifiedDateTime": { "type": "string", "format": "date-time" },
+          "description": { "type": "string" }
+        },
+        "required": ["id", "displayName"]
+      },
+      "ListItemCollectionResponse": {
+        "type": "object",
+        "properties": {
+          "@odata.context": { "type": "string" },
+          "value": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ListItem" }
+          }
+        }
+      },
+      "ListItem": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "createdDateTime": { "type": "string", "format": "date-time" },
+          "lastModifiedDateTime": { "type": "string", "format": "date-time" }
+        },
+        "required": ["id"]
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "description": "Top-level Microsoft Graph error wrapper.",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/Error"
+          }
+        },
+        "required": ["error"]
+      },
+      "Error": {
+        "type": "object",
+        "description": "Microsoft Graph error object containing code, message and innerError.",
+        "properties": {
+          "code": { "type": "string" },
+          "message": { "type": "string" },
+          "innerError": {
+            "$ref": "#/components/schemas/InnerError"
+          }
+        },
+        "required": ["code", "message"]
+      },
+      "InnerError": {
+        "type": "object",
+        "description": "Detailed internal error information returned by Graph API.",
+        "properties": {
+          "date": { "type": "string", "format": "date-time" },
+          "request-id": { "type": "string" },
+          "client-request-id": { "type": "string" }
+        },
+        "required": ["date", "request-id", "client-request-id"]
+      }
+    },
+    "securitySchemes": {
+      "oauth2": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://login.microsoftonline.com/{tenant}/oauth2/v2.0/authorize",
+            "tokenUrl": "https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token",
+            "scopes": {
+              "Sites.Read.All": "Read SharePoint sites",
+              "Sites.ReadWrite.All": "Read and write SharePoint sites"
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "oauth2": ["Sites.Read.All"]
+    }
+  ]
+}

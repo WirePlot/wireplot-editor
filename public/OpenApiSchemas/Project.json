@@ -1,0 +1,496 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Project",
+    "version": "1.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "Program": {
+        "type": "object",
+        "description": "Entry point for the compiled .NET program.",
+        "properties": {
+          "Theme": {
+            "$ref": "System#/components/schemas/String",
+            "type": "string",
+            "title": "Theme",
+            "description": "UI color theme.",
+            "default": "Light",
+            "nullable": false,
+            "readOnly": false
+          },
+          "AutoSave": {
+            "$ref": "System#/components/schemas/Boolean",
+            "type": "boolean",
+            "title": "AutoSave",
+            "description": "Enables automatic project saving.",
+            "default": false,
+            "nullable": false,
+            "readOnly": false
+          },
+          "RetryCount": {
+            "$ref": "System#/components/schemas/Int32",
+            "type": "integer",
+            "format": "int32",
+            "title": "RetryCount",
+            "description": "Number of retries before failure.",
+            "default": 3,
+            "nullable": false,
+            "readOnly": false
+          }
+        },
+        "x-methods": {
+          "Main": {
+            "owner": {
+              "$ref": "#/components/schemas/Program"
+            },
+            "overloads": {
+              "a13f94bd": {
+                "name": "Main",
+                "overloadId": "a13f94bd",
+                "methodKind": "instance",
+                "description": "Process entry point. Returns process exit code.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "instanceGuid": "1f6a9f3e-7a5c-4f7b-9b2d-1e6d4c9b8a21",
+                      "name": "top",
+                      "$ref": "System#/components/schemas/Int32",
+                      "isOptional": false,
+                      "description": "Command-line arguments."
+                    },
+                    {
+                      "instanceGuid": "2f6a9f3e-7a5c-4f7b-9b2d-1e6d4c9b8a21",
+                      "name": "skip",
+                      "$ref": "System#/components/schemas/Int32",
+                      "isOptional": false,
+                      "description": "Command-line arguments."
+                    },
+                    {
+                      "instanceGuid": "3f6a9f3e-7a5c-4f7b-9b2d-1e6d4c9b8a21",
+                      "name": "filter",
+                      "$ref": "System#/components/schemas/String",
+                      "isOptional": false,
+                      "description": "Command-line arguments."
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "1e2b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Value Customers",
+                      "$ref": "SAP.HANA.REST.API#/components/schemas/Customer",
+                      "description": ""
+                    },
+                    {
+                      "instanceGuid": "2e2b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Value Error Message",
+                      "$ref": "System#/components/schemas/String",
+                      "description": ""
+                    },
+                    {
+                      "instanceGuid": "3e2b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Has Error",
+                      "$ref": "System#/components/schemas/Boolean",
+                      "description": ""
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "HandleSuccess": {
+            "owner": {
+              "$ref": "#/components/schemas/Program"
+            },
+            "overloads": {
+              "gfd457b2": {
+                "name": "HandleSuccess",
+                "overloadId": "gfd457b2",
+                "methodKind": "instance",
+                "description": "Handle successful response (200 OK)\n Maps SAP response to function result.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "instanceGuid": "1a4a2j7d-7823-aaaa-a2c2-2d2e1a2c2f22",
+                      "name": "oData Response",
+                      "$ref": "SAP.HANA.REST.API#/components/schemas/CustomersODataResponse",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "555b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Value Customers",
+                      "$ref": "SAP.HANA.REST.API#/components/schemas/Customer",
+                      "description": ""
+                    },
+                    {
+                      "instanceGuid": "556b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Value Error Message",
+                      "$ref": "System#/components/schemas/String",
+                      "description": ""
+                    },
+                    {
+                      "instanceGuid": "557b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Has Error",
+                      "$ref": "System#/components/schemas/Boolean",
+                      "description": ""
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "HandleBadRequest": {
+            "owner": {
+              "$ref": "#/components/schemas/Program"
+            },
+            "overloads": {
+              "1a6548c2": {
+                "name": "Handle Bad Request",
+                "overloadId": "1a6548c2",
+                "methodKind": "instance",
+                "description": "Handle client-side error (400 Bad Request)\n Invalid input or request parameters.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "instanceGuid": "1a4a2j7d-7823-aaaa-a2c2-2d2e1a2c2f22",
+                      "name": "SAP Error Response",
+                      "$ref": "SAP.HANA.REST.API#/components/schemas/ErrorResponse",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "555b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Value Customers",
+                      "$ref": "SAP.HANA.REST.API#/components/schemas/Customer",
+                      "description": ""
+                    },
+                    {
+                      "instanceGuid": "556b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Value Error Message",
+                      "$ref": "System#/components/schemas/String",
+                      "description": ""
+                    },
+                    {
+                      "instanceGuid": "557b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Has Error",
+                      "$ref": "System#/components/schemas/Boolean",
+                      "description": ""
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "HandleFatalError": {
+            "owner": {
+              "$ref": "#/components/schemas/Program"
+            },
+            "overloads": {
+              "bb8457gg": {
+                "name": "Handle Fatal Error",
+                "overloadId": "bb8457gg",
+                "methodKind": "instance",
+                "description": "Handle server-side or infrastructure failure (5xx)\n SAP or downstream system failure.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "instanceGuid": "1a4a2j7d-7823-aaaa-a2c2-2d2e1a2c2f22",
+                      "name": "SAP Error Response",
+                      "$ref": "SAP.HANA.REST.API#/components/schemas/ErrorResponse",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "555b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Value Customers",
+                      "$ref": "SAP.HANA.REST.API#/components/schemas/Customer",
+                      "description": ""
+                    },
+                    {
+                      "instanceGuid": "556b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Value Error Message",
+                      "$ref": "System#/components/schemas/String",
+                      "description": ""
+                    },
+                    {
+                      "instanceGuid": "557b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Has Error",
+                      "$ref": "System#/components/schemas/Boolean",
+                      "description": ""
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "HandleUnexpectedResponse": {
+            "owner": {
+              "$ref": "#/components/schemas/Program"
+            },
+            "overloads": {
+              "3a3212yk": {
+                "name": "Handle Unexpected Response",
+                "overloadId": "3a3212yk",
+                "methodKind": "instance",
+                "description": "Handle unexpected response\n Fallback for unhandled status codes.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "instanceGuid": "1a4a2j7d-7823-aaaa-a2c2-2d2e1a2c2f22",
+                      "name": "Body",
+                      "$ref": "System#/components/schemas/Object",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "555b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Value Customers",
+                      "$ref": "SAP.HANA.REST.API#/components/schemas/Customer",
+                      "description": ""
+                    },
+                    {
+                      "instanceGuid": "556b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Value Error Message",
+                      "$ref": "System#/components/schemas/String",
+                      "description": ""
+                    },
+                    {
+                      "instanceGuid": "557b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Has Error",
+                      "$ref": "System#/components/schemas/Boolean",
+                      "description": ""
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-x-methods": {
+          "Main": {
+            "owner": {
+              "$ref": "#/components/schemas/Program"
+            },
+            "overloads": {
+              "a13f94bd": {
+                "name": "Main",
+                "overloadId": "a13f94bd",
+                "methodKind": "instance",
+                "description": "Process entry point. Returns process exit code.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "instanceGuid": "1f6a9f3e-7a5c-4f7b-9b2d-1e6d4c9b8a21",
+                      "name": "top",
+                      "$ref": "System#/components/schemas/Int32",
+                      "isOptional": false,
+                      "description": "Command-line arguments."
+                    },
+                    {
+                      "instanceGuid": "2f6a9f3e-7a5c-4f7b-9b2d-1e6d4c9b8a21",
+                      "name": "skip",
+                      "$ref": "System#/components/schemas/Int32",
+                      "isOptional": false,
+                      "description": "Command-line arguments."
+                    },
+                    {
+                      "instanceGuid": "3f6a9f3e-7a5c-4f7b-9b2d-1e6d4c9b8a21",
+                      "name": "filter",
+                      "$ref": "System#/components/schemas/String",
+                      "isOptional": false,
+                      "description": "Command-line arguments."
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "1e2b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Return Value Customers",
+                      "$ref": "SAP.HANA.REST.API#/components/schemas/Customer",
+                      "description": ""
+                    },
+                    {
+                      "instanceGuid": "2e2b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Return Value Error Message",
+                      "$ref": "System#/components/schemas/String",
+                      "description": ""
+                    },
+                    {
+                      "instanceGuid": "3e2b9c4a-6f1d-4b8e-a5c3-2d9f6e1a7b84",
+                      "isOptional": false,
+                      "name": "Return Has Error",
+                      "$ref": "System#/components/schemas/Boolean",
+                      "description": ""
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ExecuteAssembly": {
+            "owner": {
+              "$ref": "#/components/schemas/Program"
+            },
+            "overloads": {
+              "3a8457b2": {
+                "name": "ExecuteAssembly",
+                "overloadId": "3a8457b2",
+                "methodKind": "instance",
+                "description": "Executes the assembly contained in the specified file.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "instanceGuid": "1a4a2j7d-2e2b-2b2f-a2c2-2d2e1a2c2f22",
+                      "name": "assemblyFile",
+                      "$ref": "System#/components/schemas/String",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    },
+                    {
+                      "instanceGuid": "9b3c6e1f-2a8d-4f5c-9a7b-0d1e6c2f4a85",
+                      "name": "args",
+                      "$ref": "System#/components/schemas/String",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    },
+                    {
+                      "instanceGuid": "8e1d6c9a-4f2b-4c7a-b5f3-0a9e2d6c1f84",
+                      "name": "hashValue",
+                      "$ref": "System#/components/schemas/Byte",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    },
+                    {
+                      "instanceGuid": "7c5f2d9a-1b8e-4a6c-9f3d-0e2c6b4a1d58",
+                      "name": "code",
+                      "$ref": "System#/components/schemas/Int32",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7f3c1a9e-4b62-4f2d-9d8a-6e5c2b8a1f43",
+                      "name": "assemblyFile",
+                      "$ref": "System#/components/schemas/String",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    },
+                    {
+                      "instanceGuid": "c9e84d2a-1f6b-4a7e-8c5d-3b2a6f9e0d71",
+                      "name": "args",
+                      "$ref": "System#/components/schemas/String",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    },
+                    {
+                      "instanceGuid": "1b5f7a3e-9c2d-4e68-b0a1-8f6d3c4e2a95",
+                      "name": "hashValue",
+                      "$ref": "System#/components/schemas/Byte",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    },
+                    {
+                      "instanceGuid": "e2a9c6f1-7d3b-4b8e-9a54-1f0c5d6e2b73",
+                      "name": "code",
+                      "$ref": "System#/components/schemas/Int32",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    }
+                  ]
+                }
+              },
+              "cc8457b2": {
+                "name": "ExecuteAssembly",
+                "overloadId": "cc8457b2",
+                "methodKind": "instance",
+                "description": "Executes the assembly contained in the specified file.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "instanceGuid": "5f2c9a1d-8e6b-4b3f-a0c7-9d4e1a6c8f52",
+                      "name": "assemblyFile",
+                      "$ref": "System#/components/schemas/String",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    },
+                    {
+                      "instanceGuid": "4d6b9a3c-1f8e-4c5a-9b2f-7e0d6a1c3f84",
+                      "name": "args",
+                      "$ref": "System#/components/schemas/String",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    },
+                    {
+                      "instanceGuid": "3a1e8c6f-9d2b-4f7a-b5c0-4e9d1a2f6c38",
+                      "name": "hashValue",
+                      "$ref": "System#/components/schemas/Byte",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    },
+                    {
+                      "instanceGuid": "2b7f9c4d-6e5a-4d1b-8f3c-0a9e2c6b5d71",
+                      "name": "code",
+                      "$ref": "System#/components/schemas/Int32",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    },
+                    {
+                      "instanceGuid": "1e9a6d3f-2c4b-4b7e-9a51-8c0d6f2e7a94",
+                      "name": "orange",
+                      "$ref": "System#/components/schemas/Int32",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    },
+                    {
+                      "instanceGuid": "0c4f7c2b-8f4a-4a9a-bc3f-5b2c9d8e1f40",
+                      "name": "apple",
+                      "$ref": "System#/components/schemas/Int32",
+                      "isOptional": false,
+                      "description": "Executes the assembly contained in the specified file."
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "c3a8f5e1-9d6b-4a2f-8e7c-1b5d0f9a6e42",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String",
+                      "description": ""
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

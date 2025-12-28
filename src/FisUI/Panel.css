@@ -1,0 +1,35 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+.panel-header {
+  user-select: none;
+  overflow: hidden;
+  height: 40px;
+  padding: 0px 6px;
+  color: #6ea8fe;
+  background-color: #031633;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.panel-search {
+  flex-shrink: 0;
+  padding: 6px;
+  background-color: #212529;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.panel-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #212529;
+  overflow-x: clip;
+  overflow-y: auto;
+}

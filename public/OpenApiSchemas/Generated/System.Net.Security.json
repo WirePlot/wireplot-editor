@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Net.Security",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "AuthenticationLevel": {
+        "title": "AuthenticationLevel",
+        "type": "integer",
+        "description": "Specifies client requirements for authentication and impersonation when using the  class and derived classes to request a resource.",
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "x-enum-names": [
+          "None",
+          "MutualAuthRequested",
+          "MutualAuthRequired"
+        ],
+        "x-namespace": "System.Net.Security",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "SslPolicyErrors": {
+        "title": "SslPolicyErrors",
+        "type": "integer",
+        "description": "Enumerates Secure Socket Layer (SSL) policy errors.",
+        "enum": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "x-enum-names": [
+          "None",
+          "RemoteCertificateNotAvailable",
+          "RemoteCertificateNameMismatch",
+          "RemoteCertificateChainErrors"
+        ],
+        "x-namespace": "System.Net.Security",
+        "x-assembly": "System.Net.Primitives"
+      }
+    }
+  }
+}

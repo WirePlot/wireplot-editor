@@ -1,0 +1,3811 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Net",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "Keywords": {
+        "title": "Keywords",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/Keywords"
+            },
+            "overloads": {
+              "0e218d11": {
+                "name": "GetType",
+                "overloadId": "0e218d11",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "db5b25b3-b903-4717-87dc-2853d9479fa4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/Keywords"
+            },
+            "overloads": {
+              "2c6afa59": {
+                "name": "ToString",
+                "overloadId": "2c6afa59",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "691d51db-4dde-428c-adeb-e6335c168d65",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/Keywords"
+            },
+            "overloads": {
+              "6ea02695": {
+                "name": "Equals",
+                "overloadId": "6ea02695",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "09ad92f4-7833-4d33-b4fd-a763cbe0c0c3"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "da797824-5199-4ea0-9239-f47d3e858eb7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/Keywords"
+            },
+            "overloads": {
+              "add17433": {
+                "name": "GetHashCode",
+                "overloadId": "add17433",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "1d6537ff-1383-4f54-9e9c-0a721f57379f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Http"
+      },
+      "AuthenticationSchemes": {
+        "title": "AuthenticationSchemes",
+        "type": "integer",
+        "description": "Specifies protocols for authentication.",
+        "enum": [
+          0,
+          1,
+          2,
+          4,
+          6,
+          8,
+          32768
+        ],
+        "x-enum-names": [
+          "None",
+          "Digest",
+          "Negotiate",
+          "Ntlm",
+          "IntegratedWindowsAuthentication",
+          "Basic",
+          "Anonymous"
+        ],
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "CookieVariant": {
+        "title": "CookieVariant",
+        "type": "integer",
+        "description": null,
+        "enum": [
+          0,
+          1,
+          2,
+          2,
+          3
+        ],
+        "x-enum-names": [
+          "Unknown",
+          "Plain",
+          "Rfc2109",
+          "Default",
+          "Rfc2965"
+        ],
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "Cookie": {
+        "title": "Cookie",
+        "type": "object",
+        "description": "Provides a set of properties and methods that are used to manage cookies. This class cannot be inherited.",
+        "properties": {
+          "Comment": {
+            "type": "string"
+          },
+          "CommentUri": {
+            "$ref": "System#/components/schemas/Uri"
+          },
+          "HttpOnly": {
+            "type": "boolean"
+          },
+          "Discard": {
+            "type": "boolean"
+          },
+          "Domain": {
+            "type": "string"
+          },
+          "Expired": {
+            "type": "boolean"
+          },
+          "Expires": {
+            "type": "object",
+            "format": "date-time"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Path": {
+            "type": "string"
+          },
+          "Port": {
+            "type": "string"
+          },
+          "Secure": {
+            "type": "boolean"
+          },
+          "TimeStamp": {
+            "type": "object",
+            "format": "date-time"
+          },
+          "Value": {
+            "type": "string"
+          },
+          "Version": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/Cookie"
+            },
+            "overloads": {
+              "8c815a27": {
+                "name": "Equals",
+                "overloadId": "8c815a27",
+                "methodKind": "instance",
+                "description": "Overrides the  method.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "comparand",
+                      "isOptional": false,
+                      "instanceGuid": "6b6580c7-2694-4161-b170-9de50702c9d8"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "35df687b-60f6-461f-a1cc-8ebb15bd2ac0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/Cookie"
+            },
+            "overloads": {
+              "bc70635a": {
+                "name": "GetHashCode",
+                "overloadId": "bc70635a",
+                "methodKind": "instance",
+                "description": "Overrides the  method.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "61f4e098-51a6-4494-bc43-7d5f2f872f28",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/Cookie"
+            },
+            "overloads": {
+              "1ad95083": {
+                "name": "ToString",
+                "overloadId": "1ad95083",
+                "methodKind": "instance",
+                "description": "Overrides the  method.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "9143aadd-e271-4cbc-adad-e3a73623ae95",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/Cookie"
+            },
+            "overloads": {
+              "1c73504a": {
+                "name": "GetType",
+                "overloadId": "1c73504a",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5d18ea59-cd2f-4296-8d39-17d2469eebb8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "CookieContainer": {
+        "title": "CookieContainer",
+        "type": "object",
+        "description": "Provides a container for a collection of  objects.",
+        "properties": {
+          "Capacity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "MaxCookieSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "PerDomainCapacity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-methods": {
+          "Add": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieContainer"
+            },
+            "overloads": {
+              "d30928a6": {
+                "name": "Add",
+                "overloadId": "d30928a6",
+                "methodKind": "instance",
+                "description": "Adds a  to a .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Net#/components/schemas/Cookie",
+                      "name": "cookie",
+                      "isOptional": false,
+                      "instanceGuid": "5fb017c4-eea2-463e-81f1-833ddfb01301"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d749bbbd-c7d5-4ecb-943c-62e260fb29ee",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              },
+              "e965025a": {
+                "name": "Add",
+                "overloadId": "e965025a",
+                "methodKind": "instance",
+                "description": "Adds a  to a .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Net#/components/schemas/CookieCollection",
+                      "name": "cookies",
+                      "isOptional": false,
+                      "instanceGuid": "16f30e18-eaff-4a12-9dde-aabf27f14f39"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "50bff335-8e3d-4fd2-baa0-338c25032d24",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              },
+              "2c45ed0c": {
+                "name": "Add",
+                "overloadId": "2c45ed0c",
+                "methodKind": "instance",
+                "description": "Adds a  to a .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Uri",
+                      "name": "uri",
+                      "isOptional": false,
+                      "instanceGuid": "e1bfe2a8-3eda-4651-915f-2579dbf30251"
+                    },
+                    {
+                      "$ref": "System.Net#/components/schemas/Cookie",
+                      "name": "cookie",
+                      "isOptional": false,
+                      "instanceGuid": "676e286b-955f-494e-9dbc-f1671730e683"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d4c090a6-f300-4b93-b23e-213e3da9ee91",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              },
+              "4b4a2305": {
+                "name": "Add",
+                "overloadId": "4b4a2305",
+                "methodKind": "instance",
+                "description": "Adds a  to a .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Uri",
+                      "name": "uri",
+                      "isOptional": false,
+                      "instanceGuid": "7a0c01a6-74a2-4397-a9e0-65b59fdd5a35"
+                    },
+                    {
+                      "$ref": "System.Net#/components/schemas/CookieCollection",
+                      "name": "cookies",
+                      "isOptional": false,
+                      "instanceGuid": "6e62c3f2-c88a-4c47-8f54-4442a530676f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "125f0d53-2a9c-4761-88b5-4dd91587ed2a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetCookies": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieContainer"
+            },
+            "overloads": {
+              "796cc35f": {
+                "name": "GetCookies",
+                "overloadId": "796cc35f",
+                "methodKind": "instance",
+                "description": "Gets a  that contains the  instances that are associated with a specific URI.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Uri",
+                      "name": "uri",
+                      "isOptional": false,
+                      "instanceGuid": "919f57ef-5b37-4beb-8e25-60e0d65bf789"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "44837d53-1360-4e17-af7a-09176b032977",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/CookieCollection"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetAllCookies": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieContainer"
+            },
+            "overloads": {
+              "c9ebdec9": {
+                "name": "GetAllCookies",
+                "overloadId": "c9ebdec9",
+                "methodKind": "instance",
+                "description": "Gets a  that contains all of the  instances in the container.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "1993df8a-77d8-4159-8544-901d603a57a7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/CookieCollection"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetCookieHeader": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieContainer"
+            },
+            "overloads": {
+              "97f86455": {
+                "name": "GetCookieHeader",
+                "overloadId": "97f86455",
+                "methodKind": "instance",
+                "description": "Gets the HTTP cookie header that contains the HTTP cookies that represent the  instances that are associated with a specific URI.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Uri",
+                      "name": "uri",
+                      "isOptional": false,
+                      "instanceGuid": "6358202d-4dfd-4330-9c9f-f9ff6e998f8d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "38c3be3c-2e1c-4c2c-96fe-1b99b226a8fd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "SetCookies": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieContainer"
+            },
+            "overloads": {
+              "320be23a": {
+                "name": "SetCookies",
+                "overloadId": "320be23a",
+                "methodKind": "instance",
+                "description": "Adds  instances for one or more cookies from an HTTP cookie header to the  for a specific URI.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Uri",
+                      "name": "uri",
+                      "isOptional": false,
+                      "instanceGuid": "adbb5984-789b-449e-829f-ce591716dd1f"
+                    },
+                    {
+                      "type": "string",
+                      "name": "cookieHeader",
+                      "isOptional": false,
+                      "instanceGuid": "c3151c0c-e7d8-40a5-969a-518bd7431c62"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0b36a461-b60b-40ff-9157-5504e9544b79",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieContainer"
+            },
+            "overloads": {
+              "ff5d436e": {
+                "name": "GetType",
+                "overloadId": "ff5d436e",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "be262bea-2469-4eab-9861-b8d874cbfbaf",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieContainer"
+            },
+            "overloads": {
+              "30f3f6c4": {
+                "name": "ToString",
+                "overloadId": "30f3f6c4",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c6e895bc-bfbb-412b-ae8d-83860953b5cf",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieContainer"
+            },
+            "overloads": {
+              "d398b8eb": {
+                "name": "Equals",
+                "overloadId": "d398b8eb",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "96910a2a-0f48-424b-8d3d-a6975b49f8c5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2193d18a-aff4-4277-9517-a3e17750dbb7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieContainer"
+            },
+            "overloads": {
+              "0e7244e0": {
+                "name": "GetHashCode",
+                "overloadId": "0e7244e0",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e0d22f4e-38ae-4fd9-845f-e99c779e1bcf",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "PathList": {
+        "title": "PathList",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/PathList"
+            },
+            "overloads": {
+              "8a5cdf24": {
+                "name": "GetType",
+                "overloadId": "8a5cdf24",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "eae34dd1-e224-42d9-9eb0-78ad9258bd24",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/PathList"
+            },
+            "overloads": {
+              "758ba914": {
+                "name": "ToString",
+                "overloadId": "758ba914",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "00b814ec-47c3-4b26-a2d2-3da913cdc856",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/PathList"
+            },
+            "overloads": {
+              "b276813e": {
+                "name": "Equals",
+                "overloadId": "b276813e",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "c6de91d5-8d17-42e3-8d44-b043ac0e82fc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "da9a21ec-1af2-43ec-974c-772f90b83bae",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/PathList"
+            },
+            "overloads": {
+              "7cadda96": {
+                "name": "GetHashCode",
+                "overloadId": "7cadda96",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "329ec6d6-e3c1-41bf-8f9f-32662c1a4d41",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "CookieCollection": {
+        "$ref": "System.Net#/components/schemas/CookieCollection",
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "CookieException": {
+        "title": "CookieException",
+        "type": "object",
+        "description": "The exception that is thrown when an error is made adding a  to a .",
+        "properties": {
+          "TargetSite": {
+            "$ref": "System.Reflection#/components/schemas/MethodBase"
+          },
+          "Message": {
+            "type": "string"
+          },
+          "Data": {
+            "$ref": "System.Collections#/components/schemas/IDictionary"
+          },
+          "InnerException": {
+            "$ref": "System#/components/schemas/Exception"
+          },
+          "HelpLink": {
+            "type": "string"
+          },
+          "Source": {
+            "type": "string"
+          },
+          "HResult": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "StackTrace": {
+            "type": "string"
+          }
+        },
+        "x-methods": {
+          "GetObjectData": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieException"
+            },
+            "overloads": {
+              "d726e0af": {
+                "name": "GetObjectData",
+                "overloadId": "d726e0af",
+                "methodKind": "instance",
+                "description": "Populates a  instance with the data needed to serialize the .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
+                      "name": "serializationInfo",
+                      "isOptional": false,
+                      "instanceGuid": "7ba36a95-dc61-4a8d-bc9c-bfc360f7409e"
+                    },
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
+                      "name": "streamingContext",
+                      "isOptional": false,
+                      "instanceGuid": "eae8a6d0-5598-4d23-9ac1-18f1faf7b62f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "bd298e5d-07fe-47dc-b570-fc85b553de90",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetBaseException": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieException"
+            },
+            "overloads": {
+              "bb54bf99": {
+                "name": "GetBaseException",
+                "overloadId": "bb54bf99",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns the  that is the root cause of one or more subsequent exceptions.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b5fb4372-9ea8-4790-a9da-dc6066413191",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Exception"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieException"
+            },
+            "overloads": {
+              "0559461e": {
+                "name": "ToString",
+                "overloadId": "0559461e",
+                "methodKind": "instance",
+                "description": "Creates and returns a string representation of the current exception.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2ef0e684-2278-4f8c-9e7e-31c88bc3d14d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieException"
+            },
+            "overloads": {
+              "da016f37": {
+                "name": "GetType",
+                "overloadId": "da016f37",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e73101b1-211f-4ce3-8944-8f96fd5da9b1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieException"
+            },
+            "overloads": {
+              "ce10adf6": {
+                "name": "Equals",
+                "overloadId": "ce10adf6",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "344a55be-1649-4b9e-be33-5eeaa1ddc3df"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "db2b0082-9d46-49fc-99ae-e65ce98d4d1f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CookieException"
+            },
+            "overloads": {
+              "f4dd0076": {
+                "name": "GetHashCode",
+                "overloadId": "f4dd0076",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4a79c3a5-6b45-4a0d-a5bb-af042f583850",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "CredentialCache": {
+        "title": "CredentialCache",
+        "type": "object",
+        "description": "Provides storage for multiple credentials.",
+        "x-methods": {
+          "Add": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CredentialCache"
+            },
+            "overloads": {
+              "4f774ae0": {
+                "name": "Add",
+                "overloadId": "4f774ae0",
+                "methodKind": "instance",
+                "description": "Adds a  instance to the credential cache.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Uri",
+                      "name": "uriPrefix",
+                      "isOptional": false,
+                      "instanceGuid": "15155b07-a182-4031-844d-af96ed188e51"
+                    },
+                    {
+                      "type": "string",
+                      "name": "authType",
+                      "isOptional": false,
+                      "instanceGuid": "b1503604-3f93-47f1-915c-ff62ed7b7114"
+                    },
+                    {
+                      "$ref": "System.Net#/components/schemas/NetworkCredential",
+                      "name": "cred",
+                      "isOptional": false,
+                      "instanceGuid": "3d1c2c2b-f7a1-4839-ac28-1d20106dd647"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "c8b068ea-5f41-4dcf-adad-fa04de0237d5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              },
+              "c948d595": {
+                "name": "Add",
+                "overloadId": "c948d595",
+                "methodKind": "instance",
+                "description": "Adds a  instance to the credential cache.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "host",
+                      "isOptional": false,
+                      "instanceGuid": "4e49c9a4-1a08-4125-8509-af9e23ce1288"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "port",
+                      "isOptional": false,
+                      "instanceGuid": "b9ebfeb1-57e1-4ab3-9d52-164a87839395"
+                    },
+                    {
+                      "type": "string",
+                      "name": "authenticationType",
+                      "isOptional": false,
+                      "instanceGuid": "14fcd1f3-1e94-43c1-a246-406822717b91"
+                    },
+                    {
+                      "$ref": "System.Net#/components/schemas/NetworkCredential",
+                      "name": "credential",
+                      "isOptional": false,
+                      "instanceGuid": "30d09bcf-64e4-4e51-ae3d-31afc4d8fefa"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "59ba16d3-8af8-4cbb-b526-60efe77d7889",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Remove": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CredentialCache"
+            },
+            "overloads": {
+              "90303200": {
+                "name": "Remove",
+                "overloadId": "90303200",
+                "methodKind": "instance",
+                "description": "Deletes a  instance from the cache.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Uri",
+                      "name": "uriPrefix",
+                      "isOptional": false,
+                      "instanceGuid": "65a7552e-915c-4a0a-96a8-060e150f4dd6"
+                    },
+                    {
+                      "type": "string",
+                      "name": "authType",
+                      "isOptional": false,
+                      "instanceGuid": "51bd9a4c-ecd2-4dd6-afe8-7a5fcb3b537a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "17b34503-7adc-4cbd-8c7c-87f1310f725f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              },
+              "67c101fc": {
+                "name": "Remove",
+                "overloadId": "67c101fc",
+                "methodKind": "instance",
+                "description": "Deletes a  instance from the cache.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "host",
+                      "isOptional": false,
+                      "instanceGuid": "717b9fa6-3d80-4690-ad93-16f0e0078f03"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "port",
+                      "isOptional": false,
+                      "instanceGuid": "007db347-a524-4c05-a0ef-4dc0171d8008"
+                    },
+                    {
+                      "type": "string",
+                      "name": "authenticationType",
+                      "isOptional": false,
+                      "instanceGuid": "4ecca93a-ec38-456e-8583-ab9ac7629d58"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "c301944f-8565-4374-a050-3c6b9bc499d0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetCredential": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CredentialCache"
+            },
+            "overloads": {
+              "ea046fe6": {
+                "name": "GetCredential",
+                "overloadId": "ea046fe6",
+                "methodKind": "instance",
+                "description": "Returns a  instance associated with a specified Uniform Resource Identifier (URI) or host, and authentication type.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Uri",
+                      "name": "uriPrefix",
+                      "isOptional": false,
+                      "instanceGuid": "3a705a7d-eb94-4674-bd9a-781a247bfff7"
+                    },
+                    {
+                      "type": "string",
+                      "name": "authType",
+                      "isOptional": false,
+                      "instanceGuid": "3e3fb764-9919-43cb-bcd1-3bd548b45707"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "42aa3a84-512b-456a-b436-740a80e8fb7f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/NetworkCredential"
+                    }
+                  ]
+                }
+              },
+              "e3845fd8": {
+                "name": "GetCredential",
+                "overloadId": "e3845fd8",
+                "methodKind": "instance",
+                "description": "Returns a  instance associated with a specified Uniform Resource Identifier (URI) or host, and authentication type.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "host",
+                      "isOptional": false,
+                      "instanceGuid": "15b78f04-13a8-48e7-a53c-548074e906fa"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "port",
+                      "isOptional": false,
+                      "instanceGuid": "addcc53e-0822-4b8d-83e3-1fa08ba38760"
+                    },
+                    {
+                      "type": "string",
+                      "name": "authenticationType",
+                      "isOptional": false,
+                      "instanceGuid": "2b3e5a28-c924-4b4a-8334-5c9e8a4e9d53"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "840be2e9-bc3a-48a9-af63-bca9609573a9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/NetworkCredential"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CredentialCache"
+            },
+            "overloads": {
+              "691e20e1": {
+                "name": "GetEnumerator",
+                "overloadId": "691e20e1",
+                "methodKind": "instance",
+                "description": "Returns an enumerator that can iterate through the  instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "cbdcfe36-ab78-41fb-b391-c4fdc27c9117",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/IEnumerator"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CredentialCache"
+            },
+            "overloads": {
+              "fb4a8cf6": {
+                "name": "GetType",
+                "overloadId": "fb4a8cf6",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2e177698-e7e0-4e2c-9ffe-741b046d3965",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CredentialCache"
+            },
+            "overloads": {
+              "69f0092e": {
+                "name": "ToString",
+                "overloadId": "69f0092e",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ae6ea5cf-b9ac-4f47-9459-91057db9b0dc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CredentialCache"
+            },
+            "overloads": {
+              "29f8bd58": {
+                "name": "Equals",
+                "overloadId": "29f8bd58",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "a3847f30-5a25-4054-9a81-0d3b217c4c04"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "1fd29f20-e4e5-4d1a-ae24-8fd9f2b0b43f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/CredentialCache"
+            },
+            "overloads": {
+              "e9bbd6eb": {
+                "name": "GetHashCode",
+                "overloadId": "e9bbd6eb",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "669a988e-788d-4333-b4c5-d6453bf7c7b5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "DecompressionMethods": {
+        "title": "DecompressionMethods",
+        "type": "integer",
+        "description": "Represents the file compression and decompression encoding format to be used to compress the data received in response to an .",
+        "enum": [
+          0,
+          1,
+          2,
+          4,
+          -1
+        ],
+        "x-enum-names": [
+          "None",
+          "GZip",
+          "Deflate",
+          "Brotli",
+          "All"
+        ],
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "DnsEndPoint": {
+        "title": "DnsEndPoint",
+        "type": "object",
+        "description": "Represents a network endpoint as a host name or a string representation of an IP address and a port number.",
+        "properties": {
+          "Host": {
+            "type": "string"
+          },
+          "AddressFamily": {
+            "$ref": "System.Net.Sockets#/components/schemas/AddressFamily"
+          },
+          "Port": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/DnsEndPoint"
+            },
+            "overloads": {
+              "750ac33f": {
+                "name": "Equals",
+                "overloadId": "750ac33f",
+                "methodKind": "instance",
+                "description": "Compares two  objects.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "comparand",
+                      "isOptional": false,
+                      "instanceGuid": "1fc9c0fd-5552-4677-8fe6-a7a868f69f51"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "f9b901de-6d43-49d2-8315-918ef8d13c01",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/DnsEndPoint"
+            },
+            "overloads": {
+              "32602d5e": {
+                "name": "GetHashCode",
+                "overloadId": "32602d5e",
+                "methodKind": "instance",
+                "description": "Returns a hash value for a .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "bfa3bb1a-7b2d-4826-a918-75dcf8a3bdb8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/DnsEndPoint"
+            },
+            "overloads": {
+              "3eb6c6bd": {
+                "name": "ToString",
+                "overloadId": "3eb6c6bd",
+                "methodKind": "instance",
+                "description": "Returns the host name or string representation of the IP address and port number of the .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "fddbeb4f-9666-4427-826f-71f6454a33c7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Serialize": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/DnsEndPoint"
+            },
+            "overloads": {
+              "7d9e71be": {
+                "name": "Serialize",
+                "overloadId": "7d9e71be",
+                "methodKind": "instance",
+                "description": "Serializes endpoint information into a  instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "eb111fca-61a1-4625-b0e7-d23c9c1e3e8a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/SocketAddress"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Create": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/DnsEndPoint"
+            },
+            "overloads": {
+              "453d291a": {
+                "name": "Create",
+                "overloadId": "453d291a",
+                "methodKind": "instance",
+                "description": "Creates an  instance from a  instance.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Net#/components/schemas/SocketAddress",
+                      "name": "socketAddress",
+                      "isOptional": false,
+                      "instanceGuid": "daafe103-d3e0-4aa4-a923-5126061e885e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "deb48eba-a4d1-4d95-a5c2-f08d7d0e2208",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/EndPoint"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/DnsEndPoint"
+            },
+            "overloads": {
+              "b21825e6": {
+                "name": "GetType",
+                "overloadId": "b21825e6",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e8ba7e7a-1aca-419b-aca0-f8c0629b51e0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "EndPoint": {
+        "title": "EndPoint",
+        "type": "object",
+        "description": "Identifies a network address. This is an  class.",
+        "properties": {
+          "AddressFamily": {
+            "$ref": "System.Net.Sockets#/components/schemas/AddressFamily"
+          }
+        },
+        "x-methods": {
+          "Serialize": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/EndPoint"
+            },
+            "overloads": {
+              "40f03e09": {
+                "name": "Serialize",
+                "overloadId": "40f03e09",
+                "methodKind": "instance",
+                "description": "Serializes endpoint information into a  instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c1c443d8-d21a-4d49-b689-5130f13a41a9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/SocketAddress"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Create": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/EndPoint"
+            },
+            "overloads": {
+              "1a1e2b61": {
+                "name": "Create",
+                "overloadId": "1a1e2b61",
+                "methodKind": "instance",
+                "description": "Creates an  instance from a  instance.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Net#/components/schemas/SocketAddress",
+                      "name": "socketAddress",
+                      "isOptional": false,
+                      "instanceGuid": "1b894da7-a7d6-4f10-a8b0-999175f2f309"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ad8e0454-814a-4cd2-8f7a-313d52e352ef",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/EndPoint"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/EndPoint"
+            },
+            "overloads": {
+              "84a94873": {
+                "name": "GetType",
+                "overloadId": "84a94873",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "93b830ec-a415-4774-8b10-30bf977d1fd0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/EndPoint"
+            },
+            "overloads": {
+              "6401d7bc": {
+                "name": "ToString",
+                "overloadId": "6401d7bc",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "88985f83-b3ce-42e5-8186-63ed73754e7a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/EndPoint"
+            },
+            "overloads": {
+              "021b50a6": {
+                "name": "Equals",
+                "overloadId": "021b50a6",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "4509cd5f-f830-4f8b-8f39-563d64734324"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "e6871763-8611-4bb5-803a-9a937de71b93",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/EndPoint"
+            },
+            "overloads": {
+              "d5130a17": {
+                "name": "GetHashCode",
+                "overloadId": "d5130a17",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a9f3a995-64ba-42cc-8cc6-d5d7b320cf9f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "HttpStatusCode": {
+        "title": "HttpStatusCode",
+        "type": "integer",
+        "description": "Contains the values of HTTP status codes as defined by RFC 9110, section 15.",
+        "enum": [
+          100,
+          101,
+          102,
+          103,
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          226,
+          300,
+          300,
+          301,
+          301,
+          302,
+          302,
+          303,
+          303,
+          304,
+          305,
+          306,
+          307,
+          307,
+          308,
+          400,
+          401,
+          402,
+          403,
+          404,
+          405,
+          406,
+          407,
+          408,
+          409,
+          410,
+          411,
+          412,
+          413,
+          414,
+          415,
+          416,
+          417,
+          421,
+          422,
+          422,
+          423,
+          424,
+          426,
+          428,
+          429,
+          431,
+          451,
+          500,
+          501,
+          502,
+          503,
+          504,
+          505,
+          506,
+          507,
+          508,
+          510,
+          511
+        ],
+        "x-enum-names": [
+          "Continue",
+          "SwitchingProtocols",
+          "Processing",
+          "EarlyHints",
+          "OK",
+          "Created",
+          "Accepted",
+          "NonAuthoritativeInformation",
+          "NoContent",
+          "ResetContent",
+          "PartialContent",
+          "MultiStatus",
+          "AlreadyReported",
+          "IMUsed",
+          "MultipleChoices",
+          "Ambiguous",
+          "MovedPermanently",
+          "Moved",
+          "Found",
+          "Redirect",
+          "SeeOther",
+          "RedirectMethod",
+          "NotModified",
+          "UseProxy",
+          "Unused",
+          "TemporaryRedirect",
+          "RedirectKeepVerb",
+          "PermanentRedirect",
+          "BadRequest",
+          "Unauthorized",
+          "PaymentRequired",
+          "Forbidden",
+          "NotFound",
+          "MethodNotAllowed",
+          "NotAcceptable",
+          "ProxyAuthenticationRequired",
+          "RequestTimeout",
+          "Conflict",
+          "Gone",
+          "LengthRequired",
+          "PreconditionFailed",
+          "RequestEntityTooLarge",
+          "RequestUriTooLong",
+          "UnsupportedMediaType",
+          "RequestedRangeNotSatisfiable",
+          "ExpectationFailed",
+          "MisdirectedRequest",
+          "UnprocessableEntity",
+          "UnprocessableContent",
+          "Locked",
+          "FailedDependency",
+          "UpgradeRequired",
+          "PreconditionRequired",
+          "TooManyRequests",
+          "RequestHeaderFieldsTooLarge",
+          "UnavailableForLegalReasons",
+          "InternalServerError",
+          "NotImplemented",
+          "BadGateway",
+          "ServiceUnavailable",
+          "GatewayTimeout",
+          "HttpVersionNotSupported",
+          "VariantAlsoNegotiates",
+          "InsufficientStorage",
+          "LoopDetected",
+          "NotExtended",
+          "NetworkAuthenticationRequired"
+        ],
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "HttpVersion": {
+        "title": "HttpVersion",
+        "type": "object",
+        "description": "Defines the HTTP version numbers that are supported by the  and  classes.",
+        "x-methods": {
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/HttpVersion"
+            },
+            "overloads": {
+              "168a1d99": {
+                "name": "GetType",
+                "overloadId": "168a1d99",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3697efc2-8658-43d7-a4f5-128b3f62aea7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/HttpVersion"
+            },
+            "overloads": {
+              "f22c8414": {
+                "name": "ToString",
+                "overloadId": "f22c8414",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a6907685-9907-439f-be40-1f1d88634d9a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/HttpVersion"
+            },
+            "overloads": {
+              "298247be": {
+                "name": "Equals",
+                "overloadId": "298247be",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "5b6bc4d4-db28-441a-987e-454bd410adc0"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "9c9c68bf-0f38-420a-a8ee-298f7a6888eb",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/HttpVersion"
+            },
+            "overloads": {
+              "0955c549": {
+                "name": "GetHashCode",
+                "overloadId": "0955c549",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "64bd2019-48fb-4a2e-861b-68f9a812e8d5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "ICredentials": {
+        "title": "ICredentials",
+        "type": "object",
+        "description": "Provides the base authentication interface for retrieving credentials for Web client authentication.",
+        "x-methods": {
+          "GetCredential": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/ICredentials"
+            },
+            "overloads": {
+              "7f97b81b": {
+                "name": "GetCredential",
+                "overloadId": "7f97b81b",
+                "methodKind": "instance",
+                "description": "Returns a  object that is associated with the specified URI, and authentication type.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Uri",
+                      "name": "uri",
+                      "isOptional": false,
+                      "instanceGuid": "920f27bc-e47d-4024-b978-eea9bdc92423"
+                    },
+                    {
+                      "type": "string",
+                      "name": "authType",
+                      "isOptional": false,
+                      "instanceGuid": "92f138b7-58a9-4ee4-ab26-5260a1679027"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6799731e-470f-40d7-9223-d57f2a5ca342",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/NetworkCredential"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "ICredentialsByHost": {
+        "title": "ICredentialsByHost",
+        "type": "object",
+        "description": "Provides the interface for retrieving credentials for a host, port, and authentication type.",
+        "x-methods": {
+          "GetCredential": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/ICredentialsByHost"
+            },
+            "overloads": {
+              "62119fcc": {
+                "name": "GetCredential",
+                "overloadId": "62119fcc",
+                "methodKind": "instance",
+                "description": "Returns the credential for the specified host, port, and authentication protocol.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "host",
+                      "isOptional": false,
+                      "instanceGuid": "ea210081-62db-431e-ae9a-79ce44a8d8a9"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "port",
+                      "isOptional": false,
+                      "instanceGuid": "45f65c19-d4a2-4689-aae5-1386fe9db101"
+                    },
+                    {
+                      "type": "string",
+                      "name": "authenticationType",
+                      "isOptional": false,
+                      "instanceGuid": "420856d0-6160-487c-9c90-b424edf082b6"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "db3461bd-968e-4925-907e-28d9148e21dc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/NetworkCredential"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "IPAddress": {
+        "title": "IPAddress",
+        "type": "object",
+        "description": "Provides an Internet Protocol (IP) address.",
+        "properties": {
+          "AddressFamily": {
+            "$ref": "System.Net.Sockets#/components/schemas/AddressFamily"
+          },
+          "ScopeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "IsIPv6Multicast": {
+            "type": "boolean"
+          },
+          "IsIPv6LinkLocal": {
+            "type": "boolean"
+          },
+          "IsIPv6SiteLocal": {
+            "type": "boolean"
+          },
+          "IsIPv6Teredo": {
+            "type": "boolean"
+          },
+          "IsIPv6UniqueLocal": {
+            "type": "boolean"
+          },
+          "IsIPv4MappedToIPv6": {
+            "type": "boolean"
+          },
+          "Address": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-methods": {
+          "IsValid": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "e1a1a3ea": {
+                "name": "IsValid",
+                "overloadId": "e1a1a3ea",
+                "methodKind": "static",
+                "description": "Determines whether the provided span contains a valid .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "ipSpan",
+                      "isOptional": false,
+                      "instanceGuid": "3156617a-8399-49d4-ba66-cacc12c18f7b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "321ccfab-eca9-44e6-a4d0-6a994b41b9d5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsValidUtf8": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "0b8681fb": {
+                "name": "IsValidUtf8",
+                "overloadId": "0b8681fb",
+                "methodKind": "static",
+                "description": "Determines whether the provided span contains a valid .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "utf8Text",
+                      "isOptional": false,
+                      "instanceGuid": "38a54806-e9cc-4d54-8330-9471601733b6"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "48a5a5f1-6d2b-4c54-8e7e-7d7dc9a00948",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryParse": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "2f40f99c": {
+                "name": "TryParse",
+                "overloadId": "2f40f99c",
+                "methodKind": "static",
+                "description": "Tries to parse a span of UTF-8 characters into a value.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "ipString",
+                      "isOptional": false,
+                      "instanceGuid": "2fb6c34b-b801-4a2c-8b85-842995477dac"
+                    },
+                    {
+                      "$ref": "System.Net#/components/schemas/IPAddress\u0026",
+                      "name": "address",
+                      "isOptional": false,
+                      "instanceGuid": "355a16e7-5f12-4091-ad31-f6a727a488b2"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2bd7a276-75c7-40b7-9707-db3ab0ec727c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "cbb648af": {
+                "name": "TryParse",
+                "overloadId": "cbb648af",
+                "methodKind": "static",
+                "description": "Tries to parse a span of UTF-8 characters into a value.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "utf8Text",
+                      "isOptional": false,
+                      "instanceGuid": "b13c6594-16c4-45b5-8674-d4303b0d886a"
+                    },
+                    {
+                      "$ref": "System.Net#/components/schemas/IPAddress\u0026",
+                      "name": "result",
+                      "isOptional": false,
+                      "instanceGuid": "5d612a6c-c5a3-467b-a32e-66a06a0e9cc2"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "44e8fe07-32ee-4e42-95d7-34f105275743",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "14050b94": {
+                "name": "TryParse",
+                "overloadId": "14050b94",
+                "methodKind": "static",
+                "description": "Tries to parse a span of UTF-8 characters into a value.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "ipSpan",
+                      "isOptional": false,
+                      "instanceGuid": "732dc9df-c6b5-419b-a112-6a9423d3e816"
+                    },
+                    {
+                      "$ref": "System.Net#/components/schemas/IPAddress\u0026",
+                      "name": "address",
+                      "isOptional": false,
+                      "instanceGuid": "baee1175-1dba-4bc1-b357-db34498922ce"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6a0e6c49-c9c3-4a90-873e-c6568404217a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Parse": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "637bb2dc": {
+                "name": "Parse",
+                "overloadId": "637bb2dc",
+                "methodKind": "static",
+                "description": "Parses a span of UTF-8 characters into a value.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "ipString",
+                      "isOptional": false,
+                      "instanceGuid": "6373ac38-9b97-4157-a10d-09222c5b4875"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "87082601-5021-4e25-8a30-7a7b534f82c5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/IPAddress"
+                    }
+                  ]
+                }
+              },
+              "68b75459": {
+                "name": "Parse",
+                "overloadId": "68b75459",
+                "methodKind": "static",
+                "description": "Parses a span of UTF-8 characters into a value.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "utf8Text",
+                      "isOptional": false,
+                      "instanceGuid": "8081685b-b5f7-48d8-bda9-f12db36a8a0c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "335d9325-5e59-4841-a4ee-275b45d7a599",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/IPAddress"
+                    }
+                  ]
+                }
+              },
+              "5396c98b": {
+                "name": "Parse",
+                "overloadId": "5396c98b",
+                "methodKind": "static",
+                "description": "Parses a span of UTF-8 characters into a value.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "ipSpan",
+                      "isOptional": false,
+                      "instanceGuid": "f2b2db6e-6deb-405d-837a-a6752c63d98c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "facb7821-e47a-42bf-abb1-e92e68b86787",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/IPAddress"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryWriteBytes": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "84b68426": {
+                "name": "TryWriteBytes",
+                "overloadId": "84b68426",
+                "methodKind": "instance",
+                "description": "Tries to write the current IP address into a span of bytes in network order.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "56e1df8f-1e0a-4abf-b537-06e126d02ecc"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "519df509-5d49-4d2c-b562-20935717a852"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6a6de583-d84b-4700-a998-9cfcc35e42cc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetAddressBytes": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "a0b160f5": {
+                "name": "GetAddressBytes",
+                "overloadId": "a0b160f5",
+                "methodKind": "instance",
+                "description": "Provides a copy of the  as an array of bytes in network order.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b6e28a36-a5ed-4867-a3ff-cbc038e37f89",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Byte[]"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "89b47cd7": {
+                "name": "ToString",
+                "overloadId": "89b47cd7",
+                "methodKind": "instance",
+                "description": "Converts an Internet address to its standard notation.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b2b76cae-82ea-4b11-a253-0793150359e7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryFormat": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "551ee700": {
+                "name": "TryFormat",
+                "overloadId": "551ee700",
+                "methodKind": "instance",
+                "description": "Tries to format the current IP address into the provided span.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "6a5fb002-a1ed-4d70-ab1d-aab8123992a8"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "charsWritten",
+                      "isOptional": false,
+                      "instanceGuid": "6c7b66ad-7830-45a0-a194-399a89470c8b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8a140b88-48a6-41db-b3a1-746f8965ee2e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "99aa68a2": {
+                "name": "TryFormat",
+                "overloadId": "99aa68a2",
+                "methodKind": "instance",
+                "description": "Tries to format the current IP address into the provided span.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "utf8Destination",
+                      "isOptional": false,
+                      "instanceGuid": "2e01cbc7-09c1-4189-a2a1-fd4a7d561b1b"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "9747677d-80ec-4906-92d6-1e5dd9b70775"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "f778311e-ea9e-47c8-8941-3a3d13b8a436",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "HostToNetworkOrder": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "c4021dfc": {
+                "name": "HostToNetworkOrder",
+                "overloadId": "c4021dfc",
+                "methodKind": "static",
+                "description": "Converts a value from host byte order to network byte order.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int64",
+                      "name": "host",
+                      "isOptional": false,
+                      "instanceGuid": "6254d27d-3f79-4013-b56c-92e108c449cc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7a33a6b8-5c3c-4ffc-ace2-80d031e5ca51",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int64"
+                    }
+                  ]
+                }
+              },
+              "990ee644": {
+                "name": "HostToNetworkOrder",
+                "overloadId": "990ee644",
+                "methodKind": "static",
+                "description": "Converts a value from host byte order to network byte order.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "host",
+                      "isOptional": false,
+                      "instanceGuid": "80de0db0-d916-4621-9db4-f9677e77e29b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d8524df7-09f8-494f-a68c-9eaf280bed87",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              },
+              "5d0aa87f": {
+                "name": "HostToNetworkOrder",
+                "overloadId": "5d0aa87f",
+                "methodKind": "static",
+                "description": "Converts a value from host byte order to network byte order.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "name": "host",
+                      "isOptional": false,
+                      "instanceGuid": "fb8ae17f-7050-4ac6-bbca-39a96ea50f69"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6f0ae0c7-dced-4291-9840-9f71b25db533",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int16"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "NetworkToHostOrder": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "a52cee06": {
+                "name": "NetworkToHostOrder",
+                "overloadId": "a52cee06",
+                "methodKind": "static",
+                "description": "Converts a number from network byte order to host byte order.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int64",
+                      "name": "network",
+                      "isOptional": false,
+                      "instanceGuid": "76fe3e3d-297d-4d5e-a30d-b9e410d2f831"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "47a7ed83-8eed-4b33-8f23-c7e68bf0e448",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int64"
+                    }
+                  ]
+                }
+              },
+              "df0fb532": {
+                "name": "NetworkToHostOrder",
+                "overloadId": "df0fb532",
+                "methodKind": "static",
+                "description": "Converts a number from network byte order to host byte order.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "network",
+                      "isOptional": false,
+                      "instanceGuid": "a4ed3f24-e7b7-44a1-9fbd-8b583b054580"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "42b1c0c2-5ff1-4939-a640-c1539da36539",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              },
+              "d990c12b": {
+                "name": "NetworkToHostOrder",
+                "overloadId": "d990c12b",
+                "methodKind": "static",
+                "description": "Converts a number from network byte order to host byte order.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "name": "network",
+                      "isOptional": false,
+                      "instanceGuid": "d2cd9b32-bf57-4c76-b606-6958debce016"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "710967a7-3253-4a73-972b-c02f29120a9a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int16"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsLoopback": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "9dc3fdaa": {
+                "name": "IsLoopback",
+                "overloadId": "9dc3fdaa",
+                "methodKind": "static",
+                "description": "Indicates whether the specified IP address is the loopback address.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Net#/components/schemas/IPAddress",
+                      "name": "address",
+                      "isOptional": false,
+                      "instanceGuid": "57a09a6c-307f-449e-8d53-71fbc9f85313"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "1bdef41f-c73a-4cd8-aaec-ed5a87abb646",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "ede7bd16": {
+                "name": "Equals",
+                "overloadId": "ede7bd16",
+                "methodKind": "instance",
+                "description": "Compares two IP addresses.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "comparand",
+                      "isOptional": false,
+                      "instanceGuid": "7cf7c414-1441-4f19-be2d-5778464c801a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "104ad7db-030c-4a99-be60-f8da18af2954",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "49d4a8ae": {
+                "name": "GetHashCode",
+                "overloadId": "49d4a8ae",
+                "methodKind": "instance",
+                "description": "Returns a hash value for an IP address.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0ff9d011-030d-4c89-b5ea-271b56d11f16",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "MapToIPv6": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "be80fcd1": {
+                "name": "MapToIPv6",
+                "overloadId": "be80fcd1",
+                "methodKind": "instance",
+                "description": "Maps the  object to an IPv6 address.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "67cae9cb-c58d-45e5-8926-a3975fc777ed",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/IPAddress"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "MapToIPv4": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "6787559c": {
+                "name": "MapToIPv4",
+                "overloadId": "6787559c",
+                "methodKind": "instance",
+                "description": "Maps the  object to an IPv4 address.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3ad5880f-e62b-438f-8549-68900b28f915",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/IPAddress"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPAddress"
+            },
+            "overloads": {
+              "61f03433": {
+                "name": "GetType",
+                "overloadId": "61f03433",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "fc0dfb21-497b-4e60-9ab2-66c050ca9dfe",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "IPNetwork": {
+        "title": "IPNetwork",
+        "type": "object",
+        "description": "Represents an IP network with an  containing the network prefix and an  defining the prefix length.",
+        "properties": {
+          "BaseAddress": {
+            "$ref": "System.Net#/components/schemas/IPAddress"
+          },
+          "PrefixLength": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-methods": {
+          "Contains": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPNetwork"
+            },
+            "overloads": {
+              "813635bb": {
+                "name": "Contains",
+                "overloadId": "813635bb",
+                "methodKind": "instance",
+                "description": "Determines whether a given  is part of the network.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Net#/components/schemas/IPAddress",
+                      "name": "address",
+                      "isOptional": false,
+                      "instanceGuid": "87e5065e-c444-4042-af35-7378cd8aecdd"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "bf841ddb-76ff-4312-a5b0-c49f1e55723d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Parse": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPNetwork"
+            },
+            "overloads": {
+              "3891efc0": {
+                "name": "Parse",
+                "overloadId": "3891efc0",
+                "methodKind": "static",
+                "description": "Converts a UTF-8 CIDR character span to an  instance.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "s",
+                      "isOptional": false,
+                      "instanceGuid": "7fa26abb-00c1-4194-b537-891af502185e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7c51ade4-94d2-45f5-92c6-0d0400b02d35",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/IPNetwork"
+                    }
+                  ]
+                }
+              },
+              "1ade6159": {
+                "name": "Parse",
+                "overloadId": "1ade6159",
+                "methodKind": "static",
+                "description": "Converts a UTF-8 CIDR character span to an  instance.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "s",
+                      "isOptional": false,
+                      "instanceGuid": "cdae86f9-3d54-4db3-aed3-adf3c9e7f278"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "bbd109bc-f621-42d0-b484-02e9ff2431cb",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/IPNetwork"
+                    }
+                  ]
+                }
+              },
+              "9778732d": {
+                "name": "Parse",
+                "overloadId": "9778732d",
+                "methodKind": "static",
+                "description": "Converts a UTF-8 CIDR character span to an  instance.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "utf8Text",
+                      "isOptional": false,
+                      "instanceGuid": "9d868159-d49a-4775-b928-489bd8fbeb99"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8962bfd8-fd03-42be-9fc2-a985fe26d8f6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/IPNetwork"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryParse": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPNetwork"
+            },
+            "overloads": {
+              "e51cb3b1": {
+                "name": "TryParse",
+                "overloadId": "e51cb3b1",
+                "methodKind": "static",
+                "description": "Converts the specified UTF-8 CIDR character span to an  instance and returns a value indicating whether the conversion succeeded.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "s",
+                      "isOptional": false,
+                      "instanceGuid": "d1fcddde-4587-43c0-b503-77c7cceb33e0"
+                    },
+                    {
+                      "$ref": "System.Net#/components/schemas/IPNetwork\u0026",
+                      "name": "result",
+                      "isOptional": false,
+                      "instanceGuid": "3b20447a-7b31-406d-8077-1ee5ae893b86"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5a6c0d62-afa0-497e-b693-a602f4b7ffed",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "1531e974": {
+                "name": "TryParse",
+                "overloadId": "1531e974",
+                "methodKind": "static",
+                "description": "Converts the specified UTF-8 CIDR character span to an  instance and returns a value indicating whether the conversion succeeded.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "s",
+                      "isOptional": false,
+                      "instanceGuid": "b818dcdb-a197-44e5-b155-9db5fa8de1f9"
+                    },
+                    {
+                      "$ref": "System.Net#/components/schemas/IPNetwork\u0026",
+                      "name": "result",
+                      "isOptional": false,
+                      "instanceGuid": "a8547f1e-5792-4464-bd89-bd6d7954c172"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "af6384ec-a94a-4296-a3b9-fbe4c1c82b47",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "dbbacc4f": {
+                "name": "TryParse",
+                "overloadId": "dbbacc4f",
+                "methodKind": "static",
+                "description": "Converts the specified UTF-8 CIDR character span to an  instance and returns a value indicating whether the conversion succeeded.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "utf8Text",
+                      "isOptional": false,
+                      "instanceGuid": "586d9b80-0a7b-46c5-839b-e5d6f7cebb65"
+                    },
+                    {
+                      "$ref": "System.Net#/components/schemas/IPNetwork\u0026",
+                      "name": "result",
+                      "isOptional": false,
+                      "instanceGuid": "915977b0-a669-4df1-bd5c-b0ba1b4123f0"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a80ad689-8410-4a7d-a04a-dac08dfa5cb5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPNetwork"
+            },
+            "overloads": {
+              "305c10ab": {
+                "name": "ToString",
+                "overloadId": "305c10ab",
+                "methodKind": "instance",
+                "description": "Converts the instance to a string containing the \u0027s CIDR notation.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0703b86e-df83-4993-b5d4-3641dfde1468",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryFormat": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPNetwork"
+            },
+            "overloads": {
+              "7770a9dd": {
+                "name": "TryFormat",
+                "overloadId": "7770a9dd",
+                "methodKind": "instance",
+                "description": "Attempts to write the \u0027s CIDR notation to the given  UTF-8 span and returns a value indicating whether the operation succeeded.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "edc4351c-938c-4d68-995c-543fef585019"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "charsWritten",
+                      "isOptional": false,
+                      "instanceGuid": "98475eb1-86a8-4452-9b84-ba468fbdc7fc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "65dad430-be52-496f-817d-06d735e78329",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "1735865f": {
+                "name": "TryFormat",
+                "overloadId": "1735865f",
+                "methodKind": "instance",
+                "description": "Attempts to write the \u0027s CIDR notation to the given  UTF-8 span and returns a value indicating whether the operation succeeded.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Span\u00601",
+                      "name": "utf8Destination",
+                      "isOptional": false,
+                      "instanceGuid": "904fae5a-bc33-41df-94f9-c37fa1cd353f"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Int32\u0026",
+                      "name": "bytesWritten",
+                      "isOptional": false,
+                      "instanceGuid": "94145ca6-2462-41dd-a3a3-19c9717849cf"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8f486362-9c7c-4e40-989f-8f9c30cc1c37",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPNetwork"
+            },
+            "overloads": {
+              "6b75d1c1": {
+                "name": "Equals",
+                "overloadId": "6b75d1c1",
+                "methodKind": "instance",
+                "description": "Indicates whether the current object is equal to another object of the same type.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Net#/components/schemas/IPNetwork",
+                      "name": "other",
+                      "isOptional": false,
+                      "instanceGuid": "ed13bae9-10a7-46ef-bf53-496b14c9b4ac"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a8902729-2b75-49d1-8462-9bd6e76afead",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "e00d4792": {
+                "name": "Equals",
+                "overloadId": "e00d4792",
+                "methodKind": "instance",
+                "description": "Indicates whether the current object is equal to another object of the same type.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "8590e6ea-ed0f-449f-b8af-b36a6be8d8a1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "3c2e30ef-7280-4b1e-bed2-102c8e38e001",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPNetwork"
+            },
+            "overloads": {
+              "ee653709": {
+                "name": "GetHashCode",
+                "overloadId": "ee653709",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ad981f01-0865-47db-8a0a-94e9c9bf9ebf",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPNetwork"
+            },
+            "overloads": {
+              "76aa2699": {
+                "name": "GetType",
+                "overloadId": "76aa2699",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "32b63a91-eb31-4820-93b8-88f3a193beba",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "IPEndPoint": {
+        "title": "IPEndPoint",
+        "type": "object",
+        "description": "Represents a network endpoint as an IP address and a port number.",
+        "properties": {
+          "AddressFamily": {
+            "$ref": "System.Net.Sockets#/components/schemas/AddressFamily"
+          },
+          "Address": {
+            "$ref": "System.Net#/components/schemas/IPAddress"
+          },
+          "Port": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-methods": {
+          "TryParse": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPEndPoint"
+            },
+            "overloads": {
+              "54718b3e": {
+                "name": "TryParse",
+                "overloadId": "54718b3e",
+                "methodKind": "static",
+                "description": "To be added.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "s",
+                      "isOptional": false,
+                      "instanceGuid": "42015fcd-2db7-487c-bad9-e2d326e9e698"
+                    },
+                    {
+                      "$ref": "System.Net#/components/schemas/IPEndPoint\u0026",
+                      "name": "result",
+                      "isOptional": false,
+                      "instanceGuid": "abd4ed7e-9a64-4c4d-bd49-f6d08cf3e895"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0b69a4e4-3e4f-49f8-a986-371e4ba227fd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "757dabdc": {
+                "name": "TryParse",
+                "overloadId": "757dabdc",
+                "methodKind": "static",
+                "description": "To be added.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "s",
+                      "isOptional": false,
+                      "instanceGuid": "e75d3309-3256-4404-b5e3-27fe07ce6c28"
+                    },
+                    {
+                      "$ref": "System.Net#/components/schemas/IPEndPoint\u0026",
+                      "name": "result",
+                      "isOptional": false,
+                      "instanceGuid": "6306d2a3-7edb-41ad-a5d5-c666210666ac"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "447b824c-a859-411f-b4fe-90bfcaabfa10",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Parse": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPEndPoint"
+            },
+            "overloads": {
+              "84e0b548": {
+                "name": "Parse",
+                "overloadId": "84e0b548",
+                "methodKind": "static",
+                "description": "To be added.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "s",
+                      "isOptional": false,
+                      "instanceGuid": "d9e499e8-de8f-493c-960a-8d9d15a7b26d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ff78362e-cdd4-41b8-81d1-723ec397319e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/IPEndPoint"
+                    }
+                  ]
+                }
+              },
+              "63f4ffa5": {
+                "name": "Parse",
+                "overloadId": "63f4ffa5",
+                "methodKind": "static",
+                "description": "To be added.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "s",
+                      "isOptional": false,
+                      "instanceGuid": "433c4918-ea5b-44d8-8b3c-aa37f2f641e6"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "29db5b9d-ff2a-44d9-8540-414f1ea4b095",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/IPEndPoint"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPEndPoint"
+            },
+            "overloads": {
+              "c9236fae": {
+                "name": "ToString",
+                "overloadId": "c9236fae",
+                "methodKind": "instance",
+                "description": "Returns the IP address and port number of the specified endpoint.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "cae21bb2-65e4-4a32-ae7d-a49943ffabcd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Serialize": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPEndPoint"
+            },
+            "overloads": {
+              "32b42833": {
+                "name": "Serialize",
+                "overloadId": "32b42833",
+                "methodKind": "instance",
+                "description": "Serializes endpoint information into a  instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "667e21b6-fc76-4d41-a5b3-c09150f54e91",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/SocketAddress"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Create": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPEndPoint"
+            },
+            "overloads": {
+              "a2ad4854": {
+                "name": "Create",
+                "overloadId": "a2ad4854",
+                "methodKind": "instance",
+                "description": "Creates an endpoint from a socket address.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Net#/components/schemas/SocketAddress",
+                      "name": "socketAddress",
+                      "isOptional": false,
+                      "instanceGuid": "84dc95ab-4787-4acb-a27d-7ff1d9278343"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8f482a95-07ce-4638-9884-2ced0deab2c4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Net#/components/schemas/EndPoint"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPEndPoint"
+            },
+            "overloads": {
+              "b734b111": {
+                "name": "Equals",
+                "overloadId": "b734b111",
+                "methodKind": "instance",
+                "description": "Determines whether the specified  is equal to the current .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "comparand",
+                      "isOptional": false,
+                      "instanceGuid": "40f4bdb6-46af-4cf6-ac37-2cc5fecea526"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "15cc9f5d-a647-4778-91c9-c4bed0e44b19",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPEndPoint"
+            },
+            "overloads": {
+              "1e2589fe": {
+                "name": "GetHashCode",
+                "overloadId": "1e2589fe",
+                "methodKind": "instance",
+                "description": "Returns a hash value for a  instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f2f259fc-9636-4930-b6e6-db2587029ebc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IPEndPoint"
+            },
+            "overloads": {
+              "42ee5a9b": {
+                "name": "GetType",
+                "overloadId": "42ee5a9b",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "133309de-a0cc-40af-a493-1cfb94efa55d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "IWebProxy": {
+        "title": "IWebProxy",
+        "type": "object",
+        "description": "Provides the base interface for implementation of proxy access for the  class.",
+        "properties": {
+          "Credentials": {
+            "$ref": "System.Net#/components/schemas/ICredentials"
+          }
+        },
+        "x-methods": {
+          "GetProxy": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IWebProxy"
+            },
+            "overloads": {
+              "5f000513": {
+                "name": "GetProxy",
+                "overloadId": "5f000513",
+                "methodKind": "instance",
+                "description": "Returns the URI of a proxy.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Uri",
+                      "name": "destination",
+                      "isOptional": false,
+                      "instanceGuid": "20fd20e6-f47c-4246-8a6a-004e7a134d2e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "85dad420-f4f9-43e4-b670-c69d71c5e5c4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Uri"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsBypassed": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/IWebProxy"
+            },
+            "overloads": {
+              "1e498b35": {
+                "name": "IsBypassed",
+                "overloadId": "1e498b35",
+                "methodKind": "instance",
+                "description": "Indicates that the proxy should not be used for the specified host.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Uri",
+                      "name": "host",
+                      "isOptional": false,
+                      "instanceGuid": "92b0cded-b15e-4bd5-8400-d4a6df062aed"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "223d72ad-04d4-4581-987d-744429ff638a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "NetworkCredential": {
+        "$ref": "System.Net#/components/schemas/NetworkCredential",
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "TransportContext": {
+        "title": "TransportContext",
+        "type": "object",
+        "description": "The  class provides additional context about the underlying transport layer.",
+        "x-methods": {
+          "GetChannelBinding": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/TransportContext"
+            },
+            "overloads": {
+              "7e4cf5e2": {
+                "name": "GetChannelBinding",
+                "overloadId": "7e4cf5e2",
+                "methodKind": "instance",
+                "description": "Retrieves the requested channel binding.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Security.Authentication.ExtendedProtection#/components/schemas/ChannelBindingKind",
+                      "name": "kind",
+                      "isOptional": false,
+                      "instanceGuid": "23236d00-ebd0-4f70-b0d2-c9532177bb64"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "851192ee-8f1e-4461-b0ab-d63f7ee6d4e1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Security.Authentication.ExtendedProtection#/components/schemas/ChannelBinding"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/TransportContext"
+            },
+            "overloads": {
+              "829ae345": {
+                "name": "GetType",
+                "overloadId": "829ae345",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "970063d7-72f8-4b07-aa12-92b4c3f145fd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/TransportContext"
+            },
+            "overloads": {
+              "f99b9564": {
+                "name": "ToString",
+                "overloadId": "f99b9564",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "22a321e7-4d57-427a-8f1c-e511b8370584",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/TransportContext"
+            },
+            "overloads": {
+              "a0f01c45": {
+                "name": "Equals",
+                "overloadId": "a0f01c45",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "2a50a830-28f5-4258-a78e-65463b335b97"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "151e8274-1da4-4564-9503-359031f10256",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Net#/components/schemas/TransportContext"
+            },
+            "overloads": {
+              "ee93cf75": {
+                "name": "GetHashCode",
+                "overloadId": "ee93cf75",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e26a9eba-ca2f-4fc9-aebb-c37125c74412",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      },
+      "SocketAddress": {
+        "$ref": "System.Net#/components/schemas/SocketAddress",
+        "x-namespace": "System.Net",
+        "x-assembly": "System.Net.Primitives"
+      }
+    }
+  }
+}

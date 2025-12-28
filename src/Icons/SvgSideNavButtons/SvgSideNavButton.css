@@ -1,0 +1,29 @@
+.sideNavIcon {
+    width: 72px;
+    height: 72px;
+    color: var(--background-color-blurred-but-selected);
+    transition: color 0.25s ease;
+    padding: 3px;
+    border: var(--background-color-blurred-but-selected) solid 2px;
+
+}
+
+.sideNavIcon:hover {
+    color: var(--background-color-focused);
+    border: var(--background-color-focused) solid 2px;
+}
+
+.selectedSideNavIcon {
+    width: 72px;
+    height: 72px;
+    color: #94bfff;
+    transition: color 0.25s ease;
+    padding: 3px;
+    border: #94bfff solid 2px;
+}
+
+.selectedSideNavIcon:hover {
+    color: var(--background-color-focused);
+    border: var(--background-color-focused) solid 2px;
+}
+

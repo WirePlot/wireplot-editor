@@ -1,0 +1,3202 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Security",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "AllowPartiallyTrustedCallersAttribute": {
+        "title": "AllowPartiallyTrustedCallersAttribute",
+        "type": "object",
+        "description": "Allows an assembly to be called by partially trusted code. Without this declaration, only fully trusted callers are able to use the assembly. This class cannot be inherited.",
+        "properties": {
+          "PartialTrustVisibilityLevel": {
+            "$ref": "System.Security#/components/schemas/PartialTrustVisibilityLevel"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/AllowPartiallyTrustedCallersAttribute"
+            },
+            "overloads": {
+              "73520ae7": {
+                "name": "Equals",
+                "overloadId": "73520ae7",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "a0069d48-e12f-429b-94cf-faf38a823f9f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4013b2de-000a-4287-b266-57da4fe2dba3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/AllowPartiallyTrustedCallersAttribute"
+            },
+            "overloads": {
+              "c91ba5ea": {
+                "name": "GetHashCode",
+                "overloadId": "c91ba5ea",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "49ff6afa-2b48-4f4c-91f8-d28843d6caef",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/AllowPartiallyTrustedCallersAttribute"
+            },
+            "overloads": {
+              "b7e95d55": {
+                "name": "Match",
+                "overloadId": "b7e95d55",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "587cdd58-a42f-49cc-bde5-7262b4fb0d35"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "e46b3d29-ef02-4117-9a13-8cd6d10b0946",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/AllowPartiallyTrustedCallersAttribute"
+            },
+            "overloads": {
+              "a7d0a3cb": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "a7d0a3cb",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ea4fae76-31f2-466b-ac01-96010cad23d3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/AllowPartiallyTrustedCallersAttribute"
+            },
+            "overloads": {
+              "535d1ad5": {
+                "name": "GetType",
+                "overloadId": "535d1ad5",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "1b79d628-caa3-48f5-a7c4-beeb6a45b147",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/AllowPartiallyTrustedCallersAttribute"
+            },
+            "overloads": {
+              "b81312d8": {
+                "name": "ToString",
+                "overloadId": "b81312d8",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "dfdcc476-b6f2-4d89-a0db-ba5c69e7dc69",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IPermission": {
+        "title": "IPermission",
+        "type": "object",
+        "description": "Defines methods implemented by permission types.",
+        "x-methods": {
+          "Copy": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/IPermission"
+            },
+            "overloads": {
+              "0bf431b1": {
+                "name": "Copy",
+                "overloadId": "0bf431b1",
+                "methodKind": "instance",
+                "description": "Creates and returns an identical copy of the current permission.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "cf83b3f4-ab65-4249-80f1-6031c4b79743",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Security#/components/schemas/IPermission"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Demand": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/IPermission"
+            },
+            "overloads": {
+              "9e746405": {
+                "name": "Demand",
+                "overloadId": "9e746405",
+                "methodKind": "instance",
+                "description": "Throws a  at run time if the security requirement is not met.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "8513d9a9-a477-4519-9267-9e966bb3dc25",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Intersect": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/IPermission"
+            },
+            "overloads": {
+              "332f8d5b": {
+                "name": "Intersect",
+                "overloadId": "332f8d5b",
+                "methodKind": "instance",
+                "description": "Creates and returns a permission that is the intersection of the current permission and the specified permission.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Security#/components/schemas/IPermission",
+                      "name": "target",
+                      "isOptional": false,
+                      "instanceGuid": "ff3138d6-ed81-409c-8bca-a685408e750e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0c88cd5f-3ea3-4a70-88a4-2b1fcefd4ec4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Security#/components/schemas/IPermission"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsSubsetOf": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/IPermission"
+            },
+            "overloads": {
+              "8c8ecfa0": {
+                "name": "IsSubsetOf",
+                "overloadId": "8c8ecfa0",
+                "methodKind": "instance",
+                "description": "Determines whether the current permission is a subset of the specified permission.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Security#/components/schemas/IPermission",
+                      "name": "target",
+                      "isOptional": false,
+                      "instanceGuid": "f213f777-0738-416f-abdd-f627cb2d6f2d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "52c9b528-bd54-4ef8-9824-7418531f67f4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Union": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/IPermission"
+            },
+            "overloads": {
+              "48ec7b71": {
+                "name": "Union",
+                "overloadId": "48ec7b71",
+                "methodKind": "instance",
+                "description": "Creates a permission that is the union of the current permission and the specified permission.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Security#/components/schemas/IPermission",
+                      "name": "target",
+                      "isOptional": false,
+                      "instanceGuid": "f33e898b-6b22-4d83-8121-2ac3720f58d9"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "f075d9da-1fe6-4f8b-a803-6d0a6fdffb1c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Security#/components/schemas/IPermission"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IStackWalk": {
+        "title": "IStackWalk",
+        "type": "object",
+        "description": "Manages the stack walk that determines whether all callers in the call stack have the required permissions to access a protected resource.",
+        "x-methods": {
+          "Assert": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/IStackWalk"
+            },
+            "overloads": {
+              "e798253b": {
+                "name": "Assert",
+                "overloadId": "e798253b",
+                "methodKind": "instance",
+                "description": "Asserts that the calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "80a6aceb-557f-4b24-9415-f58851b7a2d0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Demand": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/IStackWalk"
+            },
+            "overloads": {
+              "f8a6c417": {
+                "name": "Demand",
+                "overloadId": "f8a6c417",
+                "methodKind": "instance",
+                "description": "Determines at run time whether all callers in the call stack have been granted the permission specified by the current permission object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "cd9f341d-0f3b-4009-9b84-7a2436ffec36",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Deny": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/IStackWalk"
+            },
+            "overloads": {
+              "92982382": {
+                "name": "Deny",
+                "overloadId": "92982382",
+                "methodKind": "instance",
+                "description": "Causes every  for the current object that passes through the calling code to fail.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d2d5d02f-e3da-43aa-adaf-ed2cde71d13b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "PermitOnly": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/IStackWalk"
+            },
+            "overloads": {
+              "065587b0": {
+                "name": "PermitOnly",
+                "overloadId": "065587b0",
+                "methodKind": "instance",
+                "description": "Causes every  for all objects except the current one that passes through the calling code to fail, even if code higher in the call stack has been granted permission to access other resources.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2f23d8df-8b44-454c-ba79-3e61c28b5048",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "PartialTrustVisibilityLevel": {
+        "$ref": "System.Security#/components/schemas/PartialTrustVisibilityLevel",
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "PermissionSet": {
+        "title": "PermissionSet",
+        "type": "object",
+        "description": "Represents a collection that can contain many different types of permissions.",
+        "properties": {
+          "Count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsReadOnly": {
+            "type": "boolean"
+          },
+          "IsSynchronized": {
+            "type": "boolean"
+          },
+          "SyncRoot": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "AddPermission": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "0739f1c4": {
+                "name": "AddPermission",
+                "overloadId": "0739f1c4",
+                "methodKind": "instance",
+                "description": "Adds a specified permission to the .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Security#/components/schemas/IPermission",
+                      "name": "perm",
+                      "isOptional": false,
+                      "instanceGuid": "d4b19c69-9b82-4e1b-8f73-baa9547f9bc2"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "af9cd63e-049f-49b8-a0e7-d83a8cbfce3b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Security#/components/schemas/IPermission"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Assert": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "756c4902": {
+                "name": "Assert",
+                "overloadId": "756c4902",
+                "methodKind": "instance",
+                "description": "Declares that the calling code can access the resource protected by a permission demand through the code that calls this method, even if callers higher in the stack have not been granted permission to access the resource. Using  can create security vulnerabilities.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "1679ff42-d877-46ec-b47b-323ab3a407a6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ContainsNonCodeAccessPermissions": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "ac148be8": {
+                "name": "ContainsNonCodeAccessPermissions",
+                "overloadId": "ac148be8",
+                "methodKind": "instance",
+                "description": "Gets a value indicating whether the  contains permissions that are not derived from .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e2b55161-cb1e-4162-8799-6857f39bb0a0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ConvertPermissionSet": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "8b7896ba": {
+                "name": "ConvertPermissionSet",
+                "overloadId": "8b7896ba",
+                "methodKind": "static",
+                "description": "Converts an encoded  from one XML encoding format to another XML encoding format.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "inFormat",
+                      "isOptional": false,
+                      "instanceGuid": "5062a143-6ee1-49d2-8a07-fb845f138597"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Byte[]",
+                      "name": "inData",
+                      "isOptional": false,
+                      "instanceGuid": "53d99984-aa74-470d-bc8b-9f1cb435a5f0"
+                    },
+                    {
+                      "type": "string",
+                      "name": "outFormat",
+                      "isOptional": false,
+                      "instanceGuid": "7b12d9ce-18cd-4213-a1f3-77b62a765ba8"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2b7bcb8e-ca47-444f-b3e1-a4a2885dfcd4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Byte[]"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Copy": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "514904fd": {
+                "name": "Copy",
+                "overloadId": "514904fd",
+                "methodKind": "instance",
+                "description": "Creates a copy of the .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a74e4482-ca41-422f-bed7-f8870f3aab99",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Security#/components/schemas/PermissionSet"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "CopyTo": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "c8d27121": {
+                "name": "CopyTo",
+                "overloadId": "c8d27121",
+                "methodKind": "instance",
+                "description": "Copies the permission objects of the set to the indicated location in an .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Array",
+                      "name": "array",
+                      "isOptional": false,
+                      "instanceGuid": "6c0726a6-1508-491b-9597-e0b96ee820ca"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "index",
+                      "isOptional": false,
+                      "instanceGuid": "54d93d55-b5a8-4f1d-817f-eb5a27cd9b8b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "380bcf58-55d9-432c-91bc-407db75fd353",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Demand": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "62576be7": {
+                "name": "Demand",
+                "overloadId": "62576be7",
+                "methodKind": "instance",
+                "description": "Forces a  at run time if all callers higher in the call stack have not been granted the permissions specified by the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "bfdfdd64-4adc-41be-8f63-af7b4f3db5d0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Deny": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "05fde26d": {
+                "name": "Deny",
+                "overloadId": "05fde26d",
+                "methodKind": "instance",
+                "description": "Causes any  that passes through the calling code for a permission that has an intersection with a permission of a type contained in the current  to fail.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "62c2f764-84cd-460b-bb6a-655873653684",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "29defba7": {
+                "name": "Equals",
+                "overloadId": "29defba7",
+                "methodKind": "instance",
+                "description": "Determines whether the specified  or  object is equal to the current .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "o",
+                      "isOptional": false,
+                      "instanceGuid": "5253a588-9c1c-4ca4-b68a-f8caad3fb5b7"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8cf0a383-6c4e-40a9-9e25-b103f3b79cc9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "FromXml": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "6640aaea": {
+                "name": "FromXml",
+                "overloadId": "6640aaea",
+                "methodKind": "instance",
+                "description": "Reconstructs a security object with a specified state from an XML encoding.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Security#/components/schemas/SecurityElement",
+                      "name": "et",
+                      "isOptional": false,
+                      "instanceGuid": "dc74d328-fb33-43ec-9864-d54cc0159d85"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "9ed20ddb-96fe-44d2-9bbc-35003c85eeca",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetEnumerator": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "a1b07e35": {
+                "name": "GetEnumerator",
+                "overloadId": "a1b07e35",
+                "methodKind": "instance",
+                "description": "Returns an enumerator for the permissions of the set.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "08702739-e40e-4114-a344-4176d1c24595",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections#/components/schemas/IEnumerator"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "d41c7867": {
+                "name": "GetHashCode",
+                "overloadId": "d41c7867",
+                "methodKind": "instance",
+                "description": "Gets a hash code for the  object that is suitable for use in hashing algorithms and data structures such as a hash table.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d9f96746-b1c2-46e2-9d87-4b16858e6cc2",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetPermission": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "5c8016f4": {
+                "name": "GetPermission",
+                "overloadId": "5c8016f4",
+                "methodKind": "instance",
+                "description": "Gets a permission object of the specified type, if it exists in the set.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Type",
+                      "name": "permClass",
+                      "isOptional": false,
+                      "instanceGuid": "3771e2a8-7ba2-43cb-83e6-a1760d666340"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8fac4ee8-4e0a-48c5-8d11-1f368d4a5b1c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Security#/components/schemas/IPermission"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Intersect": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "178dbab3": {
+                "name": "Intersect",
+                "overloadId": "178dbab3",
+                "methodKind": "instance",
+                "description": "Creates and returns a permission set that is the intersection of the current  and the specified .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Security#/components/schemas/PermissionSet",
+                      "name": "other",
+                      "isOptional": false,
+                      "instanceGuid": "12de8619-b747-4ece-8b90-40a7d7dffd0c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a1881e31-bb4d-4c91-b090-f3535158585f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Security#/components/schemas/PermissionSet"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsEmpty": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "b023eb47": {
+                "name": "IsEmpty",
+                "overloadId": "b023eb47",
+                "methodKind": "instance",
+                "description": "Gets a value indicating whether the  is empty.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a80e4578-1392-4c60-a19b-8d2d34aca114",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsSubsetOf": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "80c40baa": {
+                "name": "IsSubsetOf",
+                "overloadId": "80c40baa",
+                "methodKind": "instance",
+                "description": "Determines whether the current  is a subset of the specified .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Security#/components/schemas/PermissionSet",
+                      "name": "target",
+                      "isOptional": false,
+                      "instanceGuid": "d9ce1f4f-5965-457d-b53f-2884541e9440"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "1f761fe1-c70e-4a8e-8ba8-bee40c84073a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsUnrestricted": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "d2b590e3": {
+                "name": "IsUnrestricted",
+                "overloadId": "d2b590e3",
+                "methodKind": "instance",
+                "description": "Determines whether the  is .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f4706c3d-a7f5-4d1b-bc92-ee9022714c41",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "PermitOnly": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "f081a65f": {
+                "name": "PermitOnly",
+                "overloadId": "f081a65f",
+                "methodKind": "instance",
+                "description": "Causes any  that passes through the calling code for any  that is not a subset of the current  to fail.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "bd0b434c-ebbf-4da8-8523-26f94e0e5f18",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "RemovePermission": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "7283252b": {
+                "name": "RemovePermission",
+                "overloadId": "7283252b",
+                "methodKind": "instance",
+                "description": "Removes a permission of a certain type from the set.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Type",
+                      "name": "permClass",
+                      "isOptional": false,
+                      "instanceGuid": "35112543-4453-4912-b391-2466154f8068"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "c50255de-fd31-4a96-ba83-66a8223a3cb8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Security#/components/schemas/IPermission"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "RevertAssert": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "d74b0231": {
+                "name": "RevertAssert",
+                "overloadId": "d74b0231",
+                "methodKind": "static",
+                "description": "Causes any previous  for the current frame to be removed and no longer be in effect.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "52f10e2f-29fc-42fb-a972-62a31d762cfa",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "SetPermission": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "70235d05": {
+                "name": "SetPermission",
+                "overloadId": "70235d05",
+                "methodKind": "instance",
+                "description": "Sets a permission to the , replacing any existing permission of the same type.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Security#/components/schemas/IPermission",
+                      "name": "perm",
+                      "isOptional": false,
+                      "instanceGuid": "2382706a-31b2-4988-9015-df78d52e8186"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6c303469-2e1e-47ba-a8e8-dff4454ec894",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Security#/components/schemas/IPermission"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "728012aa": {
+                "name": "ToString",
+                "overloadId": "728012aa",
+                "methodKind": "instance",
+                "description": "Returns a string representation of the .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "53f5c6d5-d4a8-40d0-973b-dffa1bddbf03",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToXml": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "349c1273": {
+                "name": "ToXml",
+                "overloadId": "349c1273",
+                "methodKind": "instance",
+                "description": "Creates an XML encoding of the security object and its current state.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "59360ff6-e15b-4134-87ec-6b1b65ce7ca2",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Security#/components/schemas/SecurityElement"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Union": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "f52611e5": {
+                "name": "Union",
+                "overloadId": "f52611e5",
+                "methodKind": "instance",
+                "description": "Creates a  that is the union of the current  and the specified .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Security#/components/schemas/PermissionSet",
+                      "name": "other",
+                      "isOptional": false,
+                      "instanceGuid": "ad8c4d05-4ab2-4442-9c5d-f34b9364b663"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4d3d16dc-260c-46e9-a262-31974203987c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Security#/components/schemas/PermissionSet"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/PermissionSet"
+            },
+            "overloads": {
+              "2a9432d2": {
+                "name": "GetType",
+                "overloadId": "2a9432d2",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "80368fd2-3d14-4a5e-b9fd-9f8f2e27b66c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SecureString": {
+        "title": "SecureString",
+        "type": "object",
+        "description": "Represents text that should be kept confidential, such as by deleting it from computer memory when no longer needed. This class cannot be inherited.",
+        "properties": {
+          "Length": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-methods": {
+          "AppendChar": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecureString"
+            },
+            "overloads": {
+              "47ae1ae0": {
+                "name": "AppendChar",
+                "overloadId": "47ae1ae0",
+                "methodKind": "instance",
+                "description": "Appends a character to the end of the current secure string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "c",
+                      "isOptional": false,
+                      "instanceGuid": "1328aaca-ba5c-46cf-8f4b-c7d26f7eb6a2"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d3a77f33-13bc-4f88-adbf-26af8070f9a6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Clear": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecureString"
+            },
+            "overloads": {
+              "188dfd11": {
+                "name": "Clear",
+                "overloadId": "188dfd11",
+                "methodKind": "instance",
+                "description": "Deletes the value of the current secure string.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "3cb087f7-bd9b-46ec-82c2-df89f926374e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Copy": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecureString"
+            },
+            "overloads": {
+              "b4b9e8c5": {
+                "name": "Copy",
+                "overloadId": "b4b9e8c5",
+                "methodKind": "instance",
+                "description": "Creates a copy of the current secure string.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f64d26e7-7266-49cf-8f20-a0f8f510cd1c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Security#/components/schemas/SecureString"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Dispose": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecureString"
+            },
+            "overloads": {
+              "797079b4": {
+                "name": "Dispose",
+                "overloadId": "797079b4",
+                "methodKind": "instance",
+                "description": "Releases all resources used by the current  object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b899c6ba-54ec-430e-8d8b-937edd477a8b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "InsertAt": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecureString"
+            },
+            "overloads": {
+              "9cec3412": {
+                "name": "InsertAt",
+                "overloadId": "9cec3412",
+                "methodKind": "instance",
+                "description": "Inserts a character in this secure string at the specified index position.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "index",
+                      "isOptional": false,
+                      "instanceGuid": "f39d8c91-eb86-4b5f-a5d1-29f2b34780e3"
+                    },
+                    {
+                      "type": "string",
+                      "name": "c",
+                      "isOptional": false,
+                      "instanceGuid": "00a0020f-af97-4200-af5d-697a970f2a8c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "95c7016e-afc8-40b2-bb86-0617c5ae0ed3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsReadOnly": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecureString"
+            },
+            "overloads": {
+              "bd7da54f": {
+                "name": "IsReadOnly",
+                "overloadId": "bd7da54f",
+                "methodKind": "instance",
+                "description": "Indicates whether this secure string is marked read-only.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "6f2fec83-89f1-4d62-9b70-1361e80e6da8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "MakeReadOnly": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecureString"
+            },
+            "overloads": {
+              "310ea8ac": {
+                "name": "MakeReadOnly",
+                "overloadId": "310ea8ac",
+                "methodKind": "instance",
+                "description": "Makes the text value of this secure string read-only.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7bbce161-120e-4951-b6c2-c9a7988a8a07",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "RemoveAt": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecureString"
+            },
+            "overloads": {
+              "a166e0b6": {
+                "name": "RemoveAt",
+                "overloadId": "a166e0b6",
+                "methodKind": "instance",
+                "description": "Removes the character at the specified index position from this secure string.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "index",
+                      "isOptional": false,
+                      "instanceGuid": "4dc5074c-e867-40f0-b23c-012646c6092a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "900fb00b-c1d5-47d3-a1b9-0272a30b34ee",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "SetAt": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecureString"
+            },
+            "overloads": {
+              "a29f5973": {
+                "name": "SetAt",
+                "overloadId": "a29f5973",
+                "methodKind": "instance",
+                "description": "Replaces the existing character at the specified index position with another character.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "index",
+                      "isOptional": false,
+                      "instanceGuid": "c20f7825-5ea7-4e40-99d9-6b0a2a7a078c"
+                    },
+                    {
+                      "type": "string",
+                      "name": "c",
+                      "isOptional": false,
+                      "instanceGuid": "dcc1fa4e-2a2a-425b-9dc1-3f637cb063fa"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "151ce174-34b7-4804-b798-f12e9cd2c93c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecureString"
+            },
+            "overloads": {
+              "3c3cda2f": {
+                "name": "GetType",
+                "overloadId": "3c3cda2f",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "dea15e19-9098-4ef3-87c2-9eac7df9f7b8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecureString"
+            },
+            "overloads": {
+              "9afe2dac": {
+                "name": "ToString",
+                "overloadId": "9afe2dac",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "687e2a38-fb20-4a56-a5fa-8c758358b8e3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecureString"
+            },
+            "overloads": {
+              "f4d40852": {
+                "name": "Equals",
+                "overloadId": "f4d40852",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "8099039f-8219-4e52-92ae-8107777f7dd6"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ae3951a4-d230-4073-996e-c371a5ca6acd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecureString"
+            },
+            "overloads": {
+              "f3b06d6b": {
+                "name": "GetHashCode",
+                "overloadId": "f3b06d6b",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "bd632dfb-572b-4f3b-a5b6-d60a334aba96",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SecurityCriticalAttribute": {
+        "title": "SecurityCriticalAttribute",
+        "type": "object",
+        "description": "Specifies that code or an assembly performs security-critical operations.",
+        "properties": {
+          "Scope": {
+            "$ref": "System.Security#/components/schemas/SecurityCriticalScope"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityCriticalAttribute"
+            },
+            "overloads": {
+              "8705dcc6": {
+                "name": "Equals",
+                "overloadId": "8705dcc6",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "0d7de3b7-1965-4707-a91c-0e7d79fc21ce"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0916f8f9-7fde-4521-8a16-81aa8529d014",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityCriticalAttribute"
+            },
+            "overloads": {
+              "fe946ba2": {
+                "name": "GetHashCode",
+                "overloadId": "fe946ba2",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "30be825f-9491-48d8-987f-84fc42de4aff",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityCriticalAttribute"
+            },
+            "overloads": {
+              "331986ad": {
+                "name": "Match",
+                "overloadId": "331986ad",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "cae9c856-a2b1-438d-a416-178dc50b9052"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ed33d0eb-889f-4fe5-8ac1-96a9bf668b0d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityCriticalAttribute"
+            },
+            "overloads": {
+              "e66a9e17": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "e66a9e17",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7109ec80-bb4c-469b-98bf-f3edab5920d9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityCriticalAttribute"
+            },
+            "overloads": {
+              "7921bcd2": {
+                "name": "GetType",
+                "overloadId": "7921bcd2",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2d4de92f-cfde-41e7-8423-0c20b8529e8b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityCriticalAttribute"
+            },
+            "overloads": {
+              "b9df8b8c": {
+                "name": "ToString",
+                "overloadId": "b9df8b8c",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "218a11a4-5406-4dde-b589-94cc5e3c4821",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SecurityCriticalScope": {
+        "$ref": "System.Security#/components/schemas/SecurityCriticalScope",
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SecurityElement": {
+        "$ref": "System.Security#/components/schemas/SecurityElement",
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SecurityException": {
+        "title": "SecurityException",
+        "type": "object",
+        "description": "The exception that is thrown when a security error is detected.",
+        "properties": {
+          "Demanded": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "DenySetInstance": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "FailedAssemblyInfo": {
+            "$ref": "System.Reflection#/components/schemas/AssemblyName"
+          },
+          "GrantedSet": {
+            "type": "string"
+          },
+          "Method": {
+            "$ref": "System.Reflection#/components/schemas/MethodInfo"
+          },
+          "PermissionState": {
+            "type": "string"
+          },
+          "PermissionType": {
+            "$ref": "System#/components/schemas/Type"
+          },
+          "PermitOnlySetInstance": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "RefusedSet": {
+            "type": "string"
+          },
+          "Url": {
+            "type": "string"
+          },
+          "TargetSite": {
+            "$ref": "System.Reflection#/components/schemas/MethodBase"
+          },
+          "Message": {
+            "type": "string"
+          },
+          "Data": {
+            "$ref": "System.Collections#/components/schemas/IDictionary"
+          },
+          "InnerException": {
+            "$ref": "System#/components/schemas/Exception"
+          },
+          "HelpLink": {
+            "type": "string"
+          },
+          "Source": {
+            "type": "string"
+          },
+          "HResult": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "StackTrace": {
+            "type": "string"
+          }
+        },
+        "x-methods": {
+          "ToString": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityException"
+            },
+            "overloads": {
+              "6172cf82": {
+                "name": "ToString",
+                "overloadId": "6172cf82",
+                "methodKind": "instance",
+                "description": "Returns a representation of the current .",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c7abd688-a70a-4ed1-bf22-5b26f4081295",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetObjectData": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityException"
+            },
+            "overloads": {
+              "21613db7": {
+                "name": "GetObjectData",
+                "overloadId": "21613db7",
+                "methodKind": "instance",
+                "description": "Sets the  with information about the .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
+                      "name": "info",
+                      "isOptional": false,
+                      "instanceGuid": "1cdf95ca-c715-4c9c-a25b-fa1aa51d0341"
+                    },
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
+                      "name": "context",
+                      "isOptional": false,
+                      "instanceGuid": "ae1ee19a-de35-4e3d-82d0-b54a900d83cd"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "471ce3b1-29c5-41a0-994a-c075fef31e16",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetBaseException": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityException"
+            },
+            "overloads": {
+              "48409f4e": {
+                "name": "GetBaseException",
+                "overloadId": "48409f4e",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns the  that is the root cause of one or more subsequent exceptions.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "12dfaf44-db4d-45b4-a6f2-29b39b5b18b8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Exception"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityException"
+            },
+            "overloads": {
+              "339398d7": {
+                "name": "GetType",
+                "overloadId": "339398d7",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "87a2dc4a-5d8a-4f3d-a6b7-52cb2fca6966",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityException"
+            },
+            "overloads": {
+              "fe09cfed": {
+                "name": "Equals",
+                "overloadId": "fe09cfed",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "21050471-b3db-420e-938f-ab75ff5e44dd"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "dcda78fc-4a2f-4bdb-9ece-4f20c2626ec3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityException"
+            },
+            "overloads": {
+              "5a0c171a": {
+                "name": "GetHashCode",
+                "overloadId": "5a0c171a",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "706851ea-5efe-4e63-854b-c4037d1ad949",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SecurityRulesAttribute": {
+        "title": "SecurityRulesAttribute",
+        "type": "object",
+        "description": "Indicates the set of security rules the common language runtime should enforce for an assembly.",
+        "properties": {
+          "SkipVerificationInFullTrust": {
+            "type": "boolean"
+          },
+          "RuleSet": {
+            "$ref": "System.Security#/components/schemas/SecurityRuleSet"
+          },
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityRulesAttribute"
+            },
+            "overloads": {
+              "6235d7df": {
+                "name": "Equals",
+                "overloadId": "6235d7df",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "27027b64-6b01-4bff-88b2-e84b7e42b6e0"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0cb31b98-7f65-4f65-82e5-84a91a95738b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityRulesAttribute"
+            },
+            "overloads": {
+              "a9ffea2a": {
+                "name": "GetHashCode",
+                "overloadId": "a9ffea2a",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "9c1c573a-0279-45e6-a7a9-ab0b3d0f627c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityRulesAttribute"
+            },
+            "overloads": {
+              "83ea0905": {
+                "name": "Match",
+                "overloadId": "83ea0905",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "3af7b394-d313-4cc3-9a63-1b83b9a2da54"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "9c8b2ef7-64f8-4dc2-92eb-24d1a8bdc4e0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityRulesAttribute"
+            },
+            "overloads": {
+              "cad9a542": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "cad9a542",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7f60755b-ccb4-4ad5-ab39-d68a45081b15",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityRulesAttribute"
+            },
+            "overloads": {
+              "9c5013b8": {
+                "name": "GetType",
+                "overloadId": "9c5013b8",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f88d3a95-48ab-4526-878b-052013707161",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityRulesAttribute"
+            },
+            "overloads": {
+              "0af65552": {
+                "name": "ToString",
+                "overloadId": "0af65552",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0e1311f0-7eff-4016-8f1a-c4a6b5891e44",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SecurityRuleSet": {
+        "$ref": "System.Security#/components/schemas/SecurityRuleSet",
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SecuritySafeCriticalAttribute": {
+        "title": "SecuritySafeCriticalAttribute",
+        "type": "object",
+        "description": "Identifies types or members as security-critical and safely accessible by transparent code.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecuritySafeCriticalAttribute"
+            },
+            "overloads": {
+              "db984921": {
+                "name": "Equals",
+                "overloadId": "db984921",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "1eee1ac5-c522-49a8-8fb6-fd8d07cf5ca4"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4681b3db-88d1-40c4-ba46-849563bd73f8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecuritySafeCriticalAttribute"
+            },
+            "overloads": {
+              "f6f63fe0": {
+                "name": "GetHashCode",
+                "overloadId": "f6f63fe0",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "63ae5742-9a68-4bf2-a76d-84ae55872491",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecuritySafeCriticalAttribute"
+            },
+            "overloads": {
+              "caf5ea3e": {
+                "name": "Match",
+                "overloadId": "caf5ea3e",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "27f5a8b1-d106-4ed8-b40d-c14eed597206"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d91abc7e-d0a3-40f0-8db5-e1c8b01e3a46",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecuritySafeCriticalAttribute"
+            },
+            "overloads": {
+              "2176c5fb": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "2176c5fb",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c79ab96d-a3b2-4efe-8796-e4d97afafe6a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecuritySafeCriticalAttribute"
+            },
+            "overloads": {
+              "f2f6e51f": {
+                "name": "GetType",
+                "overloadId": "f2f6e51f",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d911edcf-811c-486f-b630-cef3f5c2bf9b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecuritySafeCriticalAttribute"
+            },
+            "overloads": {
+              "5a8ee45c": {
+                "name": "ToString",
+                "overloadId": "5a8ee45c",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "df79b17e-c55c-4062-b0e2-5e8580310abe",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SecurityTransparentAttribute": {
+        "title": "SecurityTransparentAttribute",
+        "type": "object",
+        "description": "Specifies that an assembly cannot cause an elevation of privilege.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityTransparentAttribute"
+            },
+            "overloads": {
+              "4e9734c0": {
+                "name": "Equals",
+                "overloadId": "4e9734c0",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "00126187-b0e0-4b8f-b751-878b6ce7c2a7"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2ce30298-43d0-4596-a8b5-145db97bceec",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityTransparentAttribute"
+            },
+            "overloads": {
+              "f4619c23": {
+                "name": "GetHashCode",
+                "overloadId": "f4619c23",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b5644b5a-cc0d-4dc4-80ad-a104bdfdf1e6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityTransparentAttribute"
+            },
+            "overloads": {
+              "ac84f6c7": {
+                "name": "Match",
+                "overloadId": "ac84f6c7",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "2119016c-cbd7-4b4e-967d-16a0a7660810"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "67cad68f-2cbf-400b-9979-b48158260c20",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityTransparentAttribute"
+            },
+            "overloads": {
+              "56d9367e": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "56d9367e",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b9ccae9c-fc01-4d08-9365-15bab7702078",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityTransparentAttribute"
+            },
+            "overloads": {
+              "786e3cfa": {
+                "name": "GetType",
+                "overloadId": "786e3cfa",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7aa46567-70cb-43dd-9b4e-c42f2a4fe506",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityTransparentAttribute"
+            },
+            "overloads": {
+              "555caf06": {
+                "name": "ToString",
+                "overloadId": "555caf06",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "be131d0e-6e96-44f2-8cb2-942ce1706d0c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SecurityTreatAsSafeAttribute": {
+        "title": "SecurityTreatAsSafeAttribute",
+        "type": "object",
+        "description": "Identifies which of the nonpublic  members are accessible by transparent code within the assembly.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityTreatAsSafeAttribute"
+            },
+            "overloads": {
+              "157be62c": {
+                "name": "Equals",
+                "overloadId": "157be62c",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "ead5b9b9-ae5e-4bc4-aeef-e72a6d719db6"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ef71d3b5-15a2-4643-b5b0-cda83f17b158",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityTreatAsSafeAttribute"
+            },
+            "overloads": {
+              "e57bdeca": {
+                "name": "GetHashCode",
+                "overloadId": "e57bdeca",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a4967aa3-6695-42fd-b3ac-1bee34a6947d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityTreatAsSafeAttribute"
+            },
+            "overloads": {
+              "5252949c": {
+                "name": "Match",
+                "overloadId": "5252949c",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "99174130-ca6e-48fd-ac8c-d950fbd04a86"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5b57d463-9bd5-4b38-84a4-f7aeb7784f8a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityTreatAsSafeAttribute"
+            },
+            "overloads": {
+              "9e8c7130": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "9e8c7130",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4fd1c0a8-576b-44ab-93dc-88471a6a9cfd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityTreatAsSafeAttribute"
+            },
+            "overloads": {
+              "a34be75e": {
+                "name": "GetType",
+                "overloadId": "a34be75e",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "80777f29-09f3-46f9-908d-c1337fbc694a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SecurityTreatAsSafeAttribute"
+            },
+            "overloads": {
+              "1fba4eb9": {
+                "name": "ToString",
+                "overloadId": "1fba4eb9",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "755dc21a-0bc4-401b-9cf6-060a36762623",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SuppressUnmanagedCodeSecurityAttribute": {
+        "title": "SuppressUnmanagedCodeSecurityAttribute",
+        "type": "object",
+        "description": "Allows managed code to call into unmanaged code without a stack walk. This class cannot be inherited.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SuppressUnmanagedCodeSecurityAttribute"
+            },
+            "overloads": {
+              "be9c9c55": {
+                "name": "Equals",
+                "overloadId": "be9c9c55",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "5d79490f-b1ec-4a6a-8034-acc2f40d52a9"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "97970c41-5e21-4418-86ca-c1f98bc6bc0d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SuppressUnmanagedCodeSecurityAttribute"
+            },
+            "overloads": {
+              "70acc6f0": {
+                "name": "GetHashCode",
+                "overloadId": "70acc6f0",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "11d05aaf-f84e-4f86-b1ed-0392ac9acd8b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SuppressUnmanagedCodeSecurityAttribute"
+            },
+            "overloads": {
+              "0c74e800": {
+                "name": "Match",
+                "overloadId": "0c74e800",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "807f1860-7dc5-44d5-9c04-61b2fe2052ef"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d644b937-4c2b-44d7-a1bf-74dff14bf526",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SuppressUnmanagedCodeSecurityAttribute"
+            },
+            "overloads": {
+              "17600929": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "17600929",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "da0b9ba0-705c-4ddb-928a-a29b4e3b6712",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SuppressUnmanagedCodeSecurityAttribute"
+            },
+            "overloads": {
+              "0dc64e44": {
+                "name": "GetType",
+                "overloadId": "0dc64e44",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ef9b61bc-f50c-4d76-a373-115cadd6377b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/SuppressUnmanagedCodeSecurityAttribute"
+            },
+            "overloads": {
+              "03bd0cb6": {
+                "name": "ToString",
+                "overloadId": "03bd0cb6",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "730a90fd-fe64-46b9-bdb1-fe35bafd8031",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "UnverifiableCodeAttribute": {
+        "title": "UnverifiableCodeAttribute",
+        "type": "object",
+        "description": "Marks modules containing unverifiable code. This class cannot be inherited.",
+        "properties": {
+          "TypeId": {
+            "$ref": "System#/components/schemas/Object"
+          }
+        },
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/UnverifiableCodeAttribute"
+            },
+            "overloads": {
+              "51a180f1": {
+                "name": "Equals",
+                "overloadId": "51a180f1",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "5ee56bf3-340f-4853-9df9-d848eb3c1519"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "306fb4f7-2b16-4405-a3d6-7b63da22abe5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/UnverifiableCodeAttribute"
+            },
+            "overloads": {
+              "2a28d2d9": {
+                "name": "GetHashCode",
+                "overloadId": "2a28d2d9",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4d7a8848-62a3-40ad-8ab0-f82f2d93ac41",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Match": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/UnverifiableCodeAttribute"
+            },
+            "overloads": {
+              "ffa9720e": {
+                "name": "Match",
+                "overloadId": "ffa9720e",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns a value that indicates whether this instance equals a specified object.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "c4c65bcb-f523-42ca-807c-90059686c37c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "97a8dbd2-8b0d-4e68-b23b-74c95dadab13",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "IsDefaultAttribute": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/UnverifiableCodeAttribute"
+            },
+            "overloads": {
+              "19b556eb": {
+                "name": "IsDefaultAttribute",
+                "overloadId": "19b556eb",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, indicates whether the value of this instance is the default value for the derived class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e25e31d5-7f12-4f57-8303-6875d8101d0b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/UnverifiableCodeAttribute"
+            },
+            "overloads": {
+              "d8f3d858": {
+                "name": "GetType",
+                "overloadId": "d8f3d858",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4faa91a0-b0e8-42a3-ad1c-776fe1e9b237",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/UnverifiableCodeAttribute"
+            },
+            "overloads": {
+              "60d82fb6": {
+                "name": "ToString",
+                "overloadId": "60d82fb6",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a0402647-332e-4d3c-bdfe-8ad747e69ccc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "VerificationException": {
+        "title": "VerificationException",
+        "type": "object",
+        "description": "The exception that is thrown when the security policy requires code to be type safe and the verification process is unable to verify that the code is type safe.",
+        "properties": {
+          "TargetSite": {
+            "$ref": "System.Reflection#/components/schemas/MethodBase"
+          },
+          "Message": {
+            "type": "string"
+          },
+          "Data": {
+            "$ref": "System.Collections#/components/schemas/IDictionary"
+          },
+          "InnerException": {
+            "$ref": "System#/components/schemas/Exception"
+          },
+          "HelpLink": {
+            "type": "string"
+          },
+          "Source": {
+            "type": "string"
+          },
+          "HResult": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "StackTrace": {
+            "type": "string"
+          }
+        },
+        "x-methods": {
+          "GetBaseException": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/VerificationException"
+            },
+            "overloads": {
+              "726cd534": {
+                "name": "GetBaseException",
+                "overloadId": "726cd534",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, returns the  that is the root cause of one or more subsequent exceptions.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "114cb1ab-c5da-4f32-ab88-15394c8a6807",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Exception"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetObjectData": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/VerificationException"
+            },
+            "overloads": {
+              "7a30b609": {
+                "name": "GetObjectData",
+                "overloadId": "7a30b609",
+                "methodKind": "instance",
+                "description": "When overridden in a derived class, sets the  with information about the exception.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
+                      "name": "info",
+                      "isOptional": false,
+                      "instanceGuid": "0bdeb49a-f12b-444e-8e3b-4ae967d3c753"
+                    },
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
+                      "name": "context",
+                      "isOptional": false,
+                      "instanceGuid": "619e9217-3eb6-4a61-9ede-829e2a289693"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "67647d00-bcd0-4106-8718-9704e13a60af",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/VerificationException"
+            },
+            "overloads": {
+              "9cf87de5": {
+                "name": "ToString",
+                "overloadId": "9cf87de5",
+                "methodKind": "instance",
+                "description": "Creates and returns a string representation of the current exception.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f0b30b86-72dc-4fe1-8404-3b920dcca749",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/VerificationException"
+            },
+            "overloads": {
+              "7a07585b": {
+                "name": "GetType",
+                "overloadId": "7a07585b",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c439429e-c54f-4fe3-8fb7-c493d4f898a3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/VerificationException"
+            },
+            "overloads": {
+              "6c60c758": {
+                "name": "Equals",
+                "overloadId": "6c60c758",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "11d190a2-8280-4420-9d34-d7dfbfd8d097"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "688daa0d-fbc4-41b3-9c6d-56454d225e22",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Security#/components/schemas/VerificationException"
+            },
+            "overloads": {
+              "afe22030": {
+                "name": "GetHashCode",
+                "overloadId": "afe22030",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7500c8ae-fe72-4dba-bb66-21a6a97d996c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Security",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

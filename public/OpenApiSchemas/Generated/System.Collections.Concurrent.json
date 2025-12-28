@@ -1,0 +1,145 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Collections.Concurrent",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "IProducerConsumerCollection\u00601": {
+        "title": "IProducerConsumerCollection\u00601",
+        "type": "object",
+        "description": "Defines methods to manipulate thread-safe collections intended for producer/consumer usage. This interface provides a unified representation for producer/consumer collections so that higher level abstractions such as  can use the collection as the underlying storage mechanism.",
+        "x-methods": {
+          "CopyTo": {
+            "owner": {
+              "$ref": "System.Collections.Concurrent#/components/schemas/IProducerConsumerCollection\u00601"
+            },
+            "overloads": {
+              "bf0581ce": {
+                "name": "CopyTo",
+                "overloadId": "bf0581ce",
+                "methodKind": "instance",
+                "description": "Copies the elements of the  to an , starting at a specified index.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.Concurrent#/components/schemas/T[]",
+                      "name": "array",
+                      "isOptional": false,
+                      "instanceGuid": "73aae841-f6c4-41e7-824a-d5e88ee846ba"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "index",
+                      "isOptional": false,
+                      "instanceGuid": "da99d2cc-9ae6-48c6-b690-4ca5d41ba704"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6e1463d6-e06b-4632-926b-15d669c3478d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryAdd": {
+            "owner": {
+              "$ref": "System.Collections.Concurrent#/components/schemas/IProducerConsumerCollection\u00601"
+            },
+            "overloads": {
+              "80c7d028": {
+                "name": "TryAdd",
+                "overloadId": "80c7d028",
+                "methodKind": "instance",
+                "description": "Attempts to add an object to the .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.Concurrent#/components/schemas/T",
+                      "name": "item",
+                      "isOptional": false,
+                      "instanceGuid": "df17d5d3-b948-4aa8-a1e9-eea61bfc64d7"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6ea162b8-07f3-419c-88e5-1d30ee5f4559",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryTake": {
+            "owner": {
+              "$ref": "System.Collections.Concurrent#/components/schemas/IProducerConsumerCollection\u00601"
+            },
+            "overloads": {
+              "a8c5790f": {
+                "name": "TryTake",
+                "overloadId": "a8c5790f",
+                "methodKind": "instance",
+                "description": "Attempts to remove and return an object from the .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Collections.Concurrent#/components/schemas/T\u0026",
+                      "name": "item",
+                      "isOptional": false,
+                      "instanceGuid": "3da38f5a-7c03-4832-aa84-533cb571363c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4e194bb1-39c8-481f-a67f-6a0f2471649e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToArray": {
+            "owner": {
+              "$ref": "System.Collections.Concurrent#/components/schemas/IProducerConsumerCollection\u00601"
+            },
+            "overloads": {
+              "cc34262f": {
+                "name": "ToArray",
+                "overloadId": "cc34262f",
+                "methodKind": "instance",
+                "description": "Copies the elements contained in the  to a new array.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "28dc9f28-ca59-4cc0-aa5a-03c32d8f7951",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Collections.Concurrent#/components/schemas/T[]"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Collections.Concurrent",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

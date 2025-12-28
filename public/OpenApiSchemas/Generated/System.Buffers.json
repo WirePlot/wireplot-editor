@@ -1,0 +1,3993 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Buffers",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "ReadOnlySpanAction\u00602": {
+        "title": "ReadOnlySpanAction\u00602",
+        "type": "object",
+        "description": "Encapsulates a method that receives a read-only span of objects of type  and a state object of type .",
+        "properties": {
+          "Target": {
+            "$ref": "System#/components/schemas/Object"
+          },
+          "Method": {
+            "$ref": "System.Reflection#/components/schemas/MethodInfo"
+          }
+        },
+        "x-methods": {
+          "Invoke": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ReadOnlySpanAction\u00602"
+            },
+            "overloads": {
+              "820ff483": {
+                "name": "Invoke",
+                "overloadId": "820ff483",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "span",
+                      "isOptional": false,
+                      "instanceGuid": "b7cc2a82-9f71-4617-a2b3-e417c4db5bda"
+                    },
+                    {
+                      "$ref": "System.Buffers#/components/schemas/TArg",
+                      "name": "arg",
+                      "isOptional": false,
+                      "instanceGuid": "16951f14-f856-49dd-a90b-1987b43a0d8e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5f023871-ceea-4dd9-950d-19a257bd7732",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "BeginInvoke": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ReadOnlySpanAction\u00602"
+            },
+            "overloads": {
+              "abfdf54d": {
+                "name": "BeginInvoke",
+                "overloadId": "abfdf54d",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "span",
+                      "isOptional": false,
+                      "instanceGuid": "365b1522-cdc0-42a2-aca7-8679ee10f6de"
+                    },
+                    {
+                      "$ref": "System.Buffers#/components/schemas/TArg",
+                      "name": "arg",
+                      "isOptional": false,
+                      "instanceGuid": "aa78d55f-b791-4f41-ae56-7cc4943f3566"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/AsyncCallback",
+                      "name": "callback",
+                      "isOptional": false,
+                      "instanceGuid": "5f09d95a-a28a-43fb-aa5c-5c356e42f7c3"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "object",
+                      "isOptional": false,
+                      "instanceGuid": "6c803514-e1d0-4d48-a1c9-41c3ea3825ee"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "cb78ca14-a305-44b9-af40-620b23a3f81e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/IAsyncResult"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "EndInvoke": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ReadOnlySpanAction\u00602"
+            },
+            "overloads": {
+              "f5b0f1f3": {
+                "name": "EndInvoke",
+                "overloadId": "f5b0f1f3",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/IAsyncResult",
+                      "name": "result",
+                      "isOptional": false,
+                      "instanceGuid": "de13a968-bf4c-419a-bcc5-93999eca349d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "01264557-7ae3-4ebf-97d7-2da7b5284e27",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetObjectData": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ReadOnlySpanAction\u00602"
+            },
+            "overloads": {
+              "f7d5577a": {
+                "name": "GetObjectData",
+                "overloadId": "f7d5577a",
+                "methodKind": "instance",
+                "description": "Populates a  object with all the data needed to serialize this instance.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
+                      "name": "info",
+                      "isOptional": false,
+                      "instanceGuid": "60b9b25e-d799-49f8-8d5b-b13304702a6f"
+                    },
+                    {
+                      "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
+                      "name": "context",
+                      "isOptional": false,
+                      "instanceGuid": "d85e8918-ad68-4473-91f0-4497d4ab35b8"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0fda46e3-cd4f-4ca0-8703-38aa17447861",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ReadOnlySpanAction\u00602"
+            },
+            "overloads": {
+              "4cddcad8": {
+                "name": "Equals",
+                "overloadId": "4cddcad8",
+                "methodKind": "instance",
+                "description": "Determines whether this multicast delegate and the specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "2693a4db-924e-47d4-bf5b-3c57dd78d30a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d1cc228e-492c-4363-9f65-271c928c706f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetInvocationList": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ReadOnlySpanAction\u00602"
+            },
+            "overloads": {
+              "b12ef3fd": {
+                "name": "GetInvocationList",
+                "overloadId": "b12ef3fd",
+                "methodKind": "instance",
+                "description": "Returns the invocation list of this multicast delegate, in invocation order.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b980dd3c-6d57-4d17-becc-bbd87463608f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Delegate[]"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ReadOnlySpanAction\u00602"
+            },
+            "overloads": {
+              "6c072186": {
+                "name": "GetHashCode",
+                "overloadId": "6c072186",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "faefd406-47fa-4dd6-b1c8-3a931d3dd805",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Clone": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ReadOnlySpanAction\u00602"
+            },
+            "overloads": {
+              "00ca67da": {
+                "name": "Clone",
+                "overloadId": "00ca67da",
+                "methodKind": "instance",
+                "description": "Creates a shallow copy of the delegate.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c2f41b84-dbcb-46e0-a60b-51d3b5bf4a70",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Object"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "DynamicInvoke": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ReadOnlySpanAction\u00602"
+            },
+            "overloads": {
+              "1b5a2595": {
+                "name": "DynamicInvoke",
+                "overloadId": "1b5a2595",
+                "methodKind": "instance",
+                "description": "Dynamically invokes (late-bound) the method represented by the current delegate.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object[]",
+                      "name": "args",
+                      "isOptional": false,
+                      "instanceGuid": "2968586a-192a-4299-9b14-a5e2fd534a9d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "f735751c-a08e-4fd3-8174-ce5fd087bf56",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Object"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ReadOnlySpanAction\u00602"
+            },
+            "overloads": {
+              "e9044cd6": {
+                "name": "GetType",
+                "overloadId": "e9044cd6",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f420186e-59e1-422e-b79d-ea37cf9eed67",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ReadOnlySpanAction\u00602"
+            },
+            "overloads": {
+              "8470068a": {
+                "name": "ToString",
+                "overloadId": "8470068a",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b88c5215-d1e7-436e-bc1d-13af1e618c6e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ArrayPool\u00601": {
+        "title": "ArrayPool\u00601",
+        "type": "object",
+        "description": "Provides a resource pool that enables reusing instances of type T[].",
+        "x-methods": {
+          "Create": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ArrayPool\u00601"
+            },
+            "overloads": {
+              "0ac9a786": {
+                "name": "Create",
+                "overloadId": "0ac9a786",
+                "methodKind": "static",
+                "description": "Creates a new instance of the  class.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4adab4e1-54bc-45b0-bfd0-7f7ec76894cf",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/ArrayPool\u00601"
+                    }
+                  ]
+                }
+              },
+              "f9abbe72": {
+                "name": "Create",
+                "overloadId": "f9abbe72",
+                "methodKind": "static",
+                "description": "Creates a new instance of the  class.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "maxArrayLength",
+                      "isOptional": false,
+                      "instanceGuid": "eefd09f6-d68f-4614-ad43-02d6f7d918a6"
+                    },
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "maxArraysPerBucket",
+                      "isOptional": false,
+                      "instanceGuid": "74453495-2e0c-4076-9064-63a9160d4464"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "95451f9b-fcd1-4b40-b77c-177844e763c7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/ArrayPool\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Rent": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ArrayPool\u00601"
+            },
+            "overloads": {
+              "7b2875de": {
+                "name": "Rent",
+                "overloadId": "7b2875de",
+                "methodKind": "instance",
+                "description": "Retrieves a buffer that is at least the requested length.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "minimumLength",
+                      "isOptional": false,
+                      "instanceGuid": "290c3522-37d4-43d5-a626-635f9472608d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ea79b033-1802-4305-a9e3-0f1ecd3100ec",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/T[]"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Return": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ArrayPool\u00601"
+            },
+            "overloads": {
+              "931fd84e": {
+                "name": "Return",
+                "overloadId": "931fd84e",
+                "methodKind": "instance",
+                "description": "Returns an array to the pool that was previously obtained using the  method on the same  instance.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Buffers#/components/schemas/T[]",
+                      "name": "array",
+                      "isOptional": false,
+                      "instanceGuid": "7a275c17-da01-4621-9a77-a867252cc90a"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "clearArray",
+                      "isOptional": true,
+                      "instanceGuid": "84aa7ab2-fc42-4dee-8e9e-a0b7de88b79a"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "68091827-ff96-4bbc-84d2-acfd36002528",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ArrayPool\u00601"
+            },
+            "overloads": {
+              "d081d7f1": {
+                "name": "GetType",
+                "overloadId": "d081d7f1",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "153e3c41-1eb4-4248-8b4b-5f0b9e43f3bc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ArrayPool\u00601"
+            },
+            "overloads": {
+              "d456285b": {
+                "name": "ToString",
+                "overloadId": "d456285b",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7fd691b7-b1a8-42c0-b707-6dedfaa4c60a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ArrayPool\u00601"
+            },
+            "overloads": {
+              "9478b678": {
+                "name": "Equals",
+                "overloadId": "9478b678",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "7621c8a6-4eea-4330-b54d-773a8d160503"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "49609ba0-78d0-4e7f-850f-df5184707ea8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ArrayPool\u00601"
+            },
+            "overloads": {
+              "e89afa9f": {
+                "name": "GetHashCode",
+                "overloadId": "e89afa9f",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "94fafced-7fab-4e2f-8ea1-5e5ec15a92d8",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IMemoryOwner\u00601": {
+        "title": "IMemoryOwner\u00601",
+        "type": "object",
+        "description": "Identifies the owner of a block of memory who is responsible for disposing of the underlying memory appropriately.",
+        "properties": {
+          "Memory": {
+            "$ref": "System#/components/schemas/Memory\u00601"
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IPinnable": {
+        "title": "IPinnable",
+        "type": "object",
+        "description": "Provides a mechanism for pinning and unpinning objects to prevent the garbage collector from moving them.",
+        "x-methods": {
+          "Pin": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/IPinnable"
+            },
+            "overloads": {
+              "e8f7c306": {
+                "name": "Pin",
+                "overloadId": "e8f7c306",
+                "methodKind": "instance",
+                "description": "Pins a block of memory.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "elementIndex",
+                      "isOptional": false,
+                      "instanceGuid": "ec40c2c9-dff7-485c-af65-f83ef08e09e1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8d5d1426-2e3e-42bb-a36d-bce4995db449",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/MemoryHandle"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Unpin": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/IPinnable"
+            },
+            "overloads": {
+              "75a33a02": {
+                "name": "Unpin",
+                "overloadId": "75a33a02",
+                "methodKind": "instance",
+                "description": "Frees a block of pinned memory.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "70e40189-e29b-44ec-92d7-f521a8009279",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "MemoryHandle": {
+        "title": "MemoryHandle",
+        "type": "object",
+        "description": "Provides a memory handle for a block of memory.",
+        "properties": {
+          "Pointer": {
+            "$ref": "System#/components/schemas/Void*"
+          }
+        },
+        "x-methods": {
+          "Dispose": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/MemoryHandle"
+            },
+            "overloads": {
+              "0358f6f0": {
+                "name": "Dispose",
+                "overloadId": "0358f6f0",
+                "methodKind": "instance",
+                "description": "Frees the pinned handle and releases the  instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "65082c63-525b-4995-898f-c66635dadc85",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/MemoryHandle"
+            },
+            "overloads": {
+              "5fd9b7d4": {
+                "name": "Equals",
+                "overloadId": "5fd9b7d4",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "fd5be00f-db5d-455f-9b9d-cb8faf5b3fbb"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "21969501-8af3-45d4-94b6-9130863a6e53",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/MemoryHandle"
+            },
+            "overloads": {
+              "775ebfa6": {
+                "name": "GetHashCode",
+                "overloadId": "775ebfa6",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "55d599ff-7dc4-4442-8c70-ec7bbfd73701",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/MemoryHandle"
+            },
+            "overloads": {
+              "8ce324f3": {
+                "name": "ToString",
+                "overloadId": "8ce324f3",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f968a03b-2489-4b85-954a-2b710a6b912b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/MemoryHandle"
+            },
+            "overloads": {
+              "b26d455b": {
+                "name": "GetType",
+                "overloadId": "b26d455b",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e91bc61b-4f5d-4ca8-b901-8a388929b836",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "MemoryManager\u00601": {
+        "title": "MemoryManager\u00601",
+        "type": "object",
+        "description": "An abstract base class that is used to replace the implementation of .",
+        "properties": {
+          "Memory": {
+            "$ref": "System#/components/schemas/Memory\u00601"
+          }
+        },
+        "x-methods": {
+          "GetSpan": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/MemoryManager\u00601"
+            },
+            "overloads": {
+              "0d9b9a18": {
+                "name": "GetSpan",
+                "overloadId": "0d9b9a18",
+                "methodKind": "instance",
+                "description": "Returns a memory span that wraps the underlying memory buffer.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c0db9d9c-c51d-4e45-b6b2-2bcb01f90c69",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Span\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Pin": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/MemoryManager\u00601"
+            },
+            "overloads": {
+              "7c3b7977": {
+                "name": "Pin",
+                "overloadId": "7c3b7977",
+                "methodKind": "instance",
+                "description": "Returns a handle to the memory that has been pinned and whose address can be taken.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "integer",
+                      "format": "int32",
+                      "name": "elementIndex",
+                      "isOptional": true,
+                      "instanceGuid": "311f7482-a9d6-4086-a54a-fe0b3ea9799f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "53b58d0e-b58e-4e44-8e7d-08a034a6360d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/MemoryHandle"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Unpin": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/MemoryManager\u00601"
+            },
+            "overloads": {
+              "a7a2152b": {
+                "name": "Unpin",
+                "overloadId": "a7a2152b",
+                "methodKind": "instance",
+                "description": "Unpins pinned memory so that the garbage collector is free to move it.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7b02c416-7cba-4de2-a1b5-c9ebee563ad5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/MemoryManager\u00601"
+            },
+            "overloads": {
+              "35114ca7": {
+                "name": "GetType",
+                "overloadId": "35114ca7",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "235b3424-5547-4cc2-bb99-4d42d57f61b5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/MemoryManager\u00601"
+            },
+            "overloads": {
+              "19842694": {
+                "name": "ToString",
+                "overloadId": "19842694",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a7014093-85d9-4629-8595-c4133e6fff77",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/MemoryManager\u00601"
+            },
+            "overloads": {
+              "ff46f8ef": {
+                "name": "Equals",
+                "overloadId": "ff46f8ef",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "9bbcd642-1146-44d7-a083-ffc80aac50a5"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a0361d84-1680-48fc-90eb-e3d968ad00ca",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/MemoryManager\u00601"
+            },
+            "overloads": {
+              "1e0c6c39": {
+                "name": "GetHashCode",
+                "overloadId": "1e0c6c39",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "6528f195-5924-42ba-af4e-1c8706d88bcc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "OperationStatus": {
+        "title": "OperationStatus",
+        "type": "integer",
+        "description": "Defines the values that can be returned from span-based operations that support processing of input contained in multiple discontiguous buffers.",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "x-enum-names": [
+          "Done",
+          "DestinationTooSmall",
+          "NeedMoreData",
+          "InvalidData"
+        ],
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "StandardFormat": {
+        "title": "StandardFormat",
+        "type": "object",
+        "description": "Represents a standard format string without using an actual string.",
+        "properties": {
+          "Symbol": {
+            "type": "string"
+          },
+          "Precision": {
+            "type": "object"
+          },
+          "HasPrecision": {
+            "type": "boolean"
+          },
+          "IsDefault": {
+            "type": "boolean"
+          }
+        },
+        "x-methods": {
+          "Parse": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/StandardFormat"
+            },
+            "overloads": {
+              "9f1297f8": {
+                "name": "Parse",
+                "overloadId": "9f1297f8",
+                "methodKind": "static",
+                "description": "Converts a  into a  instance using  precision.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "format",
+                      "isOptional": false,
+                      "instanceGuid": "09c8d03a-c480-4e90-9b5c-54326d10d1c9"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "cd5259bd-410e-44e8-b4c5-c0ae8ae39b33",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/StandardFormat"
+                    }
+                  ]
+                }
+              },
+              "49c780b6": {
+                "name": "Parse",
+                "overloadId": "49c780b6",
+                "methodKind": "static",
+                "description": "Converts a  into a  instance using  precision.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "format",
+                      "isOptional": false,
+                      "instanceGuid": "8590a64f-0042-4a60-bb56-4c1c65a1b847"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "1dbe8ee9-171e-4b06-9e1e-31e36efe8044",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/StandardFormat"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "TryParse": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/StandardFormat"
+            },
+            "overloads": {
+              "aa3d5c17": {
+                "name": "TryParse",
+                "overloadId": "aa3d5c17",
+                "methodKind": "static",
+                "description": "Attempts to convert a  to a  instance and returns a value that indicates whether the parsing operation succeeded.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "format",
+                      "isOptional": false,
+                      "instanceGuid": "469c6039-785d-4fd8-af15-046099966101"
+                    },
+                    {
+                      "$ref": "System.Buffers#/components/schemas/StandardFormat\u0026",
+                      "name": "result",
+                      "isOptional": false,
+                      "instanceGuid": "0f70538d-9511-425c-b1a7-3629555fe9fe"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "9b19bdaa-780a-4c3d-aed7-8f4934c78e59",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/StandardFormat"
+            },
+            "overloads": {
+              "6411a269": {
+                "name": "Equals",
+                "overloadId": "6411a269",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object or .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "95c596da-11a5-40df-8128-241eed159437"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "822df39d-8f62-4d34-b466-867962e60c60",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "726da82f": {
+                "name": "Equals",
+                "overloadId": "726da82f",
+                "methodKind": "instance",
+                "description": "Returns a value that indicates whether this instance is equal to a specified object or .",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Buffers#/components/schemas/StandardFormat",
+                      "name": "other",
+                      "isOptional": false,
+                      "instanceGuid": "4093a2fa-5338-49e7-8ae4-aaae54f44e6f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a1ec359b-c193-4c10-a50e-4593a56fe2b5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/StandardFormat"
+            },
+            "overloads": {
+              "d81aba1c": {
+                "name": "GetHashCode",
+                "overloadId": "d81aba1c",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "a10abb9d-6041-4e8c-80e6-6b9294613cfa",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/StandardFormat"
+            },
+            "overloads": {
+              "b921f4f2": {
+                "name": "ToString",
+                "overloadId": "b921f4f2",
+                "methodKind": "instance",
+                "description": "Returns the string representation of this format.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "328157a5-70ae-4e48-b9db-79d50101fbb1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/StandardFormat"
+            },
+            "overloads": {
+              "7b534d0e": {
+                "name": "GetType",
+                "overloadId": "7b534d0e",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "5eca4921-8995-44dd-b393-d01c1c428a7a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "\u003C_values\u003Ee__FixedBuffer": {
+        "title": "\u003C_values\u003Ee__FixedBuffer",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/\u003C_values\u003Ee__FixedBuffer"
+            },
+            "overloads": {
+              "78cb8bc6": {
+                "name": "Equals",
+                "overloadId": "78cb8bc6",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "15dcee86-965f-4987-8e06-1f990284113c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "c1f34bdd-33af-45be-9c51-8546ca0f7071",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/\u003C_values\u003Ee__FixedBuffer"
+            },
+            "overloads": {
+              "36b83d36": {
+                "name": "GetHashCode",
+                "overloadId": "36b83d36",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f656014a-2f2a-4f94-9e3e-344e384dbc28",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/\u003C_values\u003Ee__FixedBuffer"
+            },
+            "overloads": {
+              "99f97c67": {
+                "name": "ToString",
+                "overloadId": "99f97c67",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "1cfa93c2-f99c-4ef2-a779-1f7d319210ca",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/\u003C_values\u003Ee__FixedBuffer"
+            },
+            "overloads": {
+              "fea06c3d": {
+                "name": "GetType",
+                "overloadId": "fea06c3d",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "26f56854-9dca-4305-9516-795d1df5edae",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "AsciiState": {
+        "title": "AsciiState",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "CreateInverse": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/AsciiState"
+            },
+            "overloads": {
+              "4f1cbff2": {
+                "name": "CreateInverse",
+                "overloadId": "4f1cbff2",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "44e6b775-e332-4399-9fcc-60bae933184f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/AsciiState"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/AsciiState"
+            },
+            "overloads": {
+              "03837f8b": {
+                "name": "Equals",
+                "overloadId": "03837f8b",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "c2cdda9e-9a85-4ddc-9c5f-5d84beb7b7ad"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "952b93ef-bf89-477b-9a86-570bb104a417",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/AsciiState"
+            },
+            "overloads": {
+              "2cacc9fc": {
+                "name": "GetHashCode",
+                "overloadId": "2cacc9fc",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "80b2e634-1b8f-41ad-82a3-718bf4a6839a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/AsciiState"
+            },
+            "overloads": {
+              "a1ac7fc5": {
+                "name": "ToString",
+                "overloadId": "a1ac7fc5",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "6e7a29f0-bdfc-4f89-9e55-56d44bb1a0d6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/AsciiState"
+            },
+            "overloads": {
+              "6570ec88": {
+                "name": "GetType",
+                "overloadId": "6570ec88",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "028233ff-32f0-4f50-97fb-0ad31cf77341",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "AnyByteState": {
+        "title": "AnyByteState",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/AnyByteState"
+            },
+            "overloads": {
+              "368dc1a7": {
+                "name": "Equals",
+                "overloadId": "368dc1a7",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "9f04f4bf-8238-4d88-96d7-9831efc46977"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "e2f014d3-29e0-4f0b-a268-4cb8c34bcd33",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/AnyByteState"
+            },
+            "overloads": {
+              "049a9c4c": {
+                "name": "GetHashCode",
+                "overloadId": "049a9c4c",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7ee6187f-ee3a-4b02-935a-c9783ab1ba2c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/AnyByteState"
+            },
+            "overloads": {
+              "5ccc3387": {
+                "name": "ToString",
+                "overloadId": "5ccc3387",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "30d144a6-86e7-4396-b0ff-be687d3d3399",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/AnyByteState"
+            },
+            "overloads": {
+              "5c851e7a": {
+                "name": "GetType",
+                "overloadId": "5c851e7a",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f8b526fc-e435-4a5a-a4bd-1249c5ba790d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SearchValues": {
+        "title": "SearchValues",
+        "type": "object",
+        "description": "Provides a set of initialization methods for instances of the  class.",
+        "x-methods": {
+          "Create": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SearchValues"
+            },
+            "overloads": {
+              "dd37b075": {
+                "name": "Create",
+                "overloadId": "dd37b075",
+                "methodKind": "static",
+                "description": "Creates an optimized representation of  used for efficient searching.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "values",
+                      "isOptional": false,
+                      "instanceGuid": "09418f6f-5f3a-438e-b4f6-e21e769d914b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "b2514392-3166-4b13-9afb-a7b3e16b15d0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/SearchValues\u00601"
+                    }
+                  ]
+                }
+              },
+              "eab1ae71": {
+                "name": "Create",
+                "overloadId": "eab1ae71",
+                "methodKind": "static",
+                "description": "Creates an optimized representation of  used for efficient searching.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "values",
+                      "isOptional": false,
+                      "instanceGuid": "f1a7b4db-f131-4562-a4bd-d0b57d353487"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2c1f8cc6-44d8-4bdb-96b6-0208ffb2cf19",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/SearchValues\u00601"
+                    }
+                  ]
+                }
+              },
+              "2c30b4da": {
+                "name": "Create",
+                "overloadId": "2c30b4da",
+                "methodKind": "static",
+                "description": "Creates an optimized representation of  used for efficient searching.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
+                      "name": "values",
+                      "isOptional": false,
+                      "instanceGuid": "7555fc90-5256-4781-b754-fc1b8340325a"
+                    },
+                    {
+                      "$ref": "System#/components/schemas/StringComparison",
+                      "name": "comparisonType",
+                      "isOptional": false,
+                      "instanceGuid": "6ccab1f8-a72e-47b2-b543-d2e2f17c08d1"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5f51e7f5-a0b4-432a-b127-f8f1d841809d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Buffers#/components/schemas/SearchValues\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SearchValues"
+            },
+            "overloads": {
+              "c2c2d2ae": {
+                "name": "GetType",
+                "overloadId": "c2c2d2ae",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "1a8fd7d1-d527-46b3-a352-241ba5a6aa91",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SearchValues"
+            },
+            "overloads": {
+              "eb872554": {
+                "name": "ToString",
+                "overloadId": "eb872554",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2d1a5ae8-a7af-4b3e-beb6-9983899ab79e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SearchValues"
+            },
+            "overloads": {
+              "4825a1c9": {
+                "name": "Equals",
+                "overloadId": "4825a1c9",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "abe2afb9-c14e-496a-9f8f-782ecde2e56f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "94eb4555-a402-4cc2-bbec-70dd149e3707",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SearchValues"
+            },
+            "overloads": {
+              "661e7f36": {
+                "name": "GetHashCode",
+                "overloadId": "661e7f36",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4f99411b-5fca-4631-bfc2-7f38bc895fca",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SearchValues\u00601": {
+        "title": "SearchValues\u00601",
+        "type": "object",
+        "description": "Provides an immutable, read-only set of values optimized for efficient searching.\n Instances are created by  or .",
+        "x-methods": {
+          "Contains": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SearchValues\u00601"
+            },
+            "overloads": {
+              "df75cb55": {
+                "name": "Contains",
+                "overloadId": "df75cb55",
+                "methodKind": "instance",
+                "description": "Searches for the specified value.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Buffers#/components/schemas/T",
+                      "name": "value",
+                      "isOptional": false,
+                      "instanceGuid": "a21fe063-c970-4053-82bc-5b4df58d1a8e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8d854ed0-762d-44d9-8aae-51d51bd8eeaa",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SearchValues\u00601"
+            },
+            "overloads": {
+              "f9d4eec1": {
+                "name": "GetType",
+                "overloadId": "f9d4eec1",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e594fde8-83ed-474f-8b2f-ef45456df46c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SearchValues\u00601"
+            },
+            "overloads": {
+              "d460dd06": {
+                "name": "ToString",
+                "overloadId": "d460dd06",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ea77dfe7-57d7-4e12-9e15-4e790190a8e5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SearchValues\u00601"
+            },
+            "overloads": {
+              "5e25774f": {
+                "name": "Equals",
+                "overloadId": "5e25774f",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "e5648f96-0b68-467d-982d-528b0a77c9ca"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "f3321b0b-a66d-4e8c-b5ce-374b46e28761",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SearchValues\u00601"
+            },
+            "overloads": {
+              "68df515a": {
+                "name": "GetHashCode",
+                "overloadId": "68df515a",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2bcabbbf-957b-46ca-81e7-41d345d6ea41",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IFastScan": {
+        "title": "IFastScan",
+        "type": "object",
+        "description": null,
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IndexOfAnyAsciiFastScan": {
+        "title": "IndexOfAnyAsciiFastScan",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/IndexOfAnyAsciiFastScan"
+            },
+            "overloads": {
+              "4bed3fc3": {
+                "name": "Equals",
+                "overloadId": "4bed3fc3",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "d31177e7-acb9-42ed-abb5-82092cbd6954"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "68d29ddb-68c0-4f67-ba8c-054e3d674069",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/IndexOfAnyAsciiFastScan"
+            },
+            "overloads": {
+              "df0c6255": {
+                "name": "GetHashCode",
+                "overloadId": "df0c6255",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "d3d32121-e883-43c7-be51-85a4dfefc6e5",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/IndexOfAnyAsciiFastScan"
+            },
+            "overloads": {
+              "04fac58b": {
+                "name": "ToString",
+                "overloadId": "04fac58b",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "7fa766a1-922a-4f1c-a22b-de19dcfa36ac",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/IndexOfAnyAsciiFastScan"
+            },
+            "overloads": {
+              "c6abcb5d": {
+                "name": "GetType",
+                "overloadId": "c6abcb5d",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "8cc24500-e443-4f10-9b30-59186acdc6c9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "NoFastScan": {
+        "title": "NoFastScan",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/NoFastScan"
+            },
+            "overloads": {
+              "da14264e": {
+                "name": "Equals",
+                "overloadId": "da14264e",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "e68534ef-5ba5-4f0b-b036-e76ac684915d"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "3f47918b-12b5-4a73-a0d7-ef3ba1a3cd09",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/NoFastScan"
+            },
+            "overloads": {
+              "b1412652": {
+                "name": "GetHashCode",
+                "overloadId": "b1412652",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b2556fb9-2238-4459-91be-23ffeb219774",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/NoFastScan"
+            },
+            "overloads": {
+              "939d2293": {
+                "name": "ToString",
+                "overloadId": "939d2293",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "75673fe4-c8f4-4160-90d2-43810fb044e6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/NoFastScan"
+            },
+            "overloads": {
+              "8e0bdd75": {
+                "name": "GetType",
+                "overloadId": "8e0bdd75",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4d05e1b3-45e0-4832-8fa2-5d23320301c6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "IValueLength": {
+        "title": "IValueLength",
+        "type": "object",
+        "description": null,
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ValueLengthLessThan4": {
+        "title": "ValueLengthLessThan4",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLengthLessThan4"
+            },
+            "overloads": {
+              "740de1b9": {
+                "name": "Equals",
+                "overloadId": "740de1b9",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "c31e7cc6-b3f2-465c-b9a2-5a229ff38c46"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "0f649ddb-c2b1-4b47-a04f-2f6725bee1d4",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLengthLessThan4"
+            },
+            "overloads": {
+              "e4905db5": {
+                "name": "GetHashCode",
+                "overloadId": "e4905db5",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4983b0d5-ef62-4b15-b132-00c2c3e23563",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLengthLessThan4"
+            },
+            "overloads": {
+              "82344f83": {
+                "name": "ToString",
+                "overloadId": "82344f83",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "6b3932f8-f3d7-4f01-a656-7de348f73828",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLengthLessThan4"
+            },
+            "overloads": {
+              "3bf41412": {
+                "name": "GetType",
+                "overloadId": "3bf41412",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "64ef2ccf-0ed6-4f86-b1b9-fff1619a1e86",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ValueLength4To8": {
+        "title": "ValueLength4To8",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLength4To8"
+            },
+            "overloads": {
+              "e29310ab": {
+                "name": "Equals",
+                "overloadId": "e29310ab",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "b8e50e21-5975-48ef-bdba-4903baabcc24"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a62ca79e-b437-41bd-8c38-abcf80f051e3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLength4To8"
+            },
+            "overloads": {
+              "a1640bc5": {
+                "name": "GetHashCode",
+                "overloadId": "a1640bc5",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "60715a75-5b32-4f1f-bde3-2d3c99b80de7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLength4To8"
+            },
+            "overloads": {
+              "743cd854": {
+                "name": "ToString",
+                "overloadId": "743cd854",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "c8996960-3a06-4bdf-a6a0-a286c9534b21",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLength4To8"
+            },
+            "overloads": {
+              "bb497b65": {
+                "name": "GetType",
+                "overloadId": "bb497b65",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b17f24a0-e324-4eba-8f2a-f272e7b40cdd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ValueLength9To16": {
+        "title": "ValueLength9To16",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLength9To16"
+            },
+            "overloads": {
+              "93a1caad": {
+                "name": "Equals",
+                "overloadId": "93a1caad",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "75e3deaa-9bf3-4f85-ba68-8f3de1c64fd2"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "bdc01aae-be44-4909-9b98-6a60bab1eed9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLength9To16"
+            },
+            "overloads": {
+              "d350a68c": {
+                "name": "GetHashCode",
+                "overloadId": "d350a68c",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "1e93a4d5-b14e-4999-9619-a85ae2fc9ceb",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLength9To16"
+            },
+            "overloads": {
+              "ee90d89a": {
+                "name": "ToString",
+                "overloadId": "ee90d89a",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "94cc2dc1-6c17-4265-87d8-fbfe758e7965",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLength9To16"
+            },
+            "overloads": {
+              "6628b9e6": {
+                "name": "GetType",
+                "overloadId": "6628b9e6",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "96fbe65f-6ec4-4de9-b878-1e3559a86ec0",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ValueLengthLongOrUnknown": {
+        "title": "ValueLengthLongOrUnknown",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLengthLongOrUnknown"
+            },
+            "overloads": {
+              "91036d08": {
+                "name": "Equals",
+                "overloadId": "91036d08",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "95ab44ff-0dc1-490f-8a6c-84265c44a021"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "aa23e5f3-e0b7-4e15-b776-e5bea25f54de",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLengthLongOrUnknown"
+            },
+            "overloads": {
+              "ae0087e2": {
+                "name": "GetHashCode",
+                "overloadId": "ae0087e2",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "473ab4fe-5b9c-4ab4-9284-2fcee585749e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLengthLongOrUnknown"
+            },
+            "overloads": {
+              "c8bf3fc3": {
+                "name": "ToString",
+                "overloadId": "c8bf3fc3",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "b8a62b62-0161-472c-a26e-2514552acb9c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ValueLengthLongOrUnknown"
+            },
+            "overloads": {
+              "e0c1bce0": {
+                "name": "GetType",
+                "overloadId": "e0c1bce0",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f4322c18-dac7-4ed4-81a6-79e82a2990b9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "SingleValueState": {
+        "title": "SingleValueState",
+        "type": "object",
+        "description": null,
+        "properties": {
+          "Value64_0": {
+            "type": "object"
+          },
+          "Value64_1": {
+            "type": "object"
+          },
+          "Value32_0": {
+            "type": "object"
+          },
+          "Value32_1": {
+            "type": "object"
+          },
+          "ToUpperMask64_0": {
+            "type": "object"
+          },
+          "ToUpperMask64_1": {
+            "type": "object"
+          },
+          "ToUpperMask32_0": {
+            "type": "object"
+          },
+          "ToUpperMask32_1": {
+            "type": "object"
+          }
+        },
+        "x-methods": {
+          "MatchesLength9To16_CaseSensitive": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SingleValueState"
+            },
+            "overloads": {
+              "ce3c60c6": {
+                "name": "MatchesLength9To16_CaseSensitive",
+                "overloadId": "ce3c60c6",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Char\u0026",
+                      "name": "matchStart",
+                      "isOptional": false,
+                      "instanceGuid": "b73325a2-e0bb-4232-8f19-31b094dac597"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "8f9b7781-b10a-42ad-8eb6-c754030ece8f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "MatchesLength9To16_CaseInsensitiveAscii": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SingleValueState"
+            },
+            "overloads": {
+              "4aa7eac6": {
+                "name": "MatchesLength9To16_CaseInsensitiveAscii",
+                "overloadId": "4aa7eac6",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Char\u0026",
+                      "name": "matchStart",
+                      "isOptional": false,
+                      "instanceGuid": "3fccf2de-9218-41ab-8821-02d6a5dd1822"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "784e2f31-d9b5-4329-bf44-d92bfcdf3bea",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SingleValueState"
+            },
+            "overloads": {
+              "ed99177c": {
+                "name": "Equals",
+                "overloadId": "ed99177c",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "723148ff-caa5-471c-8ab4-5c320d875dd9"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7ecff071-8342-42bb-a404-fea1e9dbed69",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SingleValueState"
+            },
+            "overloads": {
+              "616b9ab8": {
+                "name": "GetHashCode",
+                "overloadId": "616b9ab8",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "31440c5f-78e3-4fb5-8822-072cde1d0bcc",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SingleValueState"
+            },
+            "overloads": {
+              "d38bd608": {
+                "name": "ToString",
+                "overloadId": "d38bd608",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "466327ae-98bd-4fb6-8d0e-db712dff9122",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/SingleValueState"
+            },
+            "overloads": {
+              "e87a7415": {
+                "name": "GetType",
+                "overloadId": "e87a7415",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "2cefb5a8-5b92-4992-a0f3-2edcc083fa86",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "ICaseSensitivity": {
+        "title": "ICaseSensitivity",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "TransformInput": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ICaseSensitivity"
+            },
+            "overloads": {
+              "b63c8d9b": {
+                "name": "TransformInput",
+                "overloadId": "b63c8d9b",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "ef1eaa22-2746-46d0-a59d-432b6bc38488"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "51992ec9-a965-46c9-972c-3d330ec37aee",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Char"
+                    }
+                  ]
+                }
+              },
+              "a1ee0754": {
+                "name": "TransformInput",
+                "overloadId": "a1ee0754",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector128\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "527f5698-142b-4b5f-81de-6659063d11bd"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "e63c2b9c-bc8c-45fb-829a-00fb9469a33e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector128\u00601"
+                    }
+                  ]
+                }
+              },
+              "3d1b1451": {
+                "name": "TransformInput",
+                "overloadId": "3d1b1451",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector256\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "be0040e4-70fc-412b-abc1-a154567fdf38"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7da9cd20-2f97-40e2-a617-a9fd29c95196",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector256\u00601"
+                    }
+                  ]
+                }
+              },
+              "7597cff9": {
+                "name": "TransformInput",
+                "overloadId": "7597cff9",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector512\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "eb144eee-e500-4fc4-b9c9-fff28ff712f7"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "26bfc16f-a394-4cc3-ad50-75b7b511b634",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector512\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/ICaseSensitivity"
+            },
+            "overloads": {
+              "c83f98b4": {
+                "name": "Equals",
+                "overloadId": "c83f98b4",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Char\u0026",
+                      "name": "matchStart",
+                      "isOptional": false,
+                      "instanceGuid": "023d2825-0410-4eea-b154-a59e12b85a43"
+                    },
+                    {
+                      "$ref": "System.Buffers#/components/schemas/SingleValueState\u0026",
+                      "name": "state",
+                      "isOptional": false,
+                      "instanceGuid": "307ba13d-f132-41c8-816a-765ee838eba2"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "52a80c20-d78a-4d29-a027-3c6bbb3d230c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "CaseSensitive": {
+        "title": "CaseSensitive",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "TransformInput": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseSensitive"
+            },
+            "overloads": {
+              "ea83e2d6": {
+                "name": "TransformInput",
+                "overloadId": "ea83e2d6",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "5d0ec549-c84e-4363-9c69-033dd95db048"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "1aa66ef0-f2ec-4adf-a068-0852529301d1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Char"
+                    }
+                  ]
+                }
+              },
+              "b27e9908": {
+                "name": "TransformInput",
+                "overloadId": "b27e9908",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector128\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "9028a037-ff42-4841-8096-dbe20fe6c161"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a1755ed5-6bac-4df3-9756-dd7aaa6dcb8c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector128\u00601"
+                    }
+                  ]
+                }
+              },
+              "4c439008": {
+                "name": "TransformInput",
+                "overloadId": "4c439008",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector256\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "367aca12-d5b1-4c17-82b0-aa613c723987"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "6c6c199b-3ec8-4e68-88fb-2d8b8c5ce521",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector256\u00601"
+                    }
+                  ]
+                }
+              },
+              "0c4d500d": {
+                "name": "TransformInput",
+                "overloadId": "0c4d500d",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector512\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "70014a35-5012-41b6-821b-dbf9501d0364"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "92a200b9-93a3-4402-b77e-85c4fc2eba09",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector512\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseSensitive"
+            },
+            "overloads": {
+              "dbe7b228": {
+                "name": "Equals",
+                "overloadId": "dbe7b228",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Char\u0026",
+                      "name": "matchStart",
+                      "isOptional": false,
+                      "instanceGuid": "03a5e012-880b-4c59-9b8b-6e0974750582"
+                    },
+                    {
+                      "$ref": "System.Buffers#/components/schemas/SingleValueState\u0026",
+                      "name": "state",
+                      "isOptional": false,
+                      "instanceGuid": "abab78da-8137-4baa-8027-20457f1e5320"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "395f0ccf-f048-459b-adce-a3e68fafd269",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "8d09998b": {
+                "name": "Equals",
+                "overloadId": "8d09998b",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "8bea61df-96ce-44e2-8fbb-916f0daab2fe"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "ec4c1d96-628e-4676-b5d8-4d388b1e3cb9",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseSensitive"
+            },
+            "overloads": {
+              "506764da": {
+                "name": "GetHashCode",
+                "overloadId": "506764da",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "1c62f390-030a-4ec9-a33b-e02f51161cac",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseSensitive"
+            },
+            "overloads": {
+              "35b09a4f": {
+                "name": "ToString",
+                "overloadId": "35b09a4f",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "555d5647-3e1b-437e-8bb6-989bb934d7af",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseSensitive"
+            },
+            "overloads": {
+              "1386cf59": {
+                "name": "GetType",
+                "overloadId": "1386cf59",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "6dc8f67f-5976-4481-84f4-0477d20f429a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "CaseInsensitiveAsciiLetters": {
+        "title": "CaseInsensitiveAsciiLetters",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "TransformInput": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveAsciiLetters"
+            },
+            "overloads": {
+              "c98bdf7f": {
+                "name": "TransformInput",
+                "overloadId": "c98bdf7f",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "442ecd1b-a52d-4122-b7b8-c8c0fde01cf6"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "de4a4b1c-91ed-4e5f-9416-57394e6790df",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Char"
+                    }
+                  ]
+                }
+              },
+              "a19e723e": {
+                "name": "TransformInput",
+                "overloadId": "a19e723e",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector128\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "80bf560b-ed0b-40a5-ad83-0f1f66482378"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "c99265e9-5b70-4c31-9a58-16f3015a5d58",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector128\u00601"
+                    }
+                  ]
+                }
+              },
+              "4cf057ed": {
+                "name": "TransformInput",
+                "overloadId": "4cf057ed",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector256\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "45c18100-7ee4-45a1-af3b-e6fdd85915f9"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "3a308d03-dd51-4dd6-9f03-451684d85db1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector256\u00601"
+                    }
+                  ]
+                }
+              },
+              "217b254f": {
+                "name": "TransformInput",
+                "overloadId": "217b254f",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector512\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "272fe341-77db-4e51-8220-cfa7c7bdde96"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "c568ab00-d4bc-4f28-bc5f-31114ded685d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector512\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveAsciiLetters"
+            },
+            "overloads": {
+              "3f77baae": {
+                "name": "Equals",
+                "overloadId": "3f77baae",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Char\u0026",
+                      "name": "matchStart",
+                      "isOptional": false,
+                      "instanceGuid": "ab05eb7d-28b9-43fe-8727-2e3d4bcdb545"
+                    },
+                    {
+                      "$ref": "System.Buffers#/components/schemas/SingleValueState\u0026",
+                      "name": "state",
+                      "isOptional": false,
+                      "instanceGuid": "096ba48e-6318-444e-8b70-c58f0be1df95"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "457e58c8-4e0b-42b1-8610-e0b27fe96ef6",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "b68f42bc": {
+                "name": "Equals",
+                "overloadId": "b68f42bc",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "bd7d8e1e-b605-480d-b782-b915d1fec634"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "16eab6eb-6555-4864-a667-b4e68cfe8169",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveAsciiLetters"
+            },
+            "overloads": {
+              "b2315db8": {
+                "name": "GetHashCode",
+                "overloadId": "b2315db8",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "173fc1d1-278b-4b28-9621-30669bfb3e58",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveAsciiLetters"
+            },
+            "overloads": {
+              "47e958f6": {
+                "name": "ToString",
+                "overloadId": "47e958f6",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "890c525b-57b0-410c-8ea4-9b9e1feea3cd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveAsciiLetters"
+            },
+            "overloads": {
+              "a9b5bf57": {
+                "name": "GetType",
+                "overloadId": "a9b5bf57",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "dd52fdd2-0489-4176-9429-00eaf4da33bf",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "CaseInsensitiveAscii": {
+        "title": "CaseInsensitiveAscii",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "TransformInput": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveAscii"
+            },
+            "overloads": {
+              "227a4fe2": {
+                "name": "TransformInput",
+                "overloadId": "227a4fe2",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "e23a93f7-6818-4eed-b27d-bbaaa7176c9e"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "1d877762-225b-4ae0-9244-6394d7879bc2",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Char"
+                    }
+                  ]
+                }
+              },
+              "e2eff3a3": {
+                "name": "TransformInput",
+                "overloadId": "e2eff3a3",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector128\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "e256df42-fd38-41e6-bb3a-7d903e8ac25b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a95f81fb-f179-4f68-a396-79749829c781",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector128\u00601"
+                    }
+                  ]
+                }
+              },
+              "a36d9644": {
+                "name": "TransformInput",
+                "overloadId": "a36d9644",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector256\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "72b5a6f8-382b-46d1-9018-e50dbbd689e7"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "5b06338f-c243-4fe0-8636-d9089a87f658",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector256\u00601"
+                    }
+                  ]
+                }
+              },
+              "ec347a2c": {
+                "name": "TransformInput",
+                "overloadId": "ec347a2c",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector512\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "8c65ecd6-9a7a-44e1-9b02-961c9b56b907"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "3e2896c3-280c-4e96-9b78-93754b32eb6a",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector512\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveAscii"
+            },
+            "overloads": {
+              "1ab98f33": {
+                "name": "Equals",
+                "overloadId": "1ab98f33",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Char\u0026",
+                      "name": "matchStart",
+                      "isOptional": false,
+                      "instanceGuid": "05c674d3-fd5c-493e-9068-0da062de4086"
+                    },
+                    {
+                      "$ref": "System.Buffers#/components/schemas/SingleValueState\u0026",
+                      "name": "state",
+                      "isOptional": false,
+                      "instanceGuid": "ff764bc5-1200-4b86-a085-71a5137daf15"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "55759081-006d-483f-ba5b-169cd3bbd847",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "10607ac0": {
+                "name": "Equals",
+                "overloadId": "10607ac0",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "4fc06fff-e503-4738-a91a-a74c7e9c607b"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "35d64bf4-be6d-41d1-8bb1-dd19d9b85b62",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveAscii"
+            },
+            "overloads": {
+              "02194299": {
+                "name": "GetHashCode",
+                "overloadId": "02194299",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "ee7fc166-42bb-421c-8c10-78896ed9c9d3",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveAscii"
+            },
+            "overloads": {
+              "fec3ba85": {
+                "name": "ToString",
+                "overloadId": "fec3ba85",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0a8dcd94-5bab-41fb-a272-48dd4988508e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveAscii"
+            },
+            "overloads": {
+              "f1adcf38": {
+                "name": "GetType",
+                "overloadId": "f1adcf38",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "590a3e30-87b2-46fd-a3aa-4c4d581f3a50",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "CaseInsensitiveUnicode": {
+        "title": "CaseInsensitiveUnicode",
+        "type": "object",
+        "description": null,
+        "x-methods": {
+          "TransformInput": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveUnicode"
+            },
+            "overloads": {
+              "66c49aa5": {
+                "name": "TransformInput",
+                "overloadId": "66c49aa5",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "e2baac22-3833-4cf8-999a-3fcbef3b5c17"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "bc832243-84e8-4008-a6cc-4d396d4aa75f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Char"
+                    }
+                  ]
+                }
+              },
+              "1c6ef8d9": {
+                "name": "TransformInput",
+                "overloadId": "1c6ef8d9",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector128\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "07654c86-f202-4c1e-a428-2e27c68caab7"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "a7a97330-99cf-473b-b1d6-5eadfe69288f",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector128\u00601"
+                    }
+                  ]
+                }
+              },
+              "3cd5ba0e": {
+                "name": "TransformInput",
+                "overloadId": "3cd5ba0e",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector256\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "3bae0d1f-aab6-4f6a-a2ab-e33b7c8e70ab"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "7a50dae2-f0b8-44cc-9fde-2118c509b94e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector256\u00601"
+                    }
+                  ]
+                }
+              },
+              "bed56ea6": {
+                "name": "TransformInput",
+                "overloadId": "bed56ea6",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector512\u00601",
+                      "name": "input",
+                      "isOptional": false,
+                      "instanceGuid": "9b150366-84ba-4eab-a1c0-837e3e11be94"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "d3c1056f-ac91-430c-827d-a135559a8226",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System.Runtime.Intrinsics#/components/schemas/Vector512\u00601"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveUnicode"
+            },
+            "overloads": {
+              "97174a03": {
+                "name": "Equals",
+                "overloadId": "97174a03",
+                "methodKind": "static",
+                "description": null,
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Char\u0026",
+                      "name": "matchStart",
+                      "isOptional": false,
+                      "instanceGuid": "19beed85-97b7-41f7-abb0-7d4c6c5564ad"
+                    },
+                    {
+                      "$ref": "System.Buffers#/components/schemas/SingleValueState\u0026",
+                      "name": "state",
+                      "isOptional": false,
+                      "instanceGuid": "1a6a339f-b96d-4342-a68b-dad07390f202"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "4292091f-3a23-4ddf-b8c2-9e4c3bc36ffd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              },
+              "b4e0db35": {
+                "name": "Equals",
+                "overloadId": "b4e0db35",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "26f4b87f-917d-45df-bf45-57e66f112625"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "f9e2625e-49ef-41ad-a782-609cfa845ebd",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveUnicode"
+            },
+            "overloads": {
+              "1b819ae7": {
+                "name": "GetHashCode",
+                "overloadId": "1b819ae7",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "9a2714bb-0bff-4b02-ab60-d0f849a8a2de",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveUnicode"
+            },
+            "overloads": {
+              "b1af49fd": {
+                "name": "ToString",
+                "overloadId": "b1af49fd",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "e3a67aee-e82a-4c3e-b66b-107fe389a85c",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Buffers#/components/schemas/CaseInsensitiveUnicode"
+            },
+            "overloads": {
+              "60b0af7d": {
+                "name": "GetType",
+                "overloadId": "60b0af7d",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "30cf4739-3b21-4a29-9c66-307436c00034",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Buffers",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

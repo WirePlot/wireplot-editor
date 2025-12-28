@@ -1,0 +1,322 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "System.Runtime.Loader",
+    "version": "1.0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "ContextualReflectionScope": {
+        "title": "ContextualReflectionScope",
+        "type": "object",
+        "description": "Represents the runtime\u0027s concept of a scope for assembly loading.",
+        "x-methods": {
+          "Dispose": {
+            "owner": {
+              "$ref": "System.Runtime.Loader#/components/schemas/ContextualReflectionScope"
+            },
+            "overloads": {
+              "9a8190a7": {
+                "name": "Dispose",
+                "overloadId": "9a8190a7",
+                "methodKind": "instance",
+                "description": null,
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "aed0c10c-769b-4123-b1b6-2a8d87370a0e",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Void"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Runtime.Loader#/components/schemas/ContextualReflectionScope"
+            },
+            "overloads": {
+              "846d062e": {
+                "name": "Equals",
+                "overloadId": "846d062e",
+                "methodKind": "instance",
+                "description": "Indicates whether this instance and a specified object are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "30d43a80-ad0d-4ac3-9506-cb36c9c0fe6c"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "c4c32ab5-f336-4f63-a974-def00918aac1",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Runtime.Loader#/components/schemas/ContextualReflectionScope"
+            },
+            "overloads": {
+              "adabbef6": {
+                "name": "GetHashCode",
+                "overloadId": "adabbef6",
+                "methodKind": "instance",
+                "description": "Returns the hash code for this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "8e0bbd3b-e698-4d9b-aaba-e8c5d6f18f20",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Runtime.Loader#/components/schemas/ContextualReflectionScope"
+            },
+            "overloads": {
+              "ac4cb189": {
+                "name": "ToString",
+                "overloadId": "ac4cb189",
+                "methodKind": "instance",
+                "description": "Returns the fully qualified type name of this instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "01a2e0f3-e5bb-4748-9c64-dc1bb2f0865b",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Runtime.Loader#/components/schemas/ContextualReflectionScope"
+            },
+            "overloads": {
+              "3d70567a": {
+                "name": "GetType",
+                "overloadId": "3d70567a",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "f09f13ab-5564-4eb9-ad34-e16020e2431d",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Loader",
+        "x-assembly": "System.Private.CoreLib"
+      },
+      "AssemblyDependencyResolver": {
+        "title": "AssemblyDependencyResolver",
+        "type": "object",
+        "description": "Allows a program to resolve assemblies and native libraries to paths based on the dependencies of a given assembly.",
+        "x-methods": {
+          "ResolveAssemblyToPath": {
+            "owner": {
+              "$ref": "System.Runtime.Loader#/components/schemas/AssemblyDependencyResolver"
+            },
+            "overloads": {
+              "7a051cdb": {
+                "name": "ResolveAssemblyToPath",
+                "overloadId": "7a051cdb",
+                "methodKind": "instance",
+                "description": "Resolves a path to an assembly with the given assembly name based on the component\u0027s dependencies.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System.Reflection#/components/schemas/AssemblyName",
+                      "name": "assemblyName",
+                      "isOptional": false,
+                      "instanceGuid": "6b6cfdf2-8064-45b6-a17f-e56e099ca12f"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "840481c7-f5ec-4ff4-a4fb-f69a0093bb68",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ResolveUnmanagedDllToPath": {
+            "owner": {
+              "$ref": "System.Runtime.Loader#/components/schemas/AssemblyDependencyResolver"
+            },
+            "overloads": {
+              "de504d9e": {
+                "name": "ResolveUnmanagedDllToPath",
+                "overloadId": "de504d9e",
+                "methodKind": "instance",
+                "description": "Resolves a path to a native library with the given name based on the component\u0027s dependencies.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "type": "string",
+                      "name": "unmanagedDllName",
+                      "isOptional": false,
+                      "instanceGuid": "995a8b44-5cfb-4109-b110-63434af311d0"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "bac46dbd-13ae-47d4-b80d-362403ff3153",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetType": {
+            "owner": {
+              "$ref": "System.Runtime.Loader#/components/schemas/AssemblyDependencyResolver"
+            },
+            "overloads": {
+              "1d6c460a": {
+                "name": "GetType",
+                "overloadId": "1d6c460a",
+                "methodKind": "instance",
+                "description": "Gets the  of the current instance.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "0154aebb-5998-42c6-8f61-23738a86c704",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Type"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ToString": {
+            "owner": {
+              "$ref": "System.Runtime.Loader#/components/schemas/AssemblyDependencyResolver"
+            },
+            "overloads": {
+              "f9982589": {
+                "name": "ToString",
+                "overloadId": "f9982589",
+                "methodKind": "instance",
+                "description": "Returns a string that represents the current object.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "19cdf0ae-ae30-42eb-b0da-0a4ae78d5362",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/String"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "Equals": {
+            "owner": {
+              "$ref": "System.Runtime.Loader#/components/schemas/AssemblyDependencyResolver"
+            },
+            "overloads": {
+              "b8e7d55c": {
+                "name": "Equals",
+                "overloadId": "b8e7d55c",
+                "methodKind": "instance",
+                "description": "Determines whether two object instances are equal.",
+                "signature": {
+                  "parameters": [
+                    {
+                      "$ref": "System#/components/schemas/Object",
+                      "name": "obj",
+                      "isOptional": false,
+                      "instanceGuid": "4dfa7de1-8c25-421f-a5bd-fa15136d9efc"
+                    }
+                  ],
+                  "return": [
+                    {
+                      "instanceGuid": "2ef8ddd2-a61d-4ef7-a0a7-e9b89fe728e7",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Boolean"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "GetHashCode": {
+            "owner": {
+              "$ref": "System.Runtime.Loader#/components/schemas/AssemblyDependencyResolver"
+            },
+            "overloads": {
+              "eae81b13": {
+                "name": "GetHashCode",
+                "overloadId": "eae81b13",
+                "methodKind": "instance",
+                "description": "Serves as the default hash function.",
+                "signature": {
+                  "parameters": [],
+                  "return": [
+                    {
+                      "instanceGuid": "4154c012-d3b6-4fec-a7dd-36f9aada41be",
+                      "isOptional": false,
+                      "name": "Return Value",
+                      "$ref": "System#/components/schemas/Int32"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "x-namespace": "System.Runtime.Loader",
+        "x-assembly": "System.Private.CoreLib"
+      }
+    }
+  }
+}

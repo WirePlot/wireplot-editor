@@ -1,0 +1,11 @@
+.schema-editor-row-item {
+    width: 100%;
+    color: var(--font-color);
+    font-size: var(--font-size);
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background);
+    border: none;
+}
