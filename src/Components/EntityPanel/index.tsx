@@ -139,11 +139,11 @@ export const EntityPanel: FC<EntityPanelProps> = ({
         {filteredEntities?.map((entity, index) => {
           return (
             <EntityItem
-              key={entity.instanceGuid}
+              key={entity.$ref}
               description={entity.description}
-              instanceGuid={entity.instanceGuid}
+              instanceGuid={entity.$ref}
               label={entity.name}
-              isSelected={entity.instanceGuid === selectedEntityInstanceGuid}
+              isSelected={entity.$ref === selectedEntityInstanceGuid}
               isEditingName={editingState[entity.name] ?? false}
               isDraggable={isDraggable ?? false}
               dropdownOptions={getDropdownOptions(entity, setEditingState)}

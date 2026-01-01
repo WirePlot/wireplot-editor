@@ -97,6 +97,7 @@ export class NodeFactory {
             title,
             position,
             schema,
+            schemaRef,
             refInstanceGuid,
             operationType,
             outputs = [],
@@ -120,6 +121,7 @@ export class NodeFactory {
             data: {
                 operationType,
                 title,
+                schemaRef,
                 refInstanceGuid,
                 outputs,
                 inputs,

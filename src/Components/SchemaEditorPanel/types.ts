@@ -1,5 +1,4 @@
-import { CSSProperties } from "react";
-
 export interface SchemaEditorProps {
-    style: CSSProperties;
+    schema: string;
+    namespace: string;
 }

@@ -47,6 +47,7 @@ export type ReferenceableNodeProps = Node<
         id?: string,
         operationType: ENodeOperationType;
         refInstanceGuid?: string;
+        schemaRef: string;
         title: string;
         outputs: HandleGroup[];
         inputs: HandleGroup[];

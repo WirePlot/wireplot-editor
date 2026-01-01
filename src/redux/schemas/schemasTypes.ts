@@ -136,6 +136,15 @@ export interface OpenApiPathItemObject {
     [method: string]: any;
 }
 
+export type ParsedRef =
+  | { kind: "namespace"; namespace: string }
+  | { kind: "schema"; namespace: string; schemaName: string }
+  | { kind: "schemaProperty"; namespace: string; schemaName: string; propertyName: string }
+  | { kind: "method"; namespace: string; schemaName: string; methodName: string }
+  | { kind: "methodOverload"; namespace: string; schemaName: string; methodName: string; overloadId: string }
+  | { kind: "path"; namespace: string; path: string; method?: string }
+  | { kind: "unknown" };
+
 
 export interface WirePlotDocument {
     // metadata
@@ -151,9 +160,4 @@ export interface WirePlotDocument {
     };
 }
 
-export interface ParsedMethodRef {
-    namespace: string;
-    schemaName: string;
-    methodName: string;
-    overloadId: string;
-}
+

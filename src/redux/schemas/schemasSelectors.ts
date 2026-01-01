@@ -16,18 +16,20 @@ const getNamespace = (_: RootState, namespace: string | undefined): string | und
 export const selectNamespaceEntityPairs = createSelector(
     [selectSchemas],
     (schemas): EntityPair[] => {
+        
         return Object
             .keys(schemas)
             .sort((a, b) => a.localeCompare(b))
             .map((name) => ({
                 name,
                 description: undefined,
-                instanceGuid: name,
+                $ref: name,
                 type: name,
                 operationType: ENodeOperationType.NONE
             }));
     }
 );
+
 
 // Selector to get all schema names for a specific namespace
 export const selectSchemaEntityPairsForNamespace = createSelector(
@@ -45,7 +47,7 @@ export const selectSchemaEntityPairsForNamespace = createSelector(
 
             return {
                 name,
-                instanceGuid: name,
+                $ref: `${namespace}#/components/schemas/${name}`,
                 type: name,
                 description: schema?.description,
                 operationType: ENodeOperationType.NONE
@@ -130,7 +132,7 @@ export const selectSchemaPropertiesAsEntityPairs = createSelector(
 
             return {
                 name: propName,
-                instanceGuid: `${namespace}.${schemaName}.${propName}`,
+                $ref: `${namespace}#/components/schemas/${schemaName}/properties/${propName}`,
                 type: typeStr,
                 description: undefined,
                 operationType: ENodeOperationType.VARIABLE
@@ -190,7 +192,7 @@ export const makeSelectSchemaMethodsAsEntityPairs = (namespace: string, schemaKe
                 Object.entries(method.overloads).forEach(([overloadId, overload]) => {
                     result.push({
                         name: methodName,
-                        instanceGuid: `${namespace}#/components/schemas/${schemaKey}/x-methods/${methodName}/overloads/${overloadId}`,
+                        $ref: `${namespace}#/components/schemas/${schemaKey}/x-methods/${methodName}/overloads/${overloadId}`,
                         type: overload.methodKind ?? "instance",
                         description: overload.description,
                         operationType: ENodeOperationType.GRID
@@ -209,8 +211,8 @@ export const makeSelectMethodNamesByRef = (methodRef: string) =>
     createSelector(
         [selectSchemas],
         (schemas): string[] => {
-            const parsed = SchemaUtils.parseMethodRef(methodRef);
-            if (!parsed) {
+            const parsed = SchemaUtils.parseRef(methodRef);
+            if (parsed. kind !== "method") {
                 return [];
             }
 
@@ -236,8 +238,8 @@ export const makeSelectMethodByRef = (ref: string) =>
     createSelector(
         [(state: RootState) => state.schemasSlice.schemas],
         (schemas) => {
-            const parsed = SchemaUtils.parseMethodRef(ref);
-            if (!parsed) {
+            const parsed = SchemaUtils.parseRef(ref);
+            if (parsed. kind !== "methodOverload") {
                 return undefined;
             }
 
