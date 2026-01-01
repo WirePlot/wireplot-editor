@@ -64,7 +64,7 @@ export const TestEntityTreePage = (): JSX.Element => {
 
                 if (metadata) {
                     const payload: EntityPair = {
-                        instanceGuid: entity.instanceGuid,
+                        $ref: entity.instanceGuid,
                         name: entity.name,
                         type: entity.type,
                         description: undefined,

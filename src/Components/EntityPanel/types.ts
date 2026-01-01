@@ -11,7 +11,7 @@ export type EntityApiMethodMetadata = {
 export type EntityPair = {
     name: string;
     description: string | undefined;
-    instanceGuid: string;
+    $ref: string;
     type: string;
     metadata?: unknown;
     operationType: ENodeOperationType;

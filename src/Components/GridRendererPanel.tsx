@@ -1,6 +1,6 @@
 import '@xyflow/react/dist/style.css';
 
-import { MouseEvent, DragEvent, useCallback, useRef, useEffect, useState, JSX } from 'react';
+import { MouseEvent, DragEvent, useCallback, useRef, useEffect, useState, FC } from 'react';
 import { NodeMouseHandler, ReactFlow, useNodesState, useEdgesState, Background, BackgroundVariant, ReactFlowInstance, Node, Edge, Controls, Connection, ControlButton, MiniMap, XYPosition, OnConnectStart, OnConnectEnd } from '@xyflow/react';
 import { saveCurrentGrid, selectActiveGridState, setActiveElement } from '../redux/project';
 import { Grid } from '../Models/Grids';
@@ -32,7 +32,12 @@ const nodeTypes = {
 const initialNodes: Node[] = [];
 const initialEdges: Edge[] = [];
 
-export const GridRendererPanel = (): JSX.Element => {
+export interface GridRendererPanelProps {
+  onSelectRef: (refId: string | null) => void;
+}
+
+
+export const GridRendererPanel: FC<GridRendererPanelProps> = ({ onSelectRef }) => {
   const dispatch = useDispatch();
   const activeGrid: Grid | undefined = useAppSelector((state) => selectActiveGridState(state));
   const displayNodeComments = useAppSelector((state) => selectDisplayNodeComments(state));
@@ -234,7 +239,8 @@ export const GridRendererPanel = (): JSX.Element => {
                 reactFlowInstance,
                 {
                   name: node.label, // previously option.value
-                  instanceGuid: "string",
+                  // TODO REFACTOR TO DO HOT FIX
+                  $ref: "String",
                   type: "string",
                   description: node.tooltip,
                   metadata: {
@@ -298,6 +304,8 @@ export const GridRendererPanel = (): JSX.Element => {
     console.log("onPaneClick");
     hideIntelliSense();
     dispatch(setActiveElement(undefined));
+    onSelectRef(null);
+
   }, [dispatch, hideIntelliSense]);
 
 
@@ -311,6 +319,8 @@ export const GridRendererPanel = (): JSX.Element => {
 
         if (ref) {
           dispatch(setActiveElement({ instanceGuid: ref, elementType: "gridButton" }));
+          onSelectRef(null);
+
           GridManager.saveActiveGrid(reactFlowInstance, ref);
           GridManager.activateGrid(reactFlowInstance, ref);
         }
@@ -320,12 +330,37 @@ export const GridRendererPanel = (): JSX.Element => {
 
   const onNodeClick = (_event: MouseEvent, node: Node): void => {
     console.log("node", node);
-    if ((node.data.operationType === ENodeOperationType.GRID_INPUT || node.data.operationType === ENodeOperationType.GRID_OUTPUT) && activeGrid !== undefined && node.data.schemaRef) {
-      dispatch(setActiveElement({ instanceGuid: node.data.schemaRef as string, elementType: "gridButton" }));
-    } else {
+
+    if (node.data.operationType === ENodeOperationType.GET_VARIABLE) {
+      if (typeof node.data.schemaRef === "string") {
+        onSelectRef(node.data.schemaRef);
+        // TODO TO DO
+        // DEPRECATED
+        // REMOVE
+        // HOT FIX
+        dispatch(setActiveElement({ instanceGuid: node.data.schemaRef as string, elementType: "globalVariable" }));
+      }
+    }
+
+    else if ((node.data.operationType === ENodeOperationType.GRID_INPUT || node.data.operationType === ENodeOperationType.GRID_OUTPUT) && activeGrid !== undefined && node.data.schemaRef) {
+      if (typeof node.data.schemaRef === "string") {
+        onSelectRef(node.data.schemaRef);
+        // TODO TO DO
+        // DEPRECATED
+        // REMOVE
+        // HOT FIX
+        dispatch(setActiveElement({ instanceGuid: node.data.schemaRef as string, elementType: "gridButton" }));
+      }
+    }
+    else {
+      onSelectRef(null);
+      // TODO TO DO
+      // DEPRECATED
+      // REMOVE
+      // HOT FIX
       dispatch(setActiveElement(undefined));
     }
-  };
+  }
 
   return (
     <div

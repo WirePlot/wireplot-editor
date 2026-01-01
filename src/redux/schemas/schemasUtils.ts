@@ -1,4 +1,4 @@
-import { OpenApiOperationObject, OpenApiPathItemObject, OpenApiResponseObject, ParsedMethodRef, SchemaContainer, WirePlotDocument, WirePlotMethod, WirePlotMethodOverload, WirePlotPropertyObject, WirePlotSchemaObject } from "./schemasTypes";
+import { OpenApiOperationObject, OpenApiPathItemObject, OpenApiResponseObject, ParsedRef, SchemaContainer, WirePlotDocument, WirePlotMethod, WirePlotMethodOverload, WirePlotPropertyObject, WirePlotSchemaObject } from "./schemasTypes";
 import { IntelliSenseNode } from "../../FisUI/IntelliSensePicker";
 import { EntityPair } from "../../Components/EntityPanel/types";
 import { ENodeOperationType } from "../../Nodes/types";
@@ -23,11 +23,117 @@ export class SchemaUtils {
      * If the reference is invalid, the original methodRef is returned unchanged.
      */
     static renameMethodInRef(methodRef: string, newName: string): string {
-        const parsed = SchemaUtils.parseMethodRef(methodRef);
-        if (!parsed) {
+        const parsed = SchemaUtils.parseRef(methodRef);
+
+        if (parsed.kind !== "method") {
             return methodRef;
         }
         return `${parsed.namespace}#/components/schemas/${parsed.schemaName}/x-methods/${newName}`;
+    }
+
+    /**
+     * Central reference parser for WirePlot entities.
+     *
+     * Parses a ref string and resolves what kind of entity it represents
+     * (namespace, schema, schema property, method, method overload, path, etc.).
+     *
+     * This function is the single source of truth for ref decoding.
+     * No other part of the codebase should manually parse ref strings
+     * (e.g. via split(), regex, or helper-specific parsers).
+     *
+     * The returned ParsedRef explicitly describes the entity type and
+     * provides all identifiers needed by inspectors, editors, and CRUD logic.
+     *
+     * When adding a new ref type, extend this function and the ParsedRef union
+     * instead of introducing a new parser.
+     */
+    static parseRef(ref: string): ParsedRef {
+        if (!ref || typeof ref !== "string") {
+            return { kind: "unknown" };
+        }
+
+        // ─────────────────────────────────────────────
+        // Method overload
+        // ns#/components/schemas/S/x-methods/M/overloads/O
+        // ─────────────────────────────────────────────
+        const overloadMatch = ref.match(
+            /^([^#]+)#\/components\/schemas\/([^/]+)\/x-methods\/([^/]+)\/overloads\/([^/]+)$/
+        );
+        if (overloadMatch) {
+            const [, namespace, schemaName, methodName, overloadId] = overloadMatch;
+            return { kind: "methodOverload", namespace, schemaName, methodName, overloadId };
+        }
+
+        // ─────────────────────────────────────────────
+        // x-method
+        // ns#/components/schemas/S/x-methods/M
+        // ─────────────────────────────────────────────
+        const methodMatch = ref.match(
+            /^([^#]+)#\/components\/schemas\/([^/]+)\/x-methods\/([^/]+)$/
+        );
+        if (methodMatch) {
+            const [, namespace, schemaName, methodName] = methodMatch;
+            return { kind: "method", namespace, schemaName, methodName };
+        }
+
+        // ─────────────────────────────────────────────
+        // Schema property
+        // ns#/components/schemas/S/properties/P
+        // ─────────────────────────────────────────────
+        const propMatch = ref.match(
+            /^([^#]+)#\/components\/schemas\/([^/]+)\/properties\/([^/]+)$/
+        );
+        if (propMatch) {
+            const [, namespace, schemaName, propertyName] = propMatch;
+            return { kind: "schemaProperty", namespace, schemaName, propertyName };
+        }
+
+        // ─────────────────────────────────────────────
+        // Schema
+        // ns#/components/schemas/S
+        // ─────────────────────────────────────────────
+        const schemaMatch = ref.match(
+            /^([^#]+)#\/components\/schemas\/([^/]+)$/
+        );
+        if (schemaMatch) {
+            const [, namespace, schemaName] = schemaMatch;
+            return { kind: "schema", namespace, schemaName };
+        }
+
+        // ─────────────────────────────────────────────
+        // Path
+        // ns#/paths/...
+        // ─────────────────────────────────────────────
+        const pathMatch = ref.match(
+            /^([^#]+)#\/paths\/(.+)$/
+        );
+        if (pathMatch) {
+            const [, namespace, rest] = pathMatch;
+
+            const parts = rest.split("/");
+            const last = parts[parts.length - 1];
+            const httpMethods = ["get", "post", "put", "delete", "patch", "options", "head"];
+
+            if (httpMethods.includes(last.toLowerCase())) {
+                return {
+                    kind: "path",
+                    namespace,
+                    path: parts.slice(0, -1).join("/"),
+                    method: last.toLowerCase(),
+                };
+            }
+
+            return { kind: "path", namespace, path: rest };
+        }
+
+        // ─────────────────────────────────────────────
+        // Namespace (UI-level)
+        // ─────────────────────────────────────────────
+        if (!ref.includes("#")) {
+            return { kind: "namespace", namespace: ref };
+        }
+
+        return { kind: "unknown" };
     }
 
 
@@ -337,22 +443,6 @@ export class SchemaUtils {
         );
     }
 
-    public static parseSchemaRef(ref: string): { namespace: string; schemaName: string } | undefined {
-        if (!ref || typeof ref !== "string") {
-            return undefined;
-        }
-
-        const namespace = SchemaUtils.getNamespaceFromRef(ref);
-        const schemaName = SchemaUtils.getSchemaNameFromRef(ref);
-
-        if (!namespace || !schemaName) {
-            return undefined;
-        }
-
-        return { namespace, schemaName };
-    }
-
-
     public static getUniqueNameForProperty(name: string, properties: { [property: string]: WirePlotSchemaObject } | undefined): string {
         if (!properties) {
             return name;
@@ -650,88 +740,6 @@ export class SchemaUtils {
         // Update the parsed document with the new schemas object
         parsed.components.schemas = updatedSchemas;
     }
-
-    // static parseMethodRef(ref: string): ParsedMethodRef | undefined {
-    //     if (!ref || typeof ref !== "string") {
-    //         return undefined;
-    //     }
-
-    //     const [namespace, path] = ref.split("#/");
-    //     if (!namespace || !path) {
-    //         return undefined;
-    //     }
-
-    //     const parts = path.split("/");
-
-    //     // must be at least:
-    //     // components / schemas / <schemaKey> / x-methods / <methodName> / overloads / <overloadId>
-    //     if (
-    //         parts.length < 7 ||
-    //         parts[0] !== "components" ||
-    //         parts[1] !== "schemas" ||
-    //         parts[3] !== "x-methods" ||
-    //         parts[5] !== "overloads"
-    //     ) {
-    //         return undefined;
-    //     }
-
-    //     const schemaKey = parts[2];
-    //     const methodName = parts[4];
-    //     const overloadId = parts[6];
-
-    //     if (!schemaKey || !methodName || !overloadId) {
-    //         return undefined;
-    //     }
-
-    //     return {
-    //         namespace,
-    //         schemaKey,
-    //         methodName,
-    //         overloadId
-    //     };
-    // }
-
-    static parseMethodRef(ref: string): ParsedMethodRef | undefined {
-        if (!ref || typeof ref !== "string") {
-            return undefined;
-        }
-
-        const hashIndex = ref.indexOf("#/");
-        if (hashIndex === -1) {
-            return undefined;
-        }
-
-        const namespace = ref.substring(0, hashIndex);
-        const path = ref.substring(hashIndex + 2);
-
-        const parts = path.split("/");
-
-        if (
-            parts.length !== 7 ||
-            parts[0] !== "components" ||
-            parts[1] !== "schemas" ||
-            parts[3] !== "x-methods" ||
-            parts[5] !== "overloads"
-        ) {
-            return undefined;
-        }
-
-        const schemaName = parts[2];
-        const methodName = parts[4];
-        const overloadId = parts[6];
-
-        return {
-            namespace,
-            schemaName,
-            methodName,
-            overloadId
-        };
-    }
-
-
-
-
-
 
     static addSchemaProperty(parsed: WirePlotDocument, schemaName: string, newPropertyName: string, newProperty: WirePlotSchemaObject): void {
         if (!parsed?.components?.schemas?.[schemaName]) {

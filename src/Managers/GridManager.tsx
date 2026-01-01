@@ -24,7 +24,7 @@ export class GridManager {
         const inputGridNodeId = Guid.generateGUID();
         const outputGridNodeId = Guid.generateGUID();
 
-        const parsedMethod = SchemaUtils.parseMethodRef(methodRef);
+        const parsedMethod = SchemaUtils.parseRef(methodRef);
 
 
         const inputParam: Parameter[] = [
@@ -73,7 +73,7 @@ export class GridManager {
                             operationType: ENodeOperationType.GRID_INPUT,
                             icon: undefined,
                             schemaRef: "",
-                            title: parsedMethod?.methodName ?? "Couldn't parse methodRef. MethodRef is undefined.",
+                            title: parsedMethod.kind === "method" ? parsedMethod.methodName : "Couldn't parse methodRef. MethodRef is undefined.",
                             toolbox: {
                                 enabled: true,
                                 visible: store.getState().workflowDesignerSlice.displayNodeComments
@@ -536,7 +536,7 @@ export class GridManager {
             if (!metadata) {
                 return;
             }
-            const operation: OpenApiOperationObject | undefined = SchemaUtils.getOperationFromSchemas(store.getState().schemasSlice.schemas, entity.instanceGuid, metadata.namespace);
+            const operation: OpenApiOperationObject | undefined = SchemaUtils.getOperationFromSchemas(store.getState().schemasSlice.schemas, entity.$ref, metadata.namespace);
             if (!operation) {
                 return;
             }
@@ -720,10 +720,10 @@ export class GridManager {
 
     private static spawnGridNode(reactFlowInstance: ReactFlowInstance<Node, Edge>, entity: EntityPair, position: XYPosition): void {
         try {
-            const grid = store.getState().projectSlice.grids.find((grid) => grid.methodRef === entity.instanceGuid);
+            const grid = store.getState().projectSlice.grids.find((grid) => grid.methodRef === entity.$ref);
 
             if (grid === undefined) {
-                throw new Error(`Grid with instance guid '${entity.instanceGuid}' is undefined`);
+                throw new Error(`Grid with instance guid '${entity.$ref}' is undefined`);
             }
 
             const method = makeSelectMethodByRef(grid.methodRef)(store.getState());
@@ -742,7 +742,7 @@ export class GridManager {
                     position: position,
                     operationType: entity.operationType,
                     comment: method.description,
-                    schemaRef: entity.instanceGuid,
+                    schemaRef: entity.$ref,
                     inputs: [
                         {
                             instanceGuid: Guid.generateGUID(),
@@ -816,27 +816,32 @@ export class GridManager {
 
     private static spawnGetVariable(reactFlowInstance: ReactFlowInstance<Node, Edge>, entity: EntityPair, position: XYPosition): void {
         try {
-            if (!entity.instanceGuid) {
+            if (!entity.$ref) {
                 return;
             }
-            const parts = entity.instanceGuid.split(".");
-            if (!parts) {
+            console.log(entity.$ref);
+            console.log(entity.$ref);
+            console.log(entity.$ref);
+            console.log(entity.$ref);
+            console.log(entity.$ref);
+            console.log(entity.$ref);
+            console.log(entity.$ref);
+            console.log(entity.$ref);
+            console.log(entity.$ref);
+            const parsedPropertyRef = SchemaUtils.parseRef(entity.$ref);
+
+            if (parsedPropertyRef.kind !== "schemaProperty") {
                 return;
             }
 
-            if (parts.length !== 3) {
-                return;
-            }
-
-            const [namespace, schemaName, propertyName] = parts;
             const schemas = store.getState().schemasSlice.schemas
 
 
-            if (!schemas || !schemas[namespace]) {
+            if (!schemas || !schemas[parsedPropertyRef.namespace]) {
                 return undefined;
             }
 
-            const parsed = schemas[namespace].parsed;
+            const parsed = schemas[parsedPropertyRef.namespace].parsed;
             if (!parsed || !parsed.components) {
                 return undefined;
             }
@@ -846,7 +851,7 @@ export class GridManager {
                 return undefined;
             }
 
-            const schema = components.schemas[schemaName];
+            const schema = components.schemas[parsedPropertyRef.schemaName];
             if (!schema) {
                 return undefined;
             }
@@ -855,7 +860,7 @@ export class GridManager {
                 return undefined;
             }
 
-            const property = schema.properties[propertyName];
+            const property = schema.properties[parsedPropertyRef.propertyName];
 
             if (!property) {
                 return;
@@ -875,7 +880,7 @@ export class GridManager {
 
             const outputHandleInfos: HandleInfo[] = [{
                 name: property.title ?? "Title is not defined",
-                instanceGuid: entity.instanceGuid,
+                instanceGuid: entity.$ref,
                 description: undefined,
                 required: false,
                 example: undefined,
@@ -891,11 +896,11 @@ export class GridManager {
             reactFlowInstance.addNodes([
                 NodeFactory.createReferenceableNode({
                     title: property.title ?? "Title is not defined",
-                    refInstanceGuid: entity.instanceGuid,
+                    refInstanceGuid: entity.$ref,
                     position: position,
                     operationType: entity.operationType,
                     schema: refSchemaName,
-                    schemaRef: "",
+                    schemaRef: entity.$ref,
                     outputs: [
                         {
                             instanceGuid: Guid.generateGUID(),
@@ -1155,10 +1160,10 @@ export class GridManager {
 
     private static spawnSetVariable(reactFlowInstance: ReactFlowInstance<Node, Edge>, entity: EntityPair, position: XYPosition): void {
         try {
-            if (!entity.instanceGuid) {
+            if (!entity.$ref) {
                 return;
             }
-            const parts = entity.instanceGuid.split(".");
+            const parts = entity.$ref.split(".");
             if (!parts) {
                 return;
             }
@@ -1218,7 +1223,7 @@ export class GridManager {
             inputHandleInfos.push(
                 {
                     name: property.title ?? "Title is not defined",
-                    instanceGuid: entity.instanceGuid,
+                    instanceGuid: entity.$ref,
                     description: undefined,
                     required: true,
                     example: undefined,

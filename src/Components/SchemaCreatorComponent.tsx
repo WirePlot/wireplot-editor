@@ -48,6 +48,7 @@ import SvgImport from "../Icons/SvgIcons/SvgImport";
 
 // UI
 import { ButtonWithSvgIcon } from "../FisUI/ButtonWithSvgIcon";
+import { InspectorPanel } from "../inspectors/InspectorPanel";
 
 
 
@@ -63,6 +64,7 @@ const panelResizingHandleStyle = {
 
 export const SchemaCreatorComponent = (): JSX.Element => {
     const dispatch = useDispatch();
+    const [selectedRef, setSelectedRef] = useState<string | null>(null);
     const [widths, setWidths] = useState(useAppSelector((state) => selectPanelWidths(state)));
     const [activeHandle, setActiveHandle] = useState<number | null>(null);
     const [isMouseUp, setIsMouseUp] = useState<boolean>(true);
@@ -133,7 +135,10 @@ export const SchemaCreatorComponent = (): JSX.Element => {
             canAddEntity={true}
             entities={entityNamespaceNames}
             selectedEntityInstanceGuid={selectedSchemaNamespace}
-            onSelectEntity={(entity) => dispatch(setSelectedSchemaNamespace(entity.name))}
+            onSelectEntity={(entity) => {
+                setSelectedRef(entity.$ref);
+                dispatch(setSelectedSchemaNamespace(entity.name));
+            }}
             onCreateEntity={(name) => dispatch(createNamespace({ namespace: name }))}
             onRenameEntity={(_instanceGuid, oldName, newName) => dispatch(renameNamespace({ oldName, newName }))}
             iconRenderer={() => <SvgBraces />}
@@ -186,7 +191,10 @@ export const SchemaCreatorComponent = (): JSX.Element => {
             canAddEntity={selectedSchemaNamespace !== 'Default'}
             entities={entitySchemasNames}
             selectedEntityInstanceGuid={selectedSchema}
-            onSelectEntity={(entity) => dispatch(setSelectedSchema(entity.instanceGuid))}
+            onSelectEntity={(entity) => {
+                setSelectedRef(entity.$ref);
+                dispatch(setSelectedSchema(entity.$ref));
+            }}
             onCreateEntity={(name) => {
                 if (selectedSchemaNamespace) {
                     console.log(name);
@@ -274,6 +282,7 @@ export const SchemaCreatorComponent = (): JSX.Element => {
         }
     }, [dispatch]);
 
+    const parsedRef = selectedRef ? SchemaUtils.parseRef(selectedRef) : { kind: "unknown" } as const;
     return (
         <div style={{ width: '100%', display: 'flex', background: '#212529', border: '#424549 solid 1px' }}>
             {/* Namespace Panel - Panel where you can select namespace with schemas */}
@@ -305,7 +314,42 @@ export const SchemaCreatorComponent = (): JSX.Element => {
                 onMouseLeave={() => { if (isMouseUp) { setActiveHandle(null); } }}
             />
             {/* Schema editor panel - Panel where you can edit selected panel */}
-            <SchemaEditor style={{ width: `${widths[2]}%` }} />
+            <div style={{ width: `${widths[2]}%` }}>
+                {parsedRef.kind === "schema" ? (
+                    <SchemaEditor
+                        namespace={parsedRef.namespace}
+                        schema={parsedRef.schemaName}
+                    />
+                ) : (
+                    <>
+                        <div style={{ width: '100%', height: '40px', padding: 6, color: '#6ea8fe', backgroundColor: '#031633', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        </div>
+                        <div
+                            style={{
+                                height: '100%',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                color: '#9aa0a6',
+                                fontSize: 13
+                            }}
+                        >
+                            Select a schema to edit
+                        </div>
+                    </>
+
+                )}
+            </div>
+            <div
+                style={{ ...panelResizingHandleStyle, backgroundColor: activeHandle === 2 ? 'var(--background-color-hover)' : '#ccc' }}
+                draggable={false}
+                onMouseDown={handleMouseDown(2)}
+                onMouseEnter={() => { if (isMouseUp) { setActiveHandle(2); } }}
+                onMouseLeave={() => { if (isMouseUp) { setActiveHandle(null); } }}
+            />
+            <div style={{ width: `${widths[3]}%` }}>
+                <InspectorPanel $ref={selectedRef} />
+            </div>
             <SchemaImporter />
         </div>
     );

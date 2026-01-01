@@ -80,12 +80,15 @@ export const projectSlice = createSlice({
                 }
             })
         },
+        /**
+        * @deprecated
+        * HOT FIX HOTFIX TO DO TODO
+        */
         setActiveElement: (state, action: PayloadAction<ActiveElement | undefined>) => {
             state.activeElement = action.payload;
         },
         setProjectName: (state, action: PayloadAction<string>) => {
             state.projectName = action.payload;
-
         }
     },
 });

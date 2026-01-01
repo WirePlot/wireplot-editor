@@ -75,8 +75,8 @@ export const schemasSlice = createSlice({
         updateSchemaMethodOverload: (state, action: PayloadAction<{ ref: string; newOverload: WirePlotMethodOverload; }>) => {
             const { ref, newOverload } = action.payload;
 
-            const parsed = SchemaUtils.parseMethodRef(ref);
-            if (!parsed) {
+            const parsed = SchemaUtils.parseRef(ref);
+            if (parsed.kind !== "methodOverload") {
                 return;
             }
 

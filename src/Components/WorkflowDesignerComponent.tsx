@@ -1,5 +1,4 @@
 import { GridRendererPanel } from './GridRendererPanel';
-import { PropertiesPanel } from "./PropertiesPanel";
 import { MouseEvent, CSSProperties, useCallback, useMemo, useState, JSX } from "react";
 import { useDispatch } from "react-redux";
 import { useAppSelector } from "../hooks";
@@ -19,6 +18,7 @@ import SvgDeleteBin from "../Icons/SvgIcons/SvgDeleteBin";
 import SvgDataType from "../Icons/SvgIcons/SvgDataType";
 import { TestEntityTreePage } from './TestEntityTreePage';
 import { addSchemaProperty, makeSelectSchemaMethodsAsEntityPairs, renameSchemaProperty, selectSchemaPropertiesAsEntityPairs } from '../redux/schemas';
+import { InspectorPanel } from '../inspectors/InspectorPanel';
 
 const panelResizingHandleStyle = {
     width: '6px',
@@ -35,6 +35,7 @@ export const WorkflowDesignerComponent = (): JSX.Element => {
 
     const selectedNamespace: string = "Project";
     const selectedSchema: string = "Program";
+    const [selectedRef, setSelectedRef] = useState<string | null>(null);
 
 
     const initialWidths: number[] = useAppSelector((state) => selectWorkflowDesignerPanelWidths(state));
@@ -109,9 +110,9 @@ export const WorkflowDesignerComponent = (): JSX.Element => {
         entities={entityParsGrids}
         selectedEntityInstanceGuid={activeElement?.instanceGuid}
         onSelectEntity={(entity) => {
-            dispatch(setActiveElement({ instanceGuid: entity.instanceGuid, elementType: "gridButton" }));
-            GridManager.saveActiveGrid(reactFlow, entity.instanceGuid);
-            GridManager.activateGrid(reactFlow, entity.instanceGuid);
+            dispatch(setActiveElement({ instanceGuid: entity.$ref, elementType: "gridButton" }));
+            GridManager.saveActiveGrid(reactFlow, entity.$ref);
+            GridManager.activateGrid(reactFlow, entity.$ref);
         }}
         onCreateEntity={(name) => GridManager.createNewGrid(reactFlow, name)}
         onRenameEntity={(instanceGuid, oldName, newName) => {
@@ -140,9 +141,9 @@ export const WorkflowDesignerComponent = (): JSX.Element => {
                 instanceGuid: 'open',
                 icon: <SvgOpenFolder />,
                 onClick: (): void => {
-                    dispatch(setActiveElement({ instanceGuid: entity.instanceGuid, elementType: "gridButton" }));
-                    GridManager.saveActiveGrid(reactFlow, entity.instanceGuid);
-                    GridManager.activateGrid(reactFlow, entity.instanceGuid);
+                    dispatch(setActiveElement({ instanceGuid: entity.$ref, elementType: "gridButton" }));
+                    GridManager.saveActiveGrid(reactFlow, entity.$ref);
+                    GridManager.activateGrid(reactFlow, entity.$ref);
                 },
             },
             {
@@ -169,7 +170,7 @@ export const WorkflowDesignerComponent = (): JSX.Element => {
                         showConfirmationDialog({
                             title: 'Confirm Deletion',
                             message: `Are you sure you want to delete '${entity.name}'?`,
-                            onConfirm: () => GridManager.deleteGrid(reactFlow, entity.instanceGuid),
+                            onConfirm: () => GridManager.deleteGrid(reactFlow, entity.$ref),
                             onCancel: () => { },
                         })
                     );
@@ -187,7 +188,8 @@ export const WorkflowDesignerComponent = (): JSX.Element => {
             selectedEntityInstanceGuid={activeElement?.instanceGuid}
             onSelectEntity={(entity) => {
                 console.log(entity);
-                dispatch(setActiveElement({ instanceGuid: entity.instanceGuid, elementType: "globalVariable" }));
+                setSelectedRef(entity.$ref);
+                dispatch(setActiveElement({ instanceGuid: entity.$ref, elementType: "globalVariable" }));
             }}
             onCreateEntity={(name) => {
                 dispatch(addSchemaProperty({
@@ -294,7 +296,7 @@ export const WorkflowDesignerComponent = (): JSX.Element => {
                 onMouseEnter={() => { if (isMouseUp) { setActiveHandle(0); } }}
                 onMouseLeave={() => { if (isMouseUp) { setActiveHandle(null); } }} />
             <div key="middle-panel" draggable={false} style={{ width: `${widths[1]}%` }}>
-                <GridRendererPanel></GridRendererPanel>
+                <GridRendererPanel onSelectRef={setSelectedRef} />
             </div>
             <div
                 style={{ ...panelResizingHandleStyle, backgroundColor: activeHandle === 1 ? 'var(--background-color-hover)' : '#ccc' }}
@@ -303,7 +305,7 @@ export const WorkflowDesignerComponent = (): JSX.Element => {
                 onMouseEnter={() => { if (isMouseUp) { setActiveHandle(1); } }}
                 onMouseLeave={() => { if (isMouseUp) { setActiveHandle(null); } }} />
             <div key="right-panel" draggable={false} style={{ width: `${widths[2]}%` }}>
-                <PropertiesPanel />
+                <InspectorPanel $ref={selectedRef} />
                 {/* Global variables panel - Panel where you can select the flow grid */}
                 {globalVariablesPanel}
             </div>

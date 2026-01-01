@@ -3,7 +3,7 @@ import { SchemaEditorState } from "./schemaEditorTypes";
 
 
 const initialState: SchemaEditorState = {
-    panelWidths: [15, 15, 70],
+    panelWidths: [15, 15, 50, 20],
     activeElementInstanceGuid: undefined,
     selectedSchemaNamespace: undefined,
     selectedSchema: undefined,
