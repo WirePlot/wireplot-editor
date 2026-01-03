@@ -47,7 +47,7 @@ export const WorkflowDesignerComponent = (): JSX.Element => {
     const entityGlobalVariables: EntityPair[] = useAppSelector((state) =>
         selectSchemaPropertiesAsEntityPairs(state, selectedNamespace, selectedSchema)
     );
-    const selectorGrids  = useMemo(() => makeSelectSchemaMethodsAsEntityPairs(selectedNamespace, selectedSchema), [selectedNamespace,selectedSchema]);
+    const selectorGrids = useMemo(() => makeSelectSchemaMethodsAsEntityPairs(selectedNamespace, selectedSchema), [selectedNamespace, selectedSchema]);
     const entityParsGrids = useAppSelector(selectorGrids);
 
     const updateWidths = useCallback((index: number, deltaX: number) => {
@@ -111,6 +111,8 @@ export const WorkflowDesignerComponent = (): JSX.Element => {
         selectedEntityInstanceGuid={activeElement?.instanceGuid}
         onSelectEntity={(entity) => {
             dispatch(setActiveElement({ instanceGuid: entity.$ref, elementType: "gridButton" }));
+            setSelectedRef(entity.$ref);
+
             GridManager.saveActiveGrid(reactFlow, entity.$ref);
             GridManager.activateGrid(reactFlow, entity.$ref);
         }}

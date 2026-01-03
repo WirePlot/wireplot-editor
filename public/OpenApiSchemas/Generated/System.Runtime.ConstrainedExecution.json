@@ -21,8 +21,8 @@
           "MayFail",
           "Success"
         ],
-        "x-namespace": "System.Runtime.ConstrainedExecution",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.ConstrainedExecution",
+        "assembly": "System.Private.CoreLib"
       },
       "Consistency": {
         "title": "Consistency",
@@ -40,14 +40,16 @@
           "MayCorruptInstance",
           "WillNotCorruptState"
         ],
-        "x-namespace": "System.Runtime.ConstrainedExecution",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.ConstrainedExecution",
+        "assembly": "System.Private.CoreLib"
       },
       "CriticalFinalizerObject": {
-        "title": "CriticalFinalizerObject",
-        "type": "object",
+        "title": "Critical Finalizer Object",
+        "type": "CriticalFinalizerObject",
         "description": "Ensures that all finalization code in derived classes is marked as critical.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "GetType": {
             "owner": {
               "$ref": "System.Runtime.ConstrainedExecution#/components/schemas/CriticalFinalizerObject"
@@ -62,7 +64,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "91a08f06-d219-42ec-89c4-8bc74772eafc",
+                      "instanceGuid": "101ef8fb-b5af-4447-a36d-f19eab4cf199",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -86,7 +88,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "554af405-5212-4270-9a35-bba024dcc8f8",
+                      "instanceGuid": "d32f7ad4-c8a1-4dc1-9bce-19bcebfc1562",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -112,12 +114,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "7ea30db5-2b03-4c3b-bf29-90bf0e7b621c"
+                      "instanceGuid": "519796b1-0f71-44a3-aca6-cf50caa411d0"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "0009c2a2-510b-4f87-abe1-ba641c7e7d7a",
+                      "instanceGuid": "f08f3520-5cdd-4759-9d71-a1f69edbe693",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -141,7 +143,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "711799a4-cc71-49a5-889a-93f709341ccf",
+                      "instanceGuid": "a3efd406-3026-49a8-bc93-df04aa06a037",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -152,19 +154,20 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.ConstrainedExecution",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.ConstrainedExecution",
+        "assembly": "System.Private.CoreLib"
       },
       "PrePrepareMethodAttribute": {
-        "title": "PrePrepareMethodAttribute",
-        "type": "object",
+        "title": "Pre Prepare Method Attribute",
+        "type": "PrePrepareMethodAttribute",
         "description": "Instructs the native image generation service to prepare a method for inclusion in a constrained execution region (CER).",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.ConstrainedExecution#/components/schemas/PrePrepareMethodAttribute"
@@ -181,12 +184,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "9c6d8dff-0aee-489f-a514-685099547549"
+                      "instanceGuid": "85a81ba3-9edb-4924-9386-69a9a3aabd4b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "21b9943a-1dfc-4488-a87e-fb2b71bc82d3",
+                      "instanceGuid": "9d1a4d21-cef6-4971-b86b-5871af3cb6ed",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -210,7 +213,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4570dfb6-0a09-4e86-9ec1-d8ddbfbba41e",
+                      "instanceGuid": "d68c9430-3e08-4aae-956d-2613699a043a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -236,12 +239,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "c03c410d-c17f-4f22-9539-b9cdb781a2f0"
+                      "instanceGuid": "26964630-2ae5-4126-bd5a-b6af5ffd81fe"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "424734ed-5595-4c79-8dc8-1853bc23532b",
+                      "instanceGuid": "cafe7201-0536-4f41-9f9e-c3729678defb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -265,7 +268,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8290c899-8fd1-4ae5-9656-68ce2b1a67f3",
+                      "instanceGuid": "e7b04462-8d8f-4cac-9b0b-3709659a8546",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -289,7 +292,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "88af062a-5485-4326-8daa-5d01e029094f",
+                      "instanceGuid": "9fc016e5-9ce2-4465-a8a1-404327b3a231",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -313,7 +316,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0828b0cc-8c4d-4c37-840d-95728a6a82f5",
+                      "instanceGuid": "370ee72c-3cde-4c68-a038-c97fc8f3a00e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -324,12 +327,12 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.ConstrainedExecution",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.ConstrainedExecution",
+        "assembly": "System.Private.CoreLib"
       },
       "ReliabilityContractAttribute": {
-        "title": "ReliabilityContractAttribute",
-        "type": "object",
+        "title": "Reliability Contract Attribute",
+        "type": "ReliabilityContractAttribute",
         "description": "Defines a contract for reliability between the author of some code, and the developers who have a dependency on that code.",
         "properties": {
           "ConsistencyGuarantee": {
@@ -342,7 +345,8 @@
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.ConstrainedExecution#/components/schemas/ReliabilityContractAttribute"
@@ -359,12 +363,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "4da9a384-4fea-45cc-9645-5953e4cc21b4"
+                      "instanceGuid": "acaef6ea-52ad-405c-9109-eef152e3a2cb"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e94c4c5c-f454-4046-8408-45885b943862",
+                      "instanceGuid": "64b094c8-09a0-44aa-9e64-28060b133204",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -388,7 +392,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b73e12e2-2aa2-4feb-93a9-65c1d80232e3",
+                      "instanceGuid": "6f762514-ce73-40d5-b444-71f3bacd76d1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -414,12 +418,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "38b4b70d-83af-4c4b-ac5e-75d9c8bc9481"
+                      "instanceGuid": "83880ca6-fd2f-48d1-a977-35a106c2bc60"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "0e3b0aa4-8563-4183-81d2-9a908343b5ec",
+                      "instanceGuid": "8f9c7df4-0a32-4ac1-b9f8-6c2e9041d1b2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -443,7 +447,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d1d6d0ce-f583-4129-92d4-3945d2dad01d",
+                      "instanceGuid": "acfb6ba4-75be-47f2-a6d8-6755be031045",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -467,7 +471,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "fea3ebfb-3d44-4f9d-bd19-1caa15557f0f",
+                      "instanceGuid": "4528f5b1-814b-49a3-80d3-9c8635aad946",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -491,7 +495,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e697eb7c-d91f-4788-a33f-14eaf4a85455",
+                      "instanceGuid": "e008f2e9-8d6f-415c-a5ca-6c90cffcb952",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -502,8 +506,8 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.ConstrainedExecution",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.ConstrainedExecution",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

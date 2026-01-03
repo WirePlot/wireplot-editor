@@ -8,7 +8,7 @@
   "components": {
     "schemas": {
       "RequestCacheLevel": {
-        "title": "RequestCacheLevel",
+        "title": "Request Cache Level",
         "type": "integer",
         "description": "Specifies caching behavior for resources obtained using  and its derived classes.",
         "enum": [
@@ -29,19 +29,20 @@
           "Reload",
           "NoCacheNoStore"
         ],
-        "x-namespace": "System.Net.Cache",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net.Cache",
+        "assembly": "System.Net.Primitives"
       },
       "RequestCachePolicy": {
-        "title": "RequestCachePolicy",
-        "type": "object",
+        "title": "Request Cache Policy",
+        "type": "RequestCachePolicy",
         "description": "Defines an application\u0027s caching requirements for resources obtained by using  objects.",
         "properties": {
           "Level": {
             "$ref": "System.Net.Cache#/components/schemas/RequestCacheLevel"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "ToString": {
             "owner": {
               "$ref": "System.Net.Cache#/components/schemas/RequestCachePolicy"
@@ -56,7 +57,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a889cb5c-1688-46a5-9b07-bf995b474738",
+                      "instanceGuid": "cde33d81-3067-44ca-8500-eef360681d27",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -80,7 +81,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f165b579-8b4e-4af9-8b63-0f567dad2560",
+                      "instanceGuid": "d40f8ddf-023c-4ddc-8625-686ceffc247a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -106,12 +107,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "e84e883a-a500-4146-b4a0-b5cfc12e6e1e"
+                      "instanceGuid": "b3ebbd0a-7984-4e33-a1b6-92698a44190b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "6f3c67d9-d0f6-4ded-a949-57e166a6470e",
+                      "instanceGuid": "ad458840-9da5-4c18-9cb5-df3b89f8dcad",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -135,7 +136,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "39378a5d-b8f8-4d42-b0ff-384abf0c918d",
+                      "instanceGuid": "b047e3fd-8ef7-4d32-abe8-898260e23a7e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -146,8 +147,8 @@
             }
           }
         },
-        "x-namespace": "System.Net.Cache",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net.Cache",
+        "assembly": "System.Net.Primitives"
       }
     }
   }

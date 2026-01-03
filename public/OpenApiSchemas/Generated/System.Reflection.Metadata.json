@@ -8,10 +8,12 @@
   "components": {
     "schemas": {
       "MetadataUpdater": {
-        "title": "MetadataUpdater",
-        "type": "object",
+        "title": "Metadata Updater",
+        "type": "MetadataUpdater",
         "description": "To be added.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "ApplyUpdate": {
             "owner": {
               "$ref": "System.Reflection.Metadata#/components/schemas/MetadataUpdater"
@@ -28,30 +30,30 @@
                       "$ref": "System.Reflection#/components/schemas/Assembly",
                       "name": "assembly",
                       "isOptional": false,
-                      "instanceGuid": "c42d86fd-f3af-4b52-8dda-f4dc04d88e94"
+                      "instanceGuid": "a014f500-c912-47a6-9206-5301ddf3f2a4"
                     },
                     {
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "metadataDelta",
                       "isOptional": false,
-                      "instanceGuid": "865eb83f-577e-4a3a-a9a6-b50af374a7d1"
+                      "instanceGuid": "cdc70b22-cb76-4aa5-8a88-c9509413a065"
                     },
                     {
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "ilDelta",
                       "isOptional": false,
-                      "instanceGuid": "7e4a42ec-4a04-4da0-8539-fb1fe93a90b3"
+                      "instanceGuid": "762d6d6f-3e94-411b-b524-cbb41536c6ed"
                     },
                     {
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "pdbDelta",
                       "isOptional": false,
-                      "instanceGuid": "37eb7155-d5d1-4aea-9bf9-abdd00bbf471"
+                      "instanceGuid": "5b185f90-6e60-451c-8027-d1d4f3ca38be"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "794e8b80-9246-47e4-97bb-280232b7d7f8",
+                      "instanceGuid": "9348cede-3abd-4b9e-84f2-f81ca7a025c9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -75,7 +77,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "3ef255e8-5297-4b68-a040-7624a9059004",
+                      "instanceGuid": "b9b59588-c854-4852-862c-ac4547c67ca6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -99,7 +101,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "dcf3a9e4-c41b-4bf5-a43c-1bb06722d778",
+                      "instanceGuid": "74cd2f41-53dd-4bdc-adf2-83e00bb4879b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -125,12 +127,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "dd584c59-ff79-493b-b077-b034e6fa00df"
+                      "instanceGuid": "34470175-44c0-4733-aba8-880a8d164dfa"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "7baf1248-cc6d-4c15-b158-7bcd3238bcce",
+                      "instanceGuid": "d98647a1-d276-4804-b90f-bac5225605ad",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -154,7 +156,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "90118f00-a69f-467c-88cb-7085fafc456f",
+                      "instanceGuid": "c3f65994-f860-4aed-b60a-81a476354d0b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -165,12 +167,12 @@
             }
           }
         },
-        "x-namespace": "System.Reflection.Metadata",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Reflection.Metadata",
+        "assembly": "System.Private.CoreLib"
       },
       "MetadataUpdateHandlerAttribute": {
-        "title": "MetadataUpdateHandlerAttribute",
-        "type": "object",
+        "title": "Metadata Update Handler Attribute",
+        "type": "MetadataUpdateHandlerAttribute",
         "description": "Indicates that a type that should receive notifications of metadata updates.",
         "properties": {
           "HandlerType": {
@@ -180,7 +182,8 @@
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Reflection.Metadata#/components/schemas/MetadataUpdateHandlerAttribute"
@@ -197,12 +200,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "fae9150e-7fb0-4d3d-8765-57bf9f0b3ee0"
+                      "instanceGuid": "14e8de36-327b-4970-a26a-3edf92bd461e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "af0978e3-5ab9-4408-8637-d22035ae002d",
+                      "instanceGuid": "0c6051c3-ee60-4189-b479-362004135c12",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -226,7 +229,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "80e5c287-428b-45bb-9ca6-b5d10d30033a",
+                      "instanceGuid": "08f8a4b3-4c24-41f7-8811-cacf920c5074",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -252,12 +255,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "d83f0c97-e10f-4899-82b1-99492ba48244"
+                      "instanceGuid": "9dcb3a3c-2ba6-48f8-bd54-c6145aee31d5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "4fa1fa14-492b-4e71-8df6-3f57104956cb",
+                      "instanceGuid": "23a76fb5-f408-42d5-9a95-cb6cf2f30320",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -281,7 +284,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7f5457d6-1cb5-4117-a37e-dbaf168a4106",
+                      "instanceGuid": "5432b2c7-86ed-4a03-a47a-a28407277483",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -305,7 +308,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e090e7f6-1311-4cb7-96bf-61671fcc8a7b",
+                      "instanceGuid": "344f4df8-00f3-40a4-bac0-08f164304a73",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -329,7 +332,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a84cf361-539a-4de6-8162-afecd09463b0",
+                      "instanceGuid": "7e538a40-37af-4637-b5fe-c9fba6a73556",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -340,8 +343,8 @@
             }
           }
         },
-        "x-namespace": "System.Reflection.Metadata",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Reflection.Metadata",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

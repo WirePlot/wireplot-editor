@@ -1,6 +1,6 @@
 import { FC, JSX, useMemo } from "react";
 import { SelectWithCategories, SelectWithCategoriesOptionGroup } from "../../FisUI/SelectWithCategories";
-import { renameSchemaProperty, selectSchemaDataTypeGroups, selectSchemaPropertyObject, updateSchemaProperty, WirePlotPropertyObject } from "../../redux/schemas";
+import { renameSchemaProperty, selectSchemaDataTypeGroups, selectSchemaPropertyObject, updateSchemaProperty, WirePlotContainerType, WirePlotPropertyObject } from "../../redux/schemas";
 import { useDispatch } from "react-redux";
 import { useAppSelector } from "../../hooks";
 import { SplitPanel } from "../common/SplitPanel";
@@ -57,11 +57,13 @@ export const SchemaPropertyInspector: FC<SchemaPropertyInspectorProps> = ({ name
         );
 
         left.push(<div style={labelStyle(2)}>Type</div>);
+        console.log("schemaGroups", schemaGroups);
+        console.log("schemaName", selectedProperty.type);
         right.push(
             <div style={valueContainer(2)}>
                 <SelectWithCategories
                     groups={schemaGroups}
-                    selected={schemaName}
+                    selected={selectedProperty.type}
                     onChange={() => {
                         // dispatch(
                         //     updateGlobalVariable({
@@ -107,6 +109,42 @@ export const SchemaPropertyInspector: FC<SchemaPropertyInspectorProps> = ({ name
                 />
             </div>
         );
+
+        left.push(<div style={labelStyle(5)}>Schema Kind</div>);
+        right.push(
+            <div style={valueContainer(5)}>
+                <div style={{ opacity: 0.7 }}>
+                    {selectedProperty.kind}
+                </div>
+            </div>
+        );
+
+
+        left.push(<div style={labelStyle(6)}>Container Type</div>);
+        right.push(
+            <div style={valueContainer(6)}>
+                <select
+                    value={selectedProperty.containerType}
+                    onChange={(event) => {
+                        const clonedSchema: WirePlotPropertyObject = { ...selectedProperty };
+                        clonedSchema.containerType = event.target.value as WirePlotContainerType;
+
+                        dispatch(updateSchemaProperty({
+                            namespace,
+                            schemaName,
+                            propertyName,
+                            updatedProperty: clonedSchema,
+                        }));
+                    }}
+                >
+                    <option value="None">None</option>
+                    <option value="Array">Array</option>
+                    <option value="List">List</option>
+                    <option value="Dictionary">Dictionary</option>
+                </select>
+            </div>
+        );
+
 
         return [left, right];
     }, [selectedProperty, styles, schemaGroups, dispatch, namespace, schemaName, propertyName]);

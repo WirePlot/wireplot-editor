@@ -8,7 +8,7 @@
   "components": {
     "schemas": {
       "AssemblyHashAlgorithm": {
-        "title": "AssemblyHashAlgorithm",
+        "title": "Assembly Hash Algorithm",
         "type": "integer",
         "description": "Specifies all the hash algorithms used for hashing files and for generating the strong name.",
         "enum": [
@@ -27,11 +27,11 @@
           "SHA384",
           "SHA512"
         ],
-        "x-namespace": "System.Configuration.Assemblies",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Configuration.Assemblies",
+        "assembly": "System.Private.CoreLib"
       },
       "AssemblyVersionCompatibility": {
-        "title": "AssemblyVersionCompatibility",
+        "title": "Assembly Version Compatibility",
         "type": "integer",
         "description": "Defines the different types of assembly version compatibility.",
         "enum": [
@@ -44,8 +44,8 @@
           "SameProcess",
           "SameDomain"
         ],
-        "x-namespace": "System.Configuration.Assemblies",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Configuration.Assemblies",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

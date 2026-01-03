@@ -8,7 +8,7 @@
   "components": {
     "schemas": {
       "SslProtocols": {
-        "title": "SslProtocols",
+        "title": "Ssl Protocols",
         "type": "integer",
         "description": "Defines the possible versions of .",
         "enum": [
@@ -31,11 +31,11 @@
           "Tls12",
           "Tls13"
         ],
-        "x-namespace": "System.Security.Authentication",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Security.Authentication",
+        "assembly": "System.Net.Primitives"
       },
       "ExchangeAlgorithmType": {
-        "title": "ExchangeAlgorithmType",
+        "title": "Exchange Algorithm Type",
         "type": "integer",
         "description": "Specifies the algorithm used to create keys shared by the client and server.",
         "enum": [
@@ -50,11 +50,11 @@
           "RsaKeyX",
           "DiffieHellman"
         ],
-        "x-namespace": "System.Security.Authentication",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Security.Authentication",
+        "assembly": "System.Net.Primitives"
       },
       "CipherAlgorithmType": {
-        "title": "CipherAlgorithmType",
+        "title": "Cipher Algorithm Type",
         "type": "integer",
         "description": "Defines the possible cipher algorithms for the  class.",
         "enum": [
@@ -81,11 +81,11 @@
           "Aes",
           "Rc4"
         ],
-        "x-namespace": "System.Security.Authentication",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Security.Authentication",
+        "assembly": "System.Net.Primitives"
       },
       "HashAlgorithmType": {
-        "title": "HashAlgorithmType",
+        "title": "Hash Algorithm Type",
         "type": "integer",
         "description": "Specifies the algorithm used for generating message authentication codes (MACs).",
         "enum": [
@@ -104,26 +104,27 @@
           "Sha384",
           "Sha512"
         ],
-        "x-namespace": "System.Security.Authentication",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Security.Authentication",
+        "assembly": "System.Net.Primitives"
       },
       "ChannelBinding": {
-        "title": "ChannelBinding",
-        "type": "object",
+        "title": "Channel Binding",
+        "type": "ChannelBinding",
         "description": "The  class encapsulates a pointer to the opaque data used to bind an authenticated transaction to a secure channel.",
         "properties": {
           "Size": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           },
           "IsInvalid": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "IsClosed": {
-            "type": "boolean"
+            "type": "Boolean"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "DangerousGetHandle": {
             "owner": {
               "$ref": "System.Security.Authentication.ExtendedProtection#/components/schemas/ChannelBinding"
@@ -138,7 +139,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "82cf0ad0-4feb-4633-819e-c7135ebd0963",
+                      "instanceGuid": "a247d435-405b-4e62-8ce7-87999f4243dd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/IntPtr"
@@ -162,7 +163,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "31f930b0-d3c4-40cd-a74c-576c8ea36b03",
+                      "instanceGuid": "6d051479-148a-4ae4-8a1d-643d193cb95d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -186,7 +187,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7835ed7c-6ca7-449e-b699-380da7b51ddc",
+                      "instanceGuid": "e40b90d2-e818-4946-94dd-c3cc2f40b93a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -210,7 +211,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "29b3dee1-19c2-4b40-8ca8-9f7acdf8180e",
+                      "instanceGuid": "420d10b5-a310-40eb-8cb3-5e2aad91adb2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -236,12 +237,12 @@
                       "$ref": "System#/components/schemas/Boolean\u0026",
                       "name": "success",
                       "isOptional": false,
-                      "instanceGuid": "fda0b6cb-33e5-436c-bf88-5bb4a698b74b"
+                      "instanceGuid": "cfe7ef5f-c618-4457-b7e3-58a90c97f78e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "78868ef2-f468-44e8-9c8e-4cc0e784bc69",
+                      "instanceGuid": "d3b3cbe3-945d-4ae7-836e-47b8bed7fb39",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -265,7 +266,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7827b1ce-e3b7-437e-9168-3cca6a1fe547",
+                      "instanceGuid": "192c0571-aa9f-4372-8904-6ed752d7174b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -289,7 +290,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8fa99b03-9e8f-470e-a8c8-63489e66f4e9",
+                      "instanceGuid": "e25b0fc6-1e25-4fbf-a057-19a85fe69f64",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -313,7 +314,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f821c0ed-dc3b-492f-b742-2c48a586d646",
+                      "instanceGuid": "c7b91544-9271-4855-adb8-9fe2207b6ede",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -339,12 +340,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "f6070608-47a7-40a9-b2f6-fb686af7df0b"
+                      "instanceGuid": "32c5438a-4ea5-4315-9b31-04cd0f370ba6"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "34009075-8b0a-4b75-9a64-161e04107f3a",
+                      "instanceGuid": "0aa7298f-9743-4f18-97ab-0980261b812f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -368,7 +369,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "24db92ed-ba90-42db-b6f4-73def75e96a6",
+                      "instanceGuid": "0ebeaad3-192b-4567-aeac-daeba1b77685",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -379,11 +380,11 @@
             }
           }
         },
-        "x-namespace": "System.Security.Authentication.ExtendedProtection",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Security.Authentication.ExtendedProtection",
+        "assembly": "System.Net.Primitives"
       },
       "ChannelBindingKind": {
-        "title": "ChannelBindingKind",
+        "title": "Channel Binding Kind",
         "type": "integer",
         "description": "The  enumeration represents the kinds of channel bindings that can be queried from secure channels.",
         "enum": [
@@ -396,8 +397,8 @@
           "Unique",
           "Endpoint"
         ],
-        "x-namespace": "System.Security.Authentication.ExtendedProtection",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Security.Authentication.ExtendedProtection",
+        "assembly": "System.Net.Primitives"
       }
     }
   }

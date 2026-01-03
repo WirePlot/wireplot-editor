@@ -8,10 +8,12 @@
   "components": {
     "schemas": {
       "ExceptionHandling": {
-        "title": "ExceptionHandling",
-        "type": "object",
+        "title": "Exception Handling",
+        "type": "ExceptionHandling",
         "description": "To be added.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "SetUnhandledExceptionHandler": {
             "owner": {
               "$ref": "System.Runtime.ExceptionServices#/components/schemas/ExceptionHandling"
@@ -28,12 +30,12 @@
                       "$ref": "System#/components/schemas/Func\u00602",
                       "name": "handler",
                       "isOptional": false,
-                      "instanceGuid": "3c92b8ca-6042-45e1-b779-8a56510d73d9"
+                      "instanceGuid": "4c25a210-2d4f-43e3-bb97-b7d1fc42febe"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8d5150a5-4b3c-4ed8-953a-292d116c5ea3",
+                      "instanceGuid": "db9a76df-9710-435b-9a55-c8fbbf52d8a7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -59,12 +61,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "exception",
                       "isOptional": false,
-                      "instanceGuid": "f856c8d7-d6bd-47d8-9f8b-09163cd51062"
+                      "instanceGuid": "2f534c87-eb54-4826-841c-3ca517b5a8ca"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d3d6d200-86f2-4a94-a91e-cf399229af9e",
+                      "instanceGuid": "445a7c0a-5931-444f-8f66-ed04528c41b5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -88,7 +90,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "eaab19f3-0f33-4b2b-9d89-e5e1fd3c3daa",
+                      "instanceGuid": "5e64b8b6-a53e-4198-863b-195dc221a327",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -112,7 +114,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7815964a-f287-42f7-9075-1117ddbec920",
+                      "instanceGuid": "3352d14e-da2b-4579-907f-976a0ba76859",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -138,12 +140,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "c1a376e1-33f0-4157-af14-289e48319300"
+                      "instanceGuid": "68523d07-e5b2-486c-9ad0-238b4404ea25"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "584e0fc3-444f-41ee-998e-4f8e77287233",
+                      "instanceGuid": "1c831c52-33e0-419b-88f3-477438e9a1ca",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -167,7 +169,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d06a5f34-22a6-41a6-85d3-c2bc3f3cc6ec",
+                      "instanceGuid": "3d0d2399-4a4b-4b47-9ac5-ca860cd6bd88",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -178,19 +180,20 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.ExceptionServices",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.ExceptionServices",
+        "assembly": "System.Private.CoreLib"
       },
       "FirstChanceExceptionEventArgs": {
-        "title": "FirstChanceExceptionEventArgs",
-        "type": "object",
+        "title": "First Chance Exception Event Args",
+        "type": "FirstChanceExceptionEventArgs",
         "description": "Provides data for the notification event that is raised when a managed exception first occurs, before the common language runtime begins searching for event handlers.",
         "properties": {
           "Exception": {
             "$ref": "System#/components/schemas/Exception"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "GetType": {
             "owner": {
               "$ref": "System.Runtime.ExceptionServices#/components/schemas/FirstChanceExceptionEventArgs"
@@ -205,7 +208,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4d700c7a-61cf-4322-97a7-8f36994f07b1",
+                      "instanceGuid": "894c1e93-a0ed-4295-908c-2bba49364ae4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -229,7 +232,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "be3c0ea9-3e0f-4692-a1a1-a5aa5f843e81",
+                      "instanceGuid": "a38413de-0155-4f96-9e3e-68c14aeac3fa",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -255,12 +258,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "1c95f0f2-1190-47a0-bed2-780f35c953ce"
+                      "instanceGuid": "f2bba96b-cb95-42cd-b2a7-5d37eccf3d0a"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "885156fc-64dc-4767-88a8-f52566e6d35b",
+                      "instanceGuid": "e684831c-c0f3-4f12-9882-31213ae7b7aa",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -284,7 +287,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c76dc487-126a-4758-bf53-05eebb2382b4",
+                      "instanceGuid": "bcb8b300-a179-4cd8-98ec-97b29759a98a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -295,19 +298,20 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.ExceptionServices",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.ExceptionServices",
+        "assembly": "System.Private.CoreLib"
       },
       "HandleProcessCorruptedStateExceptionsAttribute": {
-        "title": "HandleProcessCorruptedStateExceptionsAttribute",
-        "type": "object",
+        "title": "Handle Process Corrupted State Exceptions Attribute",
+        "type": "HandleProcessCorruptedStateExceptionsAttribute",
         "description": "Enables managed code to handle exceptions that indicate a corrupted process state.",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.ExceptionServices#/components/schemas/HandleProcessCorruptedStateExceptionsAttribute"
@@ -324,12 +328,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "409c7122-72d8-40f0-9abd-4e342375155d"
+                      "instanceGuid": "d8aadc9b-dfbe-47e7-949d-84190a9d2b36"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "19abf333-0c00-4c6f-88cf-89cf8bf35221",
+                      "instanceGuid": "7279c43a-ab49-47c0-b0b0-205f10f942a4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -353,7 +357,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "335daf9a-c4c3-49e7-be0d-a371a7cea894",
+                      "instanceGuid": "f834f9ad-7ec1-4a01-857f-c6f0e936689b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -379,12 +383,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "098637d3-200d-4ce1-9609-fc8e6b3029ec"
+                      "instanceGuid": "4236d956-6227-43cf-88ae-d8594077ad75"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "7f029157-b1c3-4815-ae45-73a9bf18a053",
+                      "instanceGuid": "90d9df6c-43d6-4516-964d-cedd56397ac2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -408,7 +412,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ec9a58ad-880e-4151-8bb0-8ed7f29e9bcf",
+                      "instanceGuid": "993c5ca1-0b23-4ef4-b7a0-e65a3d32ab51",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -432,7 +436,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d7304242-3d98-45ae-b25e-66f2fe05fb7b",
+                      "instanceGuid": "b971c4ce-aeca-4742-bdcf-8653cfb9ff8b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -456,7 +460,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2a1ed95d-aa71-4171-9e70-06c78c1547a5",
+                      "instanceGuid": "61060081-8996-4781-99d7-5e0623c09e90",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -467,8 +471,8 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.ExceptionServices",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.ExceptionServices",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

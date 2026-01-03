@@ -22,7 +22,10 @@ export const SchemaEditor: FC<SchemaEditorProps> = ({ schema, namespace }) => {
         const clonedSchema: WirePlotSchemaObject = { ...wireplotSchemaObject };
         const clonedProperties = { ...clonedSchema.properties };
 
-        clonedProperties[propertyName] = SchemaUtils.createSchemaForType(option.label);
+        // TO DO TODO
+        // HOT FIX
+        // Here should be passed ref, no option label
+        clonedProperties[propertyName] = SchemaUtils.createSchemaPropertyForType(option.label);
         clonedSchema.properties = clonedProperties;
 
         dispatch(updateSchema({

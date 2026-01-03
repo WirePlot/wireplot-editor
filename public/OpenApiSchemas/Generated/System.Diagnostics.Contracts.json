@@ -8,15 +8,15 @@
   "components": {
     "schemas": {
       "ContractFailedEventArgs": {
-        "title": "ContractFailedEventArgs",
-        "type": "object",
+        "title": "Contract Failed Event Args",
+        "type": "ContractFailedEventArgs",
         "description": "Provides methods and data for the  event.",
         "properties": {
           "Message": {
-            "type": "string"
+            "type": "String"
           },
           "Condition": {
-            "type": "string"
+            "type": "String"
           },
           "FailureKind": {
             "$ref": "System.Diagnostics.Contracts#/components/schemas/ContractFailureKind"
@@ -25,13 +25,14 @@
             "$ref": "System#/components/schemas/Exception"
           },
           "Handled": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "Unwind": {
-            "type": "boolean"
+            "type": "Boolean"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "SetHandled": {
             "owner": {
               "$ref": "System.Diagnostics.Contracts#/components/schemas/ContractFailedEventArgs"
@@ -46,7 +47,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0ff85bf9-04de-4c16-bf5e-d7297d1f7096",
+                      "instanceGuid": "1d288048-48f1-4a73-a3e8-cb0986d6932a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -70,7 +71,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "30bfc54b-ec0c-4788-8f0d-06ece1fc2225",
+                      "instanceGuid": "f442b8ca-f37d-4d3a-af6e-847dc87bf24b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -94,7 +95,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d6b123a8-58c3-4f14-bc5e-588b95e66991",
+                      "instanceGuid": "cf9ec0b9-b48f-40ba-8ab4-53294b81a33b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -118,7 +119,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "6b89707c-482b-428a-9a56-5ff760fc1037",
+                      "instanceGuid": "ecf39b56-15a2-4abc-b644-840afd5b583e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -144,12 +145,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "13486cae-1fb0-4150-b131-0841c57abb50"
+                      "instanceGuid": "0b4dd194-f29c-43be-9f4a-0cf85455e314"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b2ceb393-239f-48c6-9ce7-d19367cb0bec",
+                      "instanceGuid": "b1e3f857-de6c-4106-bd81-40c7d7968273",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -173,7 +174,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7c75b407-42bf-4a21-8054-46e4b22056fe",
+                      "instanceGuid": "c1c03620-ad63-48de-838e-d84b7c4d452a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -184,19 +185,20 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       },
       "PureAttribute": {
-        "title": "PureAttribute",
-        "type": "object",
+        "title": "Pure Attribute",
+        "type": "PureAttribute",
         "description": "Indicates that a type or method is pure, that is, it does not make any visible state changes.",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Contracts#/components/schemas/PureAttribute"
@@ -213,12 +215,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "0eef5509-6d40-4f58-b1ca-e452290d79c9"
+                      "instanceGuid": "439f60d5-b4aa-4af2-b232-354f7edd2e69"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "fda10a2b-74f3-4cd6-866a-a2e4a14c6de6",
+                      "instanceGuid": "8d9136c5-5735-4822-8f1a-2572abc99879",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -242,7 +244,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "bae7dae7-1587-4a39-bdaa-a249f8f84259",
+                      "instanceGuid": "b08fd768-14dc-4d06-99d1-2679c039db6e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -268,12 +270,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "82f587ec-ff53-4572-b766-4cee0c43b43b"
+                      "instanceGuid": "244b08b2-b708-45cf-b3bc-dd9c583812d6"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "7d11f093-f5ba-456a-9c58-9bbbeea7d7b3",
+                      "instanceGuid": "2a918716-7f20-4fa8-b566-c4b2a86b7457",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -297,7 +299,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "cecb4991-f0be-4cc6-888f-1418b9642337",
+                      "instanceGuid": "d4ef0388-e256-4beb-9ad6-09c952dc9399",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -321,7 +323,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4ea4a33e-46b3-4481-81c0-8766371ff9dc",
+                      "instanceGuid": "44e0d5cf-5c02-4cc9-bda1-b104d77b6d18",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -345,7 +347,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "3bf844c6-bbee-4c5f-adac-bbd56813d76b",
+                      "instanceGuid": "484ee479-835c-4f60-bba4-652143a5efa3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -356,12 +358,12 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       },
       "ContractClassAttribute": {
-        "title": "ContractClassAttribute",
-        "type": "object",
+        "title": "Contract Class Attribute",
+        "type": "ContractClassAttribute",
         "description": "Specifies that a separate type contains the code contracts for this type.",
         "properties": {
           "TypeContainingContracts": {
@@ -371,7 +373,8 @@
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Contracts#/components/schemas/ContractClassAttribute"
@@ -388,12 +391,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "890f5783-8b4b-49b5-b163-e33bad12d151"
+                      "instanceGuid": "6ddb01bd-6887-44d4-a76f-d39502ef7487"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2bf2de5d-7d4b-43b1-b1dc-11243b7cffde",
+                      "instanceGuid": "34235f03-d50e-4ddc-a5e7-3782e1f7e83c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -417,7 +420,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0036c963-44b0-4056-801a-d5b806dd1007",
+                      "instanceGuid": "4b781cb7-1cb4-4812-aba2-a7bbc4f6cc46",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -443,12 +446,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "10f9a09c-7f4e-4f1e-888e-658efd003ca0"
+                      "instanceGuid": "fa45ca61-5dd3-4fbc-80fd-dc59d0bc8ffe"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "bf77cfde-b741-4125-8930-4cfabe9812d3",
+                      "instanceGuid": "ec2e88f0-1f23-4169-9426-4e6cf8fc31d7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -472,7 +475,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "331f4448-95b2-43a1-b1c5-e033d72895e1",
+                      "instanceGuid": "5c1b337f-8a50-4691-9bfd-ff68e1f67989",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -496,7 +499,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c75b2f42-f7a3-411c-9310-b9ec4183cc29",
+                      "instanceGuid": "15196267-8332-4248-9daa-55625ea131cd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -520,7 +523,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d814f84e-729d-407b-bab5-156e00942802",
+                      "instanceGuid": "1c2978cd-9cb5-4d42-b5ae-5748c1f79b0b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -531,12 +534,12 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       },
       "ContractClassForAttribute": {
-        "title": "ContractClassForAttribute",
-        "type": "object",
+        "title": "Contract Class For Attribute",
+        "type": "ContractClassForAttribute",
         "description": "Specifies that a class is a contract for a type.",
         "properties": {
           "TypeContractsAreFor": {
@@ -546,7 +549,8 @@
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Contracts#/components/schemas/ContractClassForAttribute"
@@ -563,12 +567,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "df08fee6-ddb9-4847-86f7-bc5de47be1f6"
+                      "instanceGuid": "3fa11738-d103-42df-a052-f61128e0cace"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "53a12c8c-6d7f-4e26-88de-5471fe4e88de",
+                      "instanceGuid": "9e8d1d84-8cf3-42e3-8d7c-32efe8db43d9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -592,7 +596,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a033882f-feed-4448-a942-7b01680ac924",
+                      "instanceGuid": "e1932898-ab79-4543-810e-669b6626b55a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -618,12 +622,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "8f3bd158-51bb-49ef-b1ad-d58b0a588625"
+                      "instanceGuid": "30ca0438-9fda-4f15-9054-6a98baeb64e0"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "22db00c6-f72b-44b2-90ca-5fb188d33bf3",
+                      "instanceGuid": "b49c5d17-5f1c-4faf-bc06-63a373b01c1e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -647,7 +651,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "564de083-a450-4db5-8e98-8a90792a6d52",
+                      "instanceGuid": "d5400456-efa7-45c9-bfb1-cc0ed4db904b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -671,7 +675,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "498a15f5-ecfe-415a-839a-2a830e3abd6b",
+                      "instanceGuid": "745438bd-8f0d-4793-b483-69aa2463a941",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -695,7 +699,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b84f7512-12ff-4df1-9007-000bc9fea644",
+                      "instanceGuid": "a8e724af-4902-48f6-a432-4089aa77d435",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -706,19 +710,20 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       },
       "ContractInvariantMethodAttribute": {
-        "title": "ContractInvariantMethodAttribute",
-        "type": "object",
+        "title": "Contract Invariant Method Attribute",
+        "type": "ContractInvariantMethodAttribute",
         "description": "Marks a method as being the invariant method for a class.",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Contracts#/components/schemas/ContractInvariantMethodAttribute"
@@ -735,12 +740,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "b54c3b5d-d961-4a18-a16b-692b86ac0427"
+                      "instanceGuid": "ba1e1335-d609-4023-8560-ed2f672f9b58"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "31b0dba6-bba3-4316-8dbf-a6b7b8f5eacf",
+                      "instanceGuid": "c1ccb7cf-f63f-4c7e-99f5-ed726d2774f7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -764,7 +769,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "997dfa5c-d690-4b69-8d9b-cf187b33eb37",
+                      "instanceGuid": "d0f84a0d-f6f1-4766-a670-041fc62ac70a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -790,12 +795,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "a33c9ebb-180b-437d-b448-e67e46d465ba"
+                      "instanceGuid": "72b529a5-c466-4d89-82f2-5d0a7793b9cf"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "79f0af45-0e30-4434-8341-43a05fb9e5a7",
+                      "instanceGuid": "5b2de1b6-a794-4943-8e20-ffa07b44082b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -819,7 +824,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e282f4b2-917a-4a9b-b3c0-34411ce31d32",
+                      "instanceGuid": "a6961b24-64ad-44a2-8ea1-4af2a196fbf7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -843,7 +848,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5be110aa-d60f-49b4-b222-d8c9610dab2a",
+                      "instanceGuid": "a2e715ce-7135-49d0-86e8-06c5cc27d578",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -867,7 +872,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a3d15716-28b2-479b-8b0f-94257d778cd8",
+                      "instanceGuid": "b18865bd-84a7-4e7d-83c6-2d09464c9ac3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -878,19 +883,20 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       },
       "ContractReferenceAssemblyAttribute": {
-        "title": "ContractReferenceAssemblyAttribute",
-        "type": "object",
+        "title": "Contract Reference Assembly Attribute",
+        "type": "ContractReferenceAssemblyAttribute",
         "description": "Specifies that an assembly is a reference assembly that contains contracts.",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Contracts#/components/schemas/ContractReferenceAssemblyAttribute"
@@ -907,12 +913,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "360f0ae6-ddb7-4e79-bfce-abf98acc6e18"
+                      "instanceGuid": "33c835a1-8f73-4bec-bbf5-07676c440ae3"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "68572e80-5449-4639-96d6-8a9647a9b1b7",
+                      "instanceGuid": "57a90cb7-b392-484c-8469-37dbe3958cf0",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -936,7 +942,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d28a8647-9b87-4991-803a-53b3298733d8",
+                      "instanceGuid": "8632b554-6fc9-4e28-bdea-2b697e622e37",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -962,12 +968,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "387ecbb2-15c5-4481-8ae3-ff1cc7316861"
+                      "instanceGuid": "c990a6f7-f6b7-4e25-9e60-a7dedb87f7a5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c6d06e8c-4598-48e4-ac75-42064782d83e",
+                      "instanceGuid": "4e60b893-28f5-46fd-b61d-fec4f667cc3d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -991,7 +997,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e14175a1-3731-473c-9ab5-bf3c30987590",
+                      "instanceGuid": "4fc4bfc5-e646-45ac-8c7c-d4b5ba470f15",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1015,7 +1021,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "07f3576e-cbc9-4466-8cb8-44dc5602f751",
+                      "instanceGuid": "de6ab960-14dc-474f-96c2-55c8328853a2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1039,7 +1045,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "87810c3d-66a1-407e-af79-8ee5cc808990",
+                      "instanceGuid": "df1a8225-c8f6-4ded-954f-54e5ff2a59b5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1050,19 +1056,20 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       },
       "ContractRuntimeIgnoredAttribute": {
-        "title": "ContractRuntimeIgnoredAttribute",
-        "type": "object",
+        "title": "Contract Runtime Ignored Attribute",
+        "type": "ContractRuntimeIgnoredAttribute",
         "description": "Identifies a member that has no run-time behavior.",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Contracts#/components/schemas/ContractRuntimeIgnoredAttribute"
@@ -1079,12 +1086,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "4446d910-390f-4ba5-87a2-597202c5bf8a"
+                      "instanceGuid": "5441577d-9953-44f6-9c23-08e8b7307f68"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b122312f-77d1-49aa-93b9-522d634b9554",
+                      "instanceGuid": "af3ba465-7620-4e1d-adc2-d263b94a3378",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1108,7 +1115,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f18b4c8c-155a-4107-9afe-873b39585ebc",
+                      "instanceGuid": "8f823102-0c73-4926-92dc-90ccb7574c6e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1134,12 +1141,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "559cbb28-b4a7-4189-8d3d-e7dafed34011"
+                      "instanceGuid": "d4775ea3-0b74-42ec-9348-3035ef4c007c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "dd6cc605-3554-449d-8a4d-44a19b8baf4b",
+                      "instanceGuid": "f6190467-5f4f-4990-bf64-56655df6a4fc",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1163,7 +1170,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "72af35b0-59b7-4cbf-bfa2-7e6eef2f2922",
+                      "instanceGuid": "a82fdae5-8c3b-4f83-89cb-3c322816c9ed",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1187,7 +1194,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "786fa8c8-cc3c-4714-957a-f82316deb9ba",
+                      "instanceGuid": "a569decd-ebaf-41e6-b088-2fac75015bef",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1211,7 +1218,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e08dc311-6e4c-47d8-b2e0-e801b88f868b",
+                      "instanceGuid": "b6d76123-ef77-4801-8dc9-c4ff79116fa1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1222,22 +1229,23 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       },
       "ContractVerificationAttribute": {
-        "title": "ContractVerificationAttribute",
-        "type": "object",
+        "title": "Contract Verification Attribute",
+        "type": "ContractVerificationAttribute",
         "description": "Instructs analysis tools to assume the correctness of an assembly, type, or member without performing static verification.",
         "properties": {
           "Value": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Contracts#/components/schemas/ContractVerificationAttribute"
@@ -1254,12 +1262,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "32efa045-5a5c-4941-ad16-73254d06e926"
+                      "instanceGuid": "5207fbb8-b780-473a-aeef-e6386c6c0667"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "453971c7-f006-4ed3-b549-8ca70b8ad5b8",
+                      "instanceGuid": "3d0d82b6-a0df-46a0-9dfe-f48c0d50666e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1283,7 +1291,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "50ee1a8e-5b7c-41f6-9838-855f5380942e",
+                      "instanceGuid": "b765d766-29a5-4958-b7c2-66a296dcf59c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1309,12 +1317,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "ddd58a62-63f3-4999-bdec-eb3b39602300"
+                      "instanceGuid": "696c1c26-3bc9-46ed-8c9c-4ad9749a8a66"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d3fc45c4-6d1c-4bd4-90ce-de8b37f29577",
+                      "instanceGuid": "e9a5f96c-1e40-447f-a422-d934c552d9ab",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1338,7 +1346,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e0c05605-22ba-4d61-85e6-9f71f895bb9e",
+                      "instanceGuid": "e2cfba8e-97cd-496f-b7a0-58d048697f91",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1362,7 +1370,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1971ac60-6451-4609-9f83-ef3c8aca1b8f",
+                      "instanceGuid": "048c4698-5a51-4eee-a7d2-9f010ce6c2c6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1386,7 +1394,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "53786b36-bee0-4db1-a4f0-66c6fc398f86",
+                      "instanceGuid": "b53df537-6ebf-4c3e-983b-76905cab180a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1397,22 +1405,23 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       },
       "ContractPublicPropertyNameAttribute": {
-        "title": "ContractPublicPropertyNameAttribute",
-        "type": "object",
+        "title": "Contract Public Property Name Attribute",
+        "type": "ContractPublicPropertyNameAttribute",
         "description": "Specifies that a field can be used in method contracts when the field has less visibility than the method.",
         "properties": {
           "Name": {
-            "type": "string"
+            "type": "String"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Contracts#/components/schemas/ContractPublicPropertyNameAttribute"
@@ -1429,12 +1438,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "85d6face-7764-4af6-825d-e000b082aba9"
+                      "instanceGuid": "0faca437-a9d8-43eb-99d3-6b88f4596878"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f55b3aad-5f69-4dea-b715-ce576710023e",
+                      "instanceGuid": "da7a8aec-69a5-4ef4-8f5b-c3b4219bac08",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1458,7 +1467,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1f4b065c-bcd5-4fe6-9071-390c412d97d0",
+                      "instanceGuid": "f71c42f6-2764-4753-bde0-486572c04e40",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1484,12 +1493,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "b58ac054-35c3-4afc-a639-6701d83da8ad"
+                      "instanceGuid": "2ca8546f-0962-4080-9d30-77f7f8753ed5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "24134571-35b0-4ebc-84e0-cfde9b1f3528",
+                      "instanceGuid": "5a6f8282-56b8-4e32-b14b-eb770c00c813",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1513,7 +1522,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "6e428e6a-4384-410c-a299-6f7cc8865bf6",
+                      "instanceGuid": "3b3df2dd-8619-44fd-b2df-2329133acf79",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1537,7 +1546,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ee989a3f-71f4-4f12-b616-f96b4c5bb75f",
+                      "instanceGuid": "4570b322-7c52-4422-b631-d05b11f9b36d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1561,7 +1570,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "23d3af3e-181d-425d-b962-7c9331b76930",
+                      "instanceGuid": "6c101711-39ca-4a08-b352-7f4f2be21e46",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1572,19 +1581,20 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       },
       "ContractArgumentValidatorAttribute": {
-        "title": "ContractArgumentValidatorAttribute",
-        "type": "object",
+        "title": "Contract Argument Validator Attribute",
+        "type": "ContractArgumentValidatorAttribute",
         "description": "Enables the factoring of legacy  code into separate methods for reuse, and provides full control over thrown exceptions and arguments.",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Contracts#/components/schemas/ContractArgumentValidatorAttribute"
@@ -1601,12 +1611,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "a36c0e22-7791-4a78-890c-a3f4bb1678b9"
+                      "instanceGuid": "ea48e415-8fca-41be-bf40-117fdb29f7a5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f8a5f0d5-369e-462e-85f4-ec0b15a469b1",
+                      "instanceGuid": "f3f0d9f1-6169-4f99-8bae-e636930684c8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1630,7 +1640,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "225ed87e-88c9-4676-9849-00450b63ff5b",
+                      "instanceGuid": "887c4e50-0709-4086-a049-4b38c5f12228",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1656,12 +1666,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "0e694ffc-43b6-48f3-8b5d-743fd03ffafd"
+                      "instanceGuid": "d53df06d-9cba-4a77-825f-2206a4792adb"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a1ede26b-896f-4477-be20-a97fdaea265f",
+                      "instanceGuid": "f11ae99a-de75-4d76-9249-64d96c22df68",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1685,7 +1695,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5d1a5e9f-8e11-44af-9a8d-ac12448a3561",
+                      "instanceGuid": "c7787bcb-b954-4612-a63f-5046c66ad6dd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1709,7 +1719,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "74fae2b2-c738-484f-bf25-d9d9c0f859a2",
+                      "instanceGuid": "8cc3a5a0-3b20-45fb-81d4-8f8c84ee31ba",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1733,7 +1743,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b63bbfe9-6703-474e-a7ec-db355176ac4a",
+                      "instanceGuid": "0b0683ce-724c-4244-9736-fb8b856ab53f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1744,19 +1754,20 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       },
       "ContractAbbreviatorAttribute": {
-        "title": "ContractAbbreviatorAttribute",
-        "type": "object",
+        "title": "Contract Abbreviator Attribute",
+        "type": "ContractAbbreviatorAttribute",
         "description": "Defines abbreviations that you can use in place of the full contract syntax.",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Contracts#/components/schemas/ContractAbbreviatorAttribute"
@@ -1773,12 +1784,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "76a99fac-9bf8-439c-9231-c79b16e01216"
+                      "instanceGuid": "b64bc9f8-2055-45c8-85e4-207c4b3a276d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d7737af3-b181-4e4c-840d-7540375b7c01",
+                      "instanceGuid": "3195b981-6a08-4929-b591-67ad1130cac3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1802,7 +1813,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2d1cf661-311b-4d18-aed1-7a7c093f1c5b",
+                      "instanceGuid": "0bd20ade-40fa-4b98-a5a0-3d4076656c55",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1828,12 +1839,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "b373cc2c-b340-4a7c-a90f-98ff980ffe43"
+                      "instanceGuid": "9b2d9fec-1e38-445c-9bee-97f9b0a6ec7b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "1cd62af7-f11e-4c7c-ab75-a11a21ce0720",
+                      "instanceGuid": "9b90a1e1-a56b-4f2e-adf2-1c3b6165ed20",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1857,7 +1868,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "260347c7-5e6c-4610-9e5f-9e862749f231",
+                      "instanceGuid": "6a00e6b4-384d-4086-b46a-7ac48788507e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1881,7 +1892,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "40f8dd80-bc62-4c3c-bd4d-5e25773a4739",
+                      "instanceGuid": "beef761f-423d-47ac-8f0b-55bac24edea7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1905,7 +1916,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1d9104a1-d34e-4eea-85ef-99f5f042537d",
+                      "instanceGuid": "24b2b012-47cf-44b4-9d02-01df4f86c7ae",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1916,31 +1927,32 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       },
       "ContractOptionAttribute": {
-        "title": "ContractOptionAttribute",
-        "type": "object",
+        "title": "Contract Option Attribute",
+        "type": "ContractOptionAttribute",
         "description": "Enables you to set contract and tool options at assembly, type, or method granularity.",
         "properties": {
           "Category": {
-            "type": "string"
+            "type": "String"
           },
           "Setting": {
-            "type": "string"
+            "type": "String"
           },
           "Enabled": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "Value": {
-            "type": "string"
+            "type": "String"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Contracts#/components/schemas/ContractOptionAttribute"
@@ -1957,12 +1969,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "7fabd27c-c5b7-4533-941b-c67518287da3"
+                      "instanceGuid": "e4f3c4dc-f45d-46ea-86f5-c077769128c5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "682df411-4ad7-4800-add0-b41fd17197d7",
+                      "instanceGuid": "9c0b7da8-4a89-490b-aaa9-1f03e6d96f4d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1986,7 +1998,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "da6ac165-c632-4f34-ba7d-a7e0caa52db7",
+                      "instanceGuid": "028e73e2-5eaa-407a-b88f-344e2c25d788",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2012,12 +2024,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "6891c866-3ef9-4628-81cc-13e6c752f3e6"
+                      "instanceGuid": "503045c4-3d22-4dd1-837f-60b452f8a179"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f4b5e730-7726-4874-b3ef-c13c80d4eb4b",
+                      "instanceGuid": "057930e7-3cd2-4d80-b0b0-03675c1b0936",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2041,7 +2053,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2d0b73fc-9f7f-4966-b212-993534263c00",
+                      "instanceGuid": "f0dc218c-9bfe-44c8-84c2-8ae031c30185",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2065,7 +2077,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e0e0be2b-2fda-400e-b370-a98e0ab701cb",
+                      "instanceGuid": "17152461-4ff5-4100-b3ed-c46c4fd0de8c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -2089,7 +2101,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "cc93d23f-bc92-422c-8339-b8de0b53eb39",
+                      "instanceGuid": "b3ba5ea7-22c3-4a2e-89f6-86a74c2ada84",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -2100,14 +2112,16 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       },
       "Contract": {
         "title": "Contract",
-        "type": "object",
+        "type": "Contract",
         "description": "Contains static methods for representing program contracts such as preconditions, postconditions, and object invariants.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "Assume": {
             "owner": {
               "$ref": "System.Diagnostics.Contracts#/components/schemas/Contract"
@@ -2121,15 +2135,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "73e2be48-db35-4120-b5c1-d2484bf8c759"
+                      "instanceGuid": "74d2516d-d60c-445d-8fe3-53730cfa2435"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "606f831e-ad89-4bf3-84da-7a9d2f10523f",
+                      "instanceGuid": "bb9da4ae-3ac7-4ef7-8c69-38f7c4637704",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2145,21 +2159,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "880d1b7d-b444-4f78-80c7-826aed3420ec"
+                      "instanceGuid": "f1584552-7294-4511-a56a-fa32cd2b6d69"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "userMessage",
                       "isOptional": false,
-                      "instanceGuid": "c6642b53-6f61-4fc4-9286-6dffa82e9267"
+                      "instanceGuid": "76c47822-5db4-4952-9f36-0cb68fa3802d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ab50e15f-6549-4bd6-9749-bb5c9065411b",
+                      "instanceGuid": "4113b070-88bf-4079-8958-32bdccfeb09a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2182,15 +2196,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "47c35eb8-4605-444b-965b-7bd9d32df5bd"
+                      "instanceGuid": "d9ff069e-0427-431e-a934-363cb75905b1"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2a5438de-b032-42d6-af45-fdfb345e6867",
+                      "instanceGuid": "16d0a91a-201e-4997-a24b-d5df0992ff7f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2206,21 +2220,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "f3f1cecc-c2b1-4c91-80d6-9c110e25ee83"
+                      "instanceGuid": "7b9321b7-4f16-4d76-8adc-144d4eb99c72"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "userMessage",
                       "isOptional": false,
-                      "instanceGuid": "710f6ff6-ff9e-49de-92e7-0eeb58c6ef3d"
+                      "instanceGuid": "b5f558d1-1cc3-4752-88be-66865bf4993b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e5c8cf97-d5c0-4e6f-a17a-a9b0d344f83a",
+                      "instanceGuid": "22b270e1-c3b3-4e17-a69f-92e2d092fae4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2243,15 +2257,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "1b4d0cb8-6160-4280-ae3f-402d8a1a6bcf"
+                      "instanceGuid": "1b8fca21-1cfa-4406-81c6-38633d610840"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a6c6780c-f35e-4c56-a458-64236bfb6307",
+                      "instanceGuid": "05c9547f-011f-49db-a8e6-f7a8266ae05f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2267,21 +2281,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "7978cfab-08a7-4031-a3b3-7cffdac4b3e5"
+                      "instanceGuid": "622d671d-f65d-4bdb-a372-f4b6167b5106"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "userMessage",
                       "isOptional": false,
-                      "instanceGuid": "a2352e79-9c5b-401f-9582-fe78a61500aa"
+                      "instanceGuid": "54c097b3-cb1e-471b-8912-b31cb0202c94"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "89142973-831f-45f3-ad43-5b164ef8a0e0",
+                      "instanceGuid": "2cb6afdf-fe15-4417-adf1-c9ffb3b7a2ca",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2297,15 +2311,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "60ea4ace-a5e3-472b-ad7d-99c62f670074"
+                      "instanceGuid": "b1555a30-6b77-438c-b873-4428eb3efe59"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9f85d1c8-221f-4b82-98c6-b51dead0a44f",
+                      "instanceGuid": "cfe11352-2fd8-4b3f-ab04-b3fe1fe8ec5f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2321,21 +2335,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "98958d18-9bb5-43d8-8502-77f8d226098b"
+                      "instanceGuid": "375cf156-bc68-49fc-a85c-723a3cb5c9b2"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "userMessage",
                       "isOptional": false,
-                      "instanceGuid": "d4394645-d81f-45bb-933b-1af67ce0a3f9"
+                      "instanceGuid": "7786a5a5-82d1-48f4-8049-2c00d047e11e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c7300a54-2cb4-4297-837e-f458b42e59a8",
+                      "instanceGuid": "d55c00db-edf9-4b0a-8630-8b1b4b6b17d8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2358,15 +2372,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "62bae79f-bb98-4a75-b936-82ac2334de53"
+                      "instanceGuid": "4c39fbee-c7ec-490d-9e5d-cdc9e15a543f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "78b54693-c30f-4da7-b796-226f25d983e7",
+                      "instanceGuid": "8412778b-426c-4028-b31e-3d4e649399f5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2382,21 +2396,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "af653e7c-a2e3-44e2-8add-ab58c957cb12"
+                      "instanceGuid": "dd422366-97b6-45e4-ab71-07254720c94a"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "userMessage",
                       "isOptional": false,
-                      "instanceGuid": "3f396147-9a57-4071-baaf-24186e61902a"
+                      "instanceGuid": "bd71f5a1-1777-4042-a38f-17d3e955a600"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "6c0dd517-c912-483f-8a8e-39c3a970063f",
+                      "instanceGuid": "4d17faf8-15cd-4237-a9ba-ec6ec96a1e79",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2419,15 +2433,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "da375ac9-23c0-41db-930e-bf2ed24aba49"
+                      "instanceGuid": "13b47100-f351-44a1-82e4-28f14723bcdc"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a9b10949-85a7-4e6b-ab21-a0edba71dda3",
+                      "instanceGuid": "a365b3ab-b064-4ff3-9d96-973d062762c4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2443,21 +2457,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "115e8674-652d-42b9-bcc9-1fb900360819"
+                      "instanceGuid": "7a69b8a0-1c2b-465d-a4cb-878bcb1b3d3d"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "userMessage",
                       "isOptional": false,
-                      "instanceGuid": "ba9a2f3a-952b-4a17-acb8-8f1cf0c67a59"
+                      "instanceGuid": "f4e0b7c8-760a-4fcc-963e-5c8a3776e9a7"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "7561a675-0c01-4f79-9610-b2aad5cfb61b",
+                      "instanceGuid": "6d8da197-8617-4a8b-a9e4-98b220c2539b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2481,7 +2495,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "85d48bf6-dafb-4b76-947a-235dd6d14f55",
+                      "instanceGuid": "4feb0d3c-549e-464a-bc37-f013f73fe300",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Diagnostics.Contracts#/components/schemas/T"
@@ -2507,12 +2521,12 @@
                       "$ref": "System.Diagnostics.Contracts#/components/schemas/T\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "42eb0912-d627-4e62-bcdb-2170cf094c4a"
+                      "instanceGuid": "c202903b-6519-4871-b09c-68056b8a5c9c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "42f763d0-1579-48c1-8169-be80ada1dc2d",
+                      "instanceGuid": "7d7c3c62-4cbe-46bd-b846-a7f0dd236815",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Diagnostics.Contracts#/components/schemas/T"
@@ -2538,12 +2552,12 @@
                       "$ref": "System.Diagnostics.Contracts#/components/schemas/T",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "69cabce6-7b7a-4840-ac45-8aab63477d69"
+                      "instanceGuid": "41198677-b446-4621-aa43-ac983da0cdb3"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c16b3060-18b6-4759-a6fe-0ab93a2187c9",
+                      "instanceGuid": "3bb753dd-9287-4800-a027-4c836ff18a0d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Diagnostics.Contracts#/components/schemas/T"
@@ -2566,15 +2580,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "966eb2b2-a911-4811-869c-b59fab1a34eb"
+                      "instanceGuid": "fa24df6f-f9e7-4252-a378-e43f3942bc2d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b63bde23-d5c0-44b2-90c9-b5133237e6dc",
+                      "instanceGuid": "a45047c8-0913-40c5-bb1f-dff2641f327f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2590,21 +2604,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "condition",
                       "isOptional": false,
-                      "instanceGuid": "ed628fbf-3a47-44ff-bbcb-1d4edd933439"
+                      "instanceGuid": "43e6e1d8-72db-4bf1-a9c6-c05b1e1beace"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "userMessage",
                       "isOptional": false,
-                      "instanceGuid": "c06c0a77-7a3f-485e-96ad-5b2a4eeeaa12"
+                      "instanceGuid": "fb358902-aea0-422b-bd43-df64ed130fe7"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "842ff6b2-4b4d-4adf-9c22-ea81b8c0edf5",
+                      "instanceGuid": "05523e9c-cd02-41e9-9670-a6f348d26c06",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2627,29 +2641,29 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "fromInclusive",
                       "isOptional": false,
-                      "instanceGuid": "ec088ee0-c3cc-4f20-95e4-93731daee6cb"
+                      "instanceGuid": "6fe12d51-0aee-44e5-ac93-aa77dfd87d9c"
                     },
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "toExclusive",
                       "isOptional": false,
-                      "instanceGuid": "13ea12d4-61fb-4e7a-b343-4708e66c9108"
+                      "instanceGuid": "ce69e024-f516-404f-95e6-b786fdd0f7d0"
                     },
                     {
                       "$ref": "System#/components/schemas/Predicate\u00601",
                       "name": "predicate",
                       "isOptional": false,
-                      "instanceGuid": "6ce01a7f-af0f-4fb7-ace7-a2f3ee1f8935"
+                      "instanceGuid": "f868fc9a-9a34-4b96-bbb4-12ed062ba707"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a2e3e43f-7005-48cd-a405-a1b0253260ef",
+                      "instanceGuid": "cc76c9a2-2e7a-4700-904e-a86a3eeb6f2d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2668,18 +2682,18 @@
                       "$ref": "System.Collections.Generic#/components/schemas/IEnumerable\u00601",
                       "name": "collection",
                       "isOptional": false,
-                      "instanceGuid": "fbac72f5-068c-4923-887a-36d74f48d62e"
+                      "instanceGuid": "279f16ae-f818-4c18-b2d9-b521cd2935dd"
                     },
                     {
                       "$ref": "System#/components/schemas/Predicate\u00601",
                       "name": "predicate",
                       "isOptional": false,
-                      "instanceGuid": "9f56c914-1af8-4b7c-a9e3-4b3a2e75eb45"
+                      "instanceGuid": "b0643c3e-bae6-4c5f-bd4d-deccca7fcf2d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "aeb20290-faca-41f4-91d6-8be1190078b1",
+                      "instanceGuid": "280e606f-3560-4112-a4ef-ec89d5e2b06c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2702,29 +2716,29 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "fromInclusive",
                       "isOptional": false,
-                      "instanceGuid": "5c01cdac-18d4-4fe1-a411-ed0d2afd4398"
+                      "instanceGuid": "9a51e4b0-9516-4765-b9e3-c1aa792d245b"
                     },
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "toExclusive",
                       "isOptional": false,
-                      "instanceGuid": "452dedb9-beae-45dd-b85f-c5ae68683faa"
+                      "instanceGuid": "216f8ce5-36d2-47bd-bf7a-4557023be211"
                     },
                     {
                       "$ref": "System#/components/schemas/Predicate\u00601",
                       "name": "predicate",
                       "isOptional": false,
-                      "instanceGuid": "1c60346c-b93f-4251-8950-fef2d5620e60"
+                      "instanceGuid": "0be123c2-6fff-4cd5-8aa9-3c846983c0ab"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "872696db-5a53-4e11-9a47-827f12d052c9",
+                      "instanceGuid": "b73551d3-509b-4138-b86a-59f6236bc068",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2743,18 +2757,18 @@
                       "$ref": "System.Collections.Generic#/components/schemas/IEnumerable\u00601",
                       "name": "collection",
                       "isOptional": false,
-                      "instanceGuid": "db63b60b-46af-460d-9497-97671203d28b"
+                      "instanceGuid": "4f9b587d-5b68-44a5-ab49-8c84d5281290"
                     },
                     {
                       "$ref": "System#/components/schemas/Predicate\u00601",
                       "name": "predicate",
                       "isOptional": false,
-                      "instanceGuid": "3929ac57-6886-42de-aa76-cadabd5c9f8a"
+                      "instanceGuid": "ab241dba-e677-47f7-bdcd-04047b8866b3"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "bb67a211-d0a1-4d4a-8899-5161c02b79cf",
+                      "instanceGuid": "4713b75a-ee82-423f-928a-6c6a868faf8f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2778,7 +2792,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b7cb7545-7ac3-4d78-8a30-b5e2e3d2751e",
+                      "instanceGuid": "d1afe20c-5b72-4787-8e5b-b96edebe46f2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2802,7 +2816,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5f485d9f-8d74-49ec-a520-f9ca14ddb0ca",
+                      "instanceGuid": "0f7bbe6b-137f-4c99-8327-b6f5b5e1781a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -2826,7 +2840,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "3d886299-bcdc-4a3a-bf90-6ecf15be4b97",
+                      "instanceGuid": "51861612-e559-4ada-9688-d954b664d53e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -2852,12 +2866,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "722d7b8a-f834-4891-a411-958eb1eaf6dd"
+                      "instanceGuid": "369aec6e-631d-4936-a39a-e9abe757959e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f529f22e-91df-45dd-9c6d-d5e2cbf00fe3",
+                      "instanceGuid": "50546cac-ed7e-4fa0-922e-93eed02a7a7c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2881,7 +2895,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8c983d2c-6c1d-49a8-8f57-7f0779a4c4f0",
+                      "instanceGuid": "dd7c2d07-17b5-435a-8378-8f0fd35de1de",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2892,13 +2906,13 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       },
       "ContractFailureKind": {
         "$ref": "System.Diagnostics.Contracts#/components/schemas/ContractFailureKind",
-        "x-namespace": "System.Diagnostics.Contracts",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Contracts",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

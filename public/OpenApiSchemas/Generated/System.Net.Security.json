@@ -8,7 +8,7 @@
   "components": {
     "schemas": {
       "AuthenticationLevel": {
-        "title": "AuthenticationLevel",
+        "title": "Authentication Level",
         "type": "integer",
         "description": "Specifies client requirements for authentication and impersonation when using the  class and derived classes to request a resource.",
         "enum": [
@@ -21,11 +21,11 @@
           "MutualAuthRequested",
           "MutualAuthRequired"
         ],
-        "x-namespace": "System.Net.Security",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net.Security",
+        "assembly": "System.Net.Primitives"
       },
       "SslPolicyErrors": {
-        "title": "SslPolicyErrors",
+        "title": "Ssl Policy Errors",
         "type": "integer",
         "description": "Enumerates Secure Socket Layer (SSL) policy errors.",
         "enum": [
@@ -40,8 +40,8 @@
           "RemoteCertificateNameMismatch",
           "RemoteCertificateChainErrors"
         ],
-        "x-namespace": "System.Net.Security",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net.Security",
+        "assembly": "System.Net.Primitives"
       }
     }
   }

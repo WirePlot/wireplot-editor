@@ -8,10 +8,12 @@
   "components": {
     "schemas": {
       "DeserializationToken": {
-        "title": "DeserializationToken",
-        "type": "object",
+        "title": "Deserialization Token",
+        "type": "DeserializationToken",
         "description": null,
-        "x-methods": {
+        "properties": {},
+        "kind": "struct",
+        "methods": {
           "Dispose": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/DeserializationToken"
@@ -26,7 +28,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "65bd92d8-8eb4-43cb-87c5-76cf4c644c94",
+                      "instanceGuid": "1f03971c-38f5-4a01-82a1-72ea7993f80c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -52,12 +54,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "5ee777e0-ce5a-4325-a9c9-069615c5fce6"
+                      "instanceGuid": "eb517037-3945-4368-afff-73e0317e6420"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b9360586-9c13-45eb-9594-59e584fd4cd6",
+                      "instanceGuid": "9ff61625-2cb6-45cd-89f3-3cc626a87966",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -81,7 +83,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "68e0f6fc-8b4a-4286-a499-21882ca1feec",
+                      "instanceGuid": "1e88a648-a42c-4920-aae0-dce728f6c44d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -105,7 +107,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "265e17f5-8210-4978-8d43-d223daf345b0",
+                      "instanceGuid": "66ef02bb-8ba9-4bea-8f5c-9a6b28be6072",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -129,7 +131,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b40bb7ce-a0a2-4a1c-9c54-9066373c7097",
+                      "instanceGuid": "eb0c3c3c-3b2e-4472-964a-2a37e6b998b8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -140,14 +142,16 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "IDeserializationCallback": {
-        "title": "IDeserializationCallback",
-        "type": "object",
+        "title": "I Deserialization Callback",
+        "type": "IDeserializationCallback",
         "description": "Indicates that a class is to be notified when deserialization of the entire object graph has been completed. This interface is not called when you deserialize with .",
-        "x-methods": {
+        "properties": {},
+        "kind": "interface",
+        "methods": {
           "OnDeserialization": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/IDeserializationCallback"
@@ -164,12 +168,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "sender",
                       "isOptional": false,
-                      "instanceGuid": "ae908710-d2c7-419d-860c-0d3633b1c6a2"
+                      "instanceGuid": "8650e9ee-b76f-4f99-a2ec-1cb8ee3cb902"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9800bf48-0a42-4c1c-8f88-1343d32726ce",
+                      "instanceGuid": "c8e0bac5-bac3-46b3-a630-35cd9665a37a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -180,14 +184,16 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "IObjectReference": {
-        "title": "IObjectReference",
-        "type": "object",
+        "title": "I Object Reference",
+        "type": "IObjectReference",
         "description": "Indicates that the current interface implementer is a reference to another object.",
-        "x-methods": {
+        "properties": {},
+        "kind": "interface",
+        "methods": {
           "GetRealObject": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/IObjectReference"
@@ -204,12 +210,12 @@
                       "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
                       "name": "context",
                       "isOptional": false,
-                      "instanceGuid": "d1fc97d8-6e93-4a7b-b007-41bd5f329631"
+                      "instanceGuid": "c1380cd1-150c-42c8-8bb4-d77378cee51c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "246e9d55-f438-429d-ae96-d4ef2066cf28",
+                      "instanceGuid": "289c267b-5240-4d2c-9ce5-67bbfac1e594",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Object"
@@ -220,14 +226,16 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "ISafeSerializationData": {
-        "title": "ISafeSerializationData",
-        "type": "object",
+        "title": "I Safe Serialization Data",
+        "type": "ISafeSerializationData",
         "description": "Enables serialization of custom exception data in security-transparent code.",
-        "x-methods": {
+        "properties": {},
+        "kind": "interface",
+        "methods": {
           "CompleteDeserialization": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/ISafeSerializationData"
@@ -244,12 +252,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "deserialized",
                       "isOptional": false,
-                      "instanceGuid": "d399d5fb-66ed-43d3-9628-78c7c198799e"
+                      "instanceGuid": "7dfde6b3-0b1c-46d5-84ce-33244196d055"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c500e95d-7010-46e6-84ca-d2feaf60e569",
+                      "instanceGuid": "60d907e9-ca2f-4b65-a55c-855db5a11030",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -260,14 +268,16 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "ISerializable": {
-        "title": "ISerializable",
-        "type": "object",
+        "title": "I Serializable",
+        "type": "ISerializable",
         "description": "Allows an object to control its own serialization and deserialization through binary and XML serialization.",
-        "x-methods": {
+        "properties": {},
+        "kind": "interface",
+        "methods": {
           "GetObjectData": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/ISerializable"
@@ -284,18 +294,18 @@
                       "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
                       "name": "info",
                       "isOptional": false,
-                      "instanceGuid": "3e2f9583-3bae-41ca-ac4b-25bbb58329e2"
+                      "instanceGuid": "93023eee-cb97-4870-9d81-3d5f87986c46"
                     },
                     {
                       "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
                       "name": "context",
                       "isOptional": false,
-                      "instanceGuid": "3768e348-9a07-40af-bf6b-b48a8a715b5c"
+                      "instanceGuid": "025bd2a1-2b0e-4df5-a555-ecf602d5a78b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "6c23f802-f27d-4e96-b5d2-390e3e10ac0a",
+                      "instanceGuid": "d622e67d-b36e-46c3-a17f-4cab0b092623",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -306,19 +316,20 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "OnDeserializedAttribute": {
-        "title": "OnDeserializedAttribute",
-        "type": "object",
+        "title": "On Deserialized Attribute",
+        "type": "OnDeserializedAttribute",
         "description": "When applied to a method, specifies that the method is called immediately after deserialization of an object in an object graph. The order of deserialization relative to other objects in the graph is non-deterministic.",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializedAttribute"
@@ -335,12 +346,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "bffb8df1-e714-4c85-ae57-5ab6d8aaca08"
+                      "instanceGuid": "d99c7101-bf81-48d1-82dd-8f1f671bce5e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "768d25dd-9275-49bc-9542-4a818c7f5b4f",
+                      "instanceGuid": "4e563cf5-faf1-4c1c-aed0-2134163c7bdf",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -364,7 +375,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "396ece63-5b53-461b-91fa-e78ba4193c63",
+                      "instanceGuid": "3002b059-2fea-452f-95cb-ac62ef0ec41b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -390,12 +401,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "ed55228e-a51b-4ca3-8f76-b9a3c9393c69"
+                      "instanceGuid": "6569d4c6-5c33-4ecf-a90e-e652bbe09426"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "cacde4ee-ef40-435c-810b-f4c404a0e684",
+                      "instanceGuid": "fa7b9233-7da1-4bd9-b2f5-0ee0c1f17690",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -419,7 +430,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5d2910eb-0c33-4914-a539-1ec4f914aa04",
+                      "instanceGuid": "473efd24-caf5-475e-af61-cc05fc0f513d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -443,7 +454,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "60664f40-1e7c-4587-a372-0771f9cfd088",
+                      "instanceGuid": "8384185c-83a6-4c5b-85c6-01e4eb578528",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -467,7 +478,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e7f7d47a-650f-4000-960b-30fc803d7674",
+                      "instanceGuid": "155ac2f6-2842-4b1e-ac16-084eb8b3dca2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -478,19 +489,20 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "OnDeserializingAttribute": {
-        "title": "OnDeserializingAttribute",
-        "type": "object",
+        "title": "On Deserializing Attribute",
+        "type": "OnDeserializingAttribute",
         "description": "When applied to a method, specifies that the method is called during deserialization of an object in an object graph. The order of deserialization relative to other objects in the graph is non-deterministic.",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/OnDeserializingAttribute"
@@ -507,12 +519,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "5ab018cd-a735-45b0-8c3c-ebcd013227d5"
+                      "instanceGuid": "8f2bab28-046a-4f19-8239-9b3c6a533e10"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d370b64f-f2df-4744-a555-a44b46c16cbc",
+                      "instanceGuid": "3532dfb6-d387-4c4d-87a2-b359f0732271",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -536,7 +548,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f75191a3-0b8b-4123-932b-980ccb40eda4",
+                      "instanceGuid": "2bae33b4-ca88-4cd4-938b-8508ac6e80f9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -562,12 +574,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "3bfa0ba3-9ea3-4c8c-8298-b367e874592c"
+                      "instanceGuid": "e9bc8b7c-bfdd-4dee-be70-45478e39d435"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "06fd60ca-b61f-4d2d-bd88-b6be2e974865",
+                      "instanceGuid": "f494d069-b3f5-4e37-9245-3431df16b1ca",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -591,7 +603,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a2016cba-935a-4e8c-9cf3-7e4f10b85983",
+                      "instanceGuid": "080cc120-21d3-4311-91ec-416e3981c8d4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -615,7 +627,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b4a1beec-f25d-427b-81d9-9ad1e69cc783",
+                      "instanceGuid": "ee82fa2f-dfd7-490c-b4d2-eb8adc9c28aa",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -639,7 +651,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4194321b-b11f-447d-b2f5-8c243a821ea4",
+                      "instanceGuid": "8e2f0663-01af-4bd9-b19d-87f73664d71b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -650,19 +662,20 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "OnSerializedAttribute": {
-        "title": "OnSerializedAttribute",
-        "type": "object",
+        "title": "On Serialized Attribute",
+        "type": "OnSerializedAttribute",
         "description": "When applied to a method, specifies that the method is called after serialization of an object in an object graph. The order of serialization relative to other objects in the graph is non-deterministic.",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializedAttribute"
@@ -679,12 +692,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "54fca9af-d57d-475e-9745-c5c9b90641cf"
+                      "instanceGuid": "59a612e5-3556-45ec-990a-f5fcf684a75d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "09ff2148-debd-4039-9645-ec8dda64bcc6",
+                      "instanceGuid": "f6a139fd-1a19-46cb-8da9-76676dfb8196",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -708,7 +721,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "475af8af-75f5-4083-ac32-bffca2798538",
+                      "instanceGuid": "bc6b911e-261d-41ab-ba8e-fbddf6c101b4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -734,12 +747,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "72d3b9f1-cbed-419d-b761-7847e491a7a5"
+                      "instanceGuid": "9f8ab03b-a0ef-47d2-84d1-07e1c6773140"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "5d4126b7-4361-46b1-89d6-7667c6adbc15",
+                      "instanceGuid": "e85adc79-7ffc-45a2-b52c-023f844e202c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -763,7 +776,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "59714940-1cf0-4036-a62e-2350768b31c1",
+                      "instanceGuid": "898d2cd7-b8dc-4984-8b06-84eafa25970a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -787,7 +800,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f8f5a59e-9a50-48fe-b514-8e5a38bf284e",
+                      "instanceGuid": "f0628979-1e28-4b1c-bd39-222a7cb2046b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -811,7 +824,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "af17da00-0501-43f9-b429-9c626fe1f3b7",
+                      "instanceGuid": "04feb68f-d426-4e12-b172-d1e76e772a0a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -822,19 +835,20 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "OnSerializingAttribute": {
-        "title": "OnSerializingAttribute",
-        "type": "object",
+        "title": "On Serializing Attribute",
+        "type": "OnSerializingAttribute",
         "description": "When applied to a method, specifies that the method is called during serialization of an object in an object graph. The order of serialization relative to other objects in the graph is non-deterministic.",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/OnSerializingAttribute"
@@ -851,12 +865,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "1ac166d5-75bc-454c-afd6-ea40c32c6218"
+                      "instanceGuid": "f9c19870-f107-494c-8928-959914ebff54"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "1b012183-7f54-443b-a525-f2d169aa87a6",
+                      "instanceGuid": "db2e9b30-9593-4ae7-adf2-dd8c574f03a9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -880,7 +894,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "284c834a-70ae-480a-92fc-9d9cae8d078b",
+                      "instanceGuid": "faeccdc8-7222-4598-b54f-028a0092893f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -906,12 +920,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "1af7372c-3bf6-4521-86e7-76a377b2cf00"
+                      "instanceGuid": "b7e8207c-2a32-44ac-a312-baaf3c734a28"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "5ce7bcf7-63c0-4d3c-b0ec-505c8fdc0d73",
+                      "instanceGuid": "76e36d8f-00cb-4d38-b751-2efda1d816fe",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -935,7 +949,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "eb89f095-5933-48c3-9620-a632989d39d0",
+                      "instanceGuid": "724d62ff-5c6a-4d45-9792-4dd86685a60b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -959,7 +973,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "99a23d13-705f-449b-96b7-0da76659d7a4",
+                      "instanceGuid": "62a77813-ee1b-4a04-b78e-c1b5835495b7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -983,7 +997,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ce69d21e-6a1a-466b-9011-3cfcc8813db3",
+                      "instanceGuid": "098040ec-f18b-4613-b79c-37fa87b75ac1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -994,23 +1008,24 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "OptionalFieldAttribute": {
-        "title": "OptionalFieldAttribute",
-        "type": "object",
+        "title": "Optional Field Attribute",
+        "type": "OptionalFieldAttribute",
         "description": "Specifies that a field can be missing from a serialization stream so that the  and the  does not throw an exception.",
         "properties": {
           "VersionAdded": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/OptionalFieldAttribute"
@@ -1027,12 +1042,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "7af05a54-4265-4438-826b-a3e4830ebdf0"
+                      "instanceGuid": "5404a441-87f5-4717-be49-f47663c4ca6a"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9f7e4df7-1abd-4290-a1c9-ade230c70bb2",
+                      "instanceGuid": "4bf6bb7f-7101-4eba-857e-07e9bbfb8684",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1056,7 +1071,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b71cadce-3515-44c6-a64f-13ab282be8c5",
+                      "instanceGuid": "d09d7be5-6c24-4afd-8496-65d37c505cdc",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1082,12 +1097,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "1183f4eb-bc8f-45b4-bb9d-5ec1f01fe2f1"
+                      "instanceGuid": "bd1a24ce-54db-4bf2-acd9-a0c224371571"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e67570a8-fd83-482f-8ec5-5fdc65061c32",
+                      "instanceGuid": "f95f0926-f248-407a-8f48-4a59995443f7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1111,7 +1126,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1172e343-fec0-4c72-8947-1acbdf160e02",
+                      "instanceGuid": "b11cb475-0675-40a7-8ed1-ef4c312cdfd4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1135,7 +1150,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "894c90a1-20a0-4e3d-9a95-e7c870f054be",
+                      "instanceGuid": "878e48c0-9d30-43ac-bb55-3f3733048ed6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1159,7 +1174,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "78b20164-d217-4a68-94de-bdff0b679171",
+                      "instanceGuid": "385434bf-31e6-4939-963f-8bc95d6cf691",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1170,19 +1185,20 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "SafeSerializationEventArgs": {
-        "title": "SafeSerializationEventArgs",
-        "type": "object",
+        "title": "Safe Serialization Event Args",
+        "type": "SafeSerializationEventArgs",
         "description": "Provides data for the  event.",
         "properties": {
           "StreamingContext": {
             "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "AddSerializedState": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/SafeSerializationEventArgs"
@@ -1199,12 +1215,12 @@
                       "$ref": "System.Runtime.Serialization#/components/schemas/ISafeSerializationData",
                       "name": "serializedState",
                       "isOptional": false,
-                      "instanceGuid": "51639035-8ac6-443f-8a31-91962786a4de"
+                      "instanceGuid": "d91ad262-df89-4a28-b3db-44789bcfdfe8"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "aa5ee3d8-4335-4d16-980c-2151a4e12043",
+                      "instanceGuid": "4e6beaa5-e508-4f61-aa9c-c90d40e8611b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1228,7 +1244,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7ca9a2f5-15dc-45ca-8a64-8e585330ba3a",
+                      "instanceGuid": "857ce2a4-95c6-4e0d-9a9e-fbc2c29e8730",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1252,7 +1268,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "de0af74f-ca5b-4ed8-87ec-b757ec6098d0",
+                      "instanceGuid": "e06ac9c1-fbd2-4ff6-a98a-e96100839f1e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1278,12 +1294,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "503f2882-c984-496f-b2d5-b37d9443ecdc"
+                      "instanceGuid": "0a865ae8-5eaf-4044-87bb-4f8473d4248f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "226838df-bf7b-4687-9afd-2e692788b879",
+                      "instanceGuid": "a33785f9-e011-4253-90d1-8e49d7d4059e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1307,7 +1323,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ed94ad60-be3b-4c3c-bc6b-141a3cf9a17c",
+                      "instanceGuid": "19a862c5-0b0b-4f83-9110-954327e08f10",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1318,19 +1334,19 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "SerializationException": {
-        "title": "SerializationException",
-        "type": "object",
+        "title": "Serialization Exception",
+        "type": "SerializationException",
         "description": "The exception thrown when an error occurs during serialization or deserialization.",
         "properties": {
           "TargetSite": {
             "$ref": "System.Reflection#/components/schemas/MethodBase"
           },
           "Message": {
-            "type": "string"
+            "type": "String"
           },
           "Data": {
             "$ref": "System.Collections#/components/schemas/IDictionary"
@@ -1339,20 +1355,21 @@
             "$ref": "System#/components/schemas/Exception"
           },
           "HelpLink": {
-            "type": "string"
+            "type": "String"
           },
           "Source": {
-            "type": "string"
+            "type": "String"
           },
           "HResult": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           },
           "StackTrace": {
-            "type": "string"
+            "type": "String"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "GetBaseException": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/SerializationException"
@@ -1367,7 +1384,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ea23ca3e-b8fd-4d50-86c9-ffa7660bca13",
+                      "instanceGuid": "d8cbc74e-7bc9-4142-829a-bf749af9b1b5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Exception"
@@ -1393,18 +1410,18 @@
                       "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
                       "name": "info",
                       "isOptional": false,
-                      "instanceGuid": "5d0e5c97-d022-41c3-bf2d-f31394a60908"
+                      "instanceGuid": "5e79756b-a48a-41af-9b41-caecb450679f"
                     },
                     {
                       "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
                       "name": "context",
                       "isOptional": false,
-                      "instanceGuid": "dd632e6b-ba59-462d-98e7-0f17e2ce17a1"
+                      "instanceGuid": "6e72127c-d6ed-4152-86ea-371634d65e49"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "72f4e753-43f6-47a5-a47e-3be5f0796333",
+                      "instanceGuid": "d2602c3b-b176-4f95-8ce9-d559fea98125",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1428,7 +1445,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a39cc677-377b-4d5d-aa01-d0b2b3619ba9",
+                      "instanceGuid": "06be45aa-c89b-40fc-af04-31345395353f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1452,7 +1469,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7d5fc454-eb1c-4f63-b593-6deba04bb439",
+                      "instanceGuid": "48cad735-ddbd-4d3b-ab91-8ac2284b5335",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1478,12 +1495,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "9bef7327-f82a-4e81-89f0-eff32b0ec278"
+                      "instanceGuid": "087ced58-7414-4717-aae7-fc2195d10f1c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "049b6819-af8c-4239-a9b3-01dcb8c5ac29",
+                      "instanceGuid": "00d6adb8-1a22-4ed8-9aec-f8069087430b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1507,7 +1524,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "aed51e02-d6a6-4259-8905-42d13394ef2e",
+                      "instanceGuid": "d6609040-3820-4148-b8f9-d9fc122b0b15",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1518,30 +1535,31 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "SerializationInfo": {
         "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "SerializationEntry": {
-        "title": "SerializationEntry",
-        "type": "object",
+        "title": "Serialization Entry",
+        "type": "SerializationEntry",
         "description": "Holds the value, , and name of a serialized object.",
         "properties": {
           "Value": {
             "$ref": "System#/components/schemas/Object"
           },
           "Name": {
-            "type": "string"
+            "type": "String"
           },
           "ObjectType": {
             "$ref": "System#/components/schemas/Type"
           }
         },
-        "x-methods": {
+        "kind": "struct",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/SerializationEntry"
@@ -1558,12 +1576,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "04327a68-a4d9-4f0b-864f-f9215e15c063"
+                      "instanceGuid": "51fa0c4e-ae09-4a9e-9e9a-6a8e03644087"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8d26f870-3fe5-4385-a4c2-cc18c4de5e40",
+                      "instanceGuid": "7f64a182-ac5c-4e5a-9415-bd12cfbbd108",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1587,7 +1605,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ad1c4972-9a1d-4d54-b990-07a07cac7a3e",
+                      "instanceGuid": "2b99f22a-43cb-4479-b504-629717bb36b8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1611,7 +1629,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "94a180ce-4504-4f68-8fdd-0603cf05b838",
+                      "instanceGuid": "8de287d2-28a7-492f-8251-5c4f8f12d4d3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1635,7 +1653,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a05ec9aa-d971-41d3-8b76-b6ee283a4d6b",
+                      "instanceGuid": "4bd1f6ce-83d1-4719-905e-3b78b59d8a03",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1646,19 +1664,19 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "SerializationInfoEnumerator": {
-        "title": "SerializationInfoEnumerator",
-        "type": "object",
+        "title": "Serialization Info Enumerator",
+        "type": "SerializationInfoEnumerator",
         "description": "Provides a formatter-friendly mechanism for parsing the data in . This class cannot be inherited.",
         "properties": {
           "Current": {
             "$ref": "System.Runtime.Serialization#/components/schemas/SerializationEntry"
           },
           "Name": {
-            "type": "string"
+            "type": "String"
           },
           "Value": {
             "$ref": "System#/components/schemas/Object"
@@ -1667,7 +1685,8 @@
             "$ref": "System#/components/schemas/Type"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "MoveNext": {
             "owner": {
               "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfoEnumerator"
@@ -1682,7 +1701,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0f0a8d98-e387-4823-8041-2fcde712a761",
+                      "instanceGuid": "5d2187b4-9e6c-4784-8699-891fe2fd1af0",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1706,7 +1725,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8445ed50-7f08-4265-b53c-a5a73c093e1d",
+                      "instanceGuid": "8debee62-f36d-48ff-ab84-b0dfd218de72",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1730,7 +1749,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7089115f-e6e6-4c01-82ba-2983749addaf",
+                      "instanceGuid": "1e3535c1-71ba-4b15-a62d-266207cd48d9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1754,7 +1773,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "11cfd81a-b653-4ea2-88e1-edb62bf614d8",
+                      "instanceGuid": "ebe92ffa-d9ca-49c8-8479-d54b53c3fb00",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1780,12 +1799,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "bbaba269-6b9b-4200-842a-b66d60d40632"
+                      "instanceGuid": "f73301cd-dcef-4fb0-850b-4374dca66b71"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2e1edebd-35b3-40dc-9e58-cf06c64dd152",
+                      "instanceGuid": "b1373a3a-97bf-4863-bc4e-80c227f79440",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1809,7 +1828,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e735dd35-40af-4c56-9509-069a37ac6c4a",
+                      "instanceGuid": "bd34566f-2e85-4d12-bab6-b0ef03ea8c67",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1820,18 +1839,18 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "StreamingContext": {
         "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       },
       "StreamingContextStates": {
         "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContextStates",
-        "x-namespace": "System.Runtime.Serialization",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Serialization",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

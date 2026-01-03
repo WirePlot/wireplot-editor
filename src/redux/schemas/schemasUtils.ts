@@ -1,19 +1,26 @@
-import { OpenApiOperationObject, OpenApiPathItemObject, OpenApiResponseObject, ParsedRef, SchemaContainer, WirePlotDocument, WirePlotMethod, WirePlotMethodOverload, WirePlotPropertyObject, WirePlotSchemaObject } from "./schemasTypes";
+import { OpenApiOperationObject, OpenApiPathItemObject, OpenApiResponseObject, ParsedRef, SchemaContainer, WirePlotDocument, WirePlotMethodOverload, WirePlotPropertyObject, WirePlotSchemaObject } from "./schemasTypes";
 import { IntelliSenseNode } from "../../FisUI/IntelliSensePicker";
 import { EntityPair } from "../../Components/EntityPanel/types";
 import { ENodeOperationType } from "../../Nodes/types";
+import { NameHelper } from "../../Helpers/NameHelper";
 
 export class SchemaUtils {
-    static createEmptySchema(): WirePlotSchemaObject {
+    static createEmptySchema(type: string): WirePlotSchemaObject {
         return {
-            type: "object",
+            title: NameHelper.toHumanTitle(type),
+            type: type,
+            kind: "class",
             properties: {},
+            methods: {}
         };
     }
 
     static createStringProperty(title: string): WirePlotPropertyObject {
         return {
             title: title,
+            containerType: "None",
+            type: "String",
+            kind: 'class',
             $ref: "System#/components/schemas/String",
         };
     }
@@ -28,7 +35,7 @@ export class SchemaUtils {
         if (parsed.kind !== "method") {
             return methodRef;
         }
-        return `${parsed.namespace}#/components/schemas/${parsed.schemaName}/x-methods/${newName}`;
+        return `${parsed.namespace}#/components/schemas/${parsed.schemaName}/methods/${newName}`;
     }
 
     /**
@@ -54,10 +61,10 @@ export class SchemaUtils {
 
         // ─────────────────────────────────────────────
         // Method overload
-        // ns#/components/schemas/S/x-methods/M/overloads/O
+        // ns#/components/schemas/S/methods/M/overloads/O
         // ─────────────────────────────────────────────
         const overloadMatch = ref.match(
-            /^([^#]+)#\/components\/schemas\/([^/]+)\/x-methods\/([^/]+)\/overloads\/([^/]+)$/
+            /^([^#]+)#\/components\/schemas\/([^/]+)\/methods\/([^/]+)\/overloads\/([^/]+)$/
         );
         if (overloadMatch) {
             const [, namespace, schemaName, methodName, overloadId] = overloadMatch;
@@ -65,11 +72,11 @@ export class SchemaUtils {
         }
 
         // ─────────────────────────────────────────────
-        // x-method
-        // ns#/components/schemas/S/x-methods/M
+        // method
+        // ns#/components/schemas/S/methods/M
         // ─────────────────────────────────────────────
         const methodMatch = ref.match(
-            /^([^#]+)#\/components\/schemas\/([^/]+)\/x-methods\/([^/]+)$/
+            /^([^#]+)#\/components\/schemas\/([^/]+)\/methods\/([^/]+)$/
         );
         if (methodMatch) {
             const [, namespace, schemaName, methodName] = methodMatch;
@@ -213,7 +220,7 @@ export class SchemaUtils {
         const propertyNodes: IntelliSenseNode[] = [];
 
         for (const [propName, propValue] of Object.entries(schemaDef.properties)) {
-            const prop = propValue as WirePlotSchemaObject;
+            const prop = propValue as WirePlotPropertyObject;
             console.log(JSON.stringify(prop));
             const refType = (prop as any).$ref?.split("/").pop() ?? (prop.type ? prop.type.toString() : "unknown");
 
@@ -274,15 +281,14 @@ export class SchemaUtils {
 
 
     /**
-     * Builds IntelliSense tree from schema extensions ("x-methods").
+     * Builds IntelliSense tree from schema extensions ("methods").
      * Each return type becomes a folder, containing method items.
      */
     static buildXMethodTreeFromSchema(schemaDef: WirePlotSchemaObject, options: { allowStatic?: boolean } = {}): IntelliSenseNode[] {
 
         const { allowStatic = false } = options;
 
-        const xMethods = (schemaDef as { ["x-methods"]?: Record<string, WirePlotMethod> })?.["x-methods"];
-        if (!xMethods) {
+        if (!schemaDef.methods) {
             return [];
         }
 
@@ -292,7 +298,7 @@ export class SchemaUtils {
 
         const groupsMap: Record<string, IntelliSenseNode[]> = {};
 
-        for (const [methodName, method] of Object.entries(xMethods)) {
+        for (const [methodName, method] of Object.entries(schemaDef.methods)) {
 
             const overloads: WirePlotMethodOverload[] = Object.values(method.overloads);
 
@@ -398,22 +404,19 @@ export class SchemaUtils {
         return obj;
     }
 
-
-
     // TO DO REFACTOR NEEDED TODO HOT FIX
     // Are the types correct? Should all of them be a ref? 
     // System#/components/schemas/String
     // System#/components/schemas/Object
     // System#/components/schemas/Int32
-    static createSchemaForType(type: string): WirePlotSchemaObject {
+    static createSchemaPropertyForType(type: string): WirePlotPropertyObject {
         switch (type) {
-            case 'object': return { $ref: 'object', properties: {} } as WirePlotSchemaObject;
-            // case 'array': return { type: 'array', items: { type: 'string' } }; // TODO UPDATE THE ITEMS VALUE
-            case 'boolean': return { type: 'boolean' } as WirePlotSchemaObject;
-            case 'integer': return { type: 'integer' } as WirePlotSchemaObject;
-            case 'number': return { type: 'number' } as WirePlotSchemaObject;
-            case 'string': return { type: 'string' } as WirePlotSchemaObject;
-            default: return { $ref: type } as WirePlotSchemaObject;
+            case 'object': return { $ref: 'object', type: type, containerType: "None", kind: 'class' };
+            case 'boolean': return { type: type, containerType: "None", kind: 'primitive' };
+            case 'integer': return { type: type, containerType: "None", kind: 'primitive' };
+            case 'number': return { type: type, containerType: "None", kind: 'primitive' };
+            case 'string': return { type: type, containerType: "None", kind: 'primitive' };
+            default: return { $ref: type, type: type, containerType: "None", kind: 'primitive' };
         }
     };
 
@@ -443,7 +446,7 @@ export class SchemaUtils {
         );
     }
 
-    public static getUniqueNameForProperty(name: string, properties: { [property: string]: WirePlotSchemaObject } | undefined): string {
+    public static getUniqueNameForProperty(name: string, properties: Record<string, WirePlotPropertyObject> | undefined): string {
         if (!properties) {
             return name;
         }
@@ -507,6 +510,7 @@ export class SchemaUtils {
         parsed.components.schemas[schemaName] = updatedSchema;
     }
 
+    // TODO DEPRECATED TO DO REMOVE IT DELETE IT
     static getSchemaTypeFromProperty(key: string, prop: WirePlotPropertyObject): string {
         // Default fallback
         let schemaType = "Unknown";
@@ -616,7 +620,7 @@ export class SchemaUtils {
             }
 
             // Add new schema
-            schemas[schemaName] = this.createEmptySchema();
+            schemas[schemaName] = this.createEmptySchema(schemaName);
         }
     }
 
@@ -669,7 +673,7 @@ export class SchemaUtils {
         return true;
     }
 
-    static getOperationFromSchemas(schemas: Record<string, SchemaContainer>, pathKey: string, namespace: string): WirePlotSchemaObject | undefined {
+    static getOperationFromSchemas(schemas: Record<string, SchemaContainer>, pathKey: string, namespace: string): OpenApiOperationObject | undefined {
         const [rawPath, method] = pathKey.split('_').slice(1);
 
         if (!rawPath || !method) {
@@ -741,7 +745,7 @@ export class SchemaUtils {
         parsed.components.schemas = updatedSchemas;
     }
 
-    static addSchemaProperty(parsed: WirePlotDocument, schemaName: string, newPropertyName: string, newProperty: WirePlotSchemaObject): void {
+    static addSchemaProperty(parsed: WirePlotDocument, schemaName: string, newPropertyName: string, newProperty: WirePlotPropertyObject): void {
         if (!parsed?.components?.schemas?.[schemaName]) {
             return;
         }

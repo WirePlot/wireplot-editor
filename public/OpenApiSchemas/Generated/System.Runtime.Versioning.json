@@ -8,8 +8,8 @@
   "components": {
     "schemas": {
       "ComponentGuaranteesAttribute": {
-        "title": "ComponentGuaranteesAttribute",
-        "type": "object",
+        "title": "Component Guarantees Attribute",
+        "type": "ComponentGuaranteesAttribute",
         "description": "Defines the compatibility guarantee of a component, type, or type member that may span multiple versions.",
         "properties": {
           "Guarantees": {
@@ -19,7 +19,8 @@
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Versioning#/components/schemas/ComponentGuaranteesAttribute"
@@ -36,12 +37,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "73f221e7-1149-4083-9fdc-b36c74bd529c"
+                      "instanceGuid": "5f79556d-f398-443d-b675-ebb8c082a4a2"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "6f7ca91c-0098-4ff9-bcd4-32740886e181",
+                      "instanceGuid": "768b0a34-5f47-4d0e-9877-a2846e8c5f81",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -65,7 +66,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c1c81708-2317-47f2-9907-25a234e2ac6e",
+                      "instanceGuid": "9c681d95-4a9c-4808-9b61-c9bf5a82e038",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -91,12 +92,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "69d577f3-cd58-4986-840e-6751e9c7cf2c"
+                      "instanceGuid": "83d0d2f2-1338-4d1d-8cfe-f7931a891ebc"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ee94ca33-e678-45b5-98d3-d54d2798437a",
+                      "instanceGuid": "89fae733-89dd-4e9b-9ebc-ac0a9f23830d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -120,7 +121,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "470d54f6-56b2-460c-9b6e-0e4405486ac6",
+                      "instanceGuid": "9dce5cef-aba0-41ba-9254-a9c05023f730",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -144,7 +145,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "22265177-a43a-4509-98b5-88ccb3414b69",
+                      "instanceGuid": "74747647-fb0b-49ee-a18b-bdcfdce30371",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -168,7 +169,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "fd4360a7-de32-4394-95a0-8e8765634b13",
+                      "instanceGuid": "ba285ec4-ef5b-4ebb-8cb4-d8a30954af6b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -179,33 +180,34 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "ComponentGuaranteesOptions": {
         "$ref": "System.Runtime.Versioning#/components/schemas/ComponentGuaranteesOptions",
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "FrameworkName": {
-        "title": "FrameworkName",
-        "type": "object",
+        "title": "Framework Name",
+        "type": "FrameworkName",
         "description": "Represents the name of a version of .NET.",
         "properties": {
           "Identifier": {
-            "type": "string"
+            "type": "String"
           },
           "Version": {
             "$ref": "System#/components/schemas/Version"
           },
           "Profile": {
-            "type": "string"
+            "type": "String"
           },
           "FullName": {
-            "type": "string"
+            "type": "String"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Versioning#/components/schemas/FrameworkName"
@@ -222,12 +224,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "b4f986c4-5ebb-485c-975e-2ec8fc5c826b"
+                      "instanceGuid": "14232289-a8ac-4cbf-8191-e3a613f41e39"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9bb5cec8-df8d-44e7-bb54-d322be475df8",
+                      "instanceGuid": "49754b6f-ef94-43b0-9a8e-50bd1060ad72",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -246,12 +248,12 @@
                       "$ref": "System.Runtime.Versioning#/components/schemas/FrameworkName",
                       "name": "other",
                       "isOptional": false,
-                      "instanceGuid": "7ccd689b-0e8b-4f7f-8e41-7495326bb4ac"
+                      "instanceGuid": "cf823cac-404e-4ae4-bff6-3572e41a38a4"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "61c129e8-e305-44e6-aff9-c49f33bf283f",
+                      "instanceGuid": "fb12e48e-6999-43b2-ac35-6171302914a2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -275,7 +277,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "3b46c4b0-c5e9-43c7-bd97-cb70240ec795",
+                      "instanceGuid": "ef8bc396-e1e2-490d-ae28-d01656d22d43",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -299,7 +301,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "348fe68d-7b25-4bc8-a025-f495113fbbf1",
+                      "instanceGuid": "852b6fde-3982-4429-920f-10ebbdbffe2e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -323,7 +325,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "6f03db4f-47d0-4fd3-89e9-9f4e36288253",
+                      "instanceGuid": "daed39fb-599b-4610-96e8-11ac06ffe0d1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -334,22 +336,23 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "OSPlatformAttribute": {
-        "title": "OSPlatformAttribute",
-        "type": "object",
+        "title": "O S Platform Attribute",
+        "type": "OSPlatformAttribute",
         "description": "Base type for all platform-specific API attributes.",
         "properties": {
           "PlatformName": {
-            "type": "string"
+            "type": "String"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Versioning#/components/schemas/OSPlatformAttribute"
@@ -366,12 +369,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "d225b1bd-c9e7-496b-a1ab-07229578dee7"
+                      "instanceGuid": "65f70a0a-0efc-47f3-89e5-b4677bff3888"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ce359adf-582b-4c63-80ca-79db4935df61",
+                      "instanceGuid": "1041be77-12c4-4509-806f-2440ad409208",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -395,7 +398,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "185eda11-23d2-4782-a189-e8e7abe4526f",
+                      "instanceGuid": "7e21184d-7e17-48e6-92f8-48a07f8734bb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -421,12 +424,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "bbac3380-0cc9-4387-b30c-40c80e256744"
+                      "instanceGuid": "ad9a8783-0730-4939-a9e4-41bda25c745b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "97c67401-3e9c-4275-a404-8a7d659bbd69",
+                      "instanceGuid": "af26d519-82b2-4003-a17f-2999f16ac77e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -450,7 +453,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d5bf1089-ae94-4270-a4b8-1822e4caa6f0",
+                      "instanceGuid": "4f1f195e-5c02-435f-ae72-b3ba6056577c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -474,7 +477,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "9407aca5-3a7e-4d36-b878-475b58e9888b",
+                      "instanceGuid": "77147210-e9a3-4bec-ab70-afadd4278f35",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -498,7 +501,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d83852e5-0a95-49e0-a464-d6ac2d26aaf7",
+                      "instanceGuid": "b1ab0a8b-5706-4931-942a-963edfa10c94",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -509,22 +512,23 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "TargetPlatformAttribute": {
-        "title": "TargetPlatformAttribute",
-        "type": "object",
+        "title": "Target Platform Attribute",
+        "type": "TargetPlatformAttribute",
         "description": "Specifies the operating system that a project targets, for example, Windows or iOS.",
         "properties": {
           "PlatformName": {
-            "type": "string"
+            "type": "String"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Versioning#/components/schemas/TargetPlatformAttribute"
@@ -541,12 +545,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "210248aa-4e43-4c27-b13b-a9c4466462e8"
+                      "instanceGuid": "817f730b-e574-48bc-b174-393053c78a6a"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "833078d4-dcc7-482e-851a-87421efc6c2a",
+                      "instanceGuid": "eebde6de-c994-43bd-9421-4f259ed85105",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -570,7 +574,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2625f31a-5772-4f6f-ba94-8a5f8d1fe6c1",
+                      "instanceGuid": "bd52721d-65b5-4b49-beba-99151aa7800e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -596,12 +600,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "3130a56a-ac30-405f-8bfd-df8103f35b19"
+                      "instanceGuid": "581440cf-8370-40ce-9ef3-309df9cef792"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "17c90ab4-7537-4beb-9e35-bf0476f31b9d",
+                      "instanceGuid": "c167a48c-09bd-4176-8685-7d83dca63a47",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -625,7 +629,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c7262683-7c8b-4c9c-84f3-e1c41f8bf51c",
+                      "instanceGuid": "843a8dbe-e236-40f0-a790-acf1daa220fe",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -649,7 +653,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8f39ed33-e773-4948-b4dc-181a2130b85f",
+                      "instanceGuid": "071fc085-4f13-4c05-8f26-2c6f987014f3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -673,7 +677,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ef157b00-7326-4a41-93bb-407bac19d544",
+                      "instanceGuid": "ade35de5-51ce-4496-832e-c1db5a1d1765",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -684,22 +688,23 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "SupportedOSPlatformAttribute": {
-        "title": "SupportedOSPlatformAttribute",
-        "type": "object",
+        "title": "Supported O S Platform Attribute",
+        "type": "SupportedOSPlatformAttribute",
         "description": "Indicates that an API is supported for a specified platform or operating system. If a version is specified, the API cannot be called from an earlier version. Multiple attributes can be applied to indicate support on multiple operating systems.",
         "properties": {
           "PlatformName": {
-            "type": "string"
+            "type": "String"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Versioning#/components/schemas/SupportedOSPlatformAttribute"
@@ -716,12 +721,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "524e4302-169f-4652-b5a4-d73ff1e989b4"
+                      "instanceGuid": "a386c78e-4299-4e2a-aaab-ce5338d1bcc7"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ec2609d5-ee77-4f1d-997b-70f883f6bd80",
+                      "instanceGuid": "7d0e589e-92b3-4295-aaf3-5150cdfd1fd1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -745,7 +750,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "99019706-a755-4e4e-aa1a-71089f50da7f",
+                      "instanceGuid": "a269700e-0a8c-4671-bda7-a4d4b9086af2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -771,12 +776,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "d3dfaf0e-8c44-42b0-8ec1-f080a4a26670"
+                      "instanceGuid": "3d939f38-4a77-432e-b7b4-02cc56067bab"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "fc476f67-9a68-4806-9e34-972ca06720d7",
+                      "instanceGuid": "d0465a51-8475-428d-a4af-f60abb6727ce",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -800,7 +805,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "af0b02fa-cd75-450d-a21e-405d62de36c7",
+                      "instanceGuid": "924219db-31d0-4d42-8cda-cf7536266fe7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -824,7 +829,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c2a4d190-6e6d-4e57-a4dc-a7285c5b76e5",
+                      "instanceGuid": "389f0868-70f2-4231-b37e-d533fab88f43",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -848,7 +853,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "122849d8-a47e-4914-bce3-5c596a0e9fe2",
+                      "instanceGuid": "1605d6be-cf9d-4155-b2ac-52b9b0ea38c7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -859,25 +864,26 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "UnsupportedOSPlatformAttribute": {
-        "title": "UnsupportedOSPlatformAttribute",
-        "type": "object",
+        "title": "Unsupported O S Platform Attribute",
+        "type": "UnsupportedOSPlatformAttribute",
         "description": "Marks APIs that were removed or are unsupported in a given operating system version.",
         "properties": {
           "Message": {
-            "type": "string"
+            "type": "String"
           },
           "PlatformName": {
-            "type": "string"
+            "type": "String"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Versioning#/components/schemas/UnsupportedOSPlatformAttribute"
@@ -894,12 +900,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "984bb41b-0e3b-49ed-b3af-616a04021be0"
+                      "instanceGuid": "0ecae2cf-14ca-4faf-9e84-9dee31139f65"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "51285945-d984-46f6-b07e-90fdac476539",
+                      "instanceGuid": "58c2b1d4-be8a-4b8d-a438-61e216caf39d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -923,7 +929,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c102de8d-a8b6-4472-b438-ac2ca6c2a3eb",
+                      "instanceGuid": "f8e39a0a-d4a8-4a09-af46-b79f92cec256",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -949,12 +955,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "399915b8-4501-4279-ac50-ee6c012f3fc4"
+                      "instanceGuid": "957eebff-16bd-4ee2-b081-f4eacc4ad96b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8eec8f08-35ac-45ca-a6a3-ad85e30efe88",
+                      "instanceGuid": "c2326f6f-c8d9-4b54-b979-92e008b39ea5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -978,7 +984,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "fe48776e-defa-456e-ae87-24b3ddbe3d5c",
+                      "instanceGuid": "e8fb497f-14f5-449d-908a-aa2464ec893f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1002,7 +1008,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "564e8f83-fb92-4d88-b158-81b3044c6613",
+                      "instanceGuid": "0e5e082b-1ef5-45e6-bb14-64463743ca09",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1026,7 +1032,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "587c5d4f-e4b1-4c12-a086-04e13b8e6b8d",
+                      "instanceGuid": "9771fa80-f084-4d63-b2c0-1e708ecf9f2f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1037,28 +1043,29 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "ObsoletedOSPlatformAttribute": {
-        "title": "ObsoletedOSPlatformAttribute",
-        "type": "object",
+        "title": "Obsoleted O S Platform Attribute",
+        "type": "ObsoletedOSPlatformAttribute",
         "description": "Marks APIs that were obsoleted in a given operating system version.",
         "properties": {
           "Message": {
-            "type": "string"
+            "type": "String"
           },
           "Url": {
-            "type": "string"
+            "type": "String"
           },
           "PlatformName": {
-            "type": "string"
+            "type": "String"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Versioning#/components/schemas/ObsoletedOSPlatformAttribute"
@@ -1075,12 +1082,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "eda2a5b1-22ae-4742-a33d-d609851b0092"
+                      "instanceGuid": "05a4bb42-f9eb-4c08-a80a-e25689c3edaa"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "4da1faf7-af84-4140-9b9e-187a43a7aa7e",
+                      "instanceGuid": "467e30a2-f472-47fe-992c-e69b72f32c63",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1104,7 +1111,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b1b99318-ff16-40bc-a95c-0de5e3570bc3",
+                      "instanceGuid": "f2718a55-fa07-44e3-b88c-97df9b58ae82",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1130,12 +1137,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "75494c4f-f586-4237-821f-ab6aa53b4d47"
+                      "instanceGuid": "417750c7-833e-47bc-83df-11572831125e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "bbd53cf7-ad8e-4598-8c76-6998ab5b2788",
+                      "instanceGuid": "72e05955-5f28-47a3-af5e-93ddc34cb5f3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1159,7 +1166,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c2b2e9e3-e029-4441-81f9-3dba8fc74c93",
+                      "instanceGuid": "9547c287-0554-4b81-a8f7-ee6c27a53e1f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1183,7 +1190,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "340efbd5-d82b-4598-8813-a9e40eb0ba41",
+                      "instanceGuid": "517d43c7-6519-4fb2-990b-c59e86f2ce12",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1207,7 +1214,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f155ab17-0f1c-4cc4-9cee-e7a5dd8236ea",
+                      "instanceGuid": "c9d111a9-133c-40fd-ac60-88ad18224677",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1218,22 +1225,23 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "SupportedOSPlatformGuardAttribute": {
-        "title": "SupportedOSPlatformGuardAttribute",
-        "type": "object",
+        "title": "Supported O S Platform Guard Attribute",
+        "type": "SupportedOSPlatformGuardAttribute",
         "description": "Annotates a custom guard field, property or method with a supported platform name and optional version.\n             Multiple attributes can be applied to indicate guard for multiple supported platforms.",
         "properties": {
           "PlatformName": {
-            "type": "string"
+            "type": "String"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Versioning#/components/schemas/SupportedOSPlatformGuardAttribute"
@@ -1250,12 +1258,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "a8748f39-1ee6-4955-9d4b-737f827ded13"
+                      "instanceGuid": "1454cbf4-9641-43f7-ae3d-1514e2d1c973"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c2d065cd-f119-421e-bca0-01705b99105b",
+                      "instanceGuid": "5be83ec3-dc34-461d-a716-6830963f5ca7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1279,7 +1287,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b42e8f76-f97e-486c-b43b-b1f8eb0392ce",
+                      "instanceGuid": "a9192501-c7bd-423f-ad0f-e6a4d4148c3d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1305,12 +1313,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "444d8577-ede6-462e-9797-8aa19f4175a6"
+                      "instanceGuid": "e940e131-dfc7-4dc3-a675-f176ea8968d1"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "549ee8b3-63bc-4ddf-9792-922c586ae397",
+                      "instanceGuid": "e95b0dda-f57f-432c-9f23-5c3c8786c26b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1334,7 +1342,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "19474e7e-eea6-4bd4-8c75-1be20670189a",
+                      "instanceGuid": "755c21fa-d94d-464c-a97d-01d7159d0fd3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1358,7 +1366,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b17784d4-343a-4563-85a5-574d42a55a31",
+                      "instanceGuid": "2b1dfc4e-3ba4-403b-a8b1-4e2d5f85964c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1382,7 +1390,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1735a7e5-3dd9-4804-a657-1e98326a3934",
+                      "instanceGuid": "b1f5b53f-a33b-45ae-b344-c842a0985685",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1393,22 +1401,23 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "UnsupportedOSPlatformGuardAttribute": {
-        "title": "UnsupportedOSPlatformGuardAttribute",
-        "type": "object",
+        "title": "Unsupported O S Platform Guard Attribute",
+        "type": "UnsupportedOSPlatformGuardAttribute",
         "description": "Annotates the custom guard field, property or method with an unsupported platform name and optional version.\n             Multiple attributes can be applied to indicate guard for multiple unsupported platforms.",
         "properties": {
           "PlatformName": {
-            "type": "string"
+            "type": "String"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Versioning#/components/schemas/UnsupportedOSPlatformGuardAttribute"
@@ -1425,12 +1434,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "babddd0b-a6d3-418a-8b28-046689f0a828"
+                      "instanceGuid": "9d7747ae-16f8-414e-a50e-fa1e72a73106"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "17ab744b-f083-46ae-9689-d0801d5629e6",
+                      "instanceGuid": "8c6b5303-19a4-421c-9c50-13983a66536a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1454,7 +1463,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ff90b125-d4c5-49ec-b946-ba51c2acf6ef",
+                      "instanceGuid": "5a38a7a3-8a9c-49ce-874e-2a443e6052a8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1480,12 +1489,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "3d20c3c4-280d-4545-9a3b-eede921ca705"
+                      "instanceGuid": "11230b3c-1cf9-474a-9986-8f81d87472d3"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "61d9b945-c634-4a78-9abe-d334334711cd",
+                      "instanceGuid": "2d9e3d61-f0ec-4019-a4b2-2eba9741cfea",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1509,7 +1518,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "30b33c98-26b8-4443-8981-b6bc16ef9eca",
+                      "instanceGuid": "92109530-c59b-4d2f-808f-ab6d0dc8210a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1533,7 +1542,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e66d0d65-0477-4b8d-b5a1-d7ff1fd62946",
+                      "instanceGuid": "aa1724a4-53fd-4bb9-b095-10fe76cac3ee",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1557,7 +1566,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "84dab2f0-0e9a-4585-9e10-e9f142ffea9a",
+                      "instanceGuid": "68518462-85db-4338-a746-b1a5448c00e7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1568,25 +1577,26 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "RequiresPreviewFeaturesAttribute": {
-        "title": "RequiresPreviewFeaturesAttribute",
-        "type": "object",
+        "title": "Requires Preview Features Attribute",
+        "type": "RequiresPreviewFeaturesAttribute",
         "description": "Indicates that an API is in preview. This attribute allows call sites to be flagged with a diagnostic that indicates that a preview feature is used. Authors can use this attribute to ship preview features in their assemblies.",
         "properties": {
           "Message": {
-            "type": "string"
+            "type": "String"
           },
           "Url": {
-            "type": "string"
+            "type": "String"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Versioning#/components/schemas/RequiresPreviewFeaturesAttribute"
@@ -1603,12 +1613,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "68f28dec-11b6-42d9-a96c-31d123509f8a"
+                      "instanceGuid": "2ae26374-1099-4a70-a64b-a5442f569f4b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d9ac2cd7-a160-4305-87dc-24d9337236b5",
+                      "instanceGuid": "637a6305-dc5d-458e-bca9-2703b8ce3822",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1632,7 +1642,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1e9a3230-d55d-4540-a3f3-8cd0602a4d2a",
+                      "instanceGuid": "ce34c9fc-a09f-43f4-a135-7b99e89a62c5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1658,12 +1668,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "ab400e50-a2a8-457c-8d8e-77fd52ec2073"
+                      "instanceGuid": "963558ce-8aff-4aa8-a07d-22c957c4c780"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a40e886d-1027-46a5-96eb-48170541303a",
+                      "instanceGuid": "580d1211-8698-40d8-87dd-b10b378cad92",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1687,7 +1697,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "95e20f6d-4d74-4c26-bbf0-328621616ba1",
+                      "instanceGuid": "db11ca5b-e973-45f6-abe4-63b04123c45c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1711,7 +1721,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0e719f8b-d717-4a0a-83f8-4b42d485bf16",
+                      "instanceGuid": "6803a468-d8d6-4c04-ae1f-6cff407a90ed",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1735,7 +1745,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "47f74389-f1f7-4745-8574-ce313e767e6b",
+                      "instanceGuid": "60c5650c-e628-438d-91b4-b4168055bdda",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1746,12 +1756,12 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "ResourceConsumptionAttribute": {
-        "title": "ResourceConsumptionAttribute",
-        "type": "object",
+        "title": "Resource Consumption Attribute",
+        "type": "ResourceConsumptionAttribute",
         "description": "Specifies the resource consumed by the member of a class. This class cannot be inherited.",
         "properties": {
           "ResourceScope": {
@@ -1764,7 +1774,8 @@
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Versioning#/components/schemas/ResourceConsumptionAttribute"
@@ -1781,12 +1792,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "d18f6bae-3c35-4dfe-88a0-3880ceb9fb57"
+                      "instanceGuid": "9f9f0dcd-f5da-4057-8e53-6ae54573d808"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "730909c1-1c94-470c-a8fb-577af1df4611",
+                      "instanceGuid": "c73d62b0-ed9b-4487-b224-c714cf618ead",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1810,7 +1821,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e136d3e4-f238-4ee7-abea-6825ec65d292",
+                      "instanceGuid": "64d2d0ce-59cd-4803-9f8c-c93c2fdbf418",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1836,12 +1847,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "d7c2a779-551c-474e-9cba-4f6d58810c48"
+                      "instanceGuid": "42c9a668-1a36-48b4-9d41-08bd9ff72a4b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ac9ec064-a51a-43e1-ba96-95de0102c0e5",
+                      "instanceGuid": "b458127b-0882-4d2c-bebe-67cba000e4f0",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1865,7 +1876,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a5f02577-5acb-4f8a-a37e-958ea1c54e91",
+                      "instanceGuid": "40b816f1-c09e-488e-b427-af13f530cf96",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1889,7 +1900,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1bf1a381-8d43-4c99-add3-7eaed88252d3",
+                      "instanceGuid": "09678bb1-4f02-4460-854b-73928bf81df3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1913,7 +1924,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8ba00ef2-2665-46dd-8cea-2c4c6c00c121",
+                      "instanceGuid": "ce6978ab-405d-44b7-bee8-848b40a724d4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1924,12 +1935,12 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "ResourceExposureAttribute": {
-        "title": "ResourceExposureAttribute",
-        "type": "object",
+        "title": "Resource Exposure Attribute",
+        "type": "ResourceExposureAttribute",
         "description": "Specifies the resource exposure for a member of a class. This class cannot be inherited.",
         "properties": {
           "ResourceExposureLevel": {
@@ -1939,7 +1950,8 @@
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Versioning#/components/schemas/ResourceExposureAttribute"
@@ -1956,12 +1968,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "fbdf433f-7356-4970-9bda-47c3d6d2cf9c"
+                      "instanceGuid": "8ad44bc3-2e87-4f0c-9423-79b9e4feed66"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2067c48f-d82b-4b3c-9c78-4093b4526373",
+                      "instanceGuid": "f5f0b26a-0d00-4a23-a95d-b9fe23b1db79",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1985,7 +1997,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "fe29abd2-03a3-4770-af2e-8690d182138d",
+                      "instanceGuid": "1565ebd2-93c2-4f2a-a54a-fc0916a29624",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2011,12 +2023,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "3d1d90f9-e1b4-4fcb-84be-02934deac296"
+                      "instanceGuid": "f92db333-845b-4a65-95ad-72ac849862c9"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "70677b0a-1202-45ce-b90b-5d1ef0d6796f",
+                      "instanceGuid": "3470489e-eff1-40e7-96d7-7d0bd6178711",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2040,7 +2052,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e28f487a-0d9e-44de-b7ab-2503f6941871",
+                      "instanceGuid": "342164fd-eba7-4a50-9ede-d438ded9f45f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2064,7 +2076,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "78b523ee-dce2-47cd-b079-993a0beef97f",
+                      "instanceGuid": "47cebc57-8542-4c13-bbf3-84d21e02b7ec",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -2088,7 +2100,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a222985c-4246-41db-b8e5-a97ec7cccf90",
+                      "instanceGuid": "6520f95e-8ea6-49b7-a602-792e665e8dc3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -2099,30 +2111,31 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "ResourceScope": {
         "$ref": "System.Runtime.Versioning#/components/schemas/ResourceScope",
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       },
       "TargetFrameworkAttribute": {
-        "title": "TargetFrameworkAttribute",
-        "type": "object",
+        "title": "Target Framework Attribute",
+        "type": "TargetFrameworkAttribute",
         "description": "Identifies the version of .NET that a particular assembly was compiled against.",
         "properties": {
           "FrameworkName": {
-            "type": "string"
+            "type": "String"
           },
           "FrameworkDisplayName": {
-            "type": "string"
+            "type": "String"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Runtime.Versioning#/components/schemas/TargetFrameworkAttribute"
@@ -2139,12 +2152,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "f3042bb7-94b2-446a-99b7-7a21552ed12e"
+                      "instanceGuid": "033dbff3-25a2-430d-adb2-b59e30bb1ce0"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "441096b0-0f13-4a76-88be-e13921c4d638",
+                      "instanceGuid": "fb5d7211-d9af-4f76-aaa5-475406383dd6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2168,7 +2181,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "29c333cd-d4b2-462c-bf0f-3eefa2a88579",
+                      "instanceGuid": "aa5851e7-503c-49eb-af9c-ce3caef83c6e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2194,12 +2207,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "3582bc35-f2f8-4cb4-8820-73e601766271"
+                      "instanceGuid": "c35d8612-1e48-49d6-b2aa-0267c4338d3d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "48bf76bc-ca99-4079-8371-0083046e6bf7",
+                      "instanceGuid": "d1c9d6dc-6cc0-4ca5-bd5b-36a4c26bbeb9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2223,7 +2236,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "05808858-2e2a-4f8e-8b07-9abd4defa419",
+                      "instanceGuid": "c92d9e8e-47df-4c05-9c4c-a9ccfa8fb6a2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2247,7 +2260,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "6f5e1704-96de-4141-acb7-6544c179e9f9",
+                      "instanceGuid": "0d031f80-a835-47c4-ac4b-dd08a6f89734",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -2271,7 +2284,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "34ef41e3-ca9f-4bdc-8048-8c643858aa44",
+                      "instanceGuid": "18551904-2504-473e-9446-075907d2beeb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -2282,8 +2295,8 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Versioning",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Versioning",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }
