@@ -9,9 +9,11 @@
     "schemas": {
       "Keywords": {
         "title": "Keywords",
-        "type": "object",
+        "type": "Keywords",
         "description": null,
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "GetType": {
             "owner": {
               "$ref": "System.Net#/components/schemas/Keywords"
@@ -26,7 +28,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "db5b25b3-b903-4717-87dc-2853d9479fa4",
+                      "instanceGuid": "4f50530d-d709-4b45-88c6-a8e324571953",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -50,7 +52,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "691d51db-4dde-428c-adeb-e6335c168d65",
+                      "instanceGuid": "0f2b1c7e-59cb-478e-8642-c65f2d8d84d3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -76,12 +78,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "09ad92f4-7833-4d33-b4fd-a763cbe0c0c3"
+                      "instanceGuid": "a8917ced-ee7b-4e42-83b2-6046f1754510"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "da797824-5199-4ea0-9239-f47d3e858eb7",
+                      "instanceGuid": "a5f8b774-48c0-4ec8-aa8a-5be84cdbfb4d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -105,7 +107,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1d6537ff-1383-4f54-9e9c-0a721f57379f",
+                      "instanceGuid": "63309612-7191-4965-a257-14d288a53e50",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -116,11 +118,11 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Http"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Http"
       },
       "AuthenticationSchemes": {
-        "title": "AuthenticationSchemes",
+        "title": "Authentication Schemes",
         "type": "integer",
         "description": "Specifies protocols for authentication.",
         "enum": [
@@ -141,11 +143,11 @@
           "Basic",
           "Anonymous"
         ],
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "CookieVariant": {
-        "title": "CookieVariant",
+        "title": "Cookie Variant",
         "type": "integer",
         "description": null,
         "enum": [
@@ -162,61 +164,62 @@
           "Default",
           "Rfc2965"
         ],
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "Cookie": {
         "title": "Cookie",
-        "type": "object",
+        "type": "Cookie",
         "description": "Provides a set of properties and methods that are used to manage cookies. This class cannot be inherited.",
         "properties": {
           "Comment": {
-            "type": "string"
+            "type": "String"
           },
           "CommentUri": {
             "$ref": "System#/components/schemas/Uri"
           },
           "HttpOnly": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "Discard": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "Domain": {
-            "type": "string"
+            "type": "String"
           },
           "Expired": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "Expires": {
-            "type": "object",
+            "type": "DateTime",
             "format": "date-time"
           },
           "Name": {
-            "type": "string"
+            "type": "String"
           },
           "Path": {
-            "type": "string"
+            "type": "String"
           },
           "Port": {
-            "type": "string"
+            "type": "String"
           },
           "Secure": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "TimeStamp": {
-            "type": "object",
+            "type": "DateTime",
             "format": "date-time"
           },
           "Value": {
-            "type": "string"
+            "type": "String"
           },
           "Version": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Net#/components/schemas/Cookie"
@@ -233,12 +236,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "comparand",
                       "isOptional": false,
-                      "instanceGuid": "6b6580c7-2694-4161-b170-9de50702c9d8"
+                      "instanceGuid": "c5dca6d6-8cea-4d76-910c-02aa09c60cf3"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "35df687b-60f6-461f-a1cc-8ebb15bd2ac0",
+                      "instanceGuid": "0219b6fb-06dc-4091-a16c-553347b23169",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -262,7 +265,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "61f4e098-51a6-4494-bc43-7d5f2f872f28",
+                      "instanceGuid": "bae2f178-8b39-4d5b-a579-adfa16124a00",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -286,7 +289,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "9143aadd-e271-4cbc-adad-e3a73623ae95",
+                      "instanceGuid": "f14ad16a-966f-4a2b-8666-9de08cac4da7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -310,7 +313,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5d18ea59-cd2f-4296-8d39-17d2469eebb8",
+                      "instanceGuid": "0b8bf8e9-1b10-42a1-adf9-a5824963e14f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -321,32 +324,33 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "CookieContainer": {
-        "title": "CookieContainer",
-        "type": "object",
+        "title": "Cookie Container",
+        "type": "CookieContainer",
         "description": "Provides a container for a collection of  objects.",
         "properties": {
           "Capacity": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           },
           "Count": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           },
           "MaxCookieSize": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           },
           "PerDomainCapacity": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Add": {
             "owner": {
               "$ref": "System.Net#/components/schemas/CookieContainer"
@@ -363,12 +367,12 @@
                       "$ref": "System.Net#/components/schemas/Cookie",
                       "name": "cookie",
                       "isOptional": false,
-                      "instanceGuid": "5fb017c4-eea2-463e-81f1-833ddfb01301"
+                      "instanceGuid": "61218944-2826-4747-a69c-ecf15eec8998"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d749bbbd-c7d5-4ecb-943c-62e260fb29ee",
+                      "instanceGuid": "27538f6f-70ce-4c8e-aacd-690e73ec7ba1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -387,12 +391,12 @@
                       "$ref": "System.Net#/components/schemas/CookieCollection",
                       "name": "cookies",
                       "isOptional": false,
-                      "instanceGuid": "16f30e18-eaff-4a12-9dde-aabf27f14f39"
+                      "instanceGuid": "933a6d12-d589-44fd-a327-7723ff7ac604"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "50bff335-8e3d-4fd2-baa0-338c25032d24",
+                      "instanceGuid": "2bf457ae-5966-4974-918b-903f7ef3a434",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -411,18 +415,18 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uri",
                       "isOptional": false,
-                      "instanceGuid": "e1bfe2a8-3eda-4651-915f-2579dbf30251"
+                      "instanceGuid": "461d5b40-db3c-40d5-8086-68fbbc1c4ab5"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/Cookie",
                       "name": "cookie",
                       "isOptional": false,
-                      "instanceGuid": "676e286b-955f-494e-9dbc-f1671730e683"
+                      "instanceGuid": "1b6a396b-e845-4796-b46d-364a2143d4d3"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d4c090a6-f300-4b93-b23e-213e3da9ee91",
+                      "instanceGuid": "db254e38-f56b-42f0-88b7-a3d56fe1e49d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -441,18 +445,18 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uri",
                       "isOptional": false,
-                      "instanceGuid": "7a0c01a6-74a2-4397-a9e0-65b59fdd5a35"
+                      "instanceGuid": "281c8f67-cf73-4657-871a-7ac7c6e4095a"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/CookieCollection",
                       "name": "cookies",
                       "isOptional": false,
-                      "instanceGuid": "6e62c3f2-c88a-4c47-8f54-4442a530676f"
+                      "instanceGuid": "eaec61d8-f061-4cb3-84b2-cdfdf0b36fb8"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "125f0d53-2a9c-4761-88b5-4dd91587ed2a",
+                      "instanceGuid": "5045c387-6d3f-4a50-8aea-37e32f582abb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -478,12 +482,12 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uri",
                       "isOptional": false,
-                      "instanceGuid": "919f57ef-5b37-4beb-8e25-60e0d65bf789"
+                      "instanceGuid": "d5afb542-7081-4458-a2f9-6b2b8be22b06"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "44837d53-1360-4e17-af7a-09176b032977",
+                      "instanceGuid": "e6e00446-2f54-46fb-a0f5-420c9bf4b662",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/CookieCollection"
@@ -507,7 +511,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1993df8a-77d8-4159-8544-901d603a57a7",
+                      "instanceGuid": "c1427a31-dcba-4c61-9361-94e8dcacfa2f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/CookieCollection"
@@ -533,12 +537,12 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uri",
                       "isOptional": false,
-                      "instanceGuid": "6358202d-4dfd-4330-9c9f-f9ff6e998f8d"
+                      "instanceGuid": "9650f256-5eec-4b0c-935a-b7a0f63eb587"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "38c3be3c-2e1c-4c2c-96fe-1b99b226a8fd",
+                      "instanceGuid": "d3d037b1-02c8-4e62-a6f2-5c03767f9688",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -564,18 +568,18 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uri",
                       "isOptional": false,
-                      "instanceGuid": "adbb5984-789b-449e-829f-ce591716dd1f"
+                      "instanceGuid": "3726b06e-acea-4f44-8de1-94d7cf042c0c"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "cookieHeader",
                       "isOptional": false,
-                      "instanceGuid": "c3151c0c-e7d8-40a5-969a-518bd7431c62"
+                      "instanceGuid": "b80e65d9-f31a-47d4-911f-6e5bac898e15"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "0b36a461-b60b-40ff-9157-5504e9544b79",
+                      "instanceGuid": "b8dbde8c-9bde-4e27-a439-56f5035fe4eb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -599,7 +603,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "be262bea-2469-4eab-9861-b8d874cbfbaf",
+                      "instanceGuid": "f51d7070-c4bf-4c54-ab55-eeff4e80378e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -623,7 +627,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c6e895bc-bfbb-412b-ae8d-83860953b5cf",
+                      "instanceGuid": "5aa63325-67d5-46a1-9639-775f32f6fd23",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -649,12 +653,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "96910a2a-0f48-424b-8d3d-a6975b49f8c5"
+                      "instanceGuid": "48352706-bee5-4709-bf6e-02ec99d73204"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2193d18a-aff4-4277-9517-a3e17750dbb7",
+                      "instanceGuid": "ccd1d3dc-f35a-4db0-be01-80d10268c8ec",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -678,7 +682,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e0d22f4e-38ae-4fd9-845f-e99c779e1bcf",
+                      "instanceGuid": "15028279-0c0b-41b6-a055-aa31af6468e2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -689,14 +693,16 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "PathList": {
-        "title": "PathList",
-        "type": "object",
+        "title": "Path List",
+        "type": "PathList",
         "description": null,
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "GetType": {
             "owner": {
               "$ref": "System.Net#/components/schemas/PathList"
@@ -711,7 +717,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "eae34dd1-e224-42d9-9eb0-78ad9258bd24",
+                      "instanceGuid": "588dfa7d-2d54-4a09-9841-a02f28abd5eb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -735,7 +741,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "00b814ec-47c3-4b26-a2d2-3da913cdc856",
+                      "instanceGuid": "9a682608-3522-42df-827d-fc377a15206b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -761,12 +767,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "c6de91d5-8d17-42e3-8d44-b043ac0e82fc"
+                      "instanceGuid": "f7f41259-0ac3-48f1-a46a-09fc1061a0c3"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "da9a21ec-1af2-43ec-974c-772f90b83bae",
+                      "instanceGuid": "a21b539c-0690-4c02-aba6-d65babd380dd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -790,7 +796,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "329ec6d6-e3c1-41bf-8f9f-32662c1a4d41",
+                      "instanceGuid": "21695f9b-620f-48e9-8df1-569603345978",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -801,24 +807,24 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "CookieCollection": {
         "$ref": "System.Net#/components/schemas/CookieCollection",
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "CookieException": {
-        "title": "CookieException",
-        "type": "object",
+        "title": "Cookie Exception",
+        "type": "CookieException",
         "description": "The exception that is thrown when an error is made adding a  to a .",
         "properties": {
           "TargetSite": {
             "$ref": "System.Reflection#/components/schemas/MethodBase"
           },
           "Message": {
-            "type": "string"
+            "type": "String"
           },
           "Data": {
             "$ref": "System.Collections#/components/schemas/IDictionary"
@@ -827,20 +833,21 @@
             "$ref": "System#/components/schemas/Exception"
           },
           "HelpLink": {
-            "type": "string"
+            "type": "String"
           },
           "Source": {
-            "type": "string"
+            "type": "String"
           },
           "HResult": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           },
           "StackTrace": {
-            "type": "string"
+            "type": "String"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "GetObjectData": {
             "owner": {
               "$ref": "System.Net#/components/schemas/CookieException"
@@ -857,18 +864,18 @@
                       "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
                       "name": "serializationInfo",
                       "isOptional": false,
-                      "instanceGuid": "7ba36a95-dc61-4a8d-bc9c-bfc360f7409e"
+                      "instanceGuid": "5f554f57-1ebb-4837-881f-a583e57df036"
                     },
                     {
                       "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
                       "name": "streamingContext",
                       "isOptional": false,
-                      "instanceGuid": "eae8a6d0-5598-4d23-9ac1-18f1faf7b62f"
+                      "instanceGuid": "8cf16212-6efd-4ebc-954d-77ab7098f8ad"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "bd298e5d-07fe-47dc-b570-fc85b553de90",
+                      "instanceGuid": "9438da5d-a55d-4252-8e61-76c430bbd376",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -892,7 +899,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b5fb4372-9ea8-4790-a9da-dc6066413191",
+                      "instanceGuid": "39d9f2f2-d032-4d24-af84-13d86d869fa5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Exception"
@@ -916,7 +923,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2ef0e684-2278-4f8c-9e7e-31c88bc3d14d",
+                      "instanceGuid": "4931b2cf-0b1b-4301-98f3-e4b0844cfcea",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -940,7 +947,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e73101b1-211f-4ce3-8944-8f96fd5da9b1",
+                      "instanceGuid": "d4f312f9-dba6-4d1b-a8f4-8fe7a4622043",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -966,12 +973,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "344a55be-1649-4b9e-be33-5eeaa1ddc3df"
+                      "instanceGuid": "5268e041-e0a8-4243-b47d-bca49375cc15"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "db2b0082-9d46-49fc-99ae-e65ce98d4d1f",
+                      "instanceGuid": "68b8db02-a050-4733-83b9-9dd9402cba73",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -995,7 +1002,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4a79c3a5-6b45-4a0d-a5bb-af042f583850",
+                      "instanceGuid": "b2e2cf75-44c8-4386-be9a-ae171a5b5cef",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1006,14 +1013,16 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "CredentialCache": {
-        "title": "CredentialCache",
-        "type": "object",
+        "title": "Credential Cache",
+        "type": "CredentialCache",
         "description": "Provides storage for multiple credentials.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "Add": {
             "owner": {
               "$ref": "System.Net#/components/schemas/CredentialCache"
@@ -1030,24 +1039,24 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uriPrefix",
                       "isOptional": false,
-                      "instanceGuid": "15155b07-a182-4031-844d-af96ed188e51"
+                      "instanceGuid": "eb7a1489-2c04-4474-80f5-6c3cc4388e98"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "authType",
                       "isOptional": false,
-                      "instanceGuid": "b1503604-3f93-47f1-915c-ff62ed7b7114"
+                      "instanceGuid": "35811cb9-49e4-4e7c-b79b-52662709bc3a"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/NetworkCredential",
                       "name": "cred",
                       "isOptional": false,
-                      "instanceGuid": "3d1c2c2b-f7a1-4839-ac28-1d20106dd647"
+                      "instanceGuid": "23ddb122-31f4-4008-bba4-bf6163e7ca52"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c8b068ea-5f41-4dcf-adad-fa04de0237d5",
+                      "instanceGuid": "1e211263-793a-48ae-99fa-316be2cc364c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1063,34 +1072,34 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "4e49c9a4-1a08-4125-8509-af9e23ce1288"
+                      "instanceGuid": "d9f6a71d-4357-4bea-aa4b-19ab9e1d191b"
                     },
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "port",
                       "isOptional": false,
-                      "instanceGuid": "b9ebfeb1-57e1-4ab3-9d52-164a87839395"
+                      "instanceGuid": "090e3324-c195-465b-bad9-3c1477ae527a"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "authenticationType",
                       "isOptional": false,
-                      "instanceGuid": "14fcd1f3-1e94-43c1-a246-406822717b91"
+                      "instanceGuid": "8c4411d5-e2bc-4ff9-a33c-ce593b082944"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/NetworkCredential",
                       "name": "credential",
                       "isOptional": false,
-                      "instanceGuid": "30d09bcf-64e4-4e51-ae3d-31afc4d8fefa"
+                      "instanceGuid": "023c0525-1dff-4281-91a2-4f09e7b2d257"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "59ba16d3-8af8-4cbb-b526-60efe77d7889",
+                      "instanceGuid": "1789765c-8a6e-4dab-9781-7ffc3bb1c186",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1116,18 +1125,18 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uriPrefix",
                       "isOptional": false,
-                      "instanceGuid": "65a7552e-915c-4a0a-96a8-060e150f4dd6"
+                      "instanceGuid": "53d6bb73-5478-4fe6-a561-4f99e2764226"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "authType",
                       "isOptional": false,
-                      "instanceGuid": "51bd9a4c-ecd2-4dd6-afe8-7a5fcb3b537a"
+                      "instanceGuid": "3c87cbb5-7c04-4ef2-bf08-cc1b96936db6"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "17b34503-7adc-4cbd-8c7c-87f1310f725f",
+                      "instanceGuid": "bb4e8d6e-c5c2-40c3-b064-8a7b56fc0866",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1143,28 +1152,28 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "717b9fa6-3d80-4690-ad93-16f0e0078f03"
+                      "instanceGuid": "47991df4-5a04-4dda-8a20-0264ab7330f7"
                     },
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "port",
                       "isOptional": false,
-                      "instanceGuid": "007db347-a524-4c05-a0ef-4dc0171d8008"
+                      "instanceGuid": "c6a86078-8d68-4adb-9186-1bdc89a7e788"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "authenticationType",
                       "isOptional": false,
-                      "instanceGuid": "4ecca93a-ec38-456e-8583-ab9ac7629d58"
+                      "instanceGuid": "3b0718d3-d626-41d0-83e2-f35672bfef00"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c301944f-8565-4374-a050-3c6b9bc499d0",
+                      "instanceGuid": "f65d7939-fef1-4ff3-803f-39bdd91a2ee1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1190,18 +1199,18 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uriPrefix",
                       "isOptional": false,
-                      "instanceGuid": "3a705a7d-eb94-4674-bd9a-781a247bfff7"
+                      "instanceGuid": "acb61e94-7fe1-4e65-b07d-892e08df169e"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "authType",
                       "isOptional": false,
-                      "instanceGuid": "3e3fb764-9919-43cb-bcd1-3bd548b45707"
+                      "instanceGuid": "e6e73972-9465-4c39-a5e1-3c1765b240d6"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "42aa3a84-512b-456a-b436-740a80e8fb7f",
+                      "instanceGuid": "72298c53-df2f-46d3-8d46-cbd92dfa9f62",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/NetworkCredential"
@@ -1217,28 +1226,28 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "15b78f04-13a8-48e7-a53c-548074e906fa"
+                      "instanceGuid": "4384c999-2a23-4ec3-8b7e-2aef6403dce6"
                     },
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "port",
                       "isOptional": false,
-                      "instanceGuid": "addcc53e-0822-4b8d-83e3-1fa08ba38760"
+                      "instanceGuid": "c78e0706-3f9f-4623-be58-aff46b3baa93"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "authenticationType",
                       "isOptional": false,
-                      "instanceGuid": "2b3e5a28-c924-4b4a-8334-5c9e8a4e9d53"
+                      "instanceGuid": "26a75f0c-3c1d-4b23-a9ef-82c290c7aa63"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "840be2e9-bc3a-48a9-af63-bca9609573a9",
+                      "instanceGuid": "a55d65e7-4aaa-49fc-9fc6-a87f836d850e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/NetworkCredential"
@@ -1262,7 +1271,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "cbdcfe36-ab78-41fb-b391-c4fdc27c9117",
+                      "instanceGuid": "0965417d-a043-4423-8cb0-cdda3128d8a7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/IEnumerator"
@@ -1286,7 +1295,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2e177698-e7e0-4e2c-9ffe-741b046d3965",
+                      "instanceGuid": "ca9e91b5-8634-4908-82f3-c7e38cecd798",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1310,7 +1319,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ae6ea5cf-b9ac-4f47-9459-91057db9b0dc",
+                      "instanceGuid": "eeac97a9-5b15-4eca-bf41-9fce17a47dce",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1336,12 +1345,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "a3847f30-5a25-4054-9a81-0d3b217c4c04"
+                      "instanceGuid": "e78966f7-5e84-41c8-9692-d2417ff09b90"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "1fd29f20-e4e5-4d1a-ae24-8fd9f2b0b43f",
+                      "instanceGuid": "3bf1d49a-a94e-4676-86a2-b8cb9a9f79d6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1365,7 +1374,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "669a988e-788d-4333-b4c5-d6453bf7c7b5",
+                      "instanceGuid": "5e823dba-b6b1-4374-8ecc-8c77bdd57741",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1376,11 +1385,11 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "DecompressionMethods": {
-        "title": "DecompressionMethods",
+        "title": "Decompression Methods",
         "type": "integer",
         "description": "Represents the file compression and decompression encoding format to be used to compress the data received in response to an .",
         "enum": [
@@ -1397,26 +1406,27 @@
           "Brotli",
           "All"
         ],
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "DnsEndPoint": {
-        "title": "DnsEndPoint",
-        "type": "object",
+        "title": "Dns End Point",
+        "type": "DnsEndPoint",
         "description": "Represents a network endpoint as a host name or a string representation of an IP address and a port number.",
         "properties": {
           "Host": {
-            "type": "string"
+            "type": "String"
           },
           "AddressFamily": {
             "$ref": "System.Net.Sockets#/components/schemas/AddressFamily"
           },
           "Port": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Net#/components/schemas/DnsEndPoint"
@@ -1433,12 +1443,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "comparand",
                       "isOptional": false,
-                      "instanceGuid": "1fc9c0fd-5552-4677-8fe6-a7a868f69f51"
+                      "instanceGuid": "14ef88ca-7509-477f-8ea1-0ae7417e9b55"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f9b901de-6d43-49d2-8315-918ef8d13c01",
+                      "instanceGuid": "0a2f3e60-b49a-47f8-985d-6094ad5ebb03",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1462,7 +1472,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "bfa3bb1a-7b2d-4826-a918-75dcf8a3bdb8",
+                      "instanceGuid": "9ccade63-61f4-4b10-a611-6f4e3d1b9a96",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1486,7 +1496,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "fddbeb4f-9666-4427-826f-71f6454a33c7",
+                      "instanceGuid": "66e2ca48-c2f0-4bf9-bc41-450f016b5768",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1510,7 +1520,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "eb111fca-61a1-4625-b0e7-d23c9c1e3e8a",
+                      "instanceGuid": "4b4cda05-5289-4a25-90da-c1b6728f104b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/SocketAddress"
@@ -1536,12 +1546,12 @@
                       "$ref": "System.Net#/components/schemas/SocketAddress",
                       "name": "socketAddress",
                       "isOptional": false,
-                      "instanceGuid": "daafe103-d3e0-4aa4-a923-5126061e885e"
+                      "instanceGuid": "930e3c73-24e1-4546-bb01-f5ead4f3f6bc"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "deb48eba-a4d1-4d95-a5c2-f08d7d0e2208",
+                      "instanceGuid": "9dcf5474-f756-4b6f-ac18-32777ab9e7d6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/EndPoint"
@@ -1565,7 +1575,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e8ba7e7a-1aca-419b-aca0-f8c0629b51e0",
+                      "instanceGuid": "21c09b4d-8014-4d0c-bd9c-de4f22a1c467",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1576,19 +1586,20 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "EndPoint": {
-        "title": "EndPoint",
-        "type": "object",
+        "title": "End Point",
+        "type": "EndPoint",
         "description": "Identifies a network address. This is an  class.",
         "properties": {
           "AddressFamily": {
             "$ref": "System.Net.Sockets#/components/schemas/AddressFamily"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Serialize": {
             "owner": {
               "$ref": "System.Net#/components/schemas/EndPoint"
@@ -1603,7 +1614,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c1c443d8-d21a-4d49-b689-5130f13a41a9",
+                      "instanceGuid": "3157b013-532d-4cd3-b3d5-cdac7c6798ab",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/SocketAddress"
@@ -1629,12 +1640,12 @@
                       "$ref": "System.Net#/components/schemas/SocketAddress",
                       "name": "socketAddress",
                       "isOptional": false,
-                      "instanceGuid": "1b894da7-a7d6-4f10-a8b0-999175f2f309"
+                      "instanceGuid": "431b235f-1767-433d-bba0-8b38ce1b123f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ad8e0454-814a-4cd2-8f7a-313d52e352ef",
+                      "instanceGuid": "1b974095-ea6c-4dee-b1bf-c74ad7ba442c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/EndPoint"
@@ -1658,7 +1669,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "93b830ec-a415-4774-8b10-30bf977d1fd0",
+                      "instanceGuid": "d00e67e9-7d9f-4946-b14f-3931b1a90fb8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1682,7 +1693,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "88985f83-b3ce-42e5-8186-63ed73754e7a",
+                      "instanceGuid": "5fe40713-150c-4e49-be38-4c2bc2d53b9a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1708,12 +1719,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "4509cd5f-f830-4f8b-8f39-563d64734324"
+                      "instanceGuid": "7102bf37-0231-4013-8931-e1a177737997"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e6871763-8611-4bb5-803a-9a937de71b93",
+                      "instanceGuid": "8818b0c6-0b17-42bc-a22a-4e280beb9957",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1737,7 +1748,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a9f3a995-64ba-42cc-8cc6-d5d7b320cf9f",
+                      "instanceGuid": "91e461c0-076b-4ed2-a610-84f945ab5d10",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1748,11 +1759,11 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "HttpStatusCode": {
-        "title": "HttpStatusCode",
+        "title": "Http Status Code",
         "type": "integer",
         "description": "Contains the values of HTTP status codes as defined by RFC 9110, section 15.",
         "enum": [
@@ -1893,14 +1904,16 @@
           "NotExtended",
           "NetworkAuthenticationRequired"
         ],
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "HttpVersion": {
-        "title": "HttpVersion",
-        "type": "object",
+        "title": "Http Version",
+        "type": "HttpVersion",
         "description": "Defines the HTTP version numbers that are supported by the  and  classes.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "GetType": {
             "owner": {
               "$ref": "System.Net#/components/schemas/HttpVersion"
@@ -1915,7 +1928,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "3697efc2-8658-43d7-a4f5-128b3f62aea7",
+                      "instanceGuid": "d1a8ffae-f934-4056-8510-9465fbadb5f5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1939,7 +1952,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a6907685-9907-439f-be40-1f1d88634d9a",
+                      "instanceGuid": "319d1993-f322-4deb-913f-c213260e3e11",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1965,12 +1978,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "5b6bc4d4-db28-441a-987e-454bd410adc0"
+                      "instanceGuid": "3d9d7b6a-c3ad-4046-9d45-9edc78eec446"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9c9c68bf-0f38-420a-a8ee-298f7a6888eb",
+                      "instanceGuid": "39b2a28e-f6ea-432a-a8b7-d9b40f4ab0e5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1994,7 +2007,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "64bd2019-48fb-4a2e-861b-68f9a812e8d5",
+                      "instanceGuid": "0e360dc3-e177-46ea-a1e0-788110643cda",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2005,14 +2018,16 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "ICredentials": {
-        "title": "ICredentials",
-        "type": "object",
+        "title": "I Credentials",
+        "type": "ICredentials",
         "description": "Provides the base authentication interface for retrieving credentials for Web client authentication.",
-        "x-methods": {
+        "properties": {},
+        "kind": "interface",
+        "methods": {
           "GetCredential": {
             "owner": {
               "$ref": "System.Net#/components/schemas/ICredentials"
@@ -2029,18 +2044,18 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uri",
                       "isOptional": false,
-                      "instanceGuid": "920f27bc-e47d-4024-b978-eea9bdc92423"
+                      "instanceGuid": "ee6f72bc-c8e5-4350-b007-4d958fcac974"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "authType",
                       "isOptional": false,
-                      "instanceGuid": "92f138b7-58a9-4ee4-ab26-5260a1679027"
+                      "instanceGuid": "00e56091-659d-4cad-a31b-3de9b47f8994"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "6799731e-470f-40d7-9223-d57f2a5ca342",
+                      "instanceGuid": "c07d6c04-3fe5-4685-9b55-2007caacc430",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/NetworkCredential"
@@ -2051,14 +2066,16 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "ICredentialsByHost": {
-        "title": "ICredentialsByHost",
-        "type": "object",
+        "title": "I Credentials By Host",
+        "type": "ICredentialsByHost",
         "description": "Provides the interface for retrieving credentials for a host, port, and authentication type.",
-        "x-methods": {
+        "properties": {},
+        "kind": "interface",
+        "methods": {
           "GetCredential": {
             "owner": {
               "$ref": "System.Net#/components/schemas/ICredentialsByHost"
@@ -2072,28 +2089,28 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "ea210081-62db-431e-ae9a-79ce44a8d8a9"
+                      "instanceGuid": "3e180f70-c044-4667-bdff-21adf9712e9e"
                     },
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "port",
                       "isOptional": false,
-                      "instanceGuid": "45f65c19-d4a2-4689-aae5-1386fe9db101"
+                      "instanceGuid": "8a96f2aa-c350-441c-8e53-548f5f2f5bbb"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "authenticationType",
                       "isOptional": false,
-                      "instanceGuid": "420856d0-6160-487c-9c90-b424edf082b6"
+                      "instanceGuid": "d4b43d09-424b-4ce6-b929-e03474f4db4e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "db3461bd-968e-4925-907e-28d9148e21dc",
+                      "instanceGuid": "0a888cdb-e699-4861-a5b4-60ac25a7938a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/NetworkCredential"
@@ -2104,45 +2121,46 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "IPAddress": {
-        "title": "IPAddress",
-        "type": "object",
+        "title": "I P Address",
+        "type": "IPAddress",
         "description": "Provides an Internet Protocol (IP) address.",
         "properties": {
           "AddressFamily": {
             "$ref": "System.Net.Sockets#/components/schemas/AddressFamily"
           },
           "ScopeId": {
-            "type": "integer",
+            "type": "Int64",
             "format": "int64"
           },
           "IsIPv6Multicast": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "IsIPv6LinkLocal": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "IsIPv6SiteLocal": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "IsIPv6Teredo": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "IsIPv6UniqueLocal": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "IsIPv4MappedToIPv6": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "Address": {
-            "type": "integer",
+            "type": "Int64",
             "format": "int64"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "IsValid": {
             "owner": {
               "$ref": "System.Net#/components/schemas/IPAddress"
@@ -2159,12 +2177,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "ipSpan",
                       "isOptional": false,
-                      "instanceGuid": "3156617a-8399-49d4-ba66-cacc12c18f7b"
+                      "instanceGuid": "63e2ef52-789b-40c6-9f51-af4a7f81c26b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "321ccfab-eca9-44e6-a4d0-6a994b41b9d5",
+                      "instanceGuid": "92b54b62-ed61-48d9-8a3b-bac662ae9238",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2190,12 +2208,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "utf8Text",
                       "isOptional": false,
-                      "instanceGuid": "38a54806-e9cc-4d54-8330-9471601733b6"
+                      "instanceGuid": "3f1836a4-19c0-4bc7-b5a9-50bca8740aee"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "48a5a5f1-6d2b-4c54-8e7e-7d7dc9a00948",
+                      "instanceGuid": "d323a4fc-cc7f-4949-99a8-22e1a60aa898",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2218,21 +2236,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "ipString",
                       "isOptional": false,
-                      "instanceGuid": "2fb6c34b-b801-4a2c-8b85-842995477dac"
+                      "instanceGuid": "dad1dd06-a54a-440f-bd39-ce7b53fd1373"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPAddress\u0026",
                       "name": "address",
                       "isOptional": false,
-                      "instanceGuid": "355a16e7-5f12-4091-ad31-f6a727a488b2"
+                      "instanceGuid": "ddc5f847-22a1-4988-9567-8e5d9832b30e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2bd7a276-75c7-40b7-9707-db3ab0ec727c",
+                      "instanceGuid": "d003b6ea-8146-407e-a757-e40b3ba73f3f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2251,18 +2269,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "utf8Text",
                       "isOptional": false,
-                      "instanceGuid": "b13c6594-16c4-45b5-8674-d4303b0d886a"
+                      "instanceGuid": "6f754faf-7fb7-44f4-8297-c309039a3238"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPAddress\u0026",
                       "name": "result",
                       "isOptional": false,
-                      "instanceGuid": "5d612a6c-c5a3-467b-a32e-66a06a0e9cc2"
+                      "instanceGuid": "c8c03e12-286d-4b42-9f34-aaaa721d0d4b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "44e8fe07-32ee-4e42-95d7-34f105275743",
+                      "instanceGuid": "f81183e8-2601-4da1-98b3-2d2bf45c8eaf",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2281,18 +2299,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "ipSpan",
                       "isOptional": false,
-                      "instanceGuid": "732dc9df-c6b5-419b-a112-6a9423d3e816"
+                      "instanceGuid": "43ba1fe5-9e5e-46ca-acf7-c94ea3da099d"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPAddress\u0026",
                       "name": "address",
                       "isOptional": false,
-                      "instanceGuid": "baee1175-1dba-4bc1-b357-db34498922ce"
+                      "instanceGuid": "ba088ed9-6e5c-4117-8253-0948ac7205a0"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "6a0e6c49-c9c3-4a90-873e-c6568404217a",
+                      "instanceGuid": "e5a93635-0b2c-4ee4-a24a-fc3f5193543f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2315,15 +2333,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "ipString",
                       "isOptional": false,
-                      "instanceGuid": "6373ac38-9b97-4157-a10d-09222c5b4875"
+                      "instanceGuid": "283b2d55-2e03-4f90-bf00-f6843efd7a46"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "87082601-5021-4e25-8a30-7a7b534f82c5",
+                      "instanceGuid": "87bd07ad-298d-43f4-b513-8c721380d491",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPAddress"
@@ -2342,12 +2360,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "utf8Text",
                       "isOptional": false,
-                      "instanceGuid": "8081685b-b5f7-48d8-bda9-f12db36a8a0c"
+                      "instanceGuid": "0d76f806-27cb-41a5-a962-87f3568f4b2c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "335d9325-5e59-4841-a4ee-275b45d7a599",
+                      "instanceGuid": "b69bf6a4-6999-4dee-a0e8-5a7ff0f534dd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPAddress"
@@ -2366,12 +2384,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "ipSpan",
                       "isOptional": false,
-                      "instanceGuid": "f2b2db6e-6deb-405d-837a-a6752c63d98c"
+                      "instanceGuid": "74f3b6d1-e547-4f77-b2e4-ec004bcdb68e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "facb7821-e47a-42bf-abb1-e92e68b86787",
+                      "instanceGuid": "c8b2fd5e-f02b-4dbd-9560-8cb79d1727d8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPAddress"
@@ -2397,18 +2415,18 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "56e1df8f-1e0a-4abf-b537-06e126d02ecc"
+                      "instanceGuid": "f8143922-a67e-4a12-9441-06fee7d113f6"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "519df509-5d49-4d2c-b562-20935717a852"
+                      "instanceGuid": "166c4618-ded2-40a8-b737-c82468acc699"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "6a6de583-d84b-4700-a998-9cfcc35e42cc",
+                      "instanceGuid": "83e8d06a-ed16-40a0-a2cf-1c1469447fc6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2432,7 +2450,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b6e28a36-a5ed-4867-a3ff-cbc038e37f89",
+                      "instanceGuid": "1e9dbed2-58b7-49de-9ec7-43df2904d437",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Byte[]"
@@ -2456,7 +2474,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b2b76cae-82ea-4b11-a253-0793150359e7",
+                      "instanceGuid": "7250182d-7600-4418-a909-247911e10b94",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -2482,18 +2500,18 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "6a5fb002-a1ed-4d70-ab1d-aab8123992a8"
+                      "instanceGuid": "4bcb7373-ea09-475d-9844-b144deadea5f"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "charsWritten",
                       "isOptional": false,
-                      "instanceGuid": "6c7b66ad-7830-45a0-a194-399a89470c8b"
+                      "instanceGuid": "3ccbb0e6-c306-4725-b2d4-708bdbffa6fe"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8a140b88-48a6-41db-b3a1-746f8965ee2e",
+                      "instanceGuid": "7a7e1b6b-02f0-43e4-a498-087b54c2785f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2512,18 +2530,18 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "utf8Destination",
                       "isOptional": false,
-                      "instanceGuid": "2e01cbc7-09c1-4189-a2a1-fd4a7d561b1b"
+                      "instanceGuid": "9b47f26f-9d27-4d50-8301-9a40ed6c446f"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "9747677d-80ec-4906-92d6-1e5dd9b70775"
+                      "instanceGuid": "49545bbf-8993-4789-80ff-c071e26d3982"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f778311e-ea9e-47c8-8941-3a3d13b8a436",
+                      "instanceGuid": "0a36c9a4-5f56-4bd7-9c58-52b8a8b7a145",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2546,16 +2564,16 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int64",
                       "format": "int64",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "6254d27d-3f79-4013-b56c-92e108c449cc"
+                      "instanceGuid": "b032a48c-f2be-4a26-943c-1008bf93b2fe"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "7a33a6b8-5c3c-4ffc-ace2-80d031e5ca51",
+                      "instanceGuid": "ccf05b55-6ed3-43a1-bfff-e6061eecbad7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int64"
@@ -2571,16 +2589,16 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "80de0db0-d916-4621-9db4-f9677e77e29b"
+                      "instanceGuid": "1b595b57-b82a-4f5e-9c27-88dcb70e2aef"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d8524df7-09f8-494f-a68c-9eaf280bed87",
+                      "instanceGuid": "fce510eb-2de4-4a9a-84e6-abddc1de0451",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2596,15 +2614,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int16",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "fb8ae17f-7050-4ac6-bbca-39a96ea50f69"
+                      "instanceGuid": "a6a73db3-db9a-400e-a901-332b714769be"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "6f0ae0c7-dced-4291-9840-9f71b25db533",
+                      "instanceGuid": "855b363b-54b2-4d46-94ff-f2d3d47c2d56",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int16"
@@ -2627,16 +2645,16 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int64",
                       "format": "int64",
                       "name": "network",
                       "isOptional": false,
-                      "instanceGuid": "76fe3e3d-297d-4d5e-a30d-b9e410d2f831"
+                      "instanceGuid": "e45fe32c-42ba-4afa-a755-a33477296603"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "47a7ed83-8eed-4b33-8f23-c7e68bf0e448",
+                      "instanceGuid": "1773bd7b-50ed-4a05-ae10-c57a07176b4c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int64"
@@ -2652,16 +2670,16 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "network",
                       "isOptional": false,
-                      "instanceGuid": "a4ed3f24-e7b7-44a1-9fbd-8b583b054580"
+                      "instanceGuid": "16cd7109-7930-4545-b794-6a79d3fce1cb"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "42b1c0c2-5ff1-4939-a640-c1539da36539",
+                      "instanceGuid": "e218604f-4dd1-411a-828d-24bf0c498557",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2677,15 +2695,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int16",
                       "name": "network",
                       "isOptional": false,
-                      "instanceGuid": "d2cd9b32-bf57-4c76-b606-6958debce016"
+                      "instanceGuid": "db8e2d76-164f-46f0-9d19-5ed1e72c5052"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "710967a7-3253-4a73-972b-c02f29120a9a",
+                      "instanceGuid": "60c6acfa-a387-4f9d-9621-d88e0cdd428d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int16"
@@ -2711,12 +2729,12 @@
                       "$ref": "System.Net#/components/schemas/IPAddress",
                       "name": "address",
                       "isOptional": false,
-                      "instanceGuid": "57a09a6c-307f-449e-8d53-71fbc9f85313"
+                      "instanceGuid": "1a5f2740-cc4a-43b1-b8df-972b39e3f3a2"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "1bdef41f-c73a-4cd8-aaec-ed5a87abb646",
+                      "instanceGuid": "dcbdf67f-e2c0-4b1e-8421-397eea273414",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2742,12 +2760,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "comparand",
                       "isOptional": false,
-                      "instanceGuid": "7cf7c414-1441-4f19-be2d-5778464c801a"
+                      "instanceGuid": "83471824-8b79-4160-99d2-6bfb240c9468"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "104ad7db-030c-4a99-be60-f8da18af2954",
+                      "instanceGuid": "c891ea15-ae5d-4cc6-83b1-eed51a42589b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2771,7 +2789,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0ff9d011-030d-4c89-b5ea-271b56d11f16",
+                      "instanceGuid": "8d76d5ff-2502-4b81-b4dc-d1e025d5083b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2795,7 +2813,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "67cae9cb-c58d-45e5-8926-a3975fc777ed",
+                      "instanceGuid": "326196f3-01e7-4809-ae33-92372e03e7c9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPAddress"
@@ -2819,7 +2837,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "3ad5880f-e62b-438f-8549-68900b28f915",
+                      "instanceGuid": "b3b75687-fcab-4409-86ad-66afd1391bc9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPAddress"
@@ -2843,7 +2861,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "fc0dfb21-497b-4e60-9ab2-66c050ca9dfe",
+                      "instanceGuid": "1052b992-d4b3-4fc9-b978-d74647b7fcd6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -2854,23 +2872,24 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "IPNetwork": {
-        "title": "IPNetwork",
-        "type": "object",
+        "title": "I P Network",
+        "type": "IPNetwork",
         "description": "Represents an IP network with an  containing the network prefix and an  defining the prefix length.",
         "properties": {
           "BaseAddress": {
             "$ref": "System.Net#/components/schemas/IPAddress"
           },
           "PrefixLength": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           }
         },
-        "x-methods": {
+        "kind": "struct",
+        "methods": {
           "Contains": {
             "owner": {
               "$ref": "System.Net#/components/schemas/IPNetwork"
@@ -2887,12 +2906,12 @@
                       "$ref": "System.Net#/components/schemas/IPAddress",
                       "name": "address",
                       "isOptional": false,
-                      "instanceGuid": "87e5065e-c444-4042-af35-7378cd8aecdd"
+                      "instanceGuid": "3c418dcb-1138-41dd-8754-e71f3d8d009f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "bf841ddb-76ff-4312-a5b0-c49f1e55723d",
+                      "instanceGuid": "a1ba3b0c-9801-4bc2-aee1-df3955d43219",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2915,15 +2934,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "7fa26abb-00c1-4194-b537-891af502185e"
+                      "instanceGuid": "eb27d458-0fed-4a71-94cc-5e7ee0d76630"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "7c51ade4-94d2-45f5-92c6-0d0400b02d35",
+                      "instanceGuid": "3170a7e9-6c93-4f5d-a3c9-c7b754907cad",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPNetwork"
@@ -2942,12 +2961,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "cdae86f9-3d54-4db3-aed3-adf3c9e7f278"
+                      "instanceGuid": "ce588a15-9735-4da2-827b-c1099cb657fa"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "bbd109bc-f621-42d0-b484-02e9ff2431cb",
+                      "instanceGuid": "57bb2f2c-2852-46b4-b911-2f4687dc6057",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPNetwork"
@@ -2966,12 +2985,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "utf8Text",
                       "isOptional": false,
-                      "instanceGuid": "9d868159-d49a-4775-b928-489bd8fbeb99"
+                      "instanceGuid": "ce0f295d-fb4e-4b50-a4e1-6d2dc6af2a6c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8962bfd8-fd03-42be-9fc2-a985fe26d8f6",
+                      "instanceGuid": "e875a73b-59f8-429f-9b8e-dc7e1c222288",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPNetwork"
@@ -2994,21 +3013,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "d1fcddde-4587-43c0-b503-77c7cceb33e0"
+                      "instanceGuid": "4215fc89-2663-462a-a975-715ccf597949"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPNetwork\u0026",
                       "name": "result",
                       "isOptional": false,
-                      "instanceGuid": "3b20447a-7b31-406d-8077-1ee5ae893b86"
+                      "instanceGuid": "1d238eba-4223-4aed-a8b1-c251b1095646"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "5a6c0d62-afa0-497e-b693-a602f4b7ffed",
+                      "instanceGuid": "9b510e34-e635-468c-bb99-4761831ef142",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3027,18 +3046,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "b818dcdb-a197-44e5-b155-9db5fa8de1f9"
+                      "instanceGuid": "5b588543-9f0d-444e-8bd9-aebda2fd1bc7"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPNetwork\u0026",
                       "name": "result",
                       "isOptional": false,
-                      "instanceGuid": "a8547f1e-5792-4464-bd89-bd6d7954c172"
+                      "instanceGuid": "0879680d-189f-45fe-8f09-2fa986767c2e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "af6384ec-a94a-4296-a3b9-fbe4c1c82b47",
+                      "instanceGuid": "15b542a5-bda0-434f-8f3c-779d3cc38681",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3057,18 +3076,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "utf8Text",
                       "isOptional": false,
-                      "instanceGuid": "586d9b80-0a7b-46c5-839b-e5d6f7cebb65"
+                      "instanceGuid": "d62aacd2-cb5c-483d-beb2-0c7c5e31e918"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPNetwork\u0026",
                       "name": "result",
                       "isOptional": false,
-                      "instanceGuid": "915977b0-a669-4df1-bd5c-b0ba1b4123f0"
+                      "instanceGuid": "ef4c851c-78f1-4d70-bcbe-b01695481809"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a80ad689-8410-4a7d-a04a-dac08dfa5cb5",
+                      "instanceGuid": "f1adf81d-de6b-4a3f-8e17-7ac069786b49",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3092,7 +3111,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0703b86e-df83-4993-b5d4-3641dfde1468",
+                      "instanceGuid": "a73dd67d-15b8-416a-acb1-82ff2e363aee",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -3118,18 +3137,18 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "edc4351c-938c-4d68-995c-543fef585019"
+                      "instanceGuid": "a73ab085-b3ec-4fcd-94c2-b1858b5817eb"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "charsWritten",
                       "isOptional": false,
-                      "instanceGuid": "98475eb1-86a8-4452-9b84-ba468fbdc7fc"
+                      "instanceGuid": "8e5e6033-b09c-4e00-9e8a-757c748db1bd"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "65dad430-be52-496f-817d-06d735e78329",
+                      "instanceGuid": "2cf1703d-03b4-4ad6-b77b-d79c019c35f5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3148,18 +3167,18 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "utf8Destination",
                       "isOptional": false,
-                      "instanceGuid": "904fae5a-bc33-41df-94f9-c37fa1cd353f"
+                      "instanceGuid": "ec3ef2ff-8bba-4b06-aa48-eea7aee13cf7"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "94145ca6-2462-41dd-a3a3-19c9717849cf"
+                      "instanceGuid": "9e3bd489-910a-4c00-a0c3-d9841aa82052"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8f486362-9c7c-4e40-989f-8f9c30cc1c37",
+                      "instanceGuid": "199e6789-6cc3-456f-9e4b-26420cbf86d8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3185,12 +3204,12 @@
                       "$ref": "System.Net#/components/schemas/IPNetwork",
                       "name": "other",
                       "isOptional": false,
-                      "instanceGuid": "ed13bae9-10a7-46ef-bf53-496b14c9b4ac"
+                      "instanceGuid": "5464c81c-a89a-4633-918e-4ebf2018f647"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a8902729-2b75-49d1-8462-9bd6e76afead",
+                      "instanceGuid": "2e7044c6-91c5-43ed-aed0-ce7402779ec1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3209,12 +3228,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "8590e6ea-ed0f-449f-b8af-b36a6be8d8a1"
+                      "instanceGuid": "6e661c53-1ac8-4723-973e-0a945f773322"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "3c2e30ef-7280-4b1e-bed2-102c8e38e001",
+                      "instanceGuid": "e68881e4-2a14-4d72-b1a0-2dfc02f17eb2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3238,7 +3257,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ad981f01-0865-47db-8a0a-94e9c9bf9ebf",
+                      "instanceGuid": "c530b37f-a5dd-4517-aff8-840d2984c4ce",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -3262,7 +3281,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "32b63a91-eb31-4820-93b8-88f3a193beba",
+                      "instanceGuid": "6201953f-acb4-4a30-8f46-0bd8479939ae",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -3273,12 +3292,12 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "IPEndPoint": {
-        "title": "IPEndPoint",
-        "type": "object",
+        "title": "I P End Point",
+        "type": "IPEndPoint",
         "description": "Represents a network endpoint as an IP address and a port number.",
         "properties": {
           "AddressFamily": {
@@ -3288,11 +3307,12 @@
             "$ref": "System.Net#/components/schemas/IPAddress"
           },
           "Port": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "TryParse": {
             "owner": {
               "$ref": "System.Net#/components/schemas/IPEndPoint"
@@ -3306,21 +3326,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "42015fcd-2db7-487c-bad9-e2d326e9e698"
+                      "instanceGuid": "5d3c4515-8b1e-426e-a52f-db30e6f0b87f"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPEndPoint\u0026",
                       "name": "result",
                       "isOptional": false,
-                      "instanceGuid": "abd4ed7e-9a64-4c4d-bd49-f6d08cf3e895"
+                      "instanceGuid": "79c30a7d-c254-466b-84c6-3c1621af4ea6"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "0b69a4e4-3e4f-49f8-a986-371e4ba227fd",
+                      "instanceGuid": "1dd59f92-4347-45f5-85b9-f8a1c1c5656d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3339,18 +3359,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "e75d3309-3256-4404-b5e3-27fe07ce6c28"
+                      "instanceGuid": "2deb61d9-6b15-4b5c-88ee-42b5735dd6de"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPEndPoint\u0026",
                       "name": "result",
                       "isOptional": false,
-                      "instanceGuid": "6306d2a3-7edb-41ad-a5d5-c666210666ac"
+                      "instanceGuid": "34bafa32-b362-4ddb-9001-3832c66c9e8f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "447b824c-a859-411f-b4fe-90bfcaabfa10",
+                      "instanceGuid": "4c0adea4-4e5b-460f-ae3a-27d019cd9edd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3373,15 +3393,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "d9e499e8-de8f-493c-960a-8d9d15a7b26d"
+                      "instanceGuid": "612fec8d-e782-46da-87a8-335c382350a0"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ff78362e-cdd4-41b8-81d1-723ec397319e",
+                      "instanceGuid": "96df7561-c2a7-430f-9766-b5c27102eb22",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPEndPoint"
@@ -3400,12 +3420,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "433c4918-ea5b-44d8-8b3c-aa37f2f641e6"
+                      "instanceGuid": "374ee3f8-eb61-4db0-990e-ec46fab19f81"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "29db5b9d-ff2a-44d9-8540-414f1ea4b095",
+                      "instanceGuid": "59032f2e-e079-46f2-b5eb-0b50efd78632",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPEndPoint"
@@ -3429,7 +3449,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "cae21bb2-65e4-4a32-ae7d-a49943ffabcd",
+                      "instanceGuid": "ee6d599e-00de-48f6-856a-3cec0f1d0532",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -3453,7 +3473,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "667e21b6-fc76-4d41-a5b3-c09150f54e91",
+                      "instanceGuid": "b11f2331-237d-4198-84b5-3a8a05efaf34",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/SocketAddress"
@@ -3479,12 +3499,12 @@
                       "$ref": "System.Net#/components/schemas/SocketAddress",
                       "name": "socketAddress",
                       "isOptional": false,
-                      "instanceGuid": "84dc95ab-4787-4acb-a27d-7ff1d9278343"
+                      "instanceGuid": "7fb1eb5a-eed3-48f4-aa39-f3d1e92247da"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8f482a95-07ce-4638-9884-2ced0deab2c4",
+                      "instanceGuid": "d37b5945-4a9f-4a29-b7fb-8999a2f6576a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/EndPoint"
@@ -3510,12 +3530,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "comparand",
                       "isOptional": false,
-                      "instanceGuid": "40f4bdb6-46af-4cf6-ac37-2cc5fecea526"
+                      "instanceGuid": "2880bdd2-f3ff-4222-896c-baa3ac47368c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "15cc9f5d-a647-4778-91c9-c4bed0e44b19",
+                      "instanceGuid": "3c08f997-f7c9-4b12-a1a6-61dc08a901af",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3539,7 +3559,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f2f259fc-9636-4930-b6e6-db2587029ebc",
+                      "instanceGuid": "da3f1673-04e2-40f2-9813-1c2a2bbf46ec",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -3563,7 +3583,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "133309de-a0cc-40af-a493-1cfb94efa55d",
+                      "instanceGuid": "5d029890-e0c8-4693-b90f-c12d275570e8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -3574,19 +3594,20 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "IWebProxy": {
-        "title": "IWebProxy",
-        "type": "object",
+        "title": "I Web Proxy",
+        "type": "IWebProxy",
         "description": "Provides the base interface for implementation of proxy access for the  class.",
         "properties": {
           "Credentials": {
             "$ref": "System.Net#/components/schemas/ICredentials"
           }
         },
-        "x-methods": {
+        "kind": "interface",
+        "methods": {
           "GetProxy": {
             "owner": {
               "$ref": "System.Net#/components/schemas/IWebProxy"
@@ -3603,12 +3624,12 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "20fd20e6-f47c-4246-8a6a-004e7a134d2e"
+                      "instanceGuid": "c3747809-4c36-4c4c-b959-e3361c25c432"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "85dad420-f4f9-43e4-b670-c69d71c5e5c4",
+                      "instanceGuid": "432dae8b-ddc2-4d00-89a9-db4d1876b1be",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Uri"
@@ -3634,12 +3655,12 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "92b0cded-b15e-4bd5-8400-d4a6df062aed"
+                      "instanceGuid": "f3bbd187-9522-46e8-b73f-4937acc27476"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "223d72ad-04d4-4581-987d-744429ff638a",
+                      "instanceGuid": "aad6374c-813c-4c0c-9aba-f740c5b8c52c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3650,19 +3671,21 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "NetworkCredential": {
         "$ref": "System.Net#/components/schemas/NetworkCredential",
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "TransportContext": {
-        "title": "TransportContext",
-        "type": "object",
+        "title": "Transport Context",
+        "type": "TransportContext",
         "description": "The  class provides additional context about the underlying transport layer.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "GetChannelBinding": {
             "owner": {
               "$ref": "System.Net#/components/schemas/TransportContext"
@@ -3679,12 +3702,12 @@
                       "$ref": "System.Security.Authentication.ExtendedProtection#/components/schemas/ChannelBindingKind",
                       "name": "kind",
                       "isOptional": false,
-                      "instanceGuid": "23236d00-ebd0-4f70-b0d2-c9532177bb64"
+                      "instanceGuid": "7b1722a7-354e-4c0a-a602-c30970b08fe0"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "851192ee-8f1e-4461-b0ab-d63f7ee6d4e1",
+                      "instanceGuid": "9fb4e845-d656-4e48-ba3e-0760ac96e091",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Security.Authentication.ExtendedProtection#/components/schemas/ChannelBinding"
@@ -3708,7 +3731,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "970063d7-72f8-4b07-aa12-92b4c3f145fd",
+                      "instanceGuid": "4833389e-e0e7-49b6-9251-c1c62af7d26f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -3732,7 +3755,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "22a321e7-4d57-427a-8f1c-e511b8370584",
+                      "instanceGuid": "8b95ef98-22ef-40fa-956b-1189001ffcdc",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -3758,12 +3781,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "2a50a830-28f5-4258-a78e-65463b335b97"
+                      "instanceGuid": "ef427849-d0ab-4cc4-9ee6-d797a1f6ea55"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "151e8274-1da4-4564-9503-359031f10256",
+                      "instanceGuid": "611d861b-e00e-42a0-84ad-8196e0709616",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3787,7 +3810,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e26a9eba-ca2f-4fc9-aebb-c37125c74412",
+                      "instanceGuid": "e22c8c39-6d78-4a68-8fef-f38bb832bfff",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -3798,13 +3821,13 @@
             }
           }
         },
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       },
       "SocketAddress": {
         "$ref": "System.Net#/components/schemas/SocketAddress",
-        "x-namespace": "System.Net",
-        "x-assembly": "System.Net.Primitives"
+        "namespace": "System.Net",
+        "assembly": "System.Net.Primitives"
       }
     }
   }

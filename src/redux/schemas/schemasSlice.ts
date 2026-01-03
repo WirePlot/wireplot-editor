@@ -92,7 +92,7 @@ export const schemasSlice = createSlice({
                 return;
             }
 
-            const method = schema["x-methods"]?.[methodName];
+            const method = schema.methods[methodName];
             if (!method || !method.overloads) return;
 
             const overload = method.overloads?.[overloadId];
@@ -119,12 +119,12 @@ export const schemasSlice = createSlice({
             //     return;
             // }
 
-            // // Ensure x-methods exists
-            // if (!schema["x-methods"]) {
-            //     schema["x-methods"] = [];
+            // // Ensure methods exists
+            // if (!schema["methods"]) {
+            //     schema["methods"] = [];
             // }
 
-            // const methods = schema["x-methods"];
+            // const methods = schema["methods"];
 
             // // Prevent duplicates
             // if (methods.some(m => m.name === methodName)) {

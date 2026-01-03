@@ -8,33 +8,35 @@
   "components": {
     "schemas": {
       "IIdentity": {
-        "title": "IIdentity",
-        "type": "object",
+        "title": "I Identity",
+        "type": "IIdentity",
         "description": "Defines the basic functionality of an identity object.",
         "properties": {
           "Name": {
-            "type": "string"
+            "type": "String"
           },
           "AuthenticationType": {
-            "type": "string"
+            "type": "String"
           },
           "IsAuthenticated": {
-            "type": "boolean"
+            "type": "Boolean"
           }
         },
-        "x-namespace": "System.Security.Principal",
-        "x-assembly": "System.Private.CoreLib"
+        "kind": "interface",
+        "namespace": "System.Security.Principal",
+        "assembly": "System.Private.CoreLib"
       },
       "IPrincipal": {
-        "title": "IPrincipal",
-        "type": "object",
+        "title": "I Principal",
+        "type": "IPrincipal",
         "description": "Defines the basic functionality of a principal object.",
         "properties": {
           "Identity": {
             "$ref": "System.Security.Principal#/components/schemas/IIdentity"
           }
         },
-        "x-methods": {
+        "kind": "interface",
+        "methods": {
           "IsInRole": {
             "owner": {
               "$ref": "System.Security.Principal#/components/schemas/IPrincipal"
@@ -48,15 +50,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "role",
                       "isOptional": false,
-                      "instanceGuid": "69d8e235-1309-4799-929f-f9520abf5ebc"
+                      "instanceGuid": "167b1e34-a58c-455f-9ddc-6aba8190fd2b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "7d233460-3367-4d77-80b3-3253a194fbbb",
+                      "instanceGuid": "fdbd7796-f485-4064-a52e-eca75323af75",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -67,11 +69,11 @@
             }
           }
         },
-        "x-namespace": "System.Security.Principal",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Security.Principal",
+        "assembly": "System.Private.CoreLib"
       },
       "PrincipalPolicy": {
-        "title": "PrincipalPolicy",
+        "title": "Principal Policy",
         "type": "integer",
         "description": "Specifies how principal and identity objects should be created for an application domain. The default is .",
         "enum": [
@@ -84,11 +86,11 @@
           "NoPrincipal",
           "WindowsPrincipal"
         ],
-        "x-namespace": "System.Security.Principal",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Security.Principal",
+        "assembly": "System.Private.CoreLib"
       },
       "TokenImpersonationLevel": {
-        "title": "TokenImpersonationLevel",
+        "title": "Token Impersonation Level",
         "type": "integer",
         "description": "Defines security impersonation levels. Security impersonation levels govern the degree to which a server process can act on behalf of a client process.",
         "enum": [
@@ -105,8 +107,8 @@
           "Impersonation",
           "Delegation"
         ],
-        "x-namespace": "System.Security.Principal",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Security.Principal",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

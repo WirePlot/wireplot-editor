@@ -8,10 +8,12 @@
   "components": {
     "schemas": {
       "IProducerConsumerCollection\u00601": {
-        "title": "IProducerConsumerCollection\u00601",
-        "type": "object",
+        "title": "I Producer Consumer Collection\u00601",
+        "type": "IProducerConsumerCollection\u00601",
         "description": "Defines methods to manipulate thread-safe collections intended for producer/consumer usage. This interface provides a unified representation for producer/consumer collections so that higher level abstractions such as  can use the collection as the underlying storage mechanism.",
-        "x-methods": {
+        "properties": {},
+        "kind": "interface",
+        "methods": {
           "CopyTo": {
             "owner": {
               "$ref": "System.Collections.Concurrent#/components/schemas/IProducerConsumerCollection\u00601"
@@ -28,19 +30,19 @@
                       "$ref": "System.Collections.Concurrent#/components/schemas/T[]",
                       "name": "array",
                       "isOptional": false,
-                      "instanceGuid": "73aae841-f6c4-41e7-824a-d5e88ee846ba"
+                      "instanceGuid": "47b7b476-7004-4552-9111-72599e611212"
                     },
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "index",
                       "isOptional": false,
-                      "instanceGuid": "da99d2cc-9ae6-48c6-b690-4ca5d41ba704"
+                      "instanceGuid": "b6849774-0747-465a-b5e9-bee5f972c282"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "6e1463d6-e06b-4632-926b-15d669c3478d",
+                      "instanceGuid": "d8929eef-019d-4651-9c45-70ac7cc80320",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -66,12 +68,12 @@
                       "$ref": "System.Collections.Concurrent#/components/schemas/T",
                       "name": "item",
                       "isOptional": false,
-                      "instanceGuid": "df17d5d3-b948-4aa8-a1e9-eea61bfc64d7"
+                      "instanceGuid": "afec1546-462b-4076-bedb-a709765754a8"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "6ea162b8-07f3-419c-88e5-1d30ee5f4559",
+                      "instanceGuid": "edab0d82-3dd3-429a-b745-7a704adcb0fb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -97,12 +99,12 @@
                       "$ref": "System.Collections.Concurrent#/components/schemas/T\u0026",
                       "name": "item",
                       "isOptional": false,
-                      "instanceGuid": "3da38f5a-7c03-4832-aa84-533cb571363c"
+                      "instanceGuid": "9f59ebcd-6c0f-4dfd-aac0-5ffc06885ea2"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "4e194bb1-39c8-481f-a67f-6a0f2471649e",
+                      "instanceGuid": "0de86478-d993-4cf2-9e80-2bbeb7557036",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -126,7 +128,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "28dc9f28-ca59-4cc0-aa5a-03c32d8f7951",
+                      "instanceGuid": "d87719fb-9290-4bed-91b7-287725c7009f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections.Concurrent#/components/schemas/T[]"
@@ -137,8 +139,8 @@
             }
           }
         },
-        "x-namespace": "System.Collections.Concurrent",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections.Concurrent",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

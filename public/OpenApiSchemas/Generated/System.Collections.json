@@ -8,29 +8,30 @@
   "components": {
     "schemas": {
       "BitArray": {
-        "title": "BitArray",
-        "type": "object",
+        "title": "Bit Array",
+        "type": "BitArray",
         "description": "Manages a compact array of bit values, which are represented as Booleans, where  indicates that the bit is on (1) and  indicates the bit is off (0).",
         "properties": {
           "Length": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           },
           "Count": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           },
           "SyncRoot": {
             "$ref": "System#/components/schemas/Object"
           },
           "IsSynchronized": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "IsReadOnly": {
-            "type": "boolean"
+            "type": "Boolean"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Get": {
             "owner": {
               "$ref": "System.Collections#/components/schemas/BitArray"
@@ -44,16 +45,16 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "index",
                       "isOptional": false,
-                      "instanceGuid": "673b6ebe-de6e-4ed0-a984-ab87e7784f80"
+                      "instanceGuid": "c8941fa2-9caa-4fa2-a0f3-bf10d0793ec9"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "4437b4d9-cca8-4deb-af45-1d7fa6635148",
+                      "instanceGuid": "aced84de-3616-4920-b90a-1e037a67489b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -76,22 +77,22 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "index",
                       "isOptional": false,
-                      "instanceGuid": "8867617d-b8cc-4ba3-b51c-0d2e240a21d4"
+                      "instanceGuid": "ebd28308-5c9a-486d-a95b-173c63777bda"
                     },
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "de1a8d05-e19b-4301-8dd0-9cc7ed5b5710"
+                      "instanceGuid": "e404de56-4624-4729-a763-df27302cfe52"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "1f58fb93-4f1a-4361-8247-7c90b08c334d",
+                      "instanceGuid": "596f4d74-9357-4e3a-b4a9-af183595672e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -114,15 +115,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "855d9d13-1b7b-4a7e-a2f0-77e862bc42e6"
+                      "instanceGuid": "b4eb71d7-caf4-4d45-bf69-62d416a7e835"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "44676142-32fb-4fb5-a8f8-b2c86b372ce7",
+                      "instanceGuid": "30eee351-aa32-4347-864b-a717a0e8543f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -148,12 +149,12 @@
                       "$ref": "System.Collections#/components/schemas/BitArray",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "c6db52fa-b19a-4839-87e5-6f5f3ac78754"
+                      "instanceGuid": "80f5eb49-c188-4f39-87aa-292365614172"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "cbcdcd42-7b26-44aa-88c3-f3a0e7c325b2",
+                      "instanceGuid": "f4572aff-8ecf-4952-8725-76af9733c5cd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/BitArray"
@@ -179,12 +180,12 @@
                       "$ref": "System.Collections#/components/schemas/BitArray",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "95e938cf-e9b9-4d9c-a357-852588e424fb"
+                      "instanceGuid": "79000670-cda6-47a9-a8ce-6088763d67b6"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "31b3a4d1-085b-4215-98ab-bf521ccbd122",
+                      "instanceGuid": "3652b8b0-4591-4b0c-94fd-de1b10fba7ae",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/BitArray"
@@ -210,12 +211,12 @@
                       "$ref": "System.Collections#/components/schemas/BitArray",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "0bbcb36b-b052-43c3-9dc8-83ef6fd33649"
+                      "instanceGuid": "f95d9c30-470b-479a-aaca-e59abec2f3fe"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8e1832a1-0f61-4920-9d45-0aeeb88d1311",
+                      "instanceGuid": "ec63342c-f867-45e7-be1b-4b5487036e62",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/BitArray"
@@ -239,7 +240,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "69030cad-27db-4058-9567-e0d214a37e3d",
+                      "instanceGuid": "6c1decc1-75fb-4afa-a4dc-40db01a07475",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/BitArray"
@@ -262,16 +263,16 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "count",
                       "isOptional": false,
-                      "instanceGuid": "22322172-91d3-43e6-bde1-cf0cc4bec3b1"
+                      "instanceGuid": "7cb06685-8e7f-4d25-a314-75219ecdff12"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "faf5c73e-1ae5-4e76-af33-0e2b95f751f1",
+                      "instanceGuid": "65185cfe-1f77-4116-bdfc-f61308e0cdf2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/BitArray"
@@ -294,16 +295,16 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "count",
                       "isOptional": false,
-                      "instanceGuid": "e9bcf258-3bbd-43f7-a66b-1274c2b97f8b"
+                      "instanceGuid": "7d7db347-ee7c-4440-b01e-d7b1e461f46f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f930da6e-2f06-4ccf-b21c-722d9388a995",
+                      "instanceGuid": "d1ec9b58-f45e-484c-97cd-7ad0caad5777",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/BitArray"
@@ -329,19 +330,19 @@
                       "$ref": "System#/components/schemas/Array",
                       "name": "array",
                       "isOptional": false,
-                      "instanceGuid": "a999bffe-041b-4deb-8427-8f353be54c07"
+                      "instanceGuid": "6304fba2-1128-44be-aa8f-e3b399252108"
                     },
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "index",
                       "isOptional": false,
-                      "instanceGuid": "0ed28ed7-1dc2-4207-81af-8bb844184391"
+                      "instanceGuid": "d935eb82-51f2-41b1-aced-d06d95d85eec"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2cdb2879-6a19-4cc8-8f59-53a6d0d82bfe",
+                      "instanceGuid": "7cf1a929-c43f-430d-a4b1-2f409103e255",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -365,7 +366,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "40f41147-565e-46e3-ab9f-96af43339897",
+                      "instanceGuid": "2669bf28-ba64-4c06-a55b-26b24ec37c80",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -389,7 +390,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0eb51963-c396-4d90-ac2f-d10c7fec134d",
+                      "instanceGuid": "0676465b-c20d-4c69-86ba-86614e972250",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -413,7 +414,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7bfeba53-adb0-41c6-ba3d-4de1c9411c3c",
+                      "instanceGuid": "bcd61749-0a57-4697-a429-aadedf9df3b5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Object"
@@ -437,7 +438,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "789c103a-d5e9-4ad0-b8e4-d9a263497ec7",
+                      "instanceGuid": "099bc4df-4fce-4da3-9a6f-86154619ee0d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/IEnumerator"
@@ -461,7 +462,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "206c455e-6ed7-41aa-867c-c81f1c20a55a",
+                      "instanceGuid": "5649161e-409e-4ab0-a660-1a95c46ee2a9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -485,7 +486,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b7efe46d-178a-4529-892e-0e6cf752893e",
+                      "instanceGuid": "b919a483-f2b4-4de3-9a76-3385dda6023e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -511,12 +512,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "c33441b7-310c-4dd7-9c60-5a361fe40d8e"
+                      "instanceGuid": "04941f70-e422-4eaa-b810-d88b896a2505"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9282eb22-e727-4fbd-a818-d818937a3918",
+                      "instanceGuid": "edf7cdbc-e5b1-4f40-935f-59dc38c51961",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -540,7 +541,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0ccc1611-0ba2-4f67-ad47-7e638dbe474e",
+                      "instanceGuid": "f55e9c30-d98c-49f1-89fb-025a8d0748d6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -551,14 +552,16 @@
             }
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "Comparer": {
         "title": "Comparer",
-        "type": "object",
+        "type": "Comparer",
         "description": "Compares two objects for equivalence, where string comparisons are case-sensitive.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "GetObjectData": {
             "owner": {
               "$ref": "System.Collections#/components/schemas/Comparer"
@@ -575,18 +578,18 @@
                       "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
                       "name": "info",
                       "isOptional": false,
-                      "instanceGuid": "66b619e6-00ea-4631-940e-479167ad8eac"
+                      "instanceGuid": "9f7b701c-7b63-4e4c-9838-6d5285cd47ff"
                     },
                     {
                       "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
                       "name": "context",
                       "isOptional": false,
-                      "instanceGuid": "e8d176f2-47de-45e4-b874-a8670b0a7023"
+                      "instanceGuid": "a02f1507-5e7a-4dbf-946d-0570cc71daab"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "961c8675-1c19-498c-a9cb-224ec7811c26",
+                      "instanceGuid": "401fbc7a-4df1-4248-a86c-51fbda08fdcb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -612,18 +615,18 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "a",
                       "isOptional": false,
-                      "instanceGuid": "19126070-cb46-47e9-b384-903dec427265"
+                      "instanceGuid": "f0a10f97-076f-4ace-8b10-2f7d99d79d41"
                     },
                     {
                       "$ref": "System#/components/schemas/Object",
                       "name": "b",
                       "isOptional": false,
-                      "instanceGuid": "d4f6e66e-c748-4361-a796-7571e3a668a4"
+                      "instanceGuid": "d0b84518-cc6a-4a4f-81a7-571665fcc33c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "83379af3-05c1-4c4c-9b78-13e32ee90029",
+                      "instanceGuid": "c002f420-8402-41a6-a9f9-8e4c6bf7190e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -647,7 +650,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "fe6a8495-4891-4453-89d7-a24575543a59",
+                      "instanceGuid": "4c7481f7-48f2-4f10-8555-5d5103c875d5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -671,7 +674,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2e0551e0-e8a2-447a-896e-8fd45fe36d50",
+                      "instanceGuid": "07654e0a-1cf1-420d-aa9d-d6e201b54442",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -697,12 +700,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "fc3dc01a-8560-4d3f-b4f4-caaf8f7c19f1"
+                      "instanceGuid": "00dbb602-3a2a-468c-a723-9de7ee29520d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9b483126-7497-4860-bef6-443455d959f7",
+                      "instanceGuid": "e9e2fc75-3057-4e0f-ae41-c3c11cebbfcb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -726,7 +729,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5fc71047-b525-45ba-86ed-c8bd9ef92ef3",
+                      "instanceGuid": "8c3bcab6-aa29-49d3-ae2a-af561694759f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -737,12 +740,12 @@
             }
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "DictionaryEntry": {
-        "title": "DictionaryEntry",
-        "type": "object",
+        "title": "Dictionary Entry",
+        "type": "DictionaryEntry",
         "description": "Defines a dictionary key/value pair that can be set or retrieved.",
         "properties": {
           "Key": {
@@ -752,7 +755,8 @@
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "struct",
+        "methods": {
           "Deconstruct": {
             "owner": {
               "$ref": "System.Collections#/components/schemas/DictionaryEntry"
@@ -769,18 +773,18 @@
                       "$ref": "System#/components/schemas/Object\u0026",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "e68d37a7-c586-43d5-abfd-1c23bc39876f"
+                      "instanceGuid": "30a62fc7-acfb-43e4-921f-2ba78db700a3"
                     },
                     {
                       "$ref": "System#/components/schemas/Object\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "e3734902-938c-475b-9497-b87b51fcd09b"
+                      "instanceGuid": "a87437b1-acf5-4cbf-854e-1c81d9701f09"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "14e1a484-f059-4775-b579-38dde5adc7ba",
+                      "instanceGuid": "fe0205e3-d21d-4958-bef8-e3be50ae0dc7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -804,7 +808,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d469769b-8ce9-47df-afae-3d470539c293",
+                      "instanceGuid": "43a11c1c-de74-4d21-9a90-8b97d0493913",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -830,12 +834,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "0f4df65e-f210-411d-aad1-374f60b02af9"
+                      "instanceGuid": "ce787650-8ac3-4b15-9052-866e9f2394c8"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "7e869a73-d271-488a-95a8-75a6afcb9bee",
+                      "instanceGuid": "67885242-cfcd-40a9-85ad-66de8cc2af24",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -859,7 +863,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "458d6438-5312-4664-8b18-f24f0d942c39",
+                      "instanceGuid": "8a57a451-a4be-4e25-8f50-4abd449d101e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -883,7 +887,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4701e234-2f7d-42a1-a772-a10da414bd37",
+                      "instanceGuid": "6a503717-53b8-44bb-91b7-43546e9f6e1a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -894,22 +898,22 @@
             }
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "Hashtable": {
         "title": "Hashtable",
-        "type": "object",
+        "type": "Hashtable",
         "description": "Represents a collection of key/value pairs that are organized based on the hash code of the key.",
         "properties": {
           "IsReadOnly": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "IsFixedSize": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "IsSynchronized": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "Keys": {
             "$ref": "System.Collections#/components/schemas/ICollection"
@@ -921,11 +925,12 @@
             "$ref": "System#/components/schemas/Object"
           },
           "Count": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Add": {
             "owner": {
               "$ref": "System.Collections#/components/schemas/Hashtable"
@@ -942,18 +947,18 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "886625cb-8a99-4eea-9e35-1e07f7964ba7"
+                      "instanceGuid": "19217bc0-6d2a-48c7-8c40-70ec79495356"
                     },
                     {
                       "$ref": "System#/components/schemas/Object",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "17f89091-4ef3-418a-8966-6ab85b8a97a1"
+                      "instanceGuid": "11c12f3e-458e-4916-a181-99322a8509b0"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f0690269-530e-488a-b66b-b058246251db",
+                      "instanceGuid": "fe3ba156-d353-41c6-8e49-744bfbd3dbac",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -977,7 +982,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "3ce89c4a-3392-441b-a64d-f75b2cefd29e",
+                      "instanceGuid": "8930ec45-2b09-40da-b820-f8ef5f5cbd66",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1001,7 +1006,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2fbf93c4-7285-4d01-85ea-0777dd34c026",
+                      "instanceGuid": "a4debe0e-8c73-4042-a8f3-29c85d2897ea",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Object"
@@ -1027,12 +1032,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "7dc0c841-e18a-4842-8de2-5c6eda133a79"
+                      "instanceGuid": "b65e3897-c460-428c-a464-7d89acf39fd8"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "066a633d-e032-45ea-b781-26e010d1b9ba",
+                      "instanceGuid": "9a8f3d86-e896-4c72-bf7c-c08a9790bf1d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1058,12 +1063,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "c3cb39a3-053c-456d-ad21-185179abce35"
+                      "instanceGuid": "3e3b1790-f94e-47e1-a747-336d656e627c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "4549e5d9-eda9-4e6a-8688-05d35330f5cf",
+                      "instanceGuid": "8254fe94-78f7-45e3-8a7f-891dfb0b5236",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1089,12 +1094,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "ce93d31f-b312-4799-9227-7fbd81dc9e83"
+                      "instanceGuid": "2ea9cd60-2bab-4da5-bf5c-52cfd0b7277a"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8041d6c1-5575-4d5a-9cfd-4e113308e26a",
+                      "instanceGuid": "725439fd-a3ec-4b93-bd95-c9763cf9cf3f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1120,19 +1125,19 @@
                       "$ref": "System#/components/schemas/Array",
                       "name": "array",
                       "isOptional": false,
-                      "instanceGuid": "9928616e-616d-4a27-8c7e-834936206424"
+                      "instanceGuid": "3265a6fd-1d54-4e7a-8d69-aa020d72b325"
                     },
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "arrayIndex",
                       "isOptional": false,
-                      "instanceGuid": "09f2cffa-1881-4677-9f8f-7d7426b46fdc"
+                      "instanceGuid": "6059fe20-6bf1-4095-b9ea-fc1f1dc7da45"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "5cbd6407-e2d4-4552-873a-c1a61072c4b5",
+                      "instanceGuid": "221a033d-f5fa-49af-b80b-2a89765d7c7f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1156,7 +1161,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a958e9f8-887c-4105-bad6-fb9603f9ce44",
+                      "instanceGuid": "ab372f36-9694-4603-bb7a-d60f6a16703d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/IDictionaryEnumerator"
@@ -1182,12 +1187,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "890921c6-1fbb-4134-8db7-bc8fdb17d60c"
+                      "instanceGuid": "6ba5083e-94f9-4c47-842d-5fd50f3193e5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "4ccf65f2-fc96-4025-b7ba-8805346ec893",
+                      "instanceGuid": "2de8cdfa-5392-468e-b524-d1de9c78eddd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1213,12 +1218,12 @@
                       "$ref": "System.Collections#/components/schemas/Hashtable",
                       "name": "table",
                       "isOptional": false,
-                      "instanceGuid": "34218ad5-af16-4e4c-b684-c9937112c49f"
+                      "instanceGuid": "b1f7f31a-076c-4701-af87-88956e17edf7"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "829b9a76-fd22-4852-9cbe-c73da3281fad",
+                      "instanceGuid": "e266f271-c869-481c-9bcc-3927baf0dff3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/Hashtable"
@@ -1244,18 +1249,18 @@
                       "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
                       "name": "info",
                       "isOptional": false,
-                      "instanceGuid": "e671324f-db29-447b-805f-676e6f956323"
+                      "instanceGuid": "aaab7605-7193-4893-a12d-470958fe2cae"
                     },
                     {
                       "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
                       "name": "context",
                       "isOptional": false,
-                      "instanceGuid": "04f77a0c-fe5e-4f95-995f-fe6d2cf563cc"
+                      "instanceGuid": "43f64f26-a682-44f4-a45a-9ccfff811bb6"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "40286a7c-055d-478d-84c6-cb856a64d91e",
+                      "instanceGuid": "1f18e821-941f-425b-b521-10ecb655ec10",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1281,12 +1286,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "sender",
                       "isOptional": false,
-                      "instanceGuid": "e0e3c3c3-490d-408f-9ed9-d77e1a8ed60a"
+                      "instanceGuid": "86535b1f-c3ad-411f-b715-8164281dbedd"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "86dfb529-cc3d-47c0-be09-30e7b41b7144",
+                      "instanceGuid": "f2157e48-1684-4d2e-acb3-f6bead4321e5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1310,7 +1315,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d8dd2729-9505-42c0-8f3e-18d34d85ce65",
+                      "instanceGuid": "b56c15bb-bf84-4802-8ba8-71d5f2149a08",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1334,7 +1339,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4ecab633-5898-4ae8-9dd7-5278669b055c",
+                      "instanceGuid": "c3fff2dd-e4d2-4d86-8f24-79a68612eaf1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1360,12 +1365,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "3c51f911-d517-42a3-83d0-96f1d99b6cb1"
+                      "instanceGuid": "8e62299f-943f-48f1-b76c-9d4c4bc6d8e2"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f47f8749-3d9d-472b-bf28-e1e1d89d800b",
+                      "instanceGuid": "357ad6bd-e5b3-4ce8-a74a-4e69ad65e542",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1389,7 +1394,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f296ba45-3a06-47bd-a247-1a5aa9f91dc3",
+                      "instanceGuid": "ebc048a3-1a56-42c8-9406-86ee22ce0d60",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1400,19 +1405,21 @@
             }
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "ICollection": {
         "$ref": "System.Collections#/components/schemas/ICollection",
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "IComparer": {
-        "title": "IComparer",
-        "type": "object",
+        "title": "I Comparer",
+        "type": "IComparer",
         "description": "Exposes a method that compares two objects.",
-        "x-methods": {
+        "properties": {},
+        "kind": "interface",
+        "methods": {
           "Compare": {
             "owner": {
               "$ref": "System.Collections#/components/schemas/IComparer"
@@ -1429,18 +1436,18 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "x",
                       "isOptional": false,
-                      "instanceGuid": "78e986f9-f6b9-4c34-9d06-c367aab60df2"
+                      "instanceGuid": "e694c93f-fc79-412b-9542-8611f946e07a"
                     },
                     {
                       "$ref": "System#/components/schemas/Object",
                       "name": "y",
                       "isOptional": false,
-                      "instanceGuid": "2205f726-b6b4-411c-b151-e0a0c345cfb1"
+                      "instanceGuid": "1f32bac7-6d3c-4671-80b1-e6116414b958"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "4c9b926a-0de6-4e11-b656-1f65f31462ea",
+                      "instanceGuid": "01ef5515-c3ac-4881-a372-2f6f97249797",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1451,12 +1458,12 @@
             }
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "IDictionary": {
-        "title": "IDictionary",
-        "type": "object",
+        "title": "I Dictionary",
+        "type": "IDictionary",
         "description": "Represents a nongeneric collection of key/value pairs.",
         "properties": {
           "Keys": {
@@ -1466,13 +1473,14 @@
             "$ref": "System.Collections#/components/schemas/ICollection"
           },
           "IsReadOnly": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "IsFixedSize": {
-            "type": "boolean"
+            "type": "Boolean"
           }
         },
-        "x-methods": {
+        "kind": "interface",
+        "methods": {
           "Contains": {
             "owner": {
               "$ref": "System.Collections#/components/schemas/IDictionary"
@@ -1489,12 +1497,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "21c4cae2-f539-464e-931d-75e3441a1464"
+                      "instanceGuid": "2660ca1c-c009-453e-ad2f-37d8da5967ff"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "247d5646-117b-4718-b615-34be4acfd99b",
+                      "instanceGuid": "55e590a1-bdfa-4439-9b7c-6e6cb97150c6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1520,18 +1528,18 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "5459a7de-97e0-4a25-a840-0a290434fbd6"
+                      "instanceGuid": "9d9ad1fa-0f18-445e-bc11-4b22107293cc"
                     },
                     {
                       "$ref": "System#/components/schemas/Object",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "51aa92e0-cff1-43dd-bcfb-0b80732531b1"
+                      "instanceGuid": "7b5715a7-516c-44fb-8768-51e4659fe3a8"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ce81b843-3f4e-4189-95d2-ea1268632bce",
+                      "instanceGuid": "6d98273d-1e71-4de2-b6f3-2d29d506e870",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1555,7 +1563,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "cb83b48d-df95-4018-a613-74d4cf122887",
+                      "instanceGuid": "485ed957-f8bc-439d-b367-bb9f6949f69d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1579,7 +1587,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "256afa35-9d6f-4cbf-a6ea-d2814d29c2a2",
+                      "instanceGuid": "5dafd2c5-b37d-42f5-a08f-d7334f44aa41",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/IDictionaryEnumerator"
@@ -1605,12 +1613,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "aa17d2a8-4667-4c2e-857f-21f5c92d50d1"
+                      "instanceGuid": "cdfc9387-e78e-419a-ae70-fc19bd3a3654"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "73f6300e-2300-4b74-874b-4c79a2072bd8",
+                      "instanceGuid": "eb65e003-d97e-45c8-b91a-4a8b3e26c62d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1621,12 +1629,12 @@
             }
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "IDictionaryEnumerator": {
-        "title": "IDictionaryEnumerator",
-        "type": "object",
+        "title": "I Dictionary Enumerator",
+        "type": "IDictionaryEnumerator",
         "description": "Enumerates the elements of a nongeneric dictionary.",
         "properties": {
           "Key": {
@@ -1639,14 +1647,17 @@
             "$ref": "System.Collections#/components/schemas/DictionaryEntry"
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "kind": "interface",
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "IEnumerable": {
-        "title": "IEnumerable",
-        "type": "object",
+        "title": "I Enumerable",
+        "type": "IEnumerable",
         "description": "Exposes an enumerator, which supports a simple iteration over a non-generic collection.",
-        "x-methods": {
+        "properties": {},
+        "kind": "interface",
+        "methods": {
           "GetEnumerator": {
             "owner": {
               "$ref": "System.Collections#/components/schemas/IEnumerable"
@@ -1661,7 +1672,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a10599d2-4b3c-4101-845b-cf805cb10607",
+                      "instanceGuid": "2f386145-b0f4-4cd6-876e-31509ef6b039",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/IEnumerator"
@@ -1672,19 +1683,20 @@
             }
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "IEnumerator": {
-        "title": "IEnumerator",
-        "type": "object",
+        "title": "I Enumerator",
+        "type": "IEnumerator",
         "description": "Supports a simple iteration over a non-generic collection.",
         "properties": {
           "Current": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "interface",
+        "methods": {
           "MoveNext": {
             "owner": {
               "$ref": "System.Collections#/components/schemas/IEnumerator"
@@ -1699,7 +1711,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "944a38a5-e808-4e7a-8b70-a176be89c447",
+                      "instanceGuid": "e1393714-c0b8-4e1b-a4cf-2745cb2d868c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1723,7 +1735,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4c35e00a-8e0a-4883-84eb-5f00fcca1fc1",
+                      "instanceGuid": "0957cbf5-f483-41c8-8f6c-dc6cd0ecfe25",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1734,14 +1746,16 @@
             }
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "IEqualityComparer": {
-        "title": "IEqualityComparer",
-        "type": "object",
+        "title": "I Equality Comparer",
+        "type": "IEqualityComparer",
         "description": "Defines methods to support the comparison of objects for equality.",
-        "x-methods": {
+        "properties": {},
+        "kind": "interface",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Collections#/components/schemas/IEqualityComparer"
@@ -1758,18 +1772,18 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "x",
                       "isOptional": false,
-                      "instanceGuid": "196abb64-7982-4009-8fe9-68f6d29505fc"
+                      "instanceGuid": "45f112bd-15ab-4f4c-98ad-e5c1d4f5b682"
                     },
                     {
                       "$ref": "System#/components/schemas/Object",
                       "name": "y",
                       "isOptional": false,
-                      "instanceGuid": "ef2d8168-f81a-4541-a148-7925ce790a4a"
+                      "instanceGuid": "a73837f1-ce0b-4ba5-8dd6-f4643ea824e0"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "4c6bf01f-b724-4bc7-b0b1-77e91ed089e2",
+                      "instanceGuid": "f5efdd8b-0840-4fe9-a605-b85fa0fe2f53",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1795,12 +1809,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "aaf2c688-d03c-4e55-b2da-2ec74f8b00fe"
+                      "instanceGuid": "a5273c1c-be51-4625-b348-f8dd5f25e9d8"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e44702d9-ffb5-4944-90fb-f0b1e52d783b",
+                      "instanceGuid": "47967453-d1db-41a9-911e-48663eb24628",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1811,14 +1825,16 @@
             }
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "IHashCodeProvider": {
-        "title": "IHashCodeProvider",
-        "type": "object",
+        "title": "I Hash Code Provider",
+        "type": "IHashCodeProvider",
         "description": "Supplies a hash code for an object, using a custom hash function.",
-        "x-methods": {
+        "properties": {},
+        "kind": "interface",
+        "methods": {
           "GetHashCode": {
             "owner": {
               "$ref": "System.Collections#/components/schemas/IHashCodeProvider"
@@ -1835,12 +1851,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "d13a71e5-1414-418d-abc2-c858b1954ab3"
+                      "instanceGuid": "0f5248c5-186e-44a3-adaf-c79898eca57f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2aebbb93-7024-44d2-a20b-b808ec41210c",
+                      "instanceGuid": "3264dc14-ece7-4a25-bb5f-a00f0af25128",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1851,19 +1867,21 @@
             }
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "IList": {
         "$ref": "System.Collections#/components/schemas/IList",
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "IStructuralComparable": {
-        "title": "IStructuralComparable",
-        "type": "object",
+        "title": "I Structural Comparable",
+        "type": "IStructuralComparable",
         "description": "Supports the structural comparison of collection objects.",
-        "x-methods": {
+        "properties": {},
+        "kind": "interface",
+        "methods": {
           "CompareTo": {
             "owner": {
               "$ref": "System.Collections#/components/schemas/IStructuralComparable"
@@ -1880,18 +1898,18 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "other",
                       "isOptional": false,
-                      "instanceGuid": "f85b0f5f-9b9e-469c-9e5e-2bc893b73d1c"
+                      "instanceGuid": "b0f7ac80-8851-4bca-882b-dff8d6e9aed9"
                     },
                     {
                       "$ref": "System.Collections#/components/schemas/IComparer",
                       "name": "comparer",
                       "isOptional": false,
-                      "instanceGuid": "b11d2b03-436a-41a5-a2d4-58b2f57e76cf"
+                      "instanceGuid": "a61ac539-3f45-43b0-a81e-a226c5eb017a"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "aa1dcb69-e880-48b8-bbf0-033474bb6a2c",
+                      "instanceGuid": "89044692-558d-4232-9ff3-7bed0b17ddb7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1902,14 +1920,16 @@
             }
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "IStructuralEquatable": {
-        "title": "IStructuralEquatable",
-        "type": "object",
+        "title": "I Structural Equatable",
+        "type": "IStructuralEquatable",
         "description": "Defines methods to support the comparison of objects for structural equality.",
-        "x-methods": {
+        "properties": {},
+        "kind": "interface",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Collections#/components/schemas/IStructuralEquatable"
@@ -1926,18 +1946,18 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "other",
                       "isOptional": false,
-                      "instanceGuid": "d2db4f5e-94fb-49a4-9411-24adb2d3f01b"
+                      "instanceGuid": "768fea74-2f94-4022-80f6-7d2c3a31e21c"
                     },
                     {
                       "$ref": "System.Collections#/components/schemas/IEqualityComparer",
                       "name": "comparer",
                       "isOptional": false,
-                      "instanceGuid": "806114db-71a0-49f7-8f9f-cbea768077da"
+                      "instanceGuid": "d3203933-c931-4658-9b94-eab81bcd76c7"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "0ae2976e-c062-4f15-907c-c06ad4b7cded",
+                      "instanceGuid": "8b9fc3cf-e3e0-4ddb-838e-d60db81c5148",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1963,12 +1983,12 @@
                       "$ref": "System.Collections#/components/schemas/IEqualityComparer",
                       "name": "comparer",
                       "isOptional": false,
-                      "instanceGuid": "8d0cfedd-4880-4b4a-ac31-637ecd135de9"
+                      "instanceGuid": "ed4472d2-a47d-4c56-aca1-98ee2a17f197"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "101ccf81-cb4c-42e6-91ab-6f200a43a11f",
+                      "instanceGuid": "49282989-28db-47d2-8bc6-b752656b1b7c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1979,29 +1999,29 @@
             }
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       },
       "ListDictionaryInternal": {
-        "title": "ListDictionaryInternal",
-        "type": "object",
+        "title": "List Dictionary Internal",
+        "type": "ListDictionaryInternal",
         "description": null,
         "properties": {
           "Count": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           },
           "Keys": {
             "$ref": "System.Collections#/components/schemas/ICollection"
           },
           "IsReadOnly": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "IsFixedSize": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "IsSynchronized": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "SyncRoot": {
             "$ref": "System#/components/schemas/Object"
@@ -2010,7 +2030,8 @@
             "$ref": "System.Collections#/components/schemas/ICollection"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Add": {
             "owner": {
               "$ref": "System.Collections#/components/schemas/ListDictionaryInternal"
@@ -2027,18 +2048,18 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "77724c23-4c9f-4b65-b2c7-c52eedb360fb"
+                      "instanceGuid": "3dcc6e51-ec00-4df4-b22b-2a463b1df73f"
                     },
                     {
                       "$ref": "System#/components/schemas/Object",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "2fd3271d-d1ec-49ae-9664-0f6ef8c1cc48"
+                      "instanceGuid": "167f7ae3-f815-48ac-b925-0324068b2388"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9b03710a-fbcf-445c-86e8-d68b73902c18",
+                      "instanceGuid": "4497d5a4-5fbe-4691-8451-dd092bf8bbdd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2062,7 +2083,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "112f9109-b0e2-44ec-80c0-c52c51c650f9",
+                      "instanceGuid": "ac345728-9316-414b-b17f-68e1a4dfe4eb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2088,12 +2109,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "3f6700e5-4a28-421e-b66b-ed628e38d2e7"
+                      "instanceGuid": "623cd7bd-1362-40f5-9579-1e462682723e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "46105f5a-1519-470d-abfb-f96770fc04ac",
+                      "instanceGuid": "02a3af0a-9085-4387-9cce-c87751098035",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2119,19 +2140,19 @@
                       "$ref": "System#/components/schemas/Array",
                       "name": "array",
                       "isOptional": false,
-                      "instanceGuid": "64cc890e-0a1b-4eea-817d-44aad753b337"
+                      "instanceGuid": "9f96e5e1-2e25-4290-b195-84c443b6628e"
                     },
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "index",
                       "isOptional": false,
-                      "instanceGuid": "0986e3cc-7007-4d60-96f1-d6b79fecd1e9"
+                      "instanceGuid": "23ab9cb7-99b2-43a0-a530-5ada1f4cd4cc"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ea17f7d9-cc26-4e68-89d6-fc2392f45648",
+                      "instanceGuid": "00c88ff9-aa99-47d1-bc7b-d11e478a8cef",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2155,7 +2176,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "9f96fb0e-935c-4d89-9548-7a2bd8282c95",
+                      "instanceGuid": "31200d6a-7022-41ae-9b7f-89200dc49631",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/IDictionaryEnumerator"
@@ -2181,12 +2202,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "19b7e1f4-2183-4d1d-a978-062f539bf49e"
+                      "instanceGuid": "18f9dfd8-831b-46ee-9974-e48a095b871a"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "606c448e-1c0a-4e1a-a368-8a98f43c3539",
+                      "instanceGuid": "e397f0c1-54ee-4e4f-9d05-7e48fb224e83",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2210,7 +2231,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "746650cb-3c5b-4df7-aae7-e3de63835634",
+                      "instanceGuid": "beada223-521f-4a56-b512-dc1399ec5875",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -2234,7 +2255,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a7223648-88af-41c1-9a0e-d47e2bc9468b",
+                      "instanceGuid": "b088880f-f6d3-43df-a2d4-47f3405c2d49",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -2260,12 +2281,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "b2ce7499-46e1-4be3-b60d-eb9a63356699"
+                      "instanceGuid": "c546ab2a-0f09-4362-be97-4a4e3de0020d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d6c14339-89e6-45a2-a353-9ccc838ca45a",
+                      "instanceGuid": "102581e0-3bcb-4912-9150-6d2604a6eee0",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2289,7 +2310,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8a54644f-6972-484a-80ed-475f595052ad",
+                      "instanceGuid": "ad85c0ad-b3e3-442a-9162-4dfc483d9a74",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2300,8 +2321,8 @@
             }
           }
         },
-        "x-namespace": "System.Collections",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Collections",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

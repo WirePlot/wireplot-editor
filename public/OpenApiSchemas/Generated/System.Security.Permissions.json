@@ -8,21 +8,22 @@
   "components": {
     "schemas": {
       "CodeAccessSecurityAttribute": {
-        "title": "CodeAccessSecurityAttribute",
-        "type": "object",
+        "title": "Code Access Security Attribute",
+        "type": "CodeAccessSecurityAttribute",
         "description": "Specifies the base attribute class for code access security.",
         "properties": {
           "Action": {
             "$ref": "System.Security.Permissions#/components/schemas/SecurityAction"
           },
           "Unrestricted": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "CreatePermission": {
             "owner": {
               "$ref": "System.Security.Permissions#/components/schemas/CodeAccessSecurityAttribute"
@@ -37,7 +38,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "23262a7c-45d9-45c4-b24c-7223ceaf1812",
+                      "instanceGuid": "2460ee9f-709a-4ded-97b7-b1631d24963c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Security#/components/schemas/IPermission"
@@ -63,12 +64,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "4f992fc0-a463-4d59-bc77-a04a6b8a5c47"
+                      "instanceGuid": "b102f35a-0ca5-447d-8ac8-2ea5e67e46ba"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c5d680ba-5987-406f-9d16-6d6740763184",
+                      "instanceGuid": "601913be-fd66-4597-b9f6-6e2323c63ae2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -92,7 +93,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "64f126d0-be46-4f2f-aa85-acd6f9a59de7",
+                      "instanceGuid": "ea9c1c39-f4bc-4f2d-a8fc-15d669c097ff",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -118,12 +119,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "3630c455-1722-426c-99d0-1d3eff205959"
+                      "instanceGuid": "2b0831d5-f740-4a66-8cb8-d81b4c302ae6"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e23185d3-bdcc-42b6-8735-6996b25751d6",
+                      "instanceGuid": "3a2a77f0-9683-4f19-9616-909450dbeee0",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -147,7 +148,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "52d0e0ef-ccd8-4203-b0ef-7b849a7b9732",
+                      "instanceGuid": "b99d3312-4db9-477b-bf91-d405c25855ec",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -171,7 +172,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8891f402-4a3f-4995-b83c-570a80dff1ef",
+                      "instanceGuid": "7ff7ca56-d520-4c97-a855-6639a86c5f40",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -195,7 +196,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7f050395-b21f-4997-911e-dfb3aba51179",
+                      "instanceGuid": "5042c42b-06f0-45e4-b048-255673b51e4b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -206,11 +207,11 @@
             }
           }
         },
-        "x-namespace": "System.Security.Permissions",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Security.Permissions",
+        "assembly": "System.Private.CoreLib"
       },
       "PermissionState": {
-        "title": "PermissionState",
+        "title": "Permission State",
         "type": "integer",
         "description": "Specifies whether a permission should have all or no access to resources at creation.",
         "enum": [
@@ -221,30 +222,31 @@
           "None",
           "Unrestricted"
         ],
-        "x-namespace": "System.Security.Permissions",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Security.Permissions",
+        "assembly": "System.Private.CoreLib"
       },
       "SecurityAction": {
         "$ref": "System.Security.Permissions#/components/schemas/SecurityAction",
-        "x-namespace": "System.Security.Permissions",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Security.Permissions",
+        "assembly": "System.Private.CoreLib"
       },
       "SecurityAttribute": {
-        "title": "SecurityAttribute",
-        "type": "object",
+        "title": "Security Attribute",
+        "type": "SecurityAttribute",
         "description": "Specifies the base attribute class for declarative security from which  is derived.",
         "properties": {
           "Action": {
             "$ref": "System.Security.Permissions#/components/schemas/SecurityAction"
           },
           "Unrestricted": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "CreatePermission": {
             "owner": {
               "$ref": "System.Security.Permissions#/components/schemas/SecurityAttribute"
@@ -259,7 +261,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2e944bad-e585-44b5-af1e-4c6950287e35",
+                      "instanceGuid": "a1967c2d-5e74-4175-94ee-94e809a1ac6b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Security#/components/schemas/IPermission"
@@ -285,12 +287,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "367d68c5-a801-4a2f-bfac-a7db409c37cf"
+                      "instanceGuid": "1b72a3af-73d1-433b-af78-76eb1aae5a29"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "5288af27-e481-400e-9dc1-ebcaa46c4345",
+                      "instanceGuid": "ef1edb17-6e9b-4257-84fe-c8c7d0137003",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -314,7 +316,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a2411ac0-6f37-48be-8552-7558db772c9c",
+                      "instanceGuid": "e3ba24e5-d8d6-4b80-9c3a-f7e0397a5cc6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -340,12 +342,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "a1d5543d-38c9-4920-89cf-90d99df5eb56"
+                      "instanceGuid": "d7585dd4-28f9-4b80-9e51-a09fa3226a2b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8bf31f26-be8e-4c57-acf9-5dc403c3a60b",
+                      "instanceGuid": "bfbed4b1-f2ba-44ea-8956-b071d67e5320",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -369,7 +371,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "42bf878f-232b-4587-8a7b-20ccec301447",
+                      "instanceGuid": "8985aad4-4fd7-49b5-a0f2-d1fa979e8a3e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -393,7 +395,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d0b08bbe-b464-4754-9091-bc616e2d9233",
+                      "instanceGuid": "a2fcb30c-d24a-4853-b913-707ac5b18319",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -417,7 +419,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5f66ce7c-c6a8-4a50-8644-e0d35937bc30",
+                      "instanceGuid": "2c48de66-c051-4dc9-b858-41761fc6de3d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -428,70 +430,71 @@
             }
           }
         },
-        "x-namespace": "System.Security.Permissions",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Security.Permissions",
+        "assembly": "System.Private.CoreLib"
       },
       "SecurityPermissionAttribute": {
-        "title": "SecurityPermissionAttribute",
-        "type": "object",
+        "title": "Security Permission Attribute",
+        "type": "SecurityPermissionAttribute",
         "description": "Allows security actions for  to be applied to code using declarative security. This class cannot be inherited.",
         "properties": {
           "Assertion": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "BindingRedirects": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "ControlAppDomain": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "ControlDomainPolicy": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "ControlEvidence": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "ControlPolicy": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "ControlPrincipal": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "ControlThread": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "Execution": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "Flags": {
             "$ref": "System.Security.Permissions#/components/schemas/SecurityPermissionFlag"
           },
           "Infrastructure": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "RemotingConfiguration": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "SerializationFormatter": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "SkipVerification": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "UnmanagedCode": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "Action": {
             "$ref": "System.Security.Permissions#/components/schemas/SecurityAction"
           },
           "Unrestricted": {
-            "type": "boolean"
+            "type": "Boolean"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "CreatePermission": {
             "owner": {
               "$ref": "System.Security.Permissions#/components/schemas/SecurityPermissionAttribute"
@@ -506,7 +509,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "fb70e301-17db-4455-88f0-f706b7ecb23b",
+                      "instanceGuid": "282ab49a-1739-4960-a442-de65e47b6ac4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Security#/components/schemas/IPermission"
@@ -532,12 +535,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "5357c50b-16d9-4d00-b801-902a9fee57c3"
+                      "instanceGuid": "225c343f-3e0c-4e9f-8b54-6112c8730731"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "05d9dcfa-37e7-4b7c-8a09-59783f6b8f52",
+                      "instanceGuid": "3a66fd6a-2ad9-47ae-acc8-33cb74c8e941",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -561,7 +564,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a124bc7a-0d99-4dbc-806e-355948bff995",
+                      "instanceGuid": "b3cedaa9-b4bb-4258-b5d2-06f8f313b206",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -587,12 +590,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "000db90e-fd55-47bb-ab45-3870a6a2a4d9"
+                      "instanceGuid": "0c5b3a2a-7e65-4d04-b884-a438e170ef40"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8ffceb8e-632c-4a9f-9afe-50418aa445ed",
+                      "instanceGuid": "32945bf5-d2ba-47f4-b575-a5e66bdf427d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -616,7 +619,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "37e515f8-6eee-4db3-83c9-cb162ecc92e5",
+                      "instanceGuid": "26c81aa1-c3ff-49e2-9a08-cd312fc3d8c9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -640,7 +643,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2b600a56-6a92-4bd9-b9cf-95eb2f68fd39",
+                      "instanceGuid": "0ce73a33-620b-4538-9f20-090ac567e817",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -664,7 +667,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f5e9be40-0f87-4922-9427-495dc09bf0a9",
+                      "instanceGuid": "ee75d1ba-ceb6-49bc-9850-82ae2e5dfe1d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -675,13 +678,13 @@
             }
           }
         },
-        "x-namespace": "System.Security.Permissions",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Security.Permissions",
+        "assembly": "System.Private.CoreLib"
       },
       "SecurityPermissionFlag": {
         "$ref": "System.Security.Permissions#/components/schemas/SecurityPermissionFlag",
-        "x-namespace": "System.Security.Permissions",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Security.Permissions",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

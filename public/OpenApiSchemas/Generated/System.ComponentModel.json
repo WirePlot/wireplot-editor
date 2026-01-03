@@ -8,8 +8,8 @@
   "components": {
     "schemas": {
       "DefaultValueAttribute": {
-        "title": "DefaultValueAttribute",
-        "type": "object",
+        "title": "Default Value Attribute",
+        "type": "DefaultValueAttribute",
         "description": "Specifies the default value for a property.",
         "properties": {
           "Value": {
@@ -19,7 +19,8 @@
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.ComponentModel#/components/schemas/DefaultValueAttribute"
@@ -36,12 +37,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "0307f61f-50ac-4cf9-b423-13548e3a6306"
+                      "instanceGuid": "5e24cb19-2655-430e-af40-e60517a0cfbd"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b3fea11e-c5c0-4383-a988-d8ddc4c0aeed",
+                      "instanceGuid": "f55698e1-2e80-4558-add6-4eaa20ee23e1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -65,7 +66,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "04b8434c-a730-4e47-88d3-bdaabdd74dbc",
+                      "instanceGuid": "89ef6401-7d6d-4ac8-8227-cac09862045a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -91,12 +92,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "d01be698-7517-47ff-a9c1-1dc898ca9058"
+                      "instanceGuid": "2f132247-1ae0-4352-b545-85dccd0278ba"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "96fdf8ea-ba04-4ad8-838f-5560a4fd3a00",
+                      "instanceGuid": "3d9f2415-d5ff-425f-ac07-f6dd2c627afd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -120,7 +121,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e03276e6-7e69-423f-bad1-3ecddcb3584c",
+                      "instanceGuid": "4e8c8c19-d87d-413d-9418-5172e658d2be",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -144,7 +145,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a81e8677-940e-494f-87bc-80e5fca98918",
+                      "instanceGuid": "462f7fde-d65d-43c9-b5b2-662b214877f7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -168,7 +169,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c4a2091a-487c-4438-848a-179e18dfef28",
+                      "instanceGuid": "3a5fa15b-eb8e-40de-929f-6e2772843a87",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -179,12 +180,12 @@
             }
           }
         },
-        "x-namespace": "System.ComponentModel",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.ComponentModel",
+        "assembly": "System.Private.CoreLib"
       },
       "EditorBrowsableAttribute": {
-        "title": "EditorBrowsableAttribute",
-        "type": "object",
+        "title": "Editor Browsable Attribute",
+        "type": "EditorBrowsableAttribute",
         "description": "Specifies that a class or member is viewable in an editor. This class cannot be inherited.",
         "properties": {
           "State": {
@@ -194,7 +195,8 @@
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.ComponentModel#/components/schemas/EditorBrowsableAttribute"
@@ -211,12 +213,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "fbd274a7-6e50-4d55-9e7b-d04e96600c21"
+                      "instanceGuid": "b42c5d5f-ae56-4f83-baa4-cf2a8dae965d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b53acbf2-f1d3-4d91-8c49-c7ac7256f3f8",
+                      "instanceGuid": "47621440-848f-48ec-a21f-265a7f64211c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -240,7 +242,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "04525dd1-67a7-4b0f-8f68-d2fd1540d697",
+                      "instanceGuid": "3c428aab-325d-43e0-9ddc-45861d23eadc",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -266,12 +268,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "a776cd10-87b2-45fc-beed-74918a0974d6"
+                      "instanceGuid": "a593e202-4fd2-42b3-8a6d-eb0239e6043f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "fc64c046-2d5c-4cbd-b1fc-767a2b8cb422",
+                      "instanceGuid": "3478d567-3423-49f6-87a8-277a6a97b6ad",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -295,7 +297,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f55dfe39-80d1-4895-9a03-832360662a64",
+                      "instanceGuid": "a6e167f3-48e1-487d-ac46-bbd524752d29",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -319,7 +321,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "bce7d03d-0ef2-4ea1-9a96-d7f30a3431fd",
+                      "instanceGuid": "154cafe0-d7e5-4e23-b016-b7ef2085a421",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -343,7 +345,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "fef2ef6f-56e2-46a5-b737-0e655314a858",
+                      "instanceGuid": "56b8e935-5e1b-4aeb-bd7d-a0f29a04ca84",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -354,13 +356,13 @@
             }
           }
         },
-        "x-namespace": "System.ComponentModel",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.ComponentModel",
+        "assembly": "System.Private.CoreLib"
       },
       "EditorBrowsableState": {
         "$ref": "System.ComponentModel#/components/schemas/EditorBrowsableState",
-        "x-namespace": "System.ComponentModel",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.ComponentModel",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

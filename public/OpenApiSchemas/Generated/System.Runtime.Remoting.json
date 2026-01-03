@@ -8,10 +8,12 @@
   "components": {
     "schemas": {
       "ObjectHandle": {
-        "title": "ObjectHandle",
-        "type": "object",
+        "title": "Object Handle",
+        "type": "ObjectHandle",
         "description": "Wraps marshal-by-value object references, allowing them to be returned through an indirection.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "Unwrap": {
             "owner": {
               "$ref": "System.Runtime.Remoting#/components/schemas/ObjectHandle"
@@ -26,7 +28,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e2c9fdee-c8d1-40eb-b4f2-6df1bac060f1",
+                      "instanceGuid": "0b196be7-c450-4d88-a697-16fa2548c85c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Object"
@@ -50,7 +52,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "14f44648-0a44-4c5c-b54a-a5497099bc29",
+                      "instanceGuid": "99377896-1007-46c4-8d90-0732ecad678b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Object"
@@ -74,7 +76,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b9e33af8-2f21-4311-9d9a-6174e45f140a",
+                      "instanceGuid": "dee9b8eb-93e5-4545-9a55-b9bbf6d59e0c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Object"
@@ -98,7 +100,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "31926688-5bdb-4788-aa69-121203c87067",
+                      "instanceGuid": "d985ed48-4576-44a9-b7de-75eb01a7fa81",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -122,7 +124,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f0d3241e-4627-44be-ae68-fa9901b7e5d5",
+                      "instanceGuid": "52a2e6d0-741a-477f-be0a-7516ce538b49",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -148,12 +150,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "5bd97d59-4e99-4f3b-b24c-c894ec5928d0"
+                      "instanceGuid": "87266961-baba-47df-9483-81f1a6912463"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "3ba06b72-3025-4dbb-bf56-6f36bec85bdd",
+                      "instanceGuid": "5f94126a-a572-4be6-bd6e-a368c2dab436",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -177,7 +179,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8b6926ec-5ea4-42b1-b906-11b9a8a51b9f",
+                      "instanceGuid": "aa0017cf-85a1-4009-ab7b-4c65a543dd3f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -188,8 +190,8 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Remoting",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Remoting",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

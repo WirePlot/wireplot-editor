@@ -8,7 +8,7 @@
   "components": {
     "schemas": {
       "EventActivityOptions": {
-        "title": "EventActivityOptions",
+        "title": "Event Activity Options",
         "type": "integer",
         "description": "Specifies the tracking of activity start and stop events.",
         "enum": [
@@ -23,28 +23,29 @@
           "Recursive",
           "Detachable"
         ],
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventCounter": {
-        "title": "EventCounter",
-        "type": "object",
+        "title": "Event Counter",
+        "type": "EventCounter",
         "description": "Provides the ability to collect statistics for very frequent events through the   class.",
         "properties": {
           "DisplayName": {
-            "type": "string"
+            "type": "String"
           },
           "DisplayUnits": {
-            "type": "string"
+            "type": "String"
           },
           "Name": {
-            "type": "string"
+            "type": "String"
           },
           "EventSource": {
             "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSource"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "WriteMetric": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCounter"
@@ -58,15 +59,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "number",
+                      "type": "Single",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "5d867592-6278-4f2a-a434-c722e047d380"
+                      "instanceGuid": "4a1ab320-112f-4fcb-915a-2031d32412fd"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "0ef0dfba-881d-4e1e-8aac-953ce0fa1928",
+                      "instanceGuid": "52bbd4b0-c5d5-466e-b1f3-dcc4e9968534",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -82,15 +83,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "number",
+                      "type": "Double",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "efae0002-6199-45cd-a32e-3e11ef07bc24"
+                      "instanceGuid": "e260a350-3ec5-4f3a-b2d7-940272c05c31"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "7fcc0b98-567b-4681-9e9d-a106dcb4ec6c",
+                      "instanceGuid": "402cb30b-17d5-439b-9e9c-aeaf169b1fb3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -114,7 +115,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c114f021-b92b-43ef-8c7e-dd20f650a228",
+                      "instanceGuid": "2526a6fe-ed91-414e-b7ea-d8444718aff6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -138,7 +139,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "56063a6b-26ea-4ad1-ab03-df50b4ffae7d",
+                      "instanceGuid": "c50bbf73-0415-4317-b0f4-b0c6b4d6dedb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -161,21 +162,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "fe153d03-e8a2-432c-b54c-a6ada6a0eea3"
+                      "instanceGuid": "9e5a375b-53f5-4b20-a19e-319334cdabba"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "1d59fd39-6a94-44f1-9be9-39e1779b3d0f"
+                      "instanceGuid": "604101d8-dd60-4f93-9d96-e1c911c4f69d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "dc1af92f-cae0-45d9-a3da-5fc4df1cef81",
+                      "instanceGuid": "2d763cae-bee2-406e-b00e-b7d8a2604ac1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -199,7 +200,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "079e0cf3-d045-4101-b6b8-8a36049acb6e",
+                      "instanceGuid": "1baecbda-8185-4fbb-9f1a-9981315baffe",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -225,12 +226,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "92be0dac-8362-48ba-894a-dee9df05e770"
+                      "instanceGuid": "513e38d3-a942-4b1d-bebd-9e86b3c8fbec"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "50bea058-7962-4440-9235-dc24bf922a48",
+                      "instanceGuid": "b134fe86-435e-41a4-84f7-82ff02c70279",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -254,7 +255,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2a517597-4948-4fed-b617-1ded7dff46a6",
+                      "instanceGuid": "d6b195ce-2d1b-40c1-8af4-7bce0193db05",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -265,14 +266,16 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventData": {
-        "title": "EventData",
-        "type": "object",
+        "title": "Event Data",
+        "type": "EventData",
         "description": null,
-        "x-methods": {
+        "properties": {},
+        "kind": "struct",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/EventData"
@@ -289,12 +292,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "b6e179ca-9c94-4315-8d1b-e335e1c02ef8"
+                      "instanceGuid": "c76dab9c-247c-4ccc-b074-adfc53c51b66"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b7a2e413-311a-40ac-9184-b73d3aec2661",
+                      "instanceGuid": "cefff9ff-efd3-454d-a371-13102518cee7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -318,7 +321,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5dd5cb28-2cde-4035-8c60-b057feb23018",
+                      "instanceGuid": "d18a03b2-2ddd-4851-9c73-510949dd958a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -342,7 +345,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e581ec62-9025-481b-b677-b4c1fbaf8390",
+                      "instanceGuid": "27724166-69b4-4600-8c93-ce91b584d9b3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -366,7 +369,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d6aad482-ffdd-4bc6-8ba7-be54b40c354b",
+                      "instanceGuid": "cb0b6747-0457-4cd7-a220-2452f211b823",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -377,11 +380,11 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "WriteEventErrorCode": {
-        "title": "WriteEventErrorCode",
+        "title": "Write Event Error Code",
         "type": "integer",
         "description": null,
         "enum": [
@@ -400,14 +403,16 @@
           "TooManyArgs",
           "Other"
         ],
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "SessionInfo": {
-        "title": "SessionInfo",
-        "type": "object",
+        "title": "Session Info",
+        "type": "SessionInfo",
         "description": null,
-        "x-methods": {
+        "properties": {},
+        "kind": "struct",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/SessionInfo"
@@ -424,12 +429,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "96becf44-324a-4a33-a373-826ab5527468"
+                      "instanceGuid": "96b0683e-8129-471d-93e6-90434772d970"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c2a83810-1853-4070-bd9f-b1975fe4756a",
+                      "instanceGuid": "43d5d3e1-0340-423e-95c1-f002c6fd3da4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -453,7 +458,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "88cb3e53-d265-4b7a-be49-2f0c8b20e1b0",
+                      "instanceGuid": "8c5aafaa-9d40-4011-92af-9b5ccf87e807",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -477,7 +482,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "583ec2b9-f2c3-47f3-8970-c106b40041ad",
+                      "instanceGuid": "3151dacd-0dd4-4db3-9350-8d959a3cbaa9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -501,7 +506,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "6cd9bc6f-fea6-4d2b-b32d-322050d3648b",
+                      "instanceGuid": "f14f0949-dab5-4157-8a90-578c27fc4360",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -512,19 +517,21 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventSource": {
         "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSource",
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventSourcePrimitive": {
-        "title": "EventSourcePrimitive",
-        "type": "object",
+        "title": "Event Source Primitive",
+        "type": "EventSourcePrimitive",
         "description": "Provides the ability to create events for event tracing across platforms.",
-        "x-methods": {
+        "properties": {},
+        "kind": "struct",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourcePrimitive"
@@ -541,12 +548,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "056d2949-8105-4e45-a6b0-249e9e4ba153"
+                      "instanceGuid": "6a8d614e-252b-40b3-9083-ff7bd94adaa3"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "aea8d5a8-ebb4-4246-acae-0aa5a5e9c443",
+                      "instanceGuid": "83278d07-28e9-4b3f-bf36-b36c73daf719",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -570,7 +577,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "3cbc9391-c365-4d1b-929d-b25361490e98",
+                      "instanceGuid": "fa00db5d-e5d3-473e-a73b-35b834c71d85",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -594,7 +601,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e7342003-d660-4a23-aa03-216e79d876f0",
+                      "instanceGuid": "639c6144-37e9-41e0-b88d-dc3908aa8308",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -618,7 +625,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5d966351-7abf-45d9-ba45-c176ca68b788",
+                      "instanceGuid": "6a1d22e3-00ad-4bb9-accc-fb0950938d34",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -629,17 +636,17 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventSourceSettings": {
         "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceSettings",
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventCommandEventArgs": {
-        "title": "EventCommandEventArgs",
-        "type": "object",
+        "title": "Event Command Event Args",
+        "type": "EventCommandEventArgs",
         "description": "Provides the arguments for the  callback.",
         "properties": {
           "Command": {
@@ -649,7 +656,8 @@
             "$ref": "System.Collections.Generic#/components/schemas/IDictionary\u00602"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "EnableEvent": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCommandEventArgs"
@@ -663,16 +671,16 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "eventId",
                       "isOptional": false,
-                      "instanceGuid": "f534f4e5-b962-4acd-8944-12ccad94ea7d"
+                      "instanceGuid": "4042572d-56b1-4625-b132-5bc733b72f2f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "3954660b-be34-4e36-91dc-9f0973c0c5ef",
+                      "instanceGuid": "fd7b56a3-4910-4fab-881f-ce48fbbf095a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -695,16 +703,16 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "eventId",
                       "isOptional": false,
-                      "instanceGuid": "a3587046-c170-4adb-83e5-344002a0b2d2"
+                      "instanceGuid": "78061bb2-aacf-47d5-ac22-54d48f9da8a7"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a1115781-b28a-4148-967c-8f8807e67cef",
+                      "instanceGuid": "f006f393-77bb-4729-b77b-1e2120e06539",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -728,7 +736,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2b309711-c1ba-4252-8bb0-8fc7538ff9cd",
+                      "instanceGuid": "751e08ec-8eb4-43b5-be6b-fca5d585782e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -752,7 +760,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1b1344a6-8f0e-4a0e-b03b-ba5a34930da3",
+                      "instanceGuid": "b992e29c-3c77-41a3-a4c3-f2d2ef0a93e6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -778,12 +786,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "95211e3c-048d-4aff-ba55-82aca5334fdf"
+                      "instanceGuid": "9557b285-29eb-4c67-86a4-f644e9bb91fa"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "241ab07f-6a69-41e5-918c-28d1163b2b4c",
+                      "instanceGuid": "e921e777-a04b-476e-9877-19a23b4fbc81",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -807,7 +815,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d2ba6887-b6d6-4af8-92c4-a41208d18aca",
+                      "instanceGuid": "bfe738fa-b9ae-47c6-ba52-c4d54664c403",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -818,19 +826,20 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventSourceCreatedEventArgs": {
-        "title": "EventSourceCreatedEventArgs",
-        "type": "object",
+        "title": "Event Source Created Event Args",
+        "type": "EventSourceCreatedEventArgs",
         "description": "Provides data for the  event.",
         "properties": {
           "EventSource": {
             "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSource"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "GetType": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceCreatedEventArgs"
@@ -845,7 +854,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d07b2bac-89db-4422-b129-10e88b3de678",
+                      "instanceGuid": "96421ea6-4c96-44b2-9d21-c27856535bc2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -869,7 +878,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "16b8b523-281c-46f4-bc1b-4108414f8429",
+                      "instanceGuid": "1eb429f9-3447-4bc5-9d51-d3ead13690eb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -895,12 +904,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "7fa2d614-99dc-409e-95aa-522810e3b755"
+                      "instanceGuid": "3891236d-9e8e-47b6-8a7a-ffe25c4ba33c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "961c30f7-ab0b-4336-9147-fcf25d2f87e0",
+                      "instanceGuid": "ff026158-306f-4561-b17c-0886d97e3076",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -924,7 +933,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0adcc9fa-3bd9-4b06-8847-4e0d794463c5",
+                      "instanceGuid": "46362b40-f672-4f6a-96de-bf314c1c196a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -935,28 +944,29 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventSourceAttribute": {
-        "title": "EventSourceAttribute",
-        "type": "object",
+        "title": "Event Source Attribute",
+        "type": "EventSourceAttribute",
         "description": "Allows the event tracing for Windows (ETW) name to be defined independently of the name of the event source class.",
         "properties": {
           "Name": {
-            "type": "string"
+            "type": "String"
           },
           "Guid": {
-            "type": "string"
+            "type": "String"
           },
           "LocalizationResources": {
-            "type": "string"
+            "type": "String"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceAttribute"
@@ -973,12 +983,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "d4937504-65e0-4ff8-9534-d1576305fd34"
+                      "instanceGuid": "08b3f67b-7583-4dc0-b81b-fe0804f39b9c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "fe929352-e472-4374-846d-b4928c937221",
+                      "instanceGuid": "bbc73f8e-73a8-40de-9cad-d1673452a247",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1002,7 +1012,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "14335fda-20f3-4d1d-a641-b83505d6c092",
+                      "instanceGuid": "6340366e-d413-4c29-890b-a96f34d31bd8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1028,12 +1038,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "ff6474f2-762d-41b9-8145-1d85584f03ed"
+                      "instanceGuid": "e4cf7083-413d-40dd-9600-f4e0ea75c6ad"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d41c18c2-74aa-4102-b048-c0283e343ba8",
+                      "instanceGuid": "6352928c-9602-46bc-98c4-b510260d13b1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1057,7 +1067,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "38af3afb-9dc7-4713-a050-bee6397ec217",
+                      "instanceGuid": "b8d2f5dc-af00-46d3-ae91-e0512b9995b4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1081,7 +1091,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4c807f16-548a-43cc-b8ac-c8c07c67d5db",
+                      "instanceGuid": "20239f75-08d9-426d-9cdb-bb64d44f999b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1105,7 +1115,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "afee0aa9-b7f6-44cb-bf0f-bb3aa8c65a64",
+                      "instanceGuid": "3d4b2607-1adb-4179-a332-4288c4de3d4c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1116,16 +1126,16 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventAttribute": {
-        "title": "EventAttribute",
-        "type": "object",
+        "title": "Event Attribute",
+        "type": "EventAttribute",
         "description": "Specifies additional event schema information for an event.",
         "properties": {
           "EventId": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           },
           "Level": {
@@ -1144,10 +1154,10 @@
             "$ref": "System.Diagnostics.Tracing#/components/schemas/EventChannel"
           },
           "Version": {
-            "type": "object"
+            "type": "Byte"
           },
           "Message": {
-            "type": "string"
+            "type": "String"
           },
           "Tags": {
             "$ref": "System.Diagnostics.Tracing#/components/schemas/EventTags"
@@ -1159,7 +1169,8 @@
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/EventAttribute"
@@ -1176,12 +1187,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "5e14c45b-27f3-4efd-abe3-2cd0166b8a88"
+                      "instanceGuid": "26a6c7ab-2ca5-4d59-8ec6-5b8a3f2bdbde"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "bef23221-9cc9-4a2e-b303-ab5d4a6be88c",
+                      "instanceGuid": "6f4b2276-021b-4b19-91ea-f5c67b7504df",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1205,7 +1216,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "6ce3f15d-113c-434c-b95b-d15739c98202",
+                      "instanceGuid": "20b18558-45ae-4018-95d1-c74b9e175d31",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1231,12 +1242,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "cb75b8cc-52c6-4d0a-b4f9-1244e4661493"
+                      "instanceGuid": "0ee022f6-b052-4079-8ec3-f1e394fd9ce3"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "25a91200-d740-473e-a752-b73423fa85f3",
+                      "instanceGuid": "5cc3677b-c22f-4a3b-b1df-08d9821821ab",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1260,7 +1271,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ebe8082e-014a-4801-be06-461e0cc245c4",
+                      "instanceGuid": "4661ea47-03d9-40ec-9d0b-0c0341469ad1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1284,7 +1295,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a7722b18-141d-431d-9926-41b5296f41fa",
+                      "instanceGuid": "3bb04763-6f11-4539-982a-68dae8b16a03",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1308,7 +1319,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d568bc8f-ee88-464f-9ed4-363735205dc1",
+                      "instanceGuid": "95a9509e-56ca-46d0-9850-33b5bcfad32a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1319,19 +1330,20 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "NonEventAttribute": {
-        "title": "NonEventAttribute",
-        "type": "object",
+        "title": "Non Event Attribute",
+        "type": "NonEventAttribute",
         "description": "Identifies a method that is not generating an event.",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/NonEventAttribute"
@@ -1348,12 +1360,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "c8748da7-390c-4843-96c6-dc594160af83"
+                      "instanceGuid": "09577961-0d6c-4804-adb1-d205057005f1"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "5d39f013-c26b-4f1c-b9ec-acb52fba5a03",
+                      "instanceGuid": "86d33f4b-2b2a-4c55-8a7d-07415cbb9ccf",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1377,7 +1389,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "08b7d944-b71d-40dc-a4e9-10186ea84519",
+                      "instanceGuid": "49c6972e-3849-4cbc-af73-dedca513977b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1403,12 +1415,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "57d3737d-7b9e-4062-8f04-2ed9609abbc5"
+                      "instanceGuid": "d8aea8e2-bcef-4712-8faf-ae6f056cf0eb"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "70913d29-00df-4383-ba35-a73b4bd15de3",
+                      "instanceGuid": "30018d0b-6b95-46ce-b91d-11fed9ec6696",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1432,7 +1444,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ce513e7a-6857-44fc-b51e-c36888dffd2d",
+                      "instanceGuid": "3b67362d-3785-443f-b247-eb8d6bc1d515",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1456,7 +1468,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ff12b5cd-cdd6-4652-99f0-039180c548a8",
+                      "instanceGuid": "2f5bbb4e-bf56-4a0b-9f19-139795c6ba71",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1480,7 +1492,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2452527a-c6e5-46d9-af9f-69eeb2676d17",
+                      "instanceGuid": "77127c1e-6299-4fe4-9cf8-5ce72911d172",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1491,16 +1503,16 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventCommand": {
         "$ref": "System.Diagnostics.Tracing#/components/schemas/EventCommand",
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventManifestOptions": {
-        "title": "EventManifestOptions",
+        "title": "Event Manifest Options",
         "type": "integer",
         "description": "Specifies how the ETW manifest for the event source is generated.",
         "enum": [
@@ -1517,19 +1529,19 @@
           "OnlyIfNeededForRegistration",
           "AllowEventSourceOverride"
         ],
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventSourceException": {
-        "title": "EventSourceException",
-        "type": "object",
+        "title": "Event Source Exception",
+        "type": "EventSourceException",
         "description": "The exception that is thrown when an error occurs during event tracing for Windows (ETW).",
         "properties": {
           "TargetSite": {
             "$ref": "System.Reflection#/components/schemas/MethodBase"
           },
           "Message": {
-            "type": "string"
+            "type": "String"
           },
           "Data": {
             "$ref": "System.Collections#/components/schemas/IDictionary"
@@ -1538,20 +1550,21 @@
             "$ref": "System#/components/schemas/Exception"
           },
           "HelpLink": {
-            "type": "string"
+            "type": "String"
           },
           "Source": {
-            "type": "string"
+            "type": "String"
           },
           "HResult": {
-            "type": "integer",
+            "type": "Int32",
             "format": "int32"
           },
           "StackTrace": {
-            "type": "string"
+            "type": "String"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "GetBaseException": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceException"
@@ -1566,7 +1579,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1b42484e-8eb3-41bd-8ebd-4d8dc33495b4",
+                      "instanceGuid": "c6059826-863b-48cb-81b3-643b53d0412c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Exception"
@@ -1592,18 +1605,18 @@
                       "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
                       "name": "info",
                       "isOptional": false,
-                      "instanceGuid": "29e0f710-6892-498c-9b6b-fbbfcc5c6f38"
+                      "instanceGuid": "51125c52-1a2c-4aee-ad5c-f9e8fd6e8215"
                     },
                     {
                       "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
                       "name": "context",
                       "isOptional": false,
-                      "instanceGuid": "67b7d907-0ce9-4403-9613-ee035e867e04"
+                      "instanceGuid": "6bde30d7-ce19-4c48-88d1-0e07fe3514b9"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "77579ce3-8d7e-45a6-aa8a-c0905cac03ed",
+                      "instanceGuid": "951ee364-f331-4678-97c1-d149af305d9a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1627,7 +1640,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "de85fd97-45bd-460d-929d-9c39db689c03",
+                      "instanceGuid": "5c6dff22-98cb-47be-954b-3be82c4347d6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1651,7 +1664,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4011144f-82f5-4bdd-a455-90aaa3f98c94",
+                      "instanceGuid": "7596e881-e15f-45fb-8b4d-28113415f0a0",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1677,12 +1690,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "37d9d6ff-caba-4d53-9685-49ce6c90e3ab"
+                      "instanceGuid": "a1525bd1-3a80-4035-8092-e6478df14f5b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b40c87cf-4493-49e3-b507-3251d7a19716",
+                      "instanceGuid": "9eb4c0d5-89ef-471b-aef2-426b97cf9cfb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1706,7 +1719,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f05dd27d-e8ea-4c87-b0aa-10a73a9414ed",
+                      "instanceGuid": "85fe87e1-72c0-4a13-8a31-1fd11a894e66",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1717,14 +1730,16 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "Keywords": {
         "title": "Keywords",
-        "type": "object",
+        "type": "Keywords",
         "description": null,
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "GetType": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/Keywords"
@@ -1739,7 +1754,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2af7e85c-bb4a-4f98-a17b-a95433c00f75",
+                      "instanceGuid": "9d21fa8a-a629-460c-b47c-14da0d6c54a4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1763,7 +1778,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "bcc57949-e87c-470f-8034-031b1165568a",
+                      "instanceGuid": "c13455a8-f8c6-40c4-a021-ba6a804b33ba",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1789,12 +1804,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "b58f1db4-50e0-43f2-a15a-72a53a103edf"
+                      "instanceGuid": "8beecd0c-5c5f-4e1d-8ff6-f62e5863c053"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "618a1c25-4402-46e2-b69d-485be3d80a70",
+                      "instanceGuid": "c3e0e319-21e6-48bc-b581-2ebe9be6d348",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1818,7 +1833,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "974734d6-9ab9-4aa9-81c1-7c120c4ee3fc",
+                      "instanceGuid": "9d19dfaf-ddb7-412f-a76c-0289e2e12c90",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1829,14 +1844,16 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "Tasks": {
         "title": "Tasks",
-        "type": "object",
+        "type": "Tasks",
         "description": null,
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "GetType": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/Tasks"
@@ -1851,7 +1868,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "95ad3ab1-a7e1-4cd6-95f4-cee392cd74bc",
+                      "instanceGuid": "a8bbdf44-a289-49d3-8e70-5dc25981b8a4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1875,7 +1892,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8c5eb3eb-c331-4281-8b92-f3da32913275",
+                      "instanceGuid": "a3d23bf0-9f2e-406f-bd83-569241f94843",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1901,12 +1918,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "89b27da0-0a61-4273-9ebb-e609afb6d80e"
+                      "instanceGuid": "34d15fe8-e432-46ec-958f-c15d0137b454"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "20dfb4f7-24e9-4d7f-92af-f72f7fdf72fa",
+                      "instanceGuid": "fc8f61f0-3226-4b9a-b4ea-993d89da42df",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1930,7 +1947,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e162eca2-63a2-4ace-b506-f830458270d9",
+                      "instanceGuid": "7eb82fbf-fe5e-4c17-b837-1b9a65fe4a02",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1941,31 +1958,32 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "IncrementingEventCounter": {
-        "title": "IncrementingEventCounter",
-        "type": "object",
+        "title": "Incrementing Event Counter",
+        "type": "IncrementingEventCounter",
         "description": "Provides a variant of  for variables that are ever-increasing, such as the number of exceptions in the runtime.",
         "properties": {
           "DisplayRateTimeScale": {
             "$ref": "System#/components/schemas/TimeSpan"
           },
           "DisplayName": {
-            "type": "string"
+            "type": "String"
           },
           "DisplayUnits": {
-            "type": "string"
+            "type": "String"
           },
           "Name": {
-            "type": "string"
+            "type": "String"
           },
           "EventSource": {
             "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSource"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Increment": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingEventCounter"
@@ -1979,15 +1997,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "number",
+                      "type": "Double",
                       "name": "increment",
                       "isOptional": true,
-                      "instanceGuid": "68f53774-2d7d-403d-bf9a-88ba66de0ea0"
+                      "instanceGuid": "0b2cd9f9-ac2f-4b49-afe2-b111c3db4751"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2f7b265d-6286-4572-9629-ddba533a377e",
+                      "instanceGuid": "ed6ff301-f6f8-4fa8-b583-9fd4d05c1476",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2011,7 +2029,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "73368cd8-2797-4f92-b366-516c5288d91c",
+                      "instanceGuid": "d1aeb995-115f-43ca-be88-ed13abb23063",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -2035,7 +2053,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ea012f1c-b919-4ffb-ac27-b5d6f7f442a6",
+                      "instanceGuid": "0525afaf-d30a-4be7-a030-b7ef24ce7aed",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2058,21 +2076,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "74557dfb-627a-4448-89dd-44f16e743c3a"
+                      "instanceGuid": "a70270f0-c904-4420-992d-d682a558531f"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "fc1478d4-d818-4d07-92ee-c5f569169dac"
+                      "instanceGuid": "b8a4a6e8-158e-435d-90ce-3f2cbbeedd5b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ce5ddea0-a043-43c9-8151-839181837fc4",
+                      "instanceGuid": "09709c83-f59c-466e-8525-ee311edbdb53",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2096,7 +2114,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0467b433-5ec7-4169-a4d2-9a623b150f7b",
+                      "instanceGuid": "86c6fbc1-5df1-45c2-84c9-382f31ce2114",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -2122,12 +2140,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "7881e13d-0dd0-4e7d-9fe8-46e33e5e6f61"
+                      "instanceGuid": "963e23ac-c3f8-4e3a-870f-644ace455b2a"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "5033992b-893c-4535-9c8d-579e2ff92c13",
+                      "instanceGuid": "076a0e6d-d66d-47ad-9d82-9cdfe714e6ea",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2151,7 +2169,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "067a5921-798d-43b8-8f84-4bb012bbc5e9",
+                      "instanceGuid": "a467605c-8f01-46aa-bac5-440642e29d61",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2162,31 +2180,32 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "IncrementingPollingCounter": {
-        "title": "IncrementingPollingCounter",
-        "type": "object",
+        "title": "Incrementing Polling Counter",
+        "type": "IncrementingPollingCounter",
         "description": "Provides a variant of  for variables that are ever-increasing, such as the number of exceptions in the runtime.",
         "properties": {
           "DisplayRateTimeScale": {
             "$ref": "System#/components/schemas/TimeSpan"
           },
           "DisplayName": {
-            "type": "string"
+            "type": "String"
           },
           "DisplayUnits": {
-            "type": "string"
+            "type": "String"
           },
           "Name": {
-            "type": "string"
+            "type": "String"
           },
           "EventSource": {
             "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSource"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "ToString": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/IncrementingPollingCounter"
@@ -2201,7 +2220,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d55541c4-1b97-4873-81eb-3b97300dfd1d",
+                      "instanceGuid": "708b2fd9-98ee-4e5e-a160-abf90eae78fe",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -2225,7 +2244,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "025e9d51-0a18-4535-b1d6-2a17e2a9db50",
+                      "instanceGuid": "b8c7a260-22dd-4620-90b7-098639079861",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2248,21 +2267,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "697ad9a9-70ca-4d59-8358-5d84f9c7af3c"
+                      "instanceGuid": "e6baba82-fae2-4c44-b3bd-392c2ff1e6f4"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "6f0a2982-84e1-4ac1-8d62-2065c4e367a8"
+                      "instanceGuid": "f8f3b8b2-21c0-4d67-a9f9-a764558fdf6b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "81932eb5-d3c6-4aac-8f3b-1e627ddf68e7",
+                      "instanceGuid": "097714a6-39c9-442e-80fc-d034f5f4a2f8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2286,7 +2305,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8106f7b7-75bd-4c86-9641-5bb637fbae3a",
+                      "instanceGuid": "505ba55f-bd4a-4672-8c1c-292cea441276",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -2312,12 +2331,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "ff0a3064-a5d2-4c2e-b13d-34b974adbcfa"
+                      "instanceGuid": "a2dee0d1-cf48-461e-b8d6-8a45a65c85f5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "89e531a4-d853-48d7-9238-469f9f89fe0d",
+                      "instanceGuid": "73514142-f24d-4be6-8b77-691cf0723fa6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2341,7 +2360,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "6fe1beb3-5a6e-445a-8e83-c1d0256b84f0",
+                      "instanceGuid": "f9cb302f-5922-438e-a7d0-6833c1920fe5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2352,14 +2371,16 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "Opcodes": {
         "title": "Opcodes",
-        "type": "object",
+        "type": "Opcodes",
         "description": null,
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "GetType": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/Opcodes"
@@ -2374,7 +2395,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5b1b7e71-9c0a-4a9d-8d84-9fe0533545c3",
+                      "instanceGuid": "10a4561b-bcc1-45a9-96b4-90ec9eddded7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -2398,7 +2419,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "174f2e19-74ce-423d-bf66-a295f22149a9",
+                      "instanceGuid": "0c3718ec-51fb-4881-9d90-5f93176d1ba3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -2424,12 +2445,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "45f912b2-3d3b-4c19-b898-7b981d1b4d80"
+                      "instanceGuid": "4aae7c65-2aef-4498-ac70-b6286471cd14"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "53bd7c15-2785-4ff7-b152-73a05f610032",
+                      "instanceGuid": "3ffd260d-29ac-4a4d-aa2b-f39c0460f88c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2453,7 +2474,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "09db72f5-ca46-414f-a017-d177fd3234d7",
+                      "instanceGuid": "aaeaf525-6bc8-4f3d-a9e2-cd2a21401c7c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2464,11 +2485,11 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "ThreadAdjustmentReasonMap": {
-        "title": "ThreadAdjustmentReasonMap",
+        "title": "Thread Adjustment Reason Map",
         "type": "integer",
         "description": null,
         "enum": [
@@ -2493,28 +2514,29 @@
           "ThreadTimedOut",
           "CooperativeBlocking"
         ],
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "PollingCounter": {
-        "title": "PollingCounter",
-        "type": "object",
+        "title": "Polling Counter",
+        "type": "PollingCounter",
         "description": "Provides a variant of  that collects and calculates similar statistics as .",
         "properties": {
           "DisplayName": {
-            "type": "string"
+            "type": "String"
           },
           "DisplayUnits": {
-            "type": "string"
+            "type": "String"
           },
           "Name": {
-            "type": "string"
+            "type": "String"
           },
           "EventSource": {
             "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSource"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "ToString": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/PollingCounter"
@@ -2529,7 +2551,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1ee78f13-7a9e-4425-a64a-a62d8a9f3cb0",
+                      "instanceGuid": "19bea8e0-a411-404f-9ab0-0c1facd32d5f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -2553,7 +2575,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "21a63750-b584-4595-ad7b-29f3e74cffb1",
+                      "instanceGuid": "76be514f-dcbd-46cf-ad1e-0c5ac3a1d6f1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2576,21 +2598,21 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "key",
                       "isOptional": false,
-                      "instanceGuid": "4dd19080-7c5b-447c-ba18-cfed22efb214"
+                      "instanceGuid": "aa257e38-8c74-47b4-81a2-2c0626c34c69"
                     },
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "e5ae15df-c502-477a-afc9-9ce4e86ad875"
+                      "instanceGuid": "0c648d71-58a4-40df-a5bf-15b665f1b4e8"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "30d32970-e67e-443a-8729-60c087e5de56",
+                      "instanceGuid": "e15e7611-7752-4af1-8413-4268f59b1fb0",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -2614,7 +2636,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f06a6746-b7e7-4a47-919f-c951a32ad12e",
+                      "instanceGuid": "1e1c0ce4-cee1-4cc4-bb33-905f883315f1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -2640,12 +2662,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "d88fbbfd-5010-46a8-af5c-85cf4a64bd92"
+                      "instanceGuid": "b092bc7f-e109-4758-a2cb-cdb05abac2e8"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "5f04b4ee-c6cb-4182-bd6d-52d3913b6b93",
+                      "instanceGuid": "b62a488a-f403-44aa-aea9-db9dca0cac32",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2669,7 +2691,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "325c078d-5e87-461f-affe-ea9d8eb57b8f",
+                      "instanceGuid": "d07eb3cc-ef96-4995-b0e3-aa159d143da6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2680,47 +2702,48 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventLevel": {
         "$ref": "System.Diagnostics.Tracing#/components/schemas/EventLevel",
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventTask": {
         "$ref": "System.Diagnostics.Tracing#/components/schemas/EventTask",
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventOpcode": {
         "$ref": "System.Diagnostics.Tracing#/components/schemas/EventOpcode",
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventChannel": {
         "$ref": "System.Diagnostics.Tracing#/components/schemas/EventChannel",
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventKeywords": {
         "$ref": "System.Diagnostics.Tracing#/components/schemas/EventKeywords",
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventDataAttribute": {
-        "title": "EventDataAttribute",
-        "type": "object",
+        "title": "Event Data Attribute",
+        "type": "EventDataAttribute",
         "description": "Specifies a type to be passed to the  method.",
         "properties": {
           "Name": {
-            "type": "string"
+            "type": "String"
           },
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/EventDataAttribute"
@@ -2737,12 +2760,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "e14b151b-027c-472f-997a-4a266ad3fe2e"
+                      "instanceGuid": "55afd4f2-2a5c-4d2b-82c1-904187cbc33c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "23b16951-3403-4303-aed8-f9ac93d66eab",
+                      "instanceGuid": "bd5068e3-0121-4d62-a9cb-501b2f74dfea",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2766,7 +2789,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c01573ac-8926-4214-bf9e-cbf06d62b38a",
+                      "instanceGuid": "735dc6ae-e253-488f-8e98-4f92d2191f9d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2792,12 +2815,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "469e80ed-71df-4416-a003-5f05f75386cf"
+                      "instanceGuid": "3cefbd64-33b4-4413-99b5-46b34dcd94b8"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "226327c3-4ce2-4d1f-aaa9-e2273fb739e7",
+                      "instanceGuid": "1f0213d5-1580-43ea-aa44-bc382d2235f0",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2821,7 +2844,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "05c095dd-87d3-4cdd-8f5a-a06a1389c8cb",
+                      "instanceGuid": "b0d75de0-4717-47ad-a4b8-2e953a153cbe",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2845,7 +2868,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "9bbdf5aa-6738-4d6a-8801-889d12bec87f",
+                      "instanceGuid": "7b9b47d3-cf24-4952-979a-caf80eb4aad7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -2869,7 +2892,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e3e69f2e-ada4-44ce-a2e2-f5d9869a7389",
+                      "instanceGuid": "22a52ed7-f4a0-4ef6-920f-6ab5e94faebf",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -2880,11 +2903,11 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventFieldTags": {
-        "title": "EventFieldTags",
+        "title": "Event Field Tags",
         "type": "integer",
         "description": "Specifies the user-defined tag that is placed on fields of user-defined types that are passed as  payloads through the .",
         "enum": [
@@ -2893,12 +2916,12 @@
         "x-enum-names": [
           "None"
         ],
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventFieldAttribute": {
-        "title": "EventFieldAttribute",
-        "type": "object",
+        "title": "Event Field Attribute",
+        "type": "EventFieldAttribute",
         "description": "The  is placed on fields of user-defined types that are passed as  payloads.",
         "properties": {
           "Tags": {
@@ -2911,7 +2934,8 @@
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/EventFieldAttribute"
@@ -2928,12 +2952,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "c7266f20-4f0f-4fb9-b358-45da75fbd167"
+                      "instanceGuid": "457f9a82-3f9f-4ea5-b848-4cc46e157e3f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "6e20c927-7bc6-4f79-9cdf-19b8e074b60d",
+                      "instanceGuid": "79b8a53c-5e9a-4b2a-a336-66f4dde98078",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2957,7 +2981,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c533d0bd-eba3-4e9b-822d-00b822cba565",
+                      "instanceGuid": "695d4f73-1247-4296-ab39-ec4f2dbd22e2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2983,12 +3007,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "d8386a61-1540-431b-88fd-0aa6c1c8d315"
+                      "instanceGuid": "b8cef5db-a230-4329-97a2-7548b22bc19e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "fbb3cf2b-7419-4163-81bf-b22cc2b9fd2d",
+                      "instanceGuid": "2217deb2-9e3c-4e85-aa7a-25feffa84f96",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3012,7 +3036,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1bc9eb2c-f1cd-4550-a4f3-2bcccadc2709",
+                      "instanceGuid": "3567bfcd-bfee-4aa4-8880-1defe9b561e5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3036,7 +3060,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "43b1ae3a-a269-48c2-86f6-c1c7c01a9808",
+                      "instanceGuid": "967804ef-4890-449d-973f-687de60aaa10",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -3060,7 +3084,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "994ffb92-1de8-43ae-9963-c731a7f54452",
+                      "instanceGuid": "32e4de38-3eaa-49e4-9ce6-6fcbce067fd8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -3071,24 +3095,25 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventFieldFormat": {
         "$ref": "System.Diagnostics.Tracing#/components/schemas/EventFieldFormat",
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventIgnoreAttribute": {
-        "title": "EventIgnoreAttribute",
-        "type": "object",
+        "title": "Event Ignore Attribute",
+        "type": "EventIgnoreAttribute",
         "description": "Specifies a property should be ignored when writing an event type with the  method.",
         "properties": {
           "TypeId": {
             "$ref": "System#/components/schemas/Object"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/EventIgnoreAttribute"
@@ -3105,12 +3130,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "1b7106e3-856e-4469-b062-2aecf7c77c16"
+                      "instanceGuid": "8d6ea256-24c1-4139-b044-aaa4d1c49844"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "cd76bfa9-acfa-4d36-9d3b-faaf31717f56",
+                      "instanceGuid": "032b7db5-f528-4099-abc9-9ed9643d0d90",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3134,7 +3159,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c7d37c08-2bc9-4564-86a4-fcc48a238cca",
+                      "instanceGuid": "e6726705-7fbc-4e34-a013-b12823539ec9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -3160,12 +3185,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "d7fd91ed-dbe0-4aeb-9fb1-a5ec4d470894"
+                      "instanceGuid": "c6e031b8-5980-402b-bd33-09d7cc768829"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "36063b18-9610-4295-bcb5-4160ee636112",
+                      "instanceGuid": "4013b54e-c7f2-4397-8e5c-956be119676e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3189,7 +3214,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "cefba5d5-7dad-4863-b33b-c14be0619a9e",
+                      "instanceGuid": "013ddd59-a3de-4048-8e98-208e6398f2f9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3213,7 +3238,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8db5ab37-1fde-4e02-95dd-0f00c9c781c1",
+                      "instanceGuid": "d1a765eb-ddf1-4fd5-b806-0f80e57ad7c0",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -3237,7 +3262,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f27c2ad2-0ffa-4178-95fb-724b66f51d6d",
+                      "instanceGuid": "5e794d06-d637-4e47-92d5-ff13b76eea86",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -3248,12 +3273,12 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventSourceOptions": {
-        "title": "EventSourceOptions",
-        "type": "object",
+        "title": "Event Source Options",
+        "type": "EventSourceOptions",
         "description": "Specifies overrides of default event settings such as the log level, keywords and operation code when the  method is called.",
         "properties": {
           "Level": {
@@ -3272,7 +3297,8 @@
             "$ref": "System.Diagnostics.Tracing#/components/schemas/EventActivityOptions"
           }
         },
-        "x-methods": {
+        "kind": "struct",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/EventSourceOptions"
@@ -3289,12 +3315,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "1a371f10-f1ac-487d-80a0-8b727e1707bc"
+                      "instanceGuid": "857a8be2-c30d-4991-8fa8-2c7b86285b61"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2afa1004-1c7d-4ec6-bc3c-e149c1a1b0f3",
+                      "instanceGuid": "fe348ed6-8aef-4388-9ab2-0c71c92fb0fc",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3318,7 +3344,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5808f9cc-6283-4dad-9127-651231d02bf5",
+                      "instanceGuid": "cb888190-5609-4eb8-a6db-ef3c5fe5fba3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -3342,7 +3368,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4e3ed8a7-fee6-4327-87f6-86426363118c",
+                      "instanceGuid": "c18504e3-773e-49ec-b4c6-e8b1a36fed05",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -3366,7 +3392,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "9af02629-6683-4ada-9304-9dca03ea5111",
+                      "instanceGuid": "f9c52c00-8eab-422e-820e-8c91a7e1c8ee",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -3377,14 +3403,16 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "Scalar": {
         "title": "Scalar",
-        "type": "object",
+        "type": "Scalar",
         "description": null,
-        "x-methods": {
+        "properties": {},
+        "kind": "struct",
+        "methods": {
           "Equals": {
             "owner": {
               "$ref": "System.Diagnostics.Tracing#/components/schemas/Scalar"
@@ -3401,12 +3429,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "4b86b694-7fa5-45ef-bd5a-1f8857b72b5d"
+                      "instanceGuid": "7ab5a88b-ac7c-4544-a546-aaa7ff53caa2"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8a37df3c-5b5e-4f66-91de-f2c76dc97182",
+                      "instanceGuid": "5600410c-e1cc-46eb-9c62-bec97747a269",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3430,7 +3458,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "fb1a234f-c560-4355-b1e6-a8d578c2b9de",
+                      "instanceGuid": "6e2af8ee-ed7e-40b2-9c9c-fea805c6be06",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -3454,7 +3482,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "54f953c9-76d3-4e10-bbc2-b24ebfe022fb",
+                      "instanceGuid": "f923fe23-443e-425d-b096-7228b740684b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -3478,7 +3506,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "88a11214-6f23-487f-8ab2-e732dae325fd",
+                      "instanceGuid": "d03615ec-beea-48d4-95eb-b3c82ba2719b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -3489,13 +3517,13 @@
             }
           }
         },
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       },
       "EventTags": {
         "$ref": "System.Diagnostics.Tracing#/components/schemas/EventTags",
-        "x-namespace": "System.Diagnostics.Tracing",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Diagnostics.Tracing",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

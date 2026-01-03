@@ -9,9 +9,11 @@
     "schemas": {
       "Base64": {
         "title": "Base64",
-        "type": "object",
+        "type": "Base64",
         "description": "Converts between binary data and UTF-8 encoded text that is represented in base 64.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "EncodeToUtf8": {
             "owner": {
               "$ref": "System.Buffers.Text#/components/schemas/Base64"
@@ -28,36 +30,36 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "bytes",
                       "isOptional": false,
-                      "instanceGuid": "b2ea4ccf-7ea9-4505-b67e-d67d329905e8"
+                      "instanceGuid": "10704eae-ff31-4c27-b604-84aa927a9ba5"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "utf8",
                       "isOptional": false,
-                      "instanceGuid": "25acb3da-5da2-4aad-a1a9-9e5645b03ad1"
+                      "instanceGuid": "af666d83-d54b-4929-927e-dc55afe34a31"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "f9f6b378-8070-411d-88ee-b2cf9860551e"
+                      "instanceGuid": "c1aa094d-53c2-4d82-9067-f23f1387774a"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "5fe073e4-d9b6-4b16-bff9-fee1faa362aa"
+                      "instanceGuid": "a4d8041f-e055-4ee4-852f-b0f33c9ae177"
                     },
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "isFinalBlock",
                       "isOptional": true,
-                      "instanceGuid": "b7783fd0-70d5-4a9f-be91-9563451d20d2"
+                      "instanceGuid": "ea97b360-13cc-4b34-94f3-98ea2429e5d3"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "01f57ab7-6079-4ba7-af53-b29ecc14d041",
+                      "instanceGuid": "943fa5d9-fe33-4d8d-8dc7-af8b639bd439",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Buffers#/components/schemas/OperationStatus"
@@ -80,16 +82,16 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "length",
                       "isOptional": false,
-                      "instanceGuid": "bda67a67-8826-4e6d-8275-3959db199378"
+                      "instanceGuid": "93fe8464-9cdd-4780-b4cb-4a12602c2b56"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "73aadbec-2f79-4f1c-b7f2-36fddaa62bf8",
+                      "instanceGuid": "9bd150ae-65db-4077-85a2-ce55117ab4fe",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -115,25 +117,25 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "buffer",
                       "isOptional": false,
-                      "instanceGuid": "23702a37-0d68-4e89-aef5-edd51623f359"
+                      "instanceGuid": "4c7325c8-cf60-4364-8197-974beafbf77c"
                     },
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "dataLength",
                       "isOptional": false,
-                      "instanceGuid": "0459b8f3-7911-4286-ba88-be81d28129ee"
+                      "instanceGuid": "66e431b7-8208-4781-83e3-e2ddf2207e30"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "838bee55-ad14-43fe-8d5c-14036e6a5b44"
+                      "instanceGuid": "9cca1e82-f8e8-4467-ac5f-b7f7e526397f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8db26394-8eec-44c9-8f5d-29920055e5f5",
+                      "instanceGuid": "2acc4627-2db3-403b-a9fb-ed5732f103da",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Buffers#/components/schemas/OperationStatus"
@@ -159,36 +161,36 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "utf8",
                       "isOptional": false,
-                      "instanceGuid": "81716bb4-5281-4f1b-abd6-9d805e85e29b"
+                      "instanceGuid": "b08e1c28-46ce-4d06-898e-ee4856754983"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "bytes",
                       "isOptional": false,
-                      "instanceGuid": "4525d3f7-8bc1-4f7b-a8f2-5945ed8bd0f6"
+                      "instanceGuid": "518377ea-aec4-4863-a5ef-1df53bd95dc5"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "1331ff43-3e2b-40f1-8f67-8da7dd6b9d51"
+                      "instanceGuid": "3cae56f7-3b3e-418e-a734-88ce89edb048"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "bb64a815-31b2-4ae2-8429-ff11bdc11f69"
+                      "instanceGuid": "acfd9eed-2450-4fab-bf33-79f76f9814f7"
                     },
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "isFinalBlock",
                       "isOptional": true,
-                      "instanceGuid": "106acd82-b39d-47fe-9839-f4145905d334"
+                      "instanceGuid": "96d362c7-d590-4c71-bd84-e6e5fd621817"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "0d5fe6b2-148d-41d0-a2d3-411c7d5dc643",
+                      "instanceGuid": "6f249bfc-2568-40f6-85b4-b1a0039e36fa",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Buffers#/components/schemas/OperationStatus"
@@ -211,16 +213,16 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "length",
                       "isOptional": false,
-                      "instanceGuid": "98d70c48-827d-4a2e-85f4-5c8f115b1c42"
+                      "instanceGuid": "5d2b660f-2c05-430c-9a1f-792fc4a29790"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c794a338-ea06-40eb-9b85-c04324fabb5c",
+                      "instanceGuid": "1bcf3585-df88-47b9-b2fe-517bd143ecfd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -246,18 +248,18 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "buffer",
                       "isOptional": false,
-                      "instanceGuid": "026a9013-e0af-46e1-a7a5-ccae331b748d"
+                      "instanceGuid": "636e8970-4e76-4b69-81fb-cca913d11711"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "c3009ea3-333b-4afa-b74c-cc3222fcd611"
+                      "instanceGuid": "b69acef2-f71d-4484-8795-373dc88e7d96"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "35b295e6-092f-400f-ad06-7948f4d45c0f",
+                      "instanceGuid": "a61e1955-8188-4e5f-8901-d97f9493ba2e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Buffers#/components/schemas/OperationStatus"
@@ -283,12 +285,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "base64Text",
                       "isOptional": false,
-                      "instanceGuid": "4edaab5e-9996-49cc-ae51-2dfe0999e331"
+                      "instanceGuid": "553a065c-7280-48fc-a35a-6c5a7b738726"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "52227c22-b506-45d4-94e6-ccde6209d60a",
+                      "instanceGuid": "48a125e2-f999-4971-93d2-4dcd64fd0b2c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -307,18 +309,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "base64Text",
                       "isOptional": false,
-                      "instanceGuid": "aec7c5a5-8388-4210-87e9-c2c7ea4b1f2e"
+                      "instanceGuid": "ef8dcf96-77f4-476f-a44c-d76338d99341"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "decodedLength",
                       "isOptional": false,
-                      "instanceGuid": "9735eb29-dbbe-4e92-9c9f-6d259fb80154"
+                      "instanceGuid": "942c6566-ff34-480d-9e82-85769814eac5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "215262cc-f4a6-4f67-bb11-3cf771a6f2bd",
+                      "instanceGuid": "ea32e070-b20b-4528-9e09-1fb4a4277aa6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -337,12 +339,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "base64TextUtf8",
                       "isOptional": false,
-                      "instanceGuid": "585c29f9-afc5-4e85-a170-767657be111d"
+                      "instanceGuid": "452dd033-537d-4017-8e3d-7b96e0cc8438"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2166ea35-5468-4305-9de4-7aaecbf4fc24",
+                      "instanceGuid": "ec18757d-52cc-472e-b611-d0300b273d48",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -361,18 +363,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "base64TextUtf8",
                       "isOptional": false,
-                      "instanceGuid": "96657ebc-af60-4ab4-a84c-f663fe200be8"
+                      "instanceGuid": "8bc0fea7-84df-4b01-ae52-531a9461567f"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "decodedLength",
                       "isOptional": false,
-                      "instanceGuid": "e9aab75f-3f3e-441a-9dff-35aa2d3f6d2e"
+                      "instanceGuid": "f688c75b-5415-4fd8-9d96-99c7c7884a24"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "85cfed28-1e26-49bd-9ac5-a6cb6368cc97",
+                      "instanceGuid": "fc9c825b-5342-4389-907a-7ad71f3a835e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -396,7 +398,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "11e1c125-bd14-425b-ab68-0670d7c1c02e",
+                      "instanceGuid": "3317ed68-7d9f-45f1-97b7-25d6c0dfe37d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -420,7 +422,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a78904ae-4306-41c7-88ad-331199503974",
+                      "instanceGuid": "36857bff-c2bc-4b8d-8b9e-71501ef58880",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -446,12 +448,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "ddb9acd9-1dc5-45e4-bd5e-1dc5350e996c"
+                      "instanceGuid": "d8e0e4e7-9a5f-4db4-b70b-a23bc9e07a82"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b1d9eaf6-4ee1-42dc-a9ef-08808ff25a46",
+                      "instanceGuid": "bdd0fe1d-859e-4d36-ab43-536d7b97edc6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -475,7 +477,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "cba33f1b-6cf8-4e2c-88bd-9a5e2a8a4324",
+                      "instanceGuid": "0411ce48-3f45-415b-87fd-06e5d8555167",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -486,14 +488,16 @@
             }
           }
         },
-        "x-namespace": "System.Buffers.Text",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Buffers.Text",
+        "assembly": "System.Private.CoreLib"
       },
       "Base64Url": {
-        "title": "Base64Url",
-        "type": "object",
+        "title": "Base64 Url",
+        "type": "Base64Url",
         "description": "Converts between binary data and URL-safe ASCII encoded text that\u0027s represented in Base64Url characters.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "GetMaxDecodedLength": {
             "owner": {
               "$ref": "System.Buffers.Text#/components/schemas/Base64Url"
@@ -507,16 +511,16 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "base64Length",
                       "isOptional": false,
-                      "instanceGuid": "beb7ac10-115d-492d-88aa-e80d3e81c2b1"
+                      "instanceGuid": "468c7113-68f5-4241-913a-3a1156cf4992"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "cd08b94e-0fda-40e9-9e9f-596c0da75e41",
+                      "instanceGuid": "99045c64-7e7e-4fc3-92df-11175a083110",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -542,36 +546,36 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "0d0e6af4-449b-4d75-a253-355d7e472563"
+                      "instanceGuid": "177080a6-4512-44e3-9742-c88216eb0959"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "83d416f7-a56f-410d-9934-f9c112ed6c04"
+                      "instanceGuid": "842c2829-16ef-4ff1-83ca-2a2e34c6d700"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "3c273965-db53-46cf-91a6-6af66ff89100"
+                      "instanceGuid": "81921e17-cf60-4311-91a3-b6ab39cdff49"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "eb440395-1b65-48e9-8586-7fb95f70ebfa"
+                      "instanceGuid": "011e409f-78d3-42db-b1d9-fe3d1f994136"
                     },
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "isFinalBlock",
                       "isOptional": true,
-                      "instanceGuid": "62a8a42f-aa7c-41b8-abcd-3630f5866274"
+                      "instanceGuid": "81d26548-c278-4e3c-ada7-bc8ea675e04a"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9ef5859c-dc9f-4867-a7e7-dc95beb77a2e",
+                      "instanceGuid": "167af5dc-af0b-48f9-8799-ffd60d39f74e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Buffers#/components/schemas/OperationStatus"
@@ -590,18 +594,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "1579b5fc-0a1e-426e-bc8a-4a22738a9cb6"
+                      "instanceGuid": "4be3220a-a26f-47f3-a9ca-684f6eb20a13"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "b260bba7-77f6-49a5-af6b-69dc758341d8"
+                      "instanceGuid": "1c86a037-9878-4b7f-ac44-bf0d0426f53f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8db570d4-f55e-4edc-b2e4-c77bbc0c1cf6",
+                      "instanceGuid": "843717bf-ff28-464e-9c99-f7f7d0cb1aa9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -620,12 +624,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "9e022f73-5941-40d8-9e9d-8d8807c5cecc"
+                      "instanceGuid": "29dc643f-2543-4d1b-b7c1-3b74c83fa0b7"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "af20eb9b-3fe7-43f4-94ef-75fe45c3b388",
+                      "instanceGuid": "c8e028d3-d1a6-49e1-9e0c-b3dee0819e6c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Byte[]"
@@ -651,12 +655,12 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "buffer",
                       "isOptional": false,
-                      "instanceGuid": "7900bd15-fd6b-49eb-bd11-46d40f6f9f48"
+                      "instanceGuid": "89fb6aaa-5291-447a-8c13-d75bc686c828"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ebd8d7ce-2bbd-4945-94db-9c53431028ee",
+                      "instanceGuid": "232d6c71-a045-464c-aef5-ace790bac3c7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -682,24 +686,24 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "6fd79762-b795-480d-a09d-bfe413f36a8a"
+                      "instanceGuid": "458c5080-fa1c-48d3-8bca-206d103a5f0f"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "04836d79-8e8c-4434-b7e3-2fce5429002a"
+                      "instanceGuid": "04884745-daf8-4a57-a695-01fbbf0e02df"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "ab6759e7-e55f-4c93-a650-6531631e4194"
+                      "instanceGuid": "02a2558b-0b36-48a4-91eb-4cc88838c15e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "5571c9e2-8db9-4266-836e-f1a0e9973ebd",
+                      "instanceGuid": "01fc060d-3485-4010-87c7-0d672abe1e7d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -725,36 +729,36 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "0ab58322-a4e3-479e-9d5a-751a737691ca"
+                      "instanceGuid": "835bd5f5-96b3-49c6-9406-a92f8ac29679"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "674d6a71-b1e4-4e10-af89-f0987cbac111"
+                      "instanceGuid": "728f1461-713a-43b6-bd49-7f1ec6733dc9"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "charsConsumed",
                       "isOptional": false,
-                      "instanceGuid": "2dec0e3e-ab46-462e-8b63-fea0de7c7e9f"
+                      "instanceGuid": "a84518ea-8ea4-4b35-a6b1-8dfc109b1e47"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "6ba299dd-5304-4539-8a23-143d011a2814"
+                      "instanceGuid": "1ef90dae-1008-4224-8bf9-316038b66d28"
                     },
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "isFinalBlock",
                       "isOptional": true,
-                      "instanceGuid": "e2535cfb-f382-4cfe-b0d8-9d0911833aaf"
+                      "instanceGuid": "61126c88-7244-4d22-a5aa-efc46b762687"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "75e98641-776d-4212-8a75-d61f6cb75503",
+                      "instanceGuid": "1bfb4ce6-1c5d-4e30-97c3-df57dc8ae8e0",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Buffers#/components/schemas/OperationStatus"
@@ -773,18 +777,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "1a3ebf0e-7ca7-4142-b4f1-5d2ac50b0d59"
+                      "instanceGuid": "0951991f-7582-4dd9-8043-ce93d8f3a314"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "60289097-53fc-4df8-8d8a-79007f3e9e4b"
+                      "instanceGuid": "7d8f0ba9-5f7c-472f-9c8d-5c27ded1721b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "7b300ac4-adb9-484d-a6f0-54e634432722",
+                      "instanceGuid": "94525519-b68b-4846-b77a-12b09bf7ca56",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -803,12 +807,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "e6563e18-ba67-4d37-bf9f-7d9ba6a3b55a"
+                      "instanceGuid": "a7a9d1d5-bfa3-45f4-b6bb-d5264c135d6e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "98922545-e5bd-45d5-8fe9-96eb8d973134",
+                      "instanceGuid": "9ce323c1-f504-4bd6-90f6-237376239092",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Byte[]"
@@ -834,24 +838,24 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "733da7b1-b33b-44ed-9bd6-1e05e33fec08"
+                      "instanceGuid": "9c8ecbce-a012-40f9-a196-c5c03d6f9b45"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "293ce934-fe7e-4f7d-ae47-3b92f66f5cae"
+                      "instanceGuid": "9c0b385f-17cf-4a74-b39d-e15556b601c3"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "af6926f4-6312-4545-b39b-aba59b876819"
+                      "instanceGuid": "a7972a58-e913-4118-ad70-5db25071b843"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f3f12b55-9c95-4511-9dac-318cae41bcad",
+                      "instanceGuid": "4794cb9c-27e2-4957-baf9-1b8523799858",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -877,36 +881,36 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "55437119-e1a6-415d-b189-37fdecaa7394"
+                      "instanceGuid": "890f8dff-63a4-49b7-bca5-8fc4bc3f1146"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "cbb34b61-e129-442d-b75c-5397db09a6ba"
+                      "instanceGuid": "a151852b-21ee-4f72-93e7-90e33617b8d5"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "82074959-36e4-4d30-a7bb-047598cd8dce"
+                      "instanceGuid": "8c7f6141-a431-4967-bd21-033494da00c4"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "19efad5e-37a9-4f7e-93c8-50b8398f34b3"
+                      "instanceGuid": "11a78c4d-6923-4141-861a-e848f5f6b5d7"
                     },
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "isFinalBlock",
                       "isOptional": true,
-                      "instanceGuid": "a24519da-204a-4ac2-a4c0-3d361089bb71"
+                      "instanceGuid": "1e1ac7b5-1bc1-4f63-b531-21b0a39fd0c2"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c90ee51d-c253-420e-a49a-c498507d6509",
+                      "instanceGuid": "ab4c02ed-0e72-4772-8e27-87bafc14f734",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Buffers#/components/schemas/OperationStatus"
@@ -925,18 +929,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "97da0314-2381-4ece-9af3-0edf9895fc74"
+                      "instanceGuid": "45066753-8a57-42aa-b73e-de92a9c7ffcb"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "ebab96c8-6183-484b-8f70-814b44eb7d61"
+                      "instanceGuid": "abd5bad7-0c1d-443e-8db4-7a7701c265ee"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "3891ef70-4543-4df6-8b61-1de97d21aeb1",
+                      "instanceGuid": "0197db9a-0cd2-42dd-878e-738875fe4a71",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -955,12 +959,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "9ad246a8-3982-494e-ae7a-baf9a40f528c"
+                      "instanceGuid": "82db91ca-362b-4e10-81ad-4b5b05bdb495"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ebf399cd-9bad-4d48-8ccd-94f6e3bdc983",
+                      "instanceGuid": "393c1703-1225-48e8-aa7f-45b7194a834d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Byte[]"
@@ -983,16 +987,16 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "bytesLength",
                       "isOptional": false,
-                      "instanceGuid": "814fcfbb-4c93-407c-ba98-b39ed6f7f6a5"
+                      "instanceGuid": "c65a4243-63c7-4922-b26c-cb90ef156924"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "113025f9-90d4-49da-9d29-eb5446f26483",
+                      "instanceGuid": "2402fc92-8102-4fa1-b29a-955b276c36c6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1018,36 +1022,36 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "3b87b10d-a82b-413b-98dd-5a073934672f"
+                      "instanceGuid": "1d5e465b-2936-4d66-b520-cb797ca04a14"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "896a2597-155c-4206-93d0-3f65c0487aac"
+                      "instanceGuid": "c4b623e9-fc03-424d-a4d8-21b81f14869d"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "dea4c07f-48d3-4b08-817c-7d4fab97f343"
+                      "instanceGuid": "aa89a33e-8ff8-42fb-b796-cd2684294388"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "charsWritten",
                       "isOptional": false,
-                      "instanceGuid": "6cb08ea1-92f2-4f9a-bf96-59a1519c0df0"
+                      "instanceGuid": "38f811ea-215a-4593-844d-beed5277df79"
                     },
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "isFinalBlock",
                       "isOptional": true,
-                      "instanceGuid": "0b8995f4-bf52-4a74-bdf5-371b7605bfe5"
+                      "instanceGuid": "06b1d888-4dc6-4015-96eb-a05318bd1270"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "6eb41409-ae76-4f3d-a02e-706ad7812f76",
+                      "instanceGuid": "86efb1af-9a1c-4f53-8967-359732d54be7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Buffers#/components/schemas/OperationStatus"
@@ -1066,18 +1070,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "ea574aff-e9dd-4696-881d-6797f0044d50"
+                      "instanceGuid": "330711f0-e682-46a4-983f-b2e713999170"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "71edadbc-0f4b-4b0b-83ed-e6e2cc08f5d1"
+                      "instanceGuid": "30b996fc-4605-4288-8a08-6345a0b40426"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a81dd999-b725-4642-8a1d-da8a57cb8436",
+                      "instanceGuid": "f5d0ea63-6c27-459b-b60d-1ff5cd1b7991",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1096,12 +1100,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "e60feb38-2b26-43e9-ba51-535ec13febcd"
+                      "instanceGuid": "923edd3c-b037-49f0-ade4-6f26b4646510"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "db538e19-9a05-4424-bac9-c95b866c1a0b",
+                      "instanceGuid": "c9f3e323-ad41-42e5-8ac0-22bf362e1635",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Char[]"
@@ -1127,12 +1131,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "1dd395be-1218-4bf1-8cff-573c1dcacfb9"
+                      "instanceGuid": "0c00f3c6-f7c0-4d81-9a29-2f87a18acdf9"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "134eec61-48d5-4462-8865-0227e133ca58",
+                      "instanceGuid": "671a847b-01da-43c4-aee5-dc19329a6482",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1158,24 +1162,24 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "f6c4df26-a831-49b9-9380-b9b4371af7c2"
+                      "instanceGuid": "a6fa0978-a5cf-4fc6-9fcf-754ed1435f26"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "bd3fba3e-2687-4b2e-a968-213609190564"
+                      "instanceGuid": "b3387f2f-4572-4c66-a745-a0b0b6a726d6"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "charsWritten",
                       "isOptional": false,
-                      "instanceGuid": "0fc7dce9-bdad-4293-98ff-7148350dc474"
+                      "instanceGuid": "66c26ccd-c16f-4750-bcad-3d953052ebbf"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "32039304-5996-482b-b400-f97fae10f187",
+                      "instanceGuid": "ca06e86e-6412-4a12-ae43-86375cc7a4d8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1201,24 +1205,24 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "20bdf67e-99d2-41c8-ace0-132a31615568"
+                      "instanceGuid": "735e83c9-a278-45cb-a27a-1db40591bc16"
                     },
                     {
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "9b69e1a9-45b7-4c11-ac70-c24ecdea2140"
+                      "instanceGuid": "bff87422-ff78-4e60-904b-6b83d6b803f7"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "b63ae927-3959-4734-a962-0add8182ee9c"
+                      "instanceGuid": "cc8a2c0a-8818-487f-925d-d889e1f5967f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e8369728-305d-45f3-96fe-921390ba2fe9",
+                      "instanceGuid": "900cbd4b-add1-48a6-99f9-a1d6b0dfa9e5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1244,25 +1248,25 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "buffer",
                       "isOptional": false,
-                      "instanceGuid": "e9449f6c-4d4e-4d70-9ad5-a96b9ec65ed3"
+                      "instanceGuid": "d07704cf-5f58-4484-bb5a-f35ff0e37d51"
                     },
                     {
-                      "type": "integer",
+                      "type": "Int32",
                       "format": "int32",
                       "name": "dataLength",
                       "isOptional": false,
-                      "instanceGuid": "bdd64a18-c1c9-41d5-b206-09b91413c082"
+                      "instanceGuid": "614f22a7-77b2-4ed6-ba01-3f0354a5479d"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "46ea0d0e-a05d-4308-b4d0-ceee4b6d4840"
+                      "instanceGuid": "358dea33-b38f-4944-aea7-07af2e825ecd"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "050d69e5-d0b1-41eb-954d-3d75f47c30bb",
+                      "instanceGuid": "1d08be23-5926-492a-bad4-3eeeb04e7a1a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1288,12 +1292,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "base64UrlText",
                       "isOptional": false,
-                      "instanceGuid": "23003420-b479-45aa-b475-08c0418bcf69"
+                      "instanceGuid": "3cc54614-2fb9-49d7-a1e4-d2d954e51999"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9eff085b-bdc9-4b66-be10-9965ee1d74b0",
+                      "instanceGuid": "4dc39b71-d115-42e1-bf0a-1d32128893cd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1312,18 +1316,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "base64UrlText",
                       "isOptional": false,
-                      "instanceGuid": "368eea3f-446a-4072-a726-5bada04655ed"
+                      "instanceGuid": "4025b543-10e8-4c03-b9f4-0e7f3f0ad921"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "decodedLength",
                       "isOptional": false,
-                      "instanceGuid": "fee1dcba-7822-4616-8123-8707f9d3d682"
+                      "instanceGuid": "ac30edb5-452d-4b11-89a2-af9feda1d51a"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ba74704d-beef-47e4-a3c3-d64a4a992076",
+                      "instanceGuid": "607170cb-d7b6-4263-944b-0a8a53eb09ef",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1342,12 +1346,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "utf8Base64UrlText",
                       "isOptional": false,
-                      "instanceGuid": "43bdf0fd-5c9e-4c23-bed1-2bdc5bd95821"
+                      "instanceGuid": "9dd42252-6f13-4349-aa9e-bb8093c01e1f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e5118756-573c-48c5-8ecb-2c98a13894f8",
+                      "instanceGuid": "b812b623-cdf6-4d8c-a2b4-ef6c2c101262",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1366,18 +1370,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "utf8Base64UrlText",
                       "isOptional": false,
-                      "instanceGuid": "73920756-91cc-4c79-b700-c1280815ac00"
+                      "instanceGuid": "064dc500-6f04-4752-bd0f-79df003b0abd"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "decodedLength",
                       "isOptional": false,
-                      "instanceGuid": "66369b94-46a4-4766-b8b4-8ce7b80900d0"
+                      "instanceGuid": "05086b64-bc91-44b2-b5dc-851fcd74c3ed"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e0009b78-54b1-40bd-8b8e-15e5f23741f6",
+                      "instanceGuid": "9fefe9c8-9eed-4566-a1a0-20b761d4a2fb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1401,7 +1405,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ffdb3144-8c3b-465a-ab85-56847d95bc62",
+                      "instanceGuid": "37716be1-e53c-4a41-b60b-8e1443997a8d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1425,7 +1429,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "acbad178-f448-4b93-a917-528a3f89f5af",
+                      "instanceGuid": "4ceb2e1f-c78a-46fc-aaaa-d4466661c996",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1451,12 +1455,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "5a48cdae-4aef-4178-a785-6dca39e0bb5f"
+                      "instanceGuid": "6aec2236-6cb0-4f43-8bcf-c45d20f04d8d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8afc2ce3-baf3-4a71-8a8d-eadcead3932c",
+                      "instanceGuid": "76709123-23b7-434c-93f8-bc45b5b2e86c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1480,7 +1484,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "11529e7f-b1be-4225-aa06-922a92e69cf3",
+                      "instanceGuid": "e5a3bf49-175e-43af-8391-408001f727a1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1491,14 +1495,16 @@
             }
           }
         },
-        "x-namespace": "System.Buffers.Text",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Buffers.Text",
+        "assembly": "System.Private.CoreLib"
       },
       "Utf8Parser": {
-        "title": "Utf8Parser",
-        "type": "object",
+        "title": "Utf8 Parser",
+        "type": "Utf8Parser",
         "description": "Provides static methods to parse Utf8 strings to common data types.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "TryParse": {
             "owner": {
               "$ref": "System.Buffers.Text#/components/schemas/Utf8Parser"
@@ -1515,30 +1521,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "d6cda434-c531-42f2-9811-9d5d20fd0ead"
+                      "instanceGuid": "741bf221-a655-473d-a99d-af0a2fb8ba4e"
                     },
                     {
                       "$ref": "System#/components/schemas/Boolean\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "eb1a5f1e-ee33-4de8-9871-956fac761966"
+                      "instanceGuid": "5a211250-8fc8-4181-8642-edf984a3e2db"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "7ab372ea-7b2f-4199-8b5a-bd51877ee841"
+                      "instanceGuid": "56a4e3eb-4ed8-49a8-995d-1deef99d2531"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "f46d6858-4683-471d-84b1-46e353ea9a8f"
+                      "instanceGuid": "62519dfc-3b14-4e45-a2ad-a3268518229c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8472e658-93a9-4d1c-b3c9-0270295cdc1d",
+                      "instanceGuid": "32b656e5-797b-4d49-a723-7af7e7bed6e0",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1557,30 +1563,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "e63bf4c6-bbf1-424e-ac6e-c9b7582f57fe"
+                      "instanceGuid": "4dd7bff7-7f34-4632-be93-cb9169aa3fb5"
                     },
                     {
                       "$ref": "System#/components/schemas/DateTime\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "a33703b7-4b70-4c81-8441-68d56f1214f1"
+                      "instanceGuid": "1367922d-9755-43ed-ada8-43f44f74edd1"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "2f483545-56b2-4c60-bdc4-7da8ebf8fcf7"
+                      "instanceGuid": "35a74eb3-4946-4312-bc01-9f16b3685520"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "dabe02c2-2808-49c4-82db-48b930910037"
+                      "instanceGuid": "83b7a034-c0dc-4214-9348-b8eaab5ab13d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "df15b5a5-5c41-477c-86a6-a5410eff2148",
+                      "instanceGuid": "8c6d5606-4f2f-40cf-9550-4f0cfb51d3aa",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1599,30 +1605,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "79b0f448-25ee-4629-adc5-67a7b8c99890"
+                      "instanceGuid": "d7aac1cc-ce00-4190-adda-a72b9c747821"
                     },
                     {
                       "$ref": "System#/components/schemas/DateTimeOffset\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "653dc325-6c27-4639-bd84-29efafd075ff"
+                      "instanceGuid": "63d6abb6-d95b-4477-b601-8cc741489380"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "babae739-6d5d-4249-b4f3-cf1a81892c8f"
+                      "instanceGuid": "d809e68e-5fac-4373-9b25-4da9aec55339"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "11d0f9fc-2471-4e4b-91a1-20db672d141b"
+                      "instanceGuid": "6d3b8297-b0a2-4314-9ec0-04fe6a54d71f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a4a8f84a-fe25-4139-8957-207537e04851",
+                      "instanceGuid": "bf2a1409-7fe5-41bf-bc94-85c1f0269b64",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1641,30 +1647,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "9c599ae7-e36d-4974-8462-4f985752dc86"
+                      "instanceGuid": "d38d8264-dc73-4afb-9597-111e0a85d126"
                     },
                     {
                       "$ref": "System#/components/schemas/Decimal\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "3f0a9c10-a37a-45fa-b786-690b86ca93bd"
+                      "instanceGuid": "c9656108-70c2-4cb8-98b1-2fa2083aafad"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "af381e0f-7233-4662-9c86-0dc00334dc49"
+                      "instanceGuid": "e644ddb0-d07e-4661-9dad-35f60cc87258"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "a8a1075d-2c43-47ab-aeff-4665931654df"
+                      "instanceGuid": "b6c48441-554c-4626-be23-f5e2aba769ea"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e6c9859f-5d95-4724-9c3e-48c352e35198",
+                      "instanceGuid": "1d4fe7f6-ffad-4122-880b-e5ddd886c721",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1683,30 +1689,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "3bdaa8c2-71eb-4a9b-9ed6-04647dc0eb72"
+                      "instanceGuid": "b3dc0687-8b3d-41c7-94a4-a15e220ec51c"
                     },
                     {
                       "$ref": "System#/components/schemas/Single\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "622323d4-c021-49c5-bcf9-28306f80a2c8"
+                      "instanceGuid": "2d0fd392-3fa2-4ab1-b7f7-6dafb0d01b63"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "f5bba653-929c-45cd-af12-43725978af1e"
+                      "instanceGuid": "49f493f4-bf58-4dd5-abd3-b9e53ed179d6"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "0c7ce345-f1d0-4841-a3ab-5749141cb828"
+                      "instanceGuid": "4bffdf11-cd1e-4d7f-855a-15aadad04ebd"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ddcd996d-51ec-4162-98cc-66c168f9a522",
+                      "instanceGuid": "b17273bd-2c75-431a-9886-9c17d578a46e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1725,30 +1731,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "d2685758-15d1-4a1c-af54-a79bae44a94d"
+                      "instanceGuid": "e4938410-53c6-4d75-9e64-bfe94c97ba59"
                     },
                     {
                       "$ref": "System#/components/schemas/Double\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "14a3c268-b130-4a53-89a7-ffbfb01804fe"
+                      "instanceGuid": "3736b859-e3d6-485d-a2a8-cfee2174f2f7"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "0f5ff9f2-56dc-4b91-9032-79ce4df6e87b"
+                      "instanceGuid": "03b3958c-3214-4e0b-9f93-ceb39586efb0"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "76b6d2d4-eb8b-4191-ad9b-4220a4330648"
+                      "instanceGuid": "68756510-6a7c-4a66-8640-6208107db7e2"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "7a906cb2-e9bd-48e1-b8a8-0e444b2c7765",
+                      "instanceGuid": "80e71baf-b945-407f-b4d8-447517d12f02",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1767,30 +1773,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "f1b684c5-a7f4-4f66-9f59-bb4deee2d1e9"
+                      "instanceGuid": "fdc39947-4d39-411f-b57c-5c8dfcdd2a81"
                     },
                     {
                       "$ref": "System#/components/schemas/Guid\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "b53cf5db-8710-46b5-98ee-a7d0ccc99e47"
+                      "instanceGuid": "e242223c-a812-4f0a-b69b-bb0d8a745f7e"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "802b5bbf-54d3-4e31-a47a-12a567668024"
+                      "instanceGuid": "fcef73e8-7b96-4932-9af7-152bca937142"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "6fcf4917-d311-4236-9482-d8b84dce413c"
+                      "instanceGuid": "1543d6ff-ae3e-4a58-8ce2-ca5f4ceca3b9"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "70d35a39-b13b-45ef-ab07-034476ff7215",
+                      "instanceGuid": "9b5f0e07-d2ac-42fe-865e-1cf7f2ee01d3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1809,30 +1815,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "23d010d1-575f-4cdc-90ed-0d5d2d1ee936"
+                      "instanceGuid": "23b16cfe-0cb9-4a32-a353-b3487f9c31f2"
                     },
                     {
                       "$ref": "System#/components/schemas/SByte\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "25198dfd-d117-4cc7-8488-d9cdbf6de0fc"
+                      "instanceGuid": "64013fbb-6e25-4edf-81aa-7b0f144781b7"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "8abff051-9e99-433e-9ac7-c454840d66b4"
+                      "instanceGuid": "44942941-ed00-4882-8f13-d2e7822ecec4"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "75f9234a-9d93-41e4-8f11-4984af90e5f0"
+                      "instanceGuid": "5c26039e-b68f-4132-985d-55e01e22bcd2"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "42aec894-b95f-4503-bbc8-f7f1e4056d1e",
+                      "instanceGuid": "7e69cb33-00c4-4e9c-bbd1-e53e5fdda608",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1851,30 +1857,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "8a012745-d4fc-4574-84e6-df4e0361d6d4"
+                      "instanceGuid": "795e2f48-1f64-409f-ad1f-b70faa5b7d36"
                     },
                     {
                       "$ref": "System#/components/schemas/Int16\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "98bcf5fb-ae02-4cbd-b605-072a99b337f1"
+                      "instanceGuid": "df5aa1bc-561c-441c-beee-1ee2b5465037"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "e90ad8f4-055b-4dc9-bb10-271e7768f379"
+                      "instanceGuid": "69516373-2fac-44db-8322-647d50a375ba"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "bfa8dca8-604b-47ae-9b58-db2dab835c6d"
+                      "instanceGuid": "141f8623-abcf-4fdb-bdba-c287f1acf28b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b831e6a9-6473-4896-b7a6-529d6842cee1",
+                      "instanceGuid": "684f03da-6448-4351-a71e-6f8b95867b3d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1893,30 +1899,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "0d1b7fd2-afe7-4c9a-90da-e74883fe93b5"
+                      "instanceGuid": "e95164e2-7c20-47aa-8521-fe9eaaa5fa59"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "d8c6dbcd-0fbd-4187-b0af-1bdaabbaa603"
+                      "instanceGuid": "6a5f078b-df33-432b-aabb-01cdca007f53"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "5d0264d6-38ee-4e7f-bcef-ebf6701fce35"
+                      "instanceGuid": "44bdf71e-9519-4cda-b5ee-d2dbca3eb1b1"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "5eba6012-e506-4e9e-96c9-692c6d773864"
+                      "instanceGuid": "0c4a4a7b-cd99-4c8f-a797-d1d1785aea39"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "20530daa-95ae-4270-ac36-9e1e40ff207d",
+                      "instanceGuid": "1a0e5671-c504-4ca7-969a-d41a99ee916f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1935,30 +1941,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "8a7f7f42-873c-41ed-915c-028fab44436a"
+                      "instanceGuid": "b03292db-24d8-46b8-9ec0-7eb27a31510d"
                     },
                     {
                       "$ref": "System#/components/schemas/Int64\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "5980f962-3c3b-4684-880f-6a43a868a6e8"
+                      "instanceGuid": "aacd60b7-214f-42ec-91d9-82eff1bfaace"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "d4965c3a-f54f-4378-99a6-0aa8d1d2fe4c"
+                      "instanceGuid": "949d69a9-0c22-4363-9f82-8aceddc5d7ea"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "0064ad0c-17f3-40bc-be2a-0f697ce0a271"
+                      "instanceGuid": "e9e06d20-99e8-4929-8ca5-bef5c2ce3835"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "fec16e51-1d3e-4509-ba09-7e20f2b36ab4",
+                      "instanceGuid": "cc2a67d7-5617-4212-96d0-9c9cdffe74ab",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1977,30 +1983,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "88252346-3873-45ea-abfc-8a1cc9f38084"
+                      "instanceGuid": "c8d05f3f-913a-4391-b188-8136a13bdf35"
                     },
                     {
                       "$ref": "System#/components/schemas/Byte\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "eae4e17e-d1c3-445e-93f0-358d58d7c28e"
+                      "instanceGuid": "9146d628-0f4e-4ec8-813f-9154b243abe2"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "9e1dd139-f561-48e8-9e12-ece9a85d5a79"
+                      "instanceGuid": "e924ed83-1aa5-44eb-aaae-8f5cfc5c89c3"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "2bf100b8-bc7c-4302-be24-4ca8d6b4a098"
+                      "instanceGuid": "74273289-a278-43cb-91c1-c50289b0e64c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "50574900-130a-40ed-8eef-53345b8074cc",
+                      "instanceGuid": "9258a453-ecd5-4317-862d-5eb9525930e8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2019,30 +2025,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "5772ee49-3919-4fa0-a845-302620a58012"
+                      "instanceGuid": "393b7577-5630-41b8-9f1b-9616bc43ccd4"
                     },
                     {
                       "$ref": "System#/components/schemas/UInt16\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "5e66bb87-e955-4eda-a699-d50773cce285"
+                      "instanceGuid": "506b844e-bbcd-43a1-9067-fd855169bc6b"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "d9f50664-9753-4110-b1f9-09e849f4bce7"
+                      "instanceGuid": "65d38162-6347-4fb2-91f6-b7e4475340e0"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "2b4e0c75-0c4d-4ae2-9fe5-b01d4ca5044c"
+                      "instanceGuid": "a8cd8b91-aeaa-4e9a-b138-207f94dd6637"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "91704e06-2ac7-416e-b75b-7b2f60d144db",
+                      "instanceGuid": "f2b930dc-8b6e-40eb-a70c-02dcb1e53a3e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2061,30 +2067,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "3aa230f5-01f0-47b1-b226-df4439b6a1d2"
+                      "instanceGuid": "ddcbcd6f-72af-45ec-9033-6b00fd8f13b9"
                     },
                     {
                       "$ref": "System#/components/schemas/UInt32\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "d4952ecb-a333-4d21-87b9-410e6cba0467"
+                      "instanceGuid": "11f178ba-6e42-409f-93f9-85c1657a80bd"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "15218528-c2dd-472a-be74-626e337a89ab"
+                      "instanceGuid": "53a2dabf-22c2-480b-8046-79a45dcdbdcf"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "eabaa84c-4957-4c05-880d-0cfef513ea1a"
+                      "instanceGuid": "7755385a-d502-4b84-890c-f371504abc66"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "3a792f1f-0223-4062-8279-7d2602889b19",
+                      "instanceGuid": "418d56a0-31b4-46d0-a0c3-86248093b1c4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2103,30 +2109,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "3049b9cc-5935-46c0-ba32-5234ab46ab7e"
+                      "instanceGuid": "e8088c3c-16f9-41bb-874f-8e4f4bda605e"
                     },
                     {
                       "$ref": "System#/components/schemas/UInt64\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "f5b7bf71-976f-43a9-b80c-6f65a12178f5"
+                      "instanceGuid": "6d41fee4-10cc-4483-8b3a-43bf2cadbb87"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "e58f04e1-a4ed-4980-ad24-bbaca6d7e3e4"
+                      "instanceGuid": "5499a014-588e-43cd-8db6-a432d5796148"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "9a56f6ae-434f-4218-8e97-0a3bbd073dab"
+                      "instanceGuid": "d5e84e58-7941-4f53-86a6-2109815d6756"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8150e6fb-b166-4add-9c4f-e0b5f1a354fa",
+                      "instanceGuid": "17084ae0-b321-4a6b-9572-a90b88967a97",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2145,30 +2151,30 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "source",
                       "isOptional": false,
-                      "instanceGuid": "222290a8-960a-49c2-9ef3-2e481b1507d6"
+                      "instanceGuid": "7d122cf4-d82f-4194-b0d0-7f86805e861b"
                     },
                     {
                       "$ref": "System#/components/schemas/TimeSpan\u0026",
                       "name": "value",
                       "isOptional": false,
-                      "instanceGuid": "3dce40b5-ae8c-492b-a39f-2babd99f6ce6"
+                      "instanceGuid": "b421174f-f194-4012-94be-c9cc76c9163d"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesConsumed",
                       "isOptional": false,
-                      "instanceGuid": "8e2c9c9a-ebf6-4f72-b463-d63b5a92a60f"
+                      "instanceGuid": "05e341ba-8783-4696-8617-bfeb66b0f364"
                     },
                     {
-                      "type": "string",
+                      "type": "Char",
                       "name": "standardFormat",
                       "isOptional": true,
-                      "instanceGuid": "c23f850e-dfa6-44f8-9c5d-ca6197ac6541"
+                      "instanceGuid": "b4a9400a-c346-47fa-9ad8-e1a2a20ff504"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ebdb6840-a0d6-46b1-90ea-34adcb747fa4",
+                      "instanceGuid": "566f1d1c-a4ba-47ea-b624-e3609c4e5aff",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2192,7 +2198,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "3add2d0a-96e8-471f-bf15-859d31280ffb",
+                      "instanceGuid": "4a337005-5797-4a4e-9a81-5bae8ab6c7ff",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -2216,7 +2222,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5c9e2cc4-cb20-457d-bad5-bd9aa739fa5e",
+                      "instanceGuid": "433ca091-088f-44ad-842d-7bb09fab9793",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -2242,12 +2248,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "8b1c3fe9-84b9-4e3a-9275-3cb1b223278e"
+                      "instanceGuid": "e1fdc4c9-9f0f-4b57-9909-3578a9570444"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "92bfd7f6-f8df-49e5-9d52-aecfe172a356",
+                      "instanceGuid": "e9aaecd4-f73c-4e4d-8a13-abeeffb01cb3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2271,7 +2277,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ed68d32a-a9f1-4e7f-81e8-8356a622ddf4",
+                      "instanceGuid": "3ddc027f-e560-4973-a1a0-1f96b681aeb6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2282,8 +2288,8 @@
             }
           }
         },
-        "x-namespace": "System.Buffers.Text",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Buffers.Text",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

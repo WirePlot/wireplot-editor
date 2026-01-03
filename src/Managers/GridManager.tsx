@@ -598,10 +598,10 @@ export class GridManager {
                 metadata.namespace
             );
 
-            inputHandleInfos.push({ name: "Headers", instanceGuid: Guid.generateGUID(), description: undefined, required: false, example: undefined, namespace: "Default", schema: "restHeader", isArray: true });
+            inputHandleInfos.push({ name: "Request Headers", instanceGuid: Guid.generateGUID(), description: undefined, required: false, example: undefined, namespace: "System.Net.Http", schema: "HttpRequestHeaders", isArray: false });
             inputHandleInfos.push({ name: "Body", instanceGuid: Guid.generateGUID(), description: undefined, required: false, example: undefined, namespace: "System", schema: "Object", isArray: false });
-            outputHandleInfos.push({ name: "Headers", instanceGuid: Guid.generateGUID(), description: undefined, required: false, example: undefined, namespace: "Default", schema: "restHeader", isArray: true });
-            outputHandleInfos.push({ name: "HttpStatusCode", instanceGuid: sourceStatusCodeInstanceGuid, description: undefined, required: false, example: undefined, namespace: "System.Net", schema: "HttpStatusCode", isArray: false });
+            outputHandleInfos.push({ name: "Response Headers", instanceGuid: Guid.generateGUID(), description: undefined, required: false, example: undefined, namespace: "System.Net.Http", schema: "HttpResponseHeaders", isArray: false });
+            outputHandleInfos.push({ name: "Status Code", instanceGuid: sourceStatusCodeInstanceGuid, description: undefined, required: false, example: undefined, namespace: "System.Net", schema: "HttpStatusCode", isArray: false });
             outputHandleInfos.push({ name: "Body", instanceGuid: sourceBodyInstanceGuid, description: undefined, required: false, example: undefined, namespace: "System", schema: "Object", isArray: false });
 
 

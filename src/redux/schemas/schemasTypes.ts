@@ -19,6 +19,19 @@ export interface SchemasSliceState {
 
 
 
+export type WirePlotSchemaKind =
+    | "class"
+    | "struct"
+    | "record"
+    | "enum"
+    | "interface"
+    | "primitive";
+
+export type WirePlotContainerType =
+    | "Array"
+    | "Dictionary"
+    | "List"
+    | "None";
 
 
 // ------------------------------
@@ -27,7 +40,9 @@ export interface SchemasSliceState {
 
 export interface WirePlotPropertyObject {
     $ref?: string;
-    type?: string;
+    type: string;
+    kind: WirePlotSchemaKind;
+    containerType: WirePlotContainerType;
     format?: string;
     title?: string;
     description?: string;
@@ -36,17 +51,22 @@ export interface WirePlotPropertyObject {
     readOnly?: boolean;
 }
 
+
+
 // ------------------------------
 // WirePlot Schema
 // ------------------------------
 
 export interface WirePlotSchemaObject {
-    type?: string;
+    assembly?: string; 
     description?: string;
+    kind: WirePlotSchemaKind;
+    methods: Record<string, WirePlotMethod>;
+    namespace?: string;
     properties?: Record<string, WirePlotPropertyObject>;
-    ["x-methods"]?: Record<string, WirePlotMethod>;
+    type: string;
+    title: string;
 }
-
 
 // ------------------------------
 // WirePlot Method
@@ -62,7 +82,6 @@ export interface WirePlotMethodOverload {
     name: string;
     methodKind: "instance" | "static";
     description?: string;
-
     signature: {
         parameters: WirePlotMethodParameter[];
         return: WirePlotMethodParameter[];
@@ -137,13 +156,13 @@ export interface OpenApiPathItemObject {
 }
 
 export type ParsedRef =
-  | { kind: "namespace"; namespace: string }
-  | { kind: "schema"; namespace: string; schemaName: string }
-  | { kind: "schemaProperty"; namespace: string; schemaName: string; propertyName: string }
-  | { kind: "method"; namespace: string; schemaName: string; methodName: string }
-  | { kind: "methodOverload"; namespace: string; schemaName: string; methodName: string; overloadId: string }
-  | { kind: "path"; namespace: string; path: string; method?: string }
-  | { kind: "unknown" };
+    | { kind: "namespace"; namespace: string }
+    | { kind: "schema"; namespace: string; schemaName: string }
+    | { kind: "schemaProperty"; namespace: string; schemaName: string; propertyName: string }
+    | { kind: "method"; namespace: string; schemaName: string; methodName: string }
+    | { kind: "methodOverload"; namespace: string; schemaName: string; methodName: string; overloadId: string }
+    | { kind: "path"; namespace: string; path: string; method?: string }
+    | { kind: "unknown" };
 
 
 export interface WirePlotDocument {

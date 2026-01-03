@@ -13,9 +13,7 @@ export const fetchSchemaFromString = createAsyncThunk<
             const parsed = JSON.parse(jsonString);
 
             // Normalize schema if requested
-            const schema = shouldNormalizeSchema
-                ? SchemaUtils.normalizeOpenApiSchemaWithRefs(parsed)
-                : parsed;
+            const schema = shouldNormalizeSchema ? SchemaUtils.normalizeOpenApiSchemaWithRefs(parsed) : parsed;
 
             // Find schema name
             const source =
@@ -47,9 +45,7 @@ export const fetchSchemaFromFile = createAsyncThunk<
             }
 
             const jsonString = await response.text();
-            const result = await dispatch(
-                fetchSchemaFromString({ jsonString, flowCapable, isEditable, shouldNormalizeSchema })
-            ).unwrap();
+            const result = await dispatch(fetchSchemaFromString({ jsonString, flowCapable, isEditable, shouldNormalizeSchema })).unwrap();
 
             return { ...result, isFlowCapable: flowCapable };
         } catch (err: unknown) {

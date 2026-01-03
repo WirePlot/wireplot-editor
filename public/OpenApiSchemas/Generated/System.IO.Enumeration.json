@@ -8,15 +8,16 @@
   "components": {
     "schemas": {
       "FileSystemEnumerator\u00601": {
-        "title": "FileSystemEnumerator\u00601",
-        "type": "object",
+        "title": "File System Enumerator\u00601",
+        "type": "FileSystemEnumerator\u00601",
         "description": "Enumerates the file system elements of the provided type that are being searched and filtered by a .",
         "properties": {
           "Current": {
             "$ref": "System.IO.Enumeration#/components/schemas/TResult"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Reset": {
             "owner": {
               "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerator\u00601"
@@ -31,7 +32,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "9e910b31-f45f-4f00-ba7c-22f30b4a9dbf",
+                      "instanceGuid": "7f078331-052f-4d92-8835-a69c5f28ddce",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -55,7 +56,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "bfe109b8-f64c-45c1-96d0-d21305e7eca8",
+                      "instanceGuid": "e162bf36-d489-4f24-a486-80cde0bd6cda",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -79,7 +80,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f82dbdf7-0381-4dcf-97cc-9c10f53eb45c",
+                      "instanceGuid": "fe8474e9-05f1-428b-9bfb-c2cb945ddd5e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -103,7 +104,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "80f3de18-9e66-4fb3-aabc-6c07916c9a18",
+                      "instanceGuid": "d1456fdb-63c8-4978-af80-9f7bcc4aab99",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -127,7 +128,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4b0ea1b0-acc5-4909-96fa-a56c1060d97c",
+                      "instanceGuid": "ee523e98-3d4e-40a9-9620-ca84cd7a23d8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -153,12 +154,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "311a03f7-b182-4605-a278-46c6f5dded86"
+                      "instanceGuid": "95e8798a-7e94-4f32-acbb-d988f803c49d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "4a43e817-646c-44c2-8486-ef531b86c792",
+                      "instanceGuid": "2640194d-51e7-4360-8633-96fde9c448be",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -182,7 +183,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7b9454e6-c244-40f5-8180-fe4988771594",
+                      "instanceGuid": "90182865-c1cb-4c42-8235-62c8013c06c9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -193,12 +194,12 @@
             }
           }
         },
-        "x-namespace": "System.IO.Enumeration",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.IO.Enumeration",
+        "assembly": "System.Private.CoreLib"
       },
       "FileSystemEnumerable\u00601": {
-        "title": "FileSystemEnumerable\u00601",
-        "type": "object",
+        "title": "File System Enumerable\u00601",
+        "type": "FileSystemEnumerable\u00601",
         "description": "Allows utilizing custom filter predicates and transform delegates for enumeration purposes.",
         "properties": {
           "ShouldIncludePredicate": {
@@ -208,7 +209,8 @@
             "$ref": "System.IO.Enumeration#/components/schemas/FindPredicate"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "GetEnumerator": {
             "owner": {
               "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEnumerable\u00601"
@@ -223,7 +225,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "9fc107a8-a1d6-416f-bdfa-0eec1008f25e",
+                      "instanceGuid": "8a3f1da3-4b40-4c19-b81e-37c514b1491c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections.Generic#/components/schemas/IEnumerator\u00601"
@@ -247,7 +249,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "3507e078-a4e3-4e2c-a535-076fde30d124",
+                      "instanceGuid": "4ae5f50a-6cb2-41ea-b4c5-6b58162185b2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -271,7 +273,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "276a51a3-6f14-4bfe-8b3b-be70a03f503b",
+                      "instanceGuid": "c8e36aaa-0c5e-4a42-8709-ef73634c7e0d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -297,12 +299,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "372c087a-6e16-4e3e-b9fc-9bfb6e1ae77e"
+                      "instanceGuid": "85b1d23b-e06c-4172-b3da-352439bc3c02"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "23b74708-3f33-4df2-b6d2-a759d7def0fd",
+                      "instanceGuid": "e42e11ff-79ed-4caf-a409-aa7169b3bf49",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -326,7 +328,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7fb04ad7-3536-4b07-9feb-c35714fa770c",
+                      "instanceGuid": "1c67c357-3531-4d1d-a574-85b54194bf56",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -337,17 +339,17 @@
             }
           }
         },
-        "x-namespace": "System.IO.Enumeration",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.IO.Enumeration",
+        "assembly": "System.Private.CoreLib"
       },
       "FindPredicate": {
         "$ref": "System.IO.Enumeration#/components/schemas/FindPredicate",
-        "x-namespace": "System.IO.Enumeration",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.IO.Enumeration",
+        "assembly": "System.Private.CoreLib"
       },
       "FindTransform": {
-        "title": "FindTransform",
-        "type": "object",
+        "title": "Find Transform",
+        "type": "FindTransform",
         "description": "Allows utilizing custom filter predicates and transform delegates for enumeration purposes.",
         "properties": {
           "Target": {
@@ -357,7 +359,8 @@
             "$ref": "System.Reflection#/components/schemas/MethodInfo"
           }
         },
-        "x-methods": {
+        "kind": "class",
+        "methods": {
           "Invoke": {
             "owner": {
               "$ref": "System.IO.Enumeration#/components/schemas/FindTransform"
@@ -374,12 +377,12 @@
                       "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEntry\u0026",
                       "name": "entry",
                       "isOptional": false,
-                      "instanceGuid": "fb74bc70-27f9-42da-ae86-59c1261cd24c"
+                      "instanceGuid": "ec2fb0bc-5a0e-4a8a-b903-c990064d6a6c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "6854d08f-b3cc-42a6-b3ff-53bec57cb97d",
+                      "instanceGuid": "8469636c-a5ae-4b70-b705-daec9de7ec25",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.IO.Enumeration#/components/schemas/TResult"
@@ -405,24 +408,24 @@
                       "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEntry\u0026",
                       "name": "entry",
                       "isOptional": false,
-                      "instanceGuid": "043d0cd2-f0a0-4b92-9fab-404a8f09f768"
+                      "instanceGuid": "da1d1562-b68a-4d0c-b5d4-adcba46343c4"
                     },
                     {
                       "$ref": "System#/components/schemas/AsyncCallback",
                       "name": "callback",
                       "isOptional": false,
-                      "instanceGuid": "e3a52afd-e1ed-4680-8c51-c08cc709ca02"
+                      "instanceGuid": "71931efd-8909-48a6-b384-276f9f532bd1"
                     },
                     {
                       "$ref": "System#/components/schemas/Object",
                       "name": "object",
                       "isOptional": false,
-                      "instanceGuid": "20448bad-cd1f-4bd7-9890-75a343e6990a"
+                      "instanceGuid": "7836fade-87f0-482d-9407-41ecfc87d350"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "cccf064c-31d7-41a8-a32c-1ca6ac20d3c4",
+                      "instanceGuid": "8da0357d-f59b-4b40-9517-67b785d3c545",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/IAsyncResult"
@@ -448,18 +451,18 @@
                       "$ref": "System.IO.Enumeration#/components/schemas/FileSystemEntry\u0026",
                       "name": "entry",
                       "isOptional": false,
-                      "instanceGuid": "af513f99-9d30-4e3e-bfba-0ebafb2b2f72"
+                      "instanceGuid": "c9ffeb75-5a68-4f19-8dec-db9c64e307ff"
                     },
                     {
                       "$ref": "System#/components/schemas/IAsyncResult",
                       "name": "result",
                       "isOptional": false,
-                      "instanceGuid": "3442affc-5bd9-44cd-bb15-b0c3373d68a5"
+                      "instanceGuid": "95d5b748-593a-4fda-b37d-76ae16f232f2"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b9d45960-7e61-4970-a15c-d372dd537144",
+                      "instanceGuid": "7190e802-a90f-4442-b0cf-25e525641c52",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.IO.Enumeration#/components/schemas/TResult"
@@ -485,18 +488,18 @@
                       "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
                       "name": "info",
                       "isOptional": false,
-                      "instanceGuid": "ff16ffa2-8720-41f9-aad2-74f941447828"
+                      "instanceGuid": "505c4377-ee12-4a8b-8f20-ad35a6939a88"
                     },
                     {
                       "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
                       "name": "context",
                       "isOptional": false,
-                      "instanceGuid": "7212b0b0-90d3-4961-8dad-b3c98105b9b7"
+                      "instanceGuid": "0568975b-bb88-45bd-afab-b7f247bf65e5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "4b7f9564-2e0b-4440-92ce-589307ea8d5d",
+                      "instanceGuid": "38b4a2d5-fce3-4ebf-959c-d2e49c472976",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -522,12 +525,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "37afc413-8524-40ee-a4a8-b3c76516044f"
+                      "instanceGuid": "fd0709a1-2b4a-46fa-8cb2-a63bb1d38162"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "aea4af36-89a9-4632-b9f5-81249c3779e8",
+                      "instanceGuid": "4400c03a-c8ab-4206-8c5a-7a00a10610e1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -551,7 +554,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "39a414b5-0860-4c81-b878-00cecd7a16eb",
+                      "instanceGuid": "ef340d33-9809-4c9e-9dfc-40a538ffe83a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Delegate[]"
@@ -575,7 +578,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "96e5b103-42bc-4cca-8cae-ed62a275e4cf",
+                      "instanceGuid": "9bc32143-04e0-49c0-8559-8f63b727f2c4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -599,7 +602,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7346d732-86bf-49b3-a8ca-5c2d4486eaf0",
+                      "instanceGuid": "3f7aab19-d8ac-43e5-a583-466a6e11d656",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Object"
@@ -625,12 +628,12 @@
                       "$ref": "System#/components/schemas/Object[]",
                       "name": "args",
                       "isOptional": false,
-                      "instanceGuid": "44e26eb1-f038-4192-a28b-ab54e18da31e"
+                      "instanceGuid": "8f5a8372-c357-47bc-8a6f-b899ca8ce6a0"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "36332bef-be94-477e-b025-a2a68f484351",
+                      "instanceGuid": "d633ff9c-35eb-4fde-84fc-d8a428b577e4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Object"
@@ -654,7 +657,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e3a99168-0f18-43d8-ab8b-5d42128775ec",
+                      "instanceGuid": "a252c16a-476d-4c76-ad9a-d2af80ca5be5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -678,7 +681,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "77b9df5d-709c-482d-8e3f-ad58e462070d",
+                      "instanceGuid": "fe4f5b18-1617-467e-979b-7f9640ce3cde",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -689,14 +692,16 @@
             }
           }
         },
-        "x-namespace": "System.IO.Enumeration",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.IO.Enumeration",
+        "assembly": "System.Private.CoreLib"
       },
       "FileSystemName": {
-        "title": "FileSystemName",
-        "type": "object",
+        "title": "File System Name",
+        "type": "FileSystemName",
         "description": "Provides methods for matching file system names.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "TranslateWin32Expression": {
             "owner": {
               "$ref": "System.IO.Enumeration#/components/schemas/FileSystemName"
@@ -710,15 +715,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "expression",
                       "isOptional": false,
-                      "instanceGuid": "559dd598-7cec-4a7f-94a9-e0fbe4575237"
+                      "instanceGuid": "41117abb-47f8-4b33-8467-51ae27428bad"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "73b93345-9504-4f17-bf09-091e2bed85c3",
+                      "instanceGuid": "6cac59a7-b3ce-4531-b52c-832349689ec8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -744,24 +749,24 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "expression",
                       "isOptional": false,
-                      "instanceGuid": "91dab618-7a40-4eaf-9ed3-1f99ccf14037"
+                      "instanceGuid": "8cb94890-a19c-4106-886d-ba1e37ab19c1"
                     },
                     {
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "name",
                       "isOptional": false,
-                      "instanceGuid": "1cc80e15-93d4-4ebe-bab6-f7fa1854e449"
+                      "instanceGuid": "e4dfa81c-aa2b-42e4-9bcf-119949d21f93"
                     },
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "ignoreCase",
                       "isOptional": true,
-                      "instanceGuid": "e0045865-bb28-4e74-93ae-5fd3bec1ed7c"
+                      "instanceGuid": "6c81fc6a-06de-4371-b3a3-881cf2afe33b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b79b91d5-f471-45c0-9f61-40ee0ee7d6fa",
+                      "instanceGuid": "691e7731-9317-44d0-9029-e64f5d1f3a7f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -787,24 +792,24 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "expression",
                       "isOptional": false,
-                      "instanceGuid": "80ee77ff-5224-42a5-8676-bc6091275fb3"
+                      "instanceGuid": "c45dd7c3-2d20-4670-84b9-64a3b82a7a28"
                     },
                     {
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "name",
                       "isOptional": false,
-                      "instanceGuid": "89d10741-087c-4627-aec4-2493a081351d"
+                      "instanceGuid": "ecdee27f-1c1d-4fad-9ef2-9450c5d8798e"
                     },
                     {
-                      "type": "boolean",
+                      "type": "Boolean",
                       "name": "ignoreCase",
                       "isOptional": true,
-                      "instanceGuid": "ab7de4aa-6387-443b-96bd-1e7a0019bf00"
+                      "instanceGuid": "3fe0efcd-98e8-48cf-874c-fa47377d9485"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "4d99947a-f07d-41b9-b963-c29095cbb26f",
+                      "instanceGuid": "a70af617-1798-4002-82fd-06f6e5b43b0b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -828,7 +833,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e164a444-306b-49c1-ad34-bd0c147689d9",
+                      "instanceGuid": "e60e0b8b-a6f1-43d4-ba71-07ba2118ce63",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -852,7 +857,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b7186929-f07c-4c38-ba29-ae772be6b917",
+                      "instanceGuid": "0ad13fc7-875a-419e-b51c-e9764861b1d3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -878,12 +883,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "b7fdd336-f5f5-4126-bf6e-9d44536b2053"
+                      "instanceGuid": "2939bc82-5f68-4fa1-81ab-0f17f9d4e89e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f5c8b8fc-e2fb-4d7e-aec3-8c6eb3b3413a",
+                      "instanceGuid": "11eff26a-deee-48ab-9f52-948f905e8203",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -907,7 +912,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "558d7f1a-5b8a-4f9b-beb3-00e653bc6245",
+                      "instanceGuid": "48bb6476-9ef1-44f5-8119-8481f992a0df",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -918,8 +923,8 @@
             }
           }
         },
-        "x-namespace": "System.IO.Enumeration",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.IO.Enumeration",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }

@@ -1,6 +1,6 @@
 import { createSelector } from "reselect";
 import { RootState } from "../../store";
-import { HttpMethod, OpenApiPathItemObject, SchemaContainer, WirePlotDocument, WirePlotMethod, WirePlotPropertyObject, WirePlotSchemaObject } from "./schemasTypes";
+import { HttpMethod, OpenApiPathItemObject, SchemaContainer, WirePlotDocument, WirePlotPropertyObject, WirePlotSchemaObject } from "./schemasTypes";
 import { EntityApiMethodMetadata, EntityPair } from "../../Components/EntityPanel/types";
 import { TreeEntity } from "../../Components/EntityTreePanel/types";
 import { SelectWithCategoriesOption, SelectWithCategoriesOptionGroup } from "../../FisUI/SelectWithCategories";
@@ -16,7 +16,7 @@ const getNamespace = (_: RootState, namespace: string | undefined): string | und
 export const selectNamespaceEntityPairs = createSelector(
     [selectSchemas],
     (schemas): EntityPair[] => {
-        
+
         return Object
             .keys(schemas)
             .sort((a, b) => a.localeCompare(b))
@@ -70,7 +70,10 @@ export const selectSchemaPropertyObject = createSelector(
         (_state: RootState, _namespace: string, _schemaName: string, propertyName: string) => propertyName
     ],
     (schemas, namespace, schemaName, propertyName): WirePlotPropertyObject => {
-        const empty: WirePlotPropertyObject = {};
+
+        // TO DO TODO HOT FIX
+        // Look at this emppty object? What is it?
+        const empty: WirePlotPropertyObject = { containerType: 'None', kind: 'primitive', type: 'boolean' };
 
         const ns = schemas[namespace];
         if (!ns?.parsed?.components?.schemas) {
@@ -153,13 +156,13 @@ export function selectMethodRef(state: RootState, namespace: string, schemaName:
     }
 
     // TODO TO DO HOT FIX
-    // const methods = schema["x-methods"] ?? [];
+    // const methods = schema["methods"] ?? [];
     const exists = undefined;// methods.some(m => m.name === methodName);
     if (!exists) {
         return undefined;
     }
 
-    return `${namespace}#/components/schemas/${schemaName}/x-methods/${methodName}`;
+    return `${namespace}#/components/schemas/${schemaName}/methods/${methodName}`;
 }
 
 
@@ -177,14 +180,10 @@ export const makeSelectSchemaMethodsAsEntityPairs = (namespace: string, schemaKe
                 return [];
             }
 
-            const methodsObj = wSchema["x-methods"];
-            if (!methodsObj || typeof methodsObj !== "object") {
-                return [];
-            }
 
             const result: EntityPair[] = [];
 
-            Object.entries(methodsObj).forEach(([methodName, method]) => {
+            Object.entries(wSchema.methods).forEach(([methodName, method]) => {
                 if (!method.overloads) {
                     return;
                 }
@@ -192,7 +191,7 @@ export const makeSelectSchemaMethodsAsEntityPairs = (namespace: string, schemaKe
                 Object.entries(method.overloads).forEach(([overloadId, overload]) => {
                     result.push({
                         name: methodName,
-                        $ref: `${namespace}#/components/schemas/${schemaKey}/x-methods/${methodName}/overloads/${overloadId}`,
+                        $ref: `${namespace}#/components/schemas/${schemaKey}/methods/${methodName}/overloads/${overloadId}`,
                         type: overload.methodKind ?? "instance",
                         description: overload.description,
                         operationType: ENodeOperationType.GRID
@@ -212,7 +211,7 @@ export const makeSelectMethodNamesByRef = (methodRef: string) =>
         [selectSchemas],
         (schemas): string[] => {
             const parsed = SchemaUtils.parseRef(methodRef);
-            if (parsed. kind !== "method") {
+            if (parsed.kind !== "method") {
                 return [];
             }
 
@@ -223,14 +222,13 @@ export const makeSelectMethodNamesByRef = (methodRef: string) =>
                 return [];
             }
 
-            const methods =
-                container.parsed.components?.schemas?.[schemaName]?.["x-methods"];
+            const methods = container.parsed.components?.schemas?.[schemaName]?.methods;
 
-            if (!Array.isArray(methods)) {
+            if (!methods) {
                 return [];
             }
 
-            return methods.map(m => m.name);
+            return Object.keys(methods);
         }
     );
 
@@ -239,7 +237,7 @@ export const makeSelectMethodByRef = (ref: string) =>
         [(state: RootState) => state.schemasSlice.schemas],
         (schemas) => {
             const parsed = SchemaUtils.parseRef(ref);
-            if (parsed. kind !== "methodOverload") {
+            if (parsed.kind !== "methodOverload") {
                 return undefined;
             }
 
@@ -249,12 +247,7 @@ export const makeSelectMethodByRef = (ref: string) =>
                 return undefined;
             }
 
-            const methodsObj = schemaObj["x-methods"] as Record<string, WirePlotMethod>;
-            if (!methodsObj) {
-                return undefined;
-            }
-
-            const method = methodsObj[parsed.methodName];
+            const method = schemaObj.methods[parsed.methodName];
             if (!method) {
                 return undefined;
             }
@@ -402,7 +395,7 @@ export const selectIsNamespaceEditable = (state: RootState, namespace?: string):
 };
 
 
-export const selectSchemasByNamespace = (state: RootState, namespace: string | undefined): WirePlotSchemaObject | undefined => {
+export const selectSchemasByNamespace = (state: RootState, namespace: string | undefined): Record<string, WirePlotSchemaObject> | undefined => {
     if (!namespace) {
         return undefined;
     }
@@ -448,6 +441,7 @@ export const selectSchemaDataTypeGroups = createSelector([(state: RootState): Re
         if (!Object.prototype.hasOwnProperty.call(schemasByNamespace, namespace)) {
             continue;
         }
+
         const schemas = schemasByNamespace[namespace];
         const schemaEntries = schemas.parsed?.components?.schemas;
         if (!schemaEntries) {
@@ -464,24 +458,18 @@ export const selectSchemaDataTypeGroups = createSelector([(state: RootState): Re
             // Skip if it's the currently selected schema in the same namespace
             // if (namespace === selectedNamespace && schemaName === selectedSchema) continue;
 
-            const schema = schemaEntries[schemaName] as WirePlotPropertyObject;
-            let schemaType = SchemaUtils.getSchemaTypeFromProperty(schemaName, schema);
-
             options.push({
                 key: `${namespace}.${schemaName}`,
                 value: schemaName,
                 label: schemaName,
                 category: namespace,
-                icon: IconHelper.getSchemaIcon(schemaType),
+                icon: IconHelper.getSchemaIcon(schemaName),
                 onClick: undefined,
             });
         }
 
         if (options.length > 0) {
-            groups.push({
-                label: namespace,
-                options,
-            });
+            groups.push({ label: namespace, options });
         }
     }
 

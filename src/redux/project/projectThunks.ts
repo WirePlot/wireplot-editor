@@ -34,20 +34,15 @@ export const loadMockProject = createAsyncThunk(
             for (const schemaKey of Object.keys(schemasObj)) {
                 const schema = schemasObj[schemaKey];
 
-                const methods = schema["x-methods"];
-                if (!methods) {
-                    continue;
-                }
 
-                // Get all method names inside x-methods
-                for (const methodName of Object.keys(methods)) {
-                    const method = methods[methodName];
+                // Get all method names inside methods
+                for (const methodName of Object.keys(schema.methods)) {
+                    const method = schema.methods[methodName];
 
                     // Each method may have multiple overloads
                     for (const overloadId of Object.keys(method.overloads)) {
 
-                        const fullRef =
-                            `${namespace}#/components/schemas/${schemaKey}/x-methods/${methodName}/overloads/${overloadId}`;
+                        const fullRef = `${namespace}#/components/schemas/${schemaKey}/methods/${methodName}/overloads/${overloadId}`;
 
                         methodRefs.push(fullRef);
                     }
@@ -184,7 +179,7 @@ export const loadMockProject = createAsyncThunk(
             }
         }
 
-        dispatch(projectSlice.actions.setActiveGridInstanceGuid("Project#/components/schemas/Program/x-methods/Main/overloads/a13f94bd"));
+        dispatch(projectSlice.actions.setActiveGridInstanceGuid("Project#/components/schemas/Program/methods/Main/overloads/a13f94bd"));
 
         if (firstGridId) {
             dispatch(projectSlice.actions.setActiveGridInstanceGuid(firstGridId));

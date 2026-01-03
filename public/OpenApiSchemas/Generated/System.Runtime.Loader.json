@@ -8,10 +8,12 @@
   "components": {
     "schemas": {
       "ContextualReflectionScope": {
-        "title": "ContextualReflectionScope",
-        "type": "object",
+        "title": "Contextual Reflection Scope",
+        "type": "ContextualReflectionScope",
         "description": "Represents the runtime\u0027s concept of a scope for assembly loading.",
-        "x-methods": {
+        "properties": {},
+        "kind": "struct",
+        "methods": {
           "Dispose": {
             "owner": {
               "$ref": "System.Runtime.Loader#/components/schemas/ContextualReflectionScope"
@@ -26,7 +28,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "aed0c10c-769b-4123-b1b6-2a8d87370a0e",
+                      "instanceGuid": "10e04136-cbac-4ad1-b0c9-19f3ce258ae5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -52,12 +54,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "30d43a80-ad0d-4ac3-9506-cb36c9c0fe6c"
+                      "instanceGuid": "b1225921-36d5-4935-aa05-1ec67a17bd63"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c4c32ab5-f336-4f63-a974-def00918aac1",
+                      "instanceGuid": "d22ddb55-8e16-4ed7-814a-b9a10ab7161d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -81,7 +83,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8e0bbd3b-e698-4d9b-aaba-e8c5d6f18f20",
+                      "instanceGuid": "e29f7d11-15b3-40ad-b88c-4eeec03f39ef",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -105,7 +107,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "01a2e0f3-e5bb-4748-9c64-dc1bb2f0865b",
+                      "instanceGuid": "7bd7710d-cb53-4705-9185-c50270ce91a1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -129,7 +131,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f09f13ab-5564-4eb9-ad34-e16020e2431d",
+                      "instanceGuid": "d3522c0b-749e-4f8e-a084-b98c3233ebcf",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -140,14 +142,16 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Loader",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Loader",
+        "assembly": "System.Private.CoreLib"
       },
       "AssemblyDependencyResolver": {
-        "title": "AssemblyDependencyResolver",
-        "type": "object",
+        "title": "Assembly Dependency Resolver",
+        "type": "AssemblyDependencyResolver",
         "description": "Allows a program to resolve assemblies and native libraries to paths based on the dependencies of a given assembly.",
-        "x-methods": {
+        "properties": {},
+        "kind": "class",
+        "methods": {
           "ResolveAssemblyToPath": {
             "owner": {
               "$ref": "System.Runtime.Loader#/components/schemas/AssemblyDependencyResolver"
@@ -164,12 +168,12 @@
                       "$ref": "System.Reflection#/components/schemas/AssemblyName",
                       "name": "assemblyName",
                       "isOptional": false,
-                      "instanceGuid": "6b6cfdf2-8064-45b6-a17f-e56e099ca12f"
+                      "instanceGuid": "fa2a4bbf-8388-4439-a2c7-027def2a7400"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "840481c7-f5ec-4ff4-a4fb-f69a0093bb68",
+                      "instanceGuid": "bfa00496-5515-4bff-a767-62f81fb4be57",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -192,15 +196,15 @@
                 "signature": {
                   "parameters": [
                     {
-                      "type": "string",
+                      "type": "String",
                       "name": "unmanagedDllName",
                       "isOptional": false,
-                      "instanceGuid": "995a8b44-5cfb-4109-b110-63434af311d0"
+                      "instanceGuid": "d1fb5bad-5fe6-4bd5-b2fa-0f356546e722"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "bac46dbd-13ae-47d4-b80d-362403ff3153",
+                      "instanceGuid": "5b734b38-6481-471d-85ec-6c7ba950673a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -224,7 +228,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0154aebb-5998-42c6-8f61-23738a86c704",
+                      "instanceGuid": "c01af3c3-cbca-4e59-8da6-46452487f2ca",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -248,7 +252,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "19cdf0ae-ae30-42eb-b0da-0a4ae78d5362",
+                      "instanceGuid": "a6a2342f-6642-49ef-921d-c89e2c553ad5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -274,12 +278,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "4dfa7de1-8c25-421f-a5bd-fa15136d9efc"
+                      "instanceGuid": "5be68b47-eb6a-4972-8589-2837fd563c6a"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2ef8ddd2-a61d-4ef7-a0a7-e9b89fe728e7",
+                      "instanceGuid": "f0818e4b-80b0-4f88-a551-a01c3c5dddf5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -303,7 +307,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4154c012-d3b6-4fec-a7dd-36f9aada41be",
+                      "instanceGuid": "916f88d5-3ae3-4e35-8ead-a4da917b6d35",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -314,8 +318,8 @@
             }
           }
         },
-        "x-namespace": "System.Runtime.Loader",
-        "x-assembly": "System.Private.CoreLib"
+        "namespace": "System.Runtime.Loader",
+        "assembly": "System.Private.CoreLib"
       }
     }
   }
