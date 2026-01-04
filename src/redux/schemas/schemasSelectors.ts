@@ -1,6 +1,6 @@
 import { createSelector } from "reselect";
 import { RootState } from "../../store";
-import { HttpMethod, OpenApiPathItemObject, SchemaContainer, WirePlotDocument, WirePlotPropertyObject, WirePlotSchemaObject } from "./schemasTypes";
+import { HttpMethod, NamespaceMetadata, OpenApiPathItemObject, SchemaContainer, WirePlotDocument, WirePlotPropertyObject, WirePlotSchemaObject } from "./schemasTypes";
 import { EntityApiMethodMetadata, EntityPair } from "../../Components/EntityPanel/types";
 import { TreeEntity } from "../../Components/EntityTreePanel/types";
 import { SelectWithCategoriesOption, SelectWithCategoriesOptionGroup } from "../../FisUI/SelectWithCategories";
@@ -29,6 +29,25 @@ export const selectNamespaceEntityPairs = createSelector(
             }));
     }
 );
+
+export const selectNamespaceMetadata = (state: RootState, namespace: string | undefined): NamespaceMetadata | undefined => {
+    if (!namespace) {
+        return undefined;
+    }
+
+    const container = state.schemasSlice.schemas[namespace];
+    if (!container) {
+        return undefined;
+    }
+
+    const { name, editable, flowCapable } = container;
+
+    return {
+        name,
+        editable,
+        flowCapable,
+    };
+};
 
 
 // Selector to get all schema names for a specific namespace
@@ -69,28 +88,23 @@ export const selectSchemaPropertyObject = createSelector(
         (_state: RootState, _namespace: string, schemaName: string) => schemaName,
         (_state: RootState, _namespace: string, _schemaName: string, propertyName: string) => propertyName
     ],
-    (schemas, namespace, schemaName, propertyName): WirePlotPropertyObject => {
-
-        // TO DO TODO HOT FIX
-        // Look at this emppty object? What is it?
-        const empty: WirePlotPropertyObject = { containerType: 'None', kind: 'primitive', type: 'boolean' };
-
+    (schemas, namespace, schemaName, propertyName): WirePlotPropertyObject | null => {
         const ns = schemas[namespace];
         if (!ns?.parsed?.components?.schemas) {
             console.warn(`Namespace not found: ${namespace}`);
-            return empty;
+            return null;
         }
 
         const schema = ns.parsed.components.schemas[schemaName];
         if (!schema || "type" in schema === false || !schema.properties) {
             console.warn(`Schema not found or has no properties: ${namespace} → ${schemaName}`);
-            return empty;
+            return null;
         }
 
         const prop = schema.properties[propertyName];
         if (!prop) {
             console.warn(`Property not found: ${propertyName}`);
-            return empty;
+            return null;
         }
 
         // Inline schema → directly return the SchemaObject
@@ -294,7 +308,6 @@ export const selectNamespacesTree = createSelector(
                     metadata: {
                         namespace: namespaceKey,
                         flowCapable: namespace.flowCapable,
-                        format: namespace.format,
                     },
                 };
 

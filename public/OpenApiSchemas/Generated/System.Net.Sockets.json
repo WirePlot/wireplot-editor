@@ -9,8 +9,9 @@
     "schemas": {
       "AddressFamily": {
         "title": "Address Family",
-        "type": "integer",
+        "type": "AddressFamily",
         "description": "Specifies the addressing scheme that an instance of the  class can use.",
+        "kind": "enum",
         "enum": [
           0,
           1,
@@ -46,7 +47,7 @@
           65537,
           -1
         ],
-        "x-enum-names": [
+        "enumNames": [
           "Unspecified",
           "Unix",
           "InterNetwork",

@@ -9,8 +9,9 @@
     "schemas": {
       "SslProtocols": {
         "title": "Ssl Protocols",
-        "type": "integer",
+        "type": "SslProtocols",
         "description": "Defines the possible versions of .",
+        "kind": "enum",
         "enum": [
           0,
           12,
@@ -21,7 +22,7 @@
           3072,
           12288
         ],
-        "x-enum-names": [
+        "enumNames": [
           "None",
           "Ssl2",
           "Ssl3",
@@ -36,15 +37,16 @@
       },
       "ExchangeAlgorithmType": {
         "title": "Exchange Algorithm Type",
-        "type": "integer",
+        "type": "ExchangeAlgorithmType",
         "description": "Specifies the algorithm used to create keys shared by the client and server.",
+        "kind": "enum",
         "enum": [
           0,
           9216,
           41984,
           43522
         ],
-        "x-enum-names": [
+        "enumNames": [
           "None",
           "RsaSign",
           "RsaKeyX",
@@ -55,8 +57,9 @@
       },
       "CipherAlgorithmType": {
         "title": "Cipher Algorithm Type",
-        "type": "integer",
+        "type": "CipherAlgorithmType",
         "description": "Defines the possible cipher algorithms for the  class.",
+        "kind": "enum",
         "enum": [
           0,
           24576,
@@ -69,7 +72,7 @@
           26129,
           26625
         ],
-        "x-enum-names": [
+        "enumNames": [
           "None",
           "Null",
           "Des",
@@ -86,8 +89,9 @@
       },
       "HashAlgorithmType": {
         "title": "Hash Algorithm Type",
-        "type": "integer",
+        "type": "HashAlgorithmType",
         "description": "Specifies the algorithm used for generating message authentication codes (MACs).",
+        "kind": "enum",
         "enum": [
           0,
           32771,
@@ -96,7 +100,7 @@
           32781,
           32782
         ],
-        "x-enum-names": [
+        "enumNames": [
           "None",
           "Md5",
           "Sha1",
@@ -139,7 +143,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a247d435-405b-4e62-8ce7-87999f4243dd",
+                      "instanceGuid": "fe23b26b-9a6e-46c4-9cea-e11538d64458",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/IntPtr"
@@ -163,7 +167,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "6d051479-148a-4ae4-8a1d-643d193cb95d",
+                      "instanceGuid": "a501c247-bc18-4db4-be59-4fca9107e34a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -187,7 +191,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e40b90d2-e818-4946-94dd-c3cc2f40b93a",
+                      "instanceGuid": "4f1da8c5-ab1b-4d6f-befd-eb7846cff0cf",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -211,7 +215,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "420d10b5-a310-40eb-8cb3-5e2aad91adb2",
+                      "instanceGuid": "f354bb6f-4158-4996-bedd-807f28c2ae50",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -237,12 +241,12 @@
                       "$ref": "System#/components/schemas/Boolean\u0026",
                       "name": "success",
                       "isOptional": false,
-                      "instanceGuid": "cfe7ef5f-c618-4457-b7e3-58a90c97f78e"
+                      "instanceGuid": "d089fbb9-ac85-4df5-899c-2998c09bd94d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d3b3cbe3-945d-4ae7-836e-47b8bed7fb39",
+                      "instanceGuid": "f401140c-57c7-4a46-969f-4ea33bc3150a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -266,7 +270,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "192c0571-aa9f-4372-8904-6ed752d7174b",
+                      "instanceGuid": "075cc366-e2e2-411a-85ca-e135b6af82d2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -290,7 +294,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e25b0fc6-1e25-4fbf-a057-19a85fe69f64",
+                      "instanceGuid": "883a723d-9a0d-445f-ab9b-f2be82a40734",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -314,7 +318,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c7b91544-9271-4855-adb8-9fe2207b6ede",
+                      "instanceGuid": "9f71b757-fbd3-476f-9179-e0c7e48e2805",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -340,12 +344,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "32c5438a-4ea5-4315-9b31-04cd0f370ba6"
+                      "instanceGuid": "e1bdb251-93b7-472b-8ef0-a1f16a94ae4d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "0aa7298f-9743-4f18-97ab-0980261b812f",
+                      "instanceGuid": "8d5b9ed9-840b-471f-a0ae-bbbf22befa4d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -369,7 +373,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0ebeaad3-192b-4567-aeac-daeba1b77685",
+                      "instanceGuid": "9da0fb68-97cd-412d-b609-ffab248d1c79",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -385,14 +389,15 @@
       },
       "ChannelBindingKind": {
         "title": "Channel Binding Kind",
-        "type": "integer",
+        "type": "ChannelBindingKind",
         "description": "The  enumeration represents the kinds of channel bindings that can be queried from secure channels.",
+        "kind": "enum",
         "enum": [
           0,
           25,
           26
         ],
-        "x-enum-names": [
+        "enumNames": [
           "Unknown",
           "Unique",
           "Endpoint"

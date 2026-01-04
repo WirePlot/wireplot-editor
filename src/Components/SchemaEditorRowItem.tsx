@@ -11,8 +11,15 @@ import { selectSchemaDataTypeGroups } from "../redux/schemas";
 import { SelectWithCategories, SelectWithCategoriesOption } from "../FisUI/SelectWithCategories";
 import { IconHelper } from "../Helpers/IconHelper";
 
+// TODO:
+// TO DO:
+// Grid column "Container" will become editable (icon/dropdown)
+// Inspector remains source of truth
+
 interface SchemaEditorRowItemProps {
     label: string;
+    kind: string;
+    containerType: string;
     applyBrighterBackgroundColor: boolean;
     schemaType: string;
     padding: number;
@@ -22,7 +29,7 @@ interface SchemaEditorRowItemProps {
     onDataTypeChange: (option: SelectWithCategoriesOption) => void;
 }
 
-export const SchemaEditorRowItem: FC<SchemaEditorRowItemProps> = ({ label, applyBrighterBackgroundColor, isEditable, padding, schemaType, onDelete, onRename, onDataTypeChange }) => {
+export const SchemaEditorRowItem: FC<SchemaEditorRowItemProps> = ({ label, kind, containerType, applyBrighterBackgroundColor, isEditable, padding, schemaType, onDelete, onRename, onDataTypeChange }) => {
     const [isRenaming, setIsRenaming] = useState<boolean>(false);
     const schemaGroups = useAppSelector((state) => selectSchemaDataTypeGroups(state));
 
@@ -62,6 +69,14 @@ export const SchemaEditorRowItem: FC<SchemaEditorRowItemProps> = ({ label, apply
                             </span>
                         </div>
                     }
+                </div>
+                <div style={{ borderLeft: '1px solid gray', height: '20px' }}></div>
+                <div style={{ width: '100px' }}>
+                    {kind}
+                </div>
+                <div style={{ borderLeft: '1px solid gray', height: '20px' }}></div>
+                <div style={{ width: '100px' }}>
+                    {containerType}
                 </div>
                 <div style={{ borderLeft: '1px solid gray', height: '20px' }}></div>
                 {isRenaming ? (<Input

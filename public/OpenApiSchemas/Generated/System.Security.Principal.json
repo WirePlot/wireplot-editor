@@ -53,12 +53,12 @@
                       "type": "String",
                       "name": "role",
                       "isOptional": false,
-                      "instanceGuid": "167b1e34-a58c-455f-9ddc-6aba8190fd2b"
+                      "instanceGuid": "de1ade42-8062-4484-8f91-36fa41a25936"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "fdbd7796-f485-4064-a52e-eca75323af75",
+                      "instanceGuid": "0a981e95-80bc-4caa-a4b2-f9a1d66c3d99",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -74,14 +74,15 @@
       },
       "PrincipalPolicy": {
         "title": "Principal Policy",
-        "type": "integer",
+        "type": "PrincipalPolicy",
         "description": "Specifies how principal and identity objects should be created for an application domain. The default is .",
+        "kind": "enum",
         "enum": [
           0,
           1,
           2
         ],
-        "x-enum-names": [
+        "enumNames": [
           "UnauthenticatedPrincipal",
           "NoPrincipal",
           "WindowsPrincipal"
@@ -91,8 +92,9 @@
       },
       "TokenImpersonationLevel": {
         "title": "Token Impersonation Level",
-        "type": "integer",
+        "type": "TokenImpersonationLevel",
         "description": "Defines security impersonation levels. Security impersonation levels govern the degree to which a server process can act on behalf of a client process.",
+        "kind": "enum",
         "enum": [
           0,
           1,
@@ -100,7 +102,7 @@
           3,
           4
         ],
-        "x-enum-names": [
+        "enumNames": [
           "None",
           "Anonymous",
           "Identification",

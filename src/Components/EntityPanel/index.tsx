@@ -22,7 +22,6 @@ export const EntityPanel: FC<EntityPanelProps> = ({
   namePrefix,
   validateName = (): boolean => true,
   getDropdownOptions,
-  panelHeight,
   panelHeaderExtraButtons
 }) => {
   const [editingState, setEditingState] = useState<Record<string, boolean>>({});
@@ -105,7 +104,7 @@ export const EntityPanel: FC<EntityPanelProps> = ({
   );
 
   return (
-    <Panels.Panel id="entity-selector" panelHeight={panelHeight}>
+    <Panels.Panel id="entity-selector" >
       <Panels.Header>
         <div>{title}</div>
         <div style={{ display: 'flex' }}>

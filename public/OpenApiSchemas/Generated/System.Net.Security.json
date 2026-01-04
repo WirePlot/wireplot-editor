@@ -9,14 +9,15 @@
     "schemas": {
       "AuthenticationLevel": {
         "title": "Authentication Level",
-        "type": "integer",
+        "type": "AuthenticationLevel",
         "description": "Specifies client requirements for authentication and impersonation when using the  class and derived classes to request a resource.",
+        "kind": "enum",
         "enum": [
           0,
           1,
           2
         ],
-        "x-enum-names": [
+        "enumNames": [
           "None",
           "MutualAuthRequested",
           "MutualAuthRequired"
@@ -26,15 +27,16 @@
       },
       "SslPolicyErrors": {
         "title": "Ssl Policy Errors",
-        "type": "integer",
+        "type": "SslPolicyErrors",
         "description": "Enumerates Secure Socket Layer (SSL) policy errors.",
+        "kind": "enum",
         "enum": [
           0,
           1,
           2,
           4
         ],
-        "x-enum-names": [
+        "enumNames": [
           "None",
           "RemoteCertificateNotAvailable",
           "RemoteCertificateNameMismatch",

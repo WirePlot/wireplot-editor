@@ -283,11 +283,18 @@ export const WorkflowDesignerComponent = (): JSX.Element => {
 
     return (
         <div style={{ width: '100%', display: 'flex', background: '#212529', border: '#424549 solid 1px' }}>
-            <div key="left-panel" draggable={false} style={{ width: `${widths[0]}%` }}>
+            <div key="left-panel" draggable={false} style={{ width: `${widths[0]}%`, display: 'flex', flexDirection: 'column', height: '100%' }}>
                 {/* Grids Panel - Panel where you can select the flow grid */}
-                {gridsPanel}
-                <TestEntityTreePage />
-
+                {/* TODO: make panels resizable (mouse drag)
+                 current widths are static by design */}
+                <div style={{ flex: '0 0 auto' }}>
+                    {gridsPanel}
+                </div>
+                {/* TODO: make panels resizable (mouse drag)
+                 current widths are static by design */}
+                <div style={{ flex: 1, minHeight: 0 }}>
+                    <TestEntityTreePage />
+                </div>
                 {/* REST API Functions panel - Panel where you can select the flow grid */}
                 {/* {restApiFunctionsPanel} */}
             </div>
@@ -306,9 +313,13 @@ export const WorkflowDesignerComponent = (): JSX.Element => {
                 onMouseDown={handleMouseDown(1)}
                 onMouseEnter={() => { if (isMouseUp) { setActiveHandle(1); } }}
                 onMouseLeave={() => { if (isMouseUp) { setActiveHandle(null); } }} />
-            <div key="right-panel" draggable={false} style={{ width: `${widths[2]}%` }}>
+            <div key="right-panel" draggable={false} style={{ width: `${widths[2]}%`, display: 'flex', flexDirection: 'column', height: '100%' }}>
+                {/* TODO: make panels resizable (mouse drag)
+                 current widths are static by design */}
                 <InspectorPanel $ref={selectedRef} />
                 {/* Global variables panel - Panel where you can select the flow grid */}
+                {/* TODO: make panels resizable (mouse drag)
+                 current widths are static by design */}
                 {globalVariablesPanel}
             </div>
         </div>

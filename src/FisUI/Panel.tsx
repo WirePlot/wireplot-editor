@@ -5,10 +5,10 @@ type PanelContextType = { id: string };
 const PanelContext = createContext<PanelContextType | null>(null);
 
 // Panel root
-const Panel = ({ id, children, panelHeight }: { id: string; children: ReactNode; panelHeight: string }) => {
+const Panel = ({ id, children }: { id: string; children: ReactNode }) => {
     return (
         <PanelContext.Provider value={{ id }}>
-            <div data-panel-id={id} className="panel" style={{ height: panelHeight }} >
+            <div data-panel-id={id} className="panel" >
                 {children}
             </div>
         </PanelContext.Provider>

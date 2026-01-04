@@ -38,7 +38,6 @@ export const schemasSlice = createSlice({
 
             state.schemas[namespace] = {
                 name: namespace,
-                format: "openapi-v3",
                 flowCapable: false,
                 editable: true,
                 parsed: {
@@ -242,7 +241,6 @@ export const schemasSlice = createSlice({
                         name: action.payload.source,
                         editable: action.payload.isEditable,
                         flowCapable: action.payload.isFlowCapable,
-                        format: 'openapi-v3',
                         parsed: action.payload.schema,
                     };
                 }
@@ -253,7 +251,6 @@ export const schemasSlice = createSlice({
                         name: action.payload.source,
                         editable: action.payload.isEditable,
                         flowCapable: action.payload.isFlowCapable,
-                        format: 'openapi-v3',
                         parsed: action.payload.schema,
                     };
                 }

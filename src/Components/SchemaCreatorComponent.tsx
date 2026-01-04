@@ -284,7 +284,7 @@ export const SchemaCreatorComponent = (): JSX.Element => {
 
     const parsedRef = selectedRef ? SchemaUtils.parseRef(selectedRef) : { kind: "unknown" } as const;
     return (
-        <div style={{ width: '100%', display: 'flex', background: '#212529', border: '#424549 solid 1px' }}>
+        <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'stretch', background: '#212529', border: '#424549 solid 1px' }}>
             {/* Namespace Panel - Panel where you can select namespace with schemas */}
             <div style={{ width: `${widths[0]}%` }}>
                 {namespaceSelectorPanel}

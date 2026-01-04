@@ -6,8 +6,14 @@ import { NameHelper } from "../../Helpers/NameHelper";
 
 export class SchemaUtils {
     static createEmptySchema(type: string): WirePlotSchemaObject {
+        // TODO Add correct assembly and namespace
+        // HOT FIX Add correct assembly and namespace
+        // TO DO Add correct assembly and namespace
         return {
             title: NameHelper.toHumanTitle(type),
+            assembly: "",
+            namespace: "",
+            description: "",
             type: type,
             kind: "class",
             properties: {},
@@ -17,11 +23,14 @@ export class SchemaUtils {
 
     static createStringProperty(title: string): WirePlotPropertyObject {
         return {
-            title: title,
-            containerType: "None",
-            type: "String",
-            kind: 'class',
             $ref: "System#/components/schemas/String",
+            type: "String",
+            kind: 'primitive',
+            containerType: "None",
+            title: NameHelper.toHumanTitle(title),
+            description: "",
+            nullable: false,
+            readOnly: false
         };
     }
 
@@ -409,15 +418,24 @@ export class SchemaUtils {
     // System#/components/schemas/String
     // System#/components/schemas/Object
     // System#/components/schemas/Int32
-    static createSchemaPropertyForType(type: string): WirePlotPropertyObject {
-        switch (type) {
-            case 'object': return { $ref: 'object', type: type, containerType: "None", kind: 'class' };
-            case 'boolean': return { type: type, containerType: "None", kind: 'primitive' };
-            case 'integer': return { type: type, containerType: "None", kind: 'primitive' };
-            case 'number': return { type: type, containerType: "None", kind: 'primitive' };
-            case 'string': return { type: type, containerType: "None", kind: 'primitive' };
-            default: return { $ref: type, type: type, containerType: "None", kind: 'primitive' };
-        }
+    // kind: WirePlotSchemaKind;
+    // containerType: WirePlotContainerType;
+    // title: string;
+    // description: string;
+    // default?: unknown;
+    // nullable: boolean;
+    // readOnly: boolean;
+    static createSchemaPropertyForType(type: string, title: string): WirePlotPropertyObject {
+        return {
+            $ref: `System#/components/schemas/${type}`,
+            type: type,
+            kind: 'primitive',
+            containerType: "None",
+            title: NameHelper.toHumanTitle(title),
+            description: "",
+            nullable: false,
+            readOnly: false
+        };
     };
 
     static getSchemaNameFromRef(ref: string): string | undefined {

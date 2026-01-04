@@ -25,7 +25,7 @@ export const SchemaEditor: FC<SchemaEditorProps> = ({ schema, namespace }) => {
         // TO DO TODO
         // HOT FIX
         // Here should be passed ref, no option label
-        clonedProperties[propertyName] = SchemaUtils.createSchemaPropertyForType(option.label);
+        clonedProperties[propertyName] = SchemaUtils.createSchemaPropertyForType(option.label, propertyName);
         clonedSchema.properties = clonedProperties;
 
         dispatch(updateSchema({
@@ -98,10 +98,11 @@ export const SchemaEditor: FC<SchemaEditorProps> = ({ schema, namespace }) => {
                 if (Object.prototype.hasOwnProperty.call(properties, key)) {
                     const prop: WirePlotPropertyObject = properties[key];
                     let schemaType = SchemaUtils.getSchemaTypeFromProperty(key, prop);
-
                     schemaElements.push(
                         <SchemaEditorRowItem
                             key={`${path}/${key}`}
+                            kind={prop.kind}
+                            containerType={prop.containerType}
                             label={key}
                             padding={padding}
                             isEditable={isNamespaceEditable}
@@ -133,6 +134,29 @@ export const SchemaEditor: FC<SchemaEditorProps> = ({ schema, namespace }) => {
         return schemaElements;
     }, [wireplotSchemaObject, handleDataTypeChange, handleRename, handleDelete]);
 
+
+
+    const headerRowStyle: React.CSSProperties = {
+        display: "flex",
+        alignItems: "center",
+        padding: "4px 2px 4px 10px",
+        fontSize: 12,
+        gap: "0px",
+        color: "#9aa0a6",
+        backgroundColor: "#212529",
+        borderBottom: "1px solid rgba(255,255,255,0.06)",
+    };
+
+    const columnStyle = (width?: number): React.CSSProperties => ({
+        width,
+    });
+
+    const dividerStyle: React.CSSProperties = {
+        borderLeft: "1px solid gray",
+        height: 16,
+        marginRight: 10,
+        gap: 10
+    };
 
 
     return (
@@ -178,38 +202,48 @@ export const SchemaEditor: FC<SchemaEditorProps> = ({ schema, namespace }) => {
                 )}
             </div>
 
-            {wireplotSchemaObject &&
-                <div style={{ color: 'white', display: 'flex', flexDirection: 'column' }}>
-                    {/* COLUMN HEADER – doesn't scroll */}
+            {wireplotSchemaObject && (
+                wireplotSchemaObject.kind === "class" ? (
+                    < div style={{ color: 'white', display: 'flex', flexDirection: 'column' }}>
+                        {/* COLUMN HEADER – doesn't scroll */}
+                        <div style={headerRowStyle}>
+                            <div style={columnStyle(210)}>Type</div>
+
+                            <div style={dividerStyle} />
+                            <div style={columnStyle(110)}>Kind</div>
+
+                            <div style={dividerStyle} />
+                            <div style={columnStyle(110)}>Container</div>
+
+                            <div style={dividerStyle} />
+                            <div>Name</div>
+                        </div>
+
+
+
+                        {/* BODY – scrolluje */}
+                        <div
+                            style={{
+                                height: 'calc(100vh - var(--header-height) - var(--footer-height) - 40px - 28px)',
+                                overflowY: 'auto',
+                                overflowX: 'hidden'
+                            }}
+                        >
+                            {elements}
+                        </div>
+                    </div >
+                ) : (
                     <div
                         style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            padding: '4px 2px 4px 10px',
-                            fontSize: 12,
+                            padding: 12,
                             color: '#9aa0a6',
-                            backgroundColor: '#212529',
-                            borderBottom: '1px solid rgba(255,255,255,0.06)',
+                            fontStyle: 'italic'
                         }}
                     >
-                        <div style={{ width: 210 }}>Type</div>
-                        <div style={{ borderLeft: '1px solid gray', height: 16, marginRight: 10 }} />
-                        <div>Name</div>
+                        Schema kind '<b>{wireplotSchemaObject.kind}</b>' is not implemented yet.
                     </div>
-
-
-                    {/* BODY – scrolluje */}
-                    <div
-                        style={{
-                            height: 'calc(100vh - var(--header-height) - var(--footer-height) - 40px - 28px)',
-                            overflowY: 'auto',
-                            overflowX: 'hidden'
-                        }}
-                    >
-                        {elements}
-                    </div>
-                </div>
-            }
+                )
+            )}
         </>
     );
 };
