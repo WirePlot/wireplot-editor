@@ -28,7 +28,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4f50530d-d709-4b45-88c6-a8e324571953",
+                      "instanceGuid": "0cd6b507-41e4-4897-9fb0-10ce87b872b6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -52,7 +52,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0f2b1c7e-59cb-478e-8642-c65f2d8d84d3",
+                      "instanceGuid": "dc58350e-58f1-47c4-8a2a-092e14ee644a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -78,12 +78,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "a8917ced-ee7b-4e42-83b2-6046f1754510"
+                      "instanceGuid": "8fd440b0-b1dc-42f9-82d5-deded0559466"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a5f8b774-48c0-4ec8-aa8a-5be84cdbfb4d",
+                      "instanceGuid": "3f0dc5ff-f157-4b4e-95d7-13b62810f062",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -107,7 +107,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "63309612-7191-4965-a257-14d288a53e50",
+                      "instanceGuid": "50a514c4-a61b-4da9-a0e2-81fdcf78e518",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -123,8 +123,9 @@
       },
       "AuthenticationSchemes": {
         "title": "Authentication Schemes",
-        "type": "integer",
+        "type": "AuthenticationSchemes",
         "description": "Specifies protocols for authentication.",
+        "kind": "enum",
         "enum": [
           0,
           1,
@@ -134,7 +135,7 @@
           8,
           32768
         ],
-        "x-enum-names": [
+        "enumNames": [
           "None",
           "Digest",
           "Negotiate",
@@ -148,8 +149,9 @@
       },
       "CookieVariant": {
         "title": "Cookie Variant",
-        "type": "integer",
+        "type": "CookieVariant",
         "description": null,
+        "kind": "enum",
         "enum": [
           0,
           1,
@@ -157,7 +159,7 @@
           2,
           3
         ],
-        "x-enum-names": [
+        "enumNames": [
           "Unknown",
           "Plain",
           "Rfc2109",
@@ -236,12 +238,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "comparand",
                       "isOptional": false,
-                      "instanceGuid": "c5dca6d6-8cea-4d76-910c-02aa09c60cf3"
+                      "instanceGuid": "9b6ed7ae-de9c-4a7e-91c8-af2b6d5f20f0"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "0219b6fb-06dc-4091-a16c-553347b23169",
+                      "instanceGuid": "83fa665c-26ee-48cd-8149-af4627c082fd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -265,7 +267,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "bae2f178-8b39-4d5b-a579-adfa16124a00",
+                      "instanceGuid": "0277220b-e94b-4815-bcc5-142efbac84e8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -289,7 +291,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f14ad16a-966f-4a2b-8666-9de08cac4da7",
+                      "instanceGuid": "e8b9f808-5d28-40e7-a6fd-6a9316a4380d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -313,7 +315,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0b8bf8e9-1b10-42a1-adf9-a5824963e14f",
+                      "instanceGuid": "d8df6f8d-ca2a-4970-9e88-2d9bca2f23d6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -367,12 +369,12 @@
                       "$ref": "System.Net#/components/schemas/Cookie",
                       "name": "cookie",
                       "isOptional": false,
-                      "instanceGuid": "61218944-2826-4747-a69c-ecf15eec8998"
+                      "instanceGuid": "9ab53fa7-565e-470a-9348-cd9e8c25a4a1"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "27538f6f-70ce-4c8e-aacd-690e73ec7ba1",
+                      "instanceGuid": "8269639b-a6c5-420b-b35f-176a663a54a6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -391,12 +393,12 @@
                       "$ref": "System.Net#/components/schemas/CookieCollection",
                       "name": "cookies",
                       "isOptional": false,
-                      "instanceGuid": "933a6d12-d589-44fd-a327-7723ff7ac604"
+                      "instanceGuid": "09bffe6e-9497-4414-863c-e2becf03189b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2bf457ae-5966-4974-918b-903f7ef3a434",
+                      "instanceGuid": "204ce549-ceff-405f-bffe-30d08ae499f0",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -415,18 +417,18 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uri",
                       "isOptional": false,
-                      "instanceGuid": "461d5b40-db3c-40d5-8086-68fbbc1c4ab5"
+                      "instanceGuid": "52a47c1d-d697-4403-918d-e8dfb2c33883"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/Cookie",
                       "name": "cookie",
                       "isOptional": false,
-                      "instanceGuid": "1b6a396b-e845-4796-b46d-364a2143d4d3"
+                      "instanceGuid": "e0905192-70dc-44b0-aea7-8b5f912f5d3b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "db254e38-f56b-42f0-88b7-a3d56fe1e49d",
+                      "instanceGuid": "ffa78d27-f7b3-4990-8a21-baf8bf219a5d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -445,18 +447,18 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uri",
                       "isOptional": false,
-                      "instanceGuid": "281c8f67-cf73-4657-871a-7ac7c6e4095a"
+                      "instanceGuid": "cf201f94-9c40-4c91-97dd-88d4515d8b40"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/CookieCollection",
                       "name": "cookies",
                       "isOptional": false,
-                      "instanceGuid": "eaec61d8-f061-4cb3-84b2-cdfdf0b36fb8"
+                      "instanceGuid": "b4d0daa8-6347-4a36-b4f3-ac634a9dc192"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "5045c387-6d3f-4a50-8aea-37e32f582abb",
+                      "instanceGuid": "489c2e59-1e0b-4328-890c-4b0e85b8ec53",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -482,12 +484,12 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uri",
                       "isOptional": false,
-                      "instanceGuid": "d5afb542-7081-4458-a2f9-6b2b8be22b06"
+                      "instanceGuid": "014a62d4-67fe-4b44-9c5d-2e73d32ddcab"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e6e00446-2f54-46fb-a0f5-420c9bf4b662",
+                      "instanceGuid": "6c155f41-30b8-4f2f-9858-cbd44c28a90f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/CookieCollection"
@@ -511,7 +513,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c1427a31-dcba-4c61-9361-94e8dcacfa2f",
+                      "instanceGuid": "abed456d-f9d9-4fe1-af67-fed1f48a09a9",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/CookieCollection"
@@ -537,12 +539,12 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uri",
                       "isOptional": false,
-                      "instanceGuid": "9650f256-5eec-4b0c-935a-b7a0f63eb587"
+                      "instanceGuid": "08240468-bbf9-486c-a689-9e6706794070"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d3d037b1-02c8-4e62-a6f2-5c03767f9688",
+                      "instanceGuid": "33f7ca35-0df8-4411-935c-477f88ffca57",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -568,18 +570,18 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uri",
                       "isOptional": false,
-                      "instanceGuid": "3726b06e-acea-4f44-8de1-94d7cf042c0c"
+                      "instanceGuid": "9ad03b24-eed3-4ff6-8f02-95931772647a"
                     },
                     {
                       "type": "String",
                       "name": "cookieHeader",
                       "isOptional": false,
-                      "instanceGuid": "b80e65d9-f31a-47d4-911f-6e5bac898e15"
+                      "instanceGuid": "65170ee0-f183-4500-86c4-cd39af00e398"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b8dbde8c-9bde-4e27-a439-56f5035fe4eb",
+                      "instanceGuid": "611c785f-4a07-4ff9-a2b1-3f7917a8a53a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -603,7 +605,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "f51d7070-c4bf-4c54-ab55-eeff4e80378e",
+                      "instanceGuid": "413ccb32-ba21-4f19-9c4c-31765c26edd0",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -627,7 +629,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5aa63325-67d5-46a1-9639-775f32f6fd23",
+                      "instanceGuid": "81b1b745-9f31-4afe-8eeb-ebdbbfbdf2af",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -653,12 +655,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "48352706-bee5-4709-bf6e-02ec99d73204"
+                      "instanceGuid": "6799ae53-a2ea-4356-bc7a-71a877718a20"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ccd1d3dc-f35a-4db0-be01-80d10268c8ec",
+                      "instanceGuid": "28f66d5a-9754-4cf4-a896-3200426421f7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -682,7 +684,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "15028279-0c0b-41b6-a055-aa31af6468e2",
+                      "instanceGuid": "53bdbd8d-1d4f-4e0e-ae66-7b30aed4bee5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -717,7 +719,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "588dfa7d-2d54-4a09-9841-a02f28abd5eb",
+                      "instanceGuid": "63865211-ddaf-4ecf-9f65-f6925344d72e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -741,7 +743,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "9a682608-3522-42df-827d-fc377a15206b",
+                      "instanceGuid": "d39ed02d-a991-481a-a15a-86ac6109936e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -767,12 +769,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "f7f41259-0ac3-48f1-a46a-09fc1061a0c3"
+                      "instanceGuid": "54d22a66-572a-4ee8-89a8-5f8ef9cf7203"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a21b539c-0690-4c02-aba6-d65babd380dd",
+                      "instanceGuid": "e59ec9cb-3707-4bb4-aab6-558a63833286",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -796,7 +798,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "21695f9b-620f-48e9-8df1-569603345978",
+                      "instanceGuid": "67e3e18b-ef03-4be8-9a5d-abbcd096e137",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -864,18 +866,18 @@
                       "$ref": "System.Runtime.Serialization#/components/schemas/SerializationInfo",
                       "name": "serializationInfo",
                       "isOptional": false,
-                      "instanceGuid": "5f554f57-1ebb-4837-881f-a583e57df036"
+                      "instanceGuid": "2626b1d1-8ac0-48a5-97d3-2b92d4e8c30f"
                     },
                     {
                       "$ref": "System.Runtime.Serialization#/components/schemas/StreamingContext",
                       "name": "streamingContext",
                       "isOptional": false,
-                      "instanceGuid": "8cf16212-6efd-4ebc-954d-77ab7098f8ad"
+                      "instanceGuid": "367ae371-7d8b-4bfb-97ac-86d0e01e236a"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9438da5d-a55d-4252-8e61-76c430bbd376",
+                      "instanceGuid": "ab6ee9f3-5c64-41d0-b49f-00fe2b2fd696",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -899,7 +901,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "39d9f2f2-d032-4d24-af84-13d86d869fa5",
+                      "instanceGuid": "c56222b8-0406-4456-86c0-4fbf7cb7ce17",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Exception"
@@ -923,7 +925,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4931b2cf-0b1b-4301-98f3-e4b0844cfcea",
+                      "instanceGuid": "f5756b64-3e1b-40aa-a069-865a8dab4c4b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -947,7 +949,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d4f312f9-dba6-4d1b-a8f4-8fe7a4622043",
+                      "instanceGuid": "038cad25-a308-4f17-a0c7-02d93ead42c1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -973,12 +975,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "5268e041-e0a8-4243-b47d-bca49375cc15"
+                      "instanceGuid": "48e092ec-a49c-4d3a-93e2-07a292da86a0"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "68b8db02-a050-4733-83b9-9dd9402cba73",
+                      "instanceGuid": "69577171-83a5-4286-bd16-30a832f71835",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1002,7 +1004,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b2e2cf75-44c8-4386-be9a-ae171a5b5cef",
+                      "instanceGuid": "1bc00475-20db-4c0c-88a4-c546f6b3e79a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1039,24 +1041,24 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uriPrefix",
                       "isOptional": false,
-                      "instanceGuid": "eb7a1489-2c04-4474-80f5-6c3cc4388e98"
+                      "instanceGuid": "83553869-273c-4245-86d7-dc115d14c8f7"
                     },
                     {
                       "type": "String",
                       "name": "authType",
                       "isOptional": false,
-                      "instanceGuid": "35811cb9-49e4-4e7c-b79b-52662709bc3a"
+                      "instanceGuid": "3534fd34-0f63-4b60-b9ce-981ebc880bb2"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/NetworkCredential",
                       "name": "cred",
                       "isOptional": false,
-                      "instanceGuid": "23ddb122-31f4-4008-bba4-bf6163e7ca52"
+                      "instanceGuid": "57c8268b-e0d4-4a1b-a541-5e3d1efd8e0e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "1e211263-793a-48ae-99fa-316be2cc364c",
+                      "instanceGuid": "2f43ea3f-c081-4407-9ad4-d077db1aa5d2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1075,31 +1077,31 @@
                       "type": "String",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "d9f6a71d-4357-4bea-aa4b-19ab9e1d191b"
+                      "instanceGuid": "2edcad43-b4c6-41c3-a9ae-3e5e6e872bc8"
                     },
                     {
                       "type": "Int32",
                       "format": "int32",
                       "name": "port",
                       "isOptional": false,
-                      "instanceGuid": "090e3324-c195-465b-bad9-3c1477ae527a"
+                      "instanceGuid": "40ccbdee-9653-41a5-9e42-66b0e7d7f968"
                     },
                     {
                       "type": "String",
                       "name": "authenticationType",
                       "isOptional": false,
-                      "instanceGuid": "8c4411d5-e2bc-4ff9-a33c-ce593b082944"
+                      "instanceGuid": "152b1002-72ec-4337-83b6-a1ad51848fd1"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/NetworkCredential",
                       "name": "credential",
                       "isOptional": false,
-                      "instanceGuid": "023c0525-1dff-4281-91a2-4f09e7b2d257"
+                      "instanceGuid": "7eb21053-26be-427d-b451-5d280e2f1dfd"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "1789765c-8a6e-4dab-9781-7ffc3bb1c186",
+                      "instanceGuid": "4e2b27ea-8430-42de-ac6d-0839819f2f88",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1125,18 +1127,18 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uriPrefix",
                       "isOptional": false,
-                      "instanceGuid": "53d6bb73-5478-4fe6-a561-4f99e2764226"
+                      "instanceGuid": "df35876f-9177-4e16-a7a7-7a917116f720"
                     },
                     {
                       "type": "String",
                       "name": "authType",
                       "isOptional": false,
-                      "instanceGuid": "3c87cbb5-7c04-4ef2-bf08-cc1b96936db6"
+                      "instanceGuid": "6c7fb9f7-6ba4-4ab4-8f8c-0a3dd8136ebf"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "bb4e8d6e-c5c2-40c3-b064-8a7b56fc0866",
+                      "instanceGuid": "b07b8ae6-f2bc-46cd-8cff-e87f951787f7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1155,25 +1157,25 @@
                       "type": "String",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "47991df4-5a04-4dda-8a20-0264ab7330f7"
+                      "instanceGuid": "4d1927a2-677a-45af-b693-db0e71bccfdb"
                     },
                     {
                       "type": "Int32",
                       "format": "int32",
                       "name": "port",
                       "isOptional": false,
-                      "instanceGuid": "c6a86078-8d68-4adb-9186-1bdc89a7e788"
+                      "instanceGuid": "9657b861-484d-4f4a-8a89-2c32accd8b83"
                     },
                     {
                       "type": "String",
                       "name": "authenticationType",
                       "isOptional": false,
-                      "instanceGuid": "3b0718d3-d626-41d0-83e2-f35672bfef00"
+                      "instanceGuid": "f4e26bfc-6905-4435-aaa2-284d76b34077"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f65d7939-fef1-4ff3-803f-39bdd91a2ee1",
+                      "instanceGuid": "b030dd5b-300c-4bb2-a122-33211c644999",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Void"
@@ -1199,18 +1201,18 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uriPrefix",
                       "isOptional": false,
-                      "instanceGuid": "acb61e94-7fe1-4e65-b07d-892e08df169e"
+                      "instanceGuid": "23899704-a006-453e-acc6-38130ef4ecbf"
                     },
                     {
                       "type": "String",
                       "name": "authType",
                       "isOptional": false,
-                      "instanceGuid": "e6e73972-9465-4c39-a5e1-3c1765b240d6"
+                      "instanceGuid": "28940bf6-ceac-4f98-9177-a96022bbf97b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "72298c53-df2f-46d3-8d46-cbd92dfa9f62",
+                      "instanceGuid": "64260e6c-2b4c-4194-89ef-a6a31ce3a3d3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/NetworkCredential"
@@ -1229,25 +1231,25 @@
                       "type": "String",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "4384c999-2a23-4ec3-8b7e-2aef6403dce6"
+                      "instanceGuid": "fbbc2410-22a8-458c-aed2-ed779328c246"
                     },
                     {
                       "type": "Int32",
                       "format": "int32",
                       "name": "port",
                       "isOptional": false,
-                      "instanceGuid": "c78e0706-3f9f-4623-be58-aff46b3baa93"
+                      "instanceGuid": "a45e21c1-5db9-4df7-b4f6-40956603b138"
                     },
                     {
                       "type": "String",
                       "name": "authenticationType",
                       "isOptional": false,
-                      "instanceGuid": "26a75f0c-3c1d-4b23-a9ef-82c290c7aa63"
+                      "instanceGuid": "7c761c14-cafe-4c2b-a1ad-011a01c10343"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a55d65e7-4aaa-49fc-9fc6-a87f836d850e",
+                      "instanceGuid": "b4ce640c-de79-4bd5-8c59-a17aaffd6349",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/NetworkCredential"
@@ -1271,7 +1273,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0965417d-a043-4423-8cb0-cdda3128d8a7",
+                      "instanceGuid": "c9f454ab-5313-443c-8189-9880871c2ac4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Collections#/components/schemas/IEnumerator"
@@ -1295,7 +1297,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ca9e91b5-8634-4908-82f3-c7e38cecd798",
+                      "instanceGuid": "78cf8e75-3037-48ff-9c33-02d50fd82450",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1319,7 +1321,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "eeac97a9-5b15-4eca-bf41-9fce17a47dce",
+                      "instanceGuid": "a351b5df-89de-469a-bb61-79e6a32077fa",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1345,12 +1347,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "e78966f7-5e84-41c8-9692-d2417ff09b90"
+                      "instanceGuid": "69bad350-ced4-4bb4-8baa-5f2f01d7d338"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "3bf1d49a-a94e-4676-86a2-b8cb9a9f79d6",
+                      "instanceGuid": "d6e0720c-5599-417a-8698-77c21edde629",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1374,7 +1376,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5e823dba-b6b1-4374-8ecc-8c77bdd57741",
+                      "instanceGuid": "2899c3ce-c626-4543-a079-8f7cb553d153",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1390,8 +1392,9 @@
       },
       "DecompressionMethods": {
         "title": "Decompression Methods",
-        "type": "integer",
+        "type": "DecompressionMethods",
         "description": "Represents the file compression and decompression encoding format to be used to compress the data received in response to an .",
+        "kind": "enum",
         "enum": [
           0,
           1,
@@ -1399,7 +1402,7 @@
           4,
           -1
         ],
-        "x-enum-names": [
+        "enumNames": [
           "None",
           "GZip",
           "Deflate",
@@ -1443,12 +1446,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "comparand",
                       "isOptional": false,
-                      "instanceGuid": "14ef88ca-7509-477f-8ea1-0ae7417e9b55"
+                      "instanceGuid": "0763c648-6213-4ea7-aca7-9af4921a2009"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "0a2f3e60-b49a-47f8-985d-6094ad5ebb03",
+                      "instanceGuid": "5eb4ee0f-31a4-46a9-815f-b6c85984fbec",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1472,7 +1475,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "9ccade63-61f4-4b10-a611-6f4e3d1b9a96",
+                      "instanceGuid": "89bfcccc-22d5-497b-9326-8a075895b904",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1496,7 +1499,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "66e2ca48-c2f0-4bf9-bc41-450f016b5768",
+                      "instanceGuid": "b6e1f4a1-4ff0-4f47-998b-9689276143d7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1520,7 +1523,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4b4cda05-5289-4a25-90da-c1b6728f104b",
+                      "instanceGuid": "c1e5577b-56ff-4f22-9ad6-2943b68f2af2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/SocketAddress"
@@ -1546,12 +1549,12 @@
                       "$ref": "System.Net#/components/schemas/SocketAddress",
                       "name": "socketAddress",
                       "isOptional": false,
-                      "instanceGuid": "930e3c73-24e1-4546-bb01-f5ead4f3f6bc"
+                      "instanceGuid": "19067cfe-891e-48f5-9ca4-d86c84632cc8"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9dcf5474-f756-4b6f-ac18-32777ab9e7d6",
+                      "instanceGuid": "2e397b4e-a159-47ef-9940-06cfe15df5e8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/EndPoint"
@@ -1575,7 +1578,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "21c09b4d-8014-4d0c-bd9c-de4f22a1c467",
+                      "instanceGuid": "5425839d-4075-49ec-81ed-48b330e16c55",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1614,7 +1617,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "3157b013-532d-4cd3-b3d5-cdac7c6798ab",
+                      "instanceGuid": "e1624dc0-e153-4eca-ae81-855016f4230b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/SocketAddress"
@@ -1640,12 +1643,12 @@
                       "$ref": "System.Net#/components/schemas/SocketAddress",
                       "name": "socketAddress",
                       "isOptional": false,
-                      "instanceGuid": "431b235f-1767-433d-bba0-8b38ce1b123f"
+                      "instanceGuid": "4fce909e-4d56-4c38-aeb9-90447c1f0743"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "1b974095-ea6c-4dee-b1bf-c74ad7ba442c",
+                      "instanceGuid": "397d4252-bf4a-4629-9e91-365c21cc9020",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/EndPoint"
@@ -1669,7 +1672,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d00e67e9-7d9f-4946-b14f-3931b1a90fb8",
+                      "instanceGuid": "7e8b5715-cb04-4e09-8361-102c4010e483",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1693,7 +1696,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5fe40713-150c-4e49-be38-4c2bc2d53b9a",
+                      "instanceGuid": "25cdf392-65dd-4dc0-a575-2339a132d6e7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1719,12 +1722,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "7102bf37-0231-4013-8931-e1a177737997"
+                      "instanceGuid": "d6520ba0-3e7b-4279-b5a5-0ca7738b6b91"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "8818b0c6-0b17-42bc-a22a-4e280beb9957",
+                      "instanceGuid": "fae9f00b-5a5c-4efc-84f6-4f222833e89c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -1748,7 +1751,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "91e461c0-076b-4ed2-a610-84f945ab5d10",
+                      "instanceGuid": "5674a243-46cd-467e-9b3e-a865e1f32c11",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -1764,8 +1767,9 @@
       },
       "HttpStatusCode": {
         "title": "Http Status Code",
-        "type": "integer",
+        "type": "HttpStatusCode",
         "description": "Contains the values of HTTP status codes as defined by RFC 9110, section 15.",
+        "kind": "enum",
         "enum": [
           100,
           101,
@@ -1835,7 +1839,7 @@
           510,
           511
         ],
-        "x-enum-names": [
+        "enumNames": [
           "Continue",
           "SwitchingProtocols",
           "Processing",
@@ -1928,7 +1932,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d1a8ffae-f934-4056-8510-9465fbadb5f5",
+                      "instanceGuid": "96895dd2-b987-46ef-9387-ca4fc1c26b75",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -1952,7 +1956,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "319d1993-f322-4deb-913f-c213260e3e11",
+                      "instanceGuid": "2f517850-e1b9-4e6d-8d1a-a255ce7aec48",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -1978,12 +1982,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "3d9d7b6a-c3ad-4046-9d45-9edc78eec446"
+                      "instanceGuid": "f021aa2b-d2f3-4e3a-af22-1e0b63865e8e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "39b2a28e-f6ea-432a-a8b7-d9b40f4ab0e5",
+                      "instanceGuid": "51bab2a3-0b17-4018-9fe0-96adfe092818",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2007,7 +2011,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0e360dc3-e177-46ea-a1e0-788110643cda",
+                      "instanceGuid": "4cb30c0d-4386-4ef2-a901-ee85c8ada204",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2044,18 +2048,18 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "uri",
                       "isOptional": false,
-                      "instanceGuid": "ee6f72bc-c8e5-4350-b007-4d958fcac974"
+                      "instanceGuid": "fee64bb3-96b2-478b-8f28-20f203a01fbe"
                     },
                     {
                       "type": "String",
                       "name": "authType",
                       "isOptional": false,
-                      "instanceGuid": "00e56091-659d-4cad-a31b-3de9b47f8994"
+                      "instanceGuid": "c39f30bd-3bb8-4611-a17d-1e7a974de5ac"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c07d6c04-3fe5-4685-9b55-2007caacc430",
+                      "instanceGuid": "34654b9e-49ed-4d68-ac3d-26769cc10ac2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/NetworkCredential"
@@ -2092,25 +2096,25 @@
                       "type": "String",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "3e180f70-c044-4667-bdff-21adf9712e9e"
+                      "instanceGuid": "616fd5bd-3040-47d0-be9d-4daf6adb8f5a"
                     },
                     {
                       "type": "Int32",
                       "format": "int32",
                       "name": "port",
                       "isOptional": false,
-                      "instanceGuid": "8a96f2aa-c350-441c-8e53-548f5f2f5bbb"
+                      "instanceGuid": "3db3cc86-5fff-4bc9-aa38-551d987a9947"
                     },
                     {
                       "type": "String",
                       "name": "authenticationType",
                       "isOptional": false,
-                      "instanceGuid": "d4b43d09-424b-4ce6-b929-e03474f4db4e"
+                      "instanceGuid": "6fd7cc0b-d0ec-4669-8f40-5b6c90234427"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "0a888cdb-e699-4861-a5b4-60ac25a7938a",
+                      "instanceGuid": "af769143-876e-4a53-8eee-ffe6671bc22a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/NetworkCredential"
@@ -2177,12 +2181,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "ipSpan",
                       "isOptional": false,
-                      "instanceGuid": "63e2ef52-789b-40c6-9f51-af4a7f81c26b"
+                      "instanceGuid": "c7aa4317-7cc8-4ee2-b05c-b54f77835e98"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "92b54b62-ed61-48d9-8a3b-bac662ae9238",
+                      "instanceGuid": "8fc1dd61-dccb-48ff-ab35-2f7d23ecc874",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2208,12 +2212,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "utf8Text",
                       "isOptional": false,
-                      "instanceGuid": "3f1836a4-19c0-4bc7-b5a9-50bca8740aee"
+                      "instanceGuid": "d1a32048-a90d-42db-917d-92ec7bdf175d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d323a4fc-cc7f-4949-99a8-22e1a60aa898",
+                      "instanceGuid": "e672b816-d068-4cd6-a8cc-ca2044bb50ab",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2239,18 +2243,18 @@
                       "type": "String",
                       "name": "ipString",
                       "isOptional": false,
-                      "instanceGuid": "dad1dd06-a54a-440f-bd39-ce7b53fd1373"
+                      "instanceGuid": "6ffd99be-1a3c-450c-b215-00a7c00335d8"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPAddress\u0026",
                       "name": "address",
                       "isOptional": false,
-                      "instanceGuid": "ddc5f847-22a1-4988-9567-8e5d9832b30e"
+                      "instanceGuid": "e0a52193-2b18-49bd-bbbe-3c4ddd4e01f5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d003b6ea-8146-407e-a757-e40b3ba73f3f",
+                      "instanceGuid": "4117b1a7-2e8b-4600-9938-151c5236ac4b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2269,18 +2273,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "utf8Text",
                       "isOptional": false,
-                      "instanceGuid": "6f754faf-7fb7-44f4-8297-c309039a3238"
+                      "instanceGuid": "c8806d2d-ce8d-4878-a797-ecabf2e64432"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPAddress\u0026",
                       "name": "result",
                       "isOptional": false,
-                      "instanceGuid": "c8c03e12-286d-4b42-9f34-aaaa721d0d4b"
+                      "instanceGuid": "11790ecd-50ab-4fa1-87b3-47491c2ea3ee"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f81183e8-2601-4da1-98b3-2d2bf45c8eaf",
+                      "instanceGuid": "123a15be-734c-4481-94d8-f7ebc88a32fc",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2299,18 +2303,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "ipSpan",
                       "isOptional": false,
-                      "instanceGuid": "43ba1fe5-9e5e-46ca-acf7-c94ea3da099d"
+                      "instanceGuid": "2b813976-c214-4f7d-85d6-5144988f68a9"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPAddress\u0026",
                       "name": "address",
                       "isOptional": false,
-                      "instanceGuid": "ba088ed9-6e5c-4117-8253-0948ac7205a0"
+                      "instanceGuid": "717daf39-977d-4c4f-8df7-76d89972c53f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e5a93635-0b2c-4ee4-a24a-fc3f5193543f",
+                      "instanceGuid": "d7197f77-b7e6-423b-8683-2cd9e9ac52e8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2336,12 +2340,12 @@
                       "type": "String",
                       "name": "ipString",
                       "isOptional": false,
-                      "instanceGuid": "283b2d55-2e03-4f90-bf00-f6843efd7a46"
+                      "instanceGuid": "49050327-5802-4bb4-b8bb-a889a7f72911"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "87bd07ad-298d-43f4-b513-8c721380d491",
+                      "instanceGuid": "353ff332-c69a-4ef2-a835-f547e7754621",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPAddress"
@@ -2360,12 +2364,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "utf8Text",
                       "isOptional": false,
-                      "instanceGuid": "0d76f806-27cb-41a5-a962-87f3568f4b2c"
+                      "instanceGuid": "92605b61-4eab-4183-aa8f-9ee14b14936e"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "b69bf6a4-6999-4dee-a0e8-5a7ff0f534dd",
+                      "instanceGuid": "7d8200f0-de2e-4e47-9853-5e470f97d627",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPAddress"
@@ -2384,12 +2388,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "ipSpan",
                       "isOptional": false,
-                      "instanceGuid": "74f3b6d1-e547-4f77-b2e4-ec004bcdb68e"
+                      "instanceGuid": "af70097e-e636-4b6c-8306-05ad7a64812f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c8b2fd5e-f02b-4dbd-9560-8cb79d1727d8",
+                      "instanceGuid": "a0216fa3-7582-428e-b1a7-86bf06787c8c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPAddress"
@@ -2415,18 +2419,18 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "f8143922-a67e-4a12-9441-06fee7d113f6"
+                      "instanceGuid": "d5c1cca6-59e0-4357-9214-337d22df0d91"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "166c4618-ded2-40a8-b737-c82468acc699"
+                      "instanceGuid": "ef110e27-bd12-4232-a128-80ac8fba952f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "83e8d06a-ed16-40a0-a2cf-1c1469447fc6",
+                      "instanceGuid": "99e21d6c-bffb-4bf0-8ba0-1c361f6027f5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2450,7 +2454,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1e9dbed2-58b7-49de-9ec7-43df2904d437",
+                      "instanceGuid": "457252f8-8299-44fc-b445-bff2eca84b3d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Byte[]"
@@ -2474,7 +2478,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7250182d-7600-4418-a909-247911e10b94",
+                      "instanceGuid": "c9bc1b97-2743-4c2b-ab8f-696f682b8111",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -2500,18 +2504,18 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "4bcb7373-ea09-475d-9844-b144deadea5f"
+                      "instanceGuid": "16b086fc-e625-468d-b221-22838648538f"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "charsWritten",
                       "isOptional": false,
-                      "instanceGuid": "3ccbb0e6-c306-4725-b2d4-708bdbffa6fe"
+                      "instanceGuid": "42dffd35-1434-4a7b-81ff-d7bbde6e4e8d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "7a7e1b6b-02f0-43e4-a498-087b54c2785f",
+                      "instanceGuid": "836c7fa2-f5da-4a3e-ac95-92a9dc8021fc",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2530,18 +2534,18 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "utf8Destination",
                       "isOptional": false,
-                      "instanceGuid": "9b47f26f-9d27-4d50-8301-9a40ed6c446f"
+                      "instanceGuid": "6c32dc72-87b7-4f4d-b444-1a98f63bcb37"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "49545bbf-8993-4789-80ff-c071e26d3982"
+                      "instanceGuid": "4de643c9-b92d-455b-b8a4-7fc4e3fefe37"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "0a36c9a4-5f56-4bd7-9c58-52b8a8b7a145",
+                      "instanceGuid": "6c045211-7eef-476b-b1e0-814fe1c6f4cb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2568,12 +2572,12 @@
                       "format": "int64",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "b032a48c-f2be-4a26-943c-1008bf93b2fe"
+                      "instanceGuid": "49dd3290-ceb8-45a8-91da-b60191c461d1"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ccf05b55-6ed3-43a1-bfff-e6061eecbad7",
+                      "instanceGuid": "7970ef5d-316a-4d0a-8bc5-06a4c53dbbd3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int64"
@@ -2593,12 +2597,12 @@
                       "format": "int32",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "1b595b57-b82a-4f5e-9c27-88dcb70e2aef"
+                      "instanceGuid": "de825cb9-066c-4b49-885b-44130af885e3"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "fce510eb-2de4-4a9a-84e6-abddc1de0451",
+                      "instanceGuid": "6cd10f08-a3e9-43a4-af8d-addf1c4eeb73",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2617,12 +2621,12 @@
                       "type": "Int16",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "a6a73db3-db9a-400e-a901-332b714769be"
+                      "instanceGuid": "e10d74bc-e4c7-45d7-b283-b4ff437dab68"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "855b363b-54b2-4d46-94ff-f2d3d47c2d56",
+                      "instanceGuid": "92b7d606-bc5b-48a8-b7b4-24e84aacaa43",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int16"
@@ -2649,12 +2653,12 @@
                       "format": "int64",
                       "name": "network",
                       "isOptional": false,
-                      "instanceGuid": "e45fe32c-42ba-4afa-a755-a33477296603"
+                      "instanceGuid": "1bd859cc-0c53-4408-a87e-5835ab6388c6"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "1773bd7b-50ed-4a05-ae10-c57a07176b4c",
+                      "instanceGuid": "cfd417a0-5577-453d-ae9f-e9f9b1852185",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int64"
@@ -2674,12 +2678,12 @@
                       "format": "int32",
                       "name": "network",
                       "isOptional": false,
-                      "instanceGuid": "16cd7109-7930-4545-b794-6a79d3fce1cb"
+                      "instanceGuid": "3fc019bc-8a5b-4c31-9ba0-d01597cab354"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e218604f-4dd1-411a-828d-24bf0c498557",
+                      "instanceGuid": "1e791fab-fcc9-4291-8caa-0f781c0e3a8b",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2698,12 +2702,12 @@
                       "type": "Int16",
                       "name": "network",
                       "isOptional": false,
-                      "instanceGuid": "db8e2d76-164f-46f0-9d19-5ed1e72c5052"
+                      "instanceGuid": "df708e57-4852-42bf-9189-1504f627139b"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "60c6acfa-a387-4f9d-9621-d88e0cdd428d",
+                      "instanceGuid": "e03037a1-6a6b-404a-9667-5065549de30c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int16"
@@ -2729,12 +2733,12 @@
                       "$ref": "System.Net#/components/schemas/IPAddress",
                       "name": "address",
                       "isOptional": false,
-                      "instanceGuid": "1a5f2740-cc4a-43b1-b8df-972b39e3f3a2"
+                      "instanceGuid": "47ae0d39-6aec-4f26-a154-74412e600aa6"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "dcbdf67f-e2c0-4b1e-8421-397eea273414",
+                      "instanceGuid": "5aadbebd-9d7c-42a7-9c39-6d0fbeb67ba2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2760,12 +2764,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "comparand",
                       "isOptional": false,
-                      "instanceGuid": "83471824-8b79-4160-99d2-6bfb240c9468"
+                      "instanceGuid": "8ea02c4f-f04e-49ce-93ae-bdf3dd22c9e3"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "c891ea15-ae5d-4cc6-83b1-eed51a42589b",
+                      "instanceGuid": "96dce5f4-ce16-49a2-9297-1d8ea1827895",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2789,7 +2793,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8d76d5ff-2502-4b81-b4dc-d1e025d5083b",
+                      "instanceGuid": "6a04a1b1-9873-44a2-a564-9c719b7904a3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -2813,7 +2817,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "326196f3-01e7-4809-ae33-92372e03e7c9",
+                      "instanceGuid": "3a1de7f4-65aa-42e9-9d78-d9287716cff1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPAddress"
@@ -2837,7 +2841,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b3b75687-fcab-4409-86ad-66afd1391bc9",
+                      "instanceGuid": "750eb093-0a70-4326-8b67-479666ae18b6",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPAddress"
@@ -2861,7 +2865,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "1052b992-d4b3-4fc9-b978-d74647b7fcd6",
+                      "instanceGuid": "a65689fa-9eca-4894-be2c-e9198e7b885c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -2906,12 +2910,12 @@
                       "$ref": "System.Net#/components/schemas/IPAddress",
                       "name": "address",
                       "isOptional": false,
-                      "instanceGuid": "3c418dcb-1138-41dd-8754-e71f3d8d009f"
+                      "instanceGuid": "56062ffa-1d38-465d-9c60-a4cd3e57e747"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "a1ba3b0c-9801-4bc2-aee1-df3955d43219",
+                      "instanceGuid": "60541f33-469e-45c3-9f4b-da2cd43adcad",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -2937,12 +2941,12 @@
                       "type": "String",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "eb27d458-0fed-4a71-94cc-5e7ee0d76630"
+                      "instanceGuid": "a014a0a9-47c9-4bae-9355-515fa28e359d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "3170a7e9-6c93-4f5d-a3c9-c7b754907cad",
+                      "instanceGuid": "8e52b5f1-1c25-4559-a419-c641b96f3e0a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPNetwork"
@@ -2961,12 +2965,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "ce588a15-9735-4da2-827b-c1099cb657fa"
+                      "instanceGuid": "81b15524-fa8d-4ab2-875e-d24412803bd1"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "57bb2f2c-2852-46b4-b911-2f4687dc6057",
+                      "instanceGuid": "2086c1f8-2f24-4eed-964c-4be7f89dc5dc",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPNetwork"
@@ -2985,12 +2989,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "utf8Text",
                       "isOptional": false,
-                      "instanceGuid": "ce0f295d-fb4e-4b50-a4e1-6d2dc6af2a6c"
+                      "instanceGuid": "80abc284-e1bf-4ffa-8860-f228456b746d"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e875a73b-59f8-429f-9b8e-dc7e1c222288",
+                      "instanceGuid": "869e6c6e-dbf1-467b-b9b4-6599d2e605fd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPNetwork"
@@ -3016,18 +3020,18 @@
                       "type": "String",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "4215fc89-2663-462a-a975-715ccf597949"
+                      "instanceGuid": "4cd7656f-c31a-420e-8cd3-4e91c28012bf"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPNetwork\u0026",
                       "name": "result",
                       "isOptional": false,
-                      "instanceGuid": "1d238eba-4223-4aed-a8b1-c251b1095646"
+                      "instanceGuid": "48291960-40cf-4294-858c-d5ed73fb4645"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9b510e34-e635-468c-bb99-4761831ef142",
+                      "instanceGuid": "f7aebee0-3af2-4991-b26b-deae02e9111a",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3046,18 +3050,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "5b588543-9f0d-444e-8bd9-aebda2fd1bc7"
+                      "instanceGuid": "62beba49-05f9-4883-8663-c03714d4554f"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPNetwork\u0026",
                       "name": "result",
                       "isOptional": false,
-                      "instanceGuid": "0879680d-189f-45fe-8f09-2fa986767c2e"
+                      "instanceGuid": "fdd13fb2-d308-4e8f-831a-3b314917aba2"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "15b542a5-bda0-434f-8f3c-779d3cc38681",
+                      "instanceGuid": "f695c6c6-44bb-4ce6-8869-5ec68fcc4229",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3076,18 +3080,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "utf8Text",
                       "isOptional": false,
-                      "instanceGuid": "d62aacd2-cb5c-483d-beb2-0c7c5e31e918"
+                      "instanceGuid": "13783ac0-c962-4a10-adff-ec8c5c7571b9"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPNetwork\u0026",
                       "name": "result",
                       "isOptional": false,
-                      "instanceGuid": "ef4c851c-78f1-4d70-bcbe-b01695481809"
+                      "instanceGuid": "74da5d36-46a5-44a7-9dc6-6bbe0989cb4f"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "f1adf81d-de6b-4a3f-8e17-7ac069786b49",
+                      "instanceGuid": "1b08bc7d-2476-422b-8ac8-0d2c513fa021",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3111,7 +3115,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a73dd67d-15b8-416a-acb1-82ff2e363aee",
+                      "instanceGuid": "7f4fbd87-f946-4dcc-be6e-421066c93376",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -3137,18 +3141,18 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "a73ab085-b3ec-4fcd-94c2-b1858b5817eb"
+                      "instanceGuid": "c52d1d9b-104b-444c-a877-ca748fcde886"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "charsWritten",
                       "isOptional": false,
-                      "instanceGuid": "8e5e6033-b09c-4e00-9e8a-757c748db1bd"
+                      "instanceGuid": "f2f50652-d3ce-4b6f-8999-5ee320ab08f1"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2cf1703d-03b4-4ad6-b77b-d79c019c35f5",
+                      "instanceGuid": "abe8ec19-5fba-45de-8826-f5254f1963e1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3167,18 +3171,18 @@
                       "$ref": "System#/components/schemas/Span\u00601",
                       "name": "utf8Destination",
                       "isOptional": false,
-                      "instanceGuid": "ec3ef2ff-8bba-4b06-aa48-eea7aee13cf7"
+                      "instanceGuid": "d0915b76-a9e8-4fa7-8ad3-62ed80ed71c0"
                     },
                     {
                       "$ref": "System#/components/schemas/Int32\u0026",
                       "name": "bytesWritten",
                       "isOptional": false,
-                      "instanceGuid": "9e3bd489-910a-4c00-a0c3-d9841aa82052"
+                      "instanceGuid": "1bf64bdb-3e65-4c6c-8d7e-29fce5964124"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "199e6789-6cc3-456f-9e4b-26420cbf86d8",
+                      "instanceGuid": "a1e5c76e-147d-40ff-9b5f-7da1e26dc91e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3204,12 +3208,12 @@
                       "$ref": "System.Net#/components/schemas/IPNetwork",
                       "name": "other",
                       "isOptional": false,
-                      "instanceGuid": "5464c81c-a89a-4633-918e-4ebf2018f647"
+                      "instanceGuid": "9ffb661e-f47e-4165-9f6d-3c38e17c5e12"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "2e7044c6-91c5-43ed-aed0-ce7402779ec1",
+                      "instanceGuid": "abaf96b2-a8d0-48cf-8a34-8e4bf2c657b1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3228,12 +3232,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "6e661c53-1ac8-4723-973e-0a945f773322"
+                      "instanceGuid": "6bde18c5-f5e0-4909-bd17-4d7af71fb2fb"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "e68881e4-2a14-4d72-b1a0-2dfc02f17eb2",
+                      "instanceGuid": "a3788772-114f-43b6-9942-6538d6a6a88c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3257,7 +3261,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "c530b37f-a5dd-4517-aff8-840d2984c4ce",
+                      "instanceGuid": "cc40f4cd-e5a7-4f9f-b683-1fca2d53f184",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -3281,7 +3285,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "6201953f-acb4-4a30-8f46-0bd8479939ae",
+                      "instanceGuid": "f765dd7f-f729-49be-9c80-b19bc252f322",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -3329,18 +3333,18 @@
                       "type": "String",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "5d3c4515-8b1e-426e-a52f-db30e6f0b87f"
+                      "instanceGuid": "17b02152-26df-48dd-8709-4ebbe60fa0a8"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPEndPoint\u0026",
                       "name": "result",
                       "isOptional": false,
-                      "instanceGuid": "79c30a7d-c254-466b-84c6-3c1621af4ea6"
+                      "instanceGuid": "bab95522-95e2-41f1-8ea3-a62d217aa7c5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "1dd59f92-4347-45f5-85b9-f8a1c1c5656d",
+                      "instanceGuid": "f5a87c8b-2f84-44e7-85e7-6b891b723257",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3359,18 +3363,18 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "2deb61d9-6b15-4b5c-88ee-42b5735dd6de"
+                      "instanceGuid": "dca078ac-d086-4618-a296-b99ae10b9f91"
                     },
                     {
                       "$ref": "System.Net#/components/schemas/IPEndPoint\u0026",
                       "name": "result",
                       "isOptional": false,
-                      "instanceGuid": "34bafa32-b362-4ddb-9001-3832c66c9e8f"
+                      "instanceGuid": "39dcff1d-34e8-4780-9227-3b2eb9ec48e6"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "4c0adea4-4e5b-460f-ae3a-27d019cd9edd",
+                      "instanceGuid": "3d4fc375-882a-4c93-9418-a25c6285470e",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3396,12 +3400,12 @@
                       "type": "String",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "612fec8d-e782-46da-87a8-335c382350a0"
+                      "instanceGuid": "5016ebb4-59b5-439b-b638-5b37b25306c5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "96df7561-c2a7-430f-9766-b5c27102eb22",
+                      "instanceGuid": "3a27ad8c-d6b8-447b-bad3-5ab46bb8d5be",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPEndPoint"
@@ -3420,12 +3424,12 @@
                       "$ref": "System#/components/schemas/ReadOnlySpan\u00601",
                       "name": "s",
                       "isOptional": false,
-                      "instanceGuid": "374ee3f8-eb61-4db0-990e-ec46fab19f81"
+                      "instanceGuid": "6d879b74-38a8-492a-83cd-04c6baffea93"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "59032f2e-e079-46f2-b5eb-0b50efd78632",
+                      "instanceGuid": "3f563b27-6073-4588-b8d5-ed1a636c754c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/IPEndPoint"
@@ -3449,7 +3453,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ee6d599e-00de-48f6-856a-3cec0f1d0532",
+                      "instanceGuid": "506de2cb-3cfa-4608-be79-59ac826903f7",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -3473,7 +3477,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b11f2331-237d-4198-84b5-3a8a05efaf34",
+                      "instanceGuid": "31e664f8-1d0e-4cde-878f-e375ce26fb73",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/SocketAddress"
@@ -3499,12 +3503,12 @@
                       "$ref": "System.Net#/components/schemas/SocketAddress",
                       "name": "socketAddress",
                       "isOptional": false,
-                      "instanceGuid": "7fb1eb5a-eed3-48f4-aa39-f3d1e92247da"
+                      "instanceGuid": "6e965bba-fbb2-439c-8cd8-a7e44323f73a"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "d37b5945-4a9f-4a29-b7fb-8999a2f6576a",
+                      "instanceGuid": "157a37c2-22b2-4cad-800f-41dd4820864c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Net#/components/schemas/EndPoint"
@@ -3530,12 +3534,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "comparand",
                       "isOptional": false,
-                      "instanceGuid": "2880bdd2-f3ff-4222-896c-baa3ac47368c"
+                      "instanceGuid": "f1801d14-192b-4e22-b299-3b335bd137a5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "3c08f997-f7c9-4b12-a1a6-61dc08a901af",
+                      "instanceGuid": "f8888c74-dcb0-47e2-8f9c-fd5e7d42acbb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3559,7 +3563,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "da3f1673-04e2-40f2-9813-1c2a2bbf46ec",
+                      "instanceGuid": "9f1ce9d8-ada5-413f-82ee-c5ec2c54daf5",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -3583,7 +3587,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5d029890-e0c8-4693-b90f-c12d275570e8",
+                      "instanceGuid": "6193449a-73c2-4a8b-b401-71597db3c456",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -3624,12 +3628,12 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "destination",
                       "isOptional": false,
-                      "instanceGuid": "c3747809-4c36-4c4c-b959-e3361c25c432"
+                      "instanceGuid": "96cbbfd6-542d-425d-8c0b-7cec77fd9690"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "432dae8b-ddc2-4d00-89a9-db4d1876b1be",
+                      "instanceGuid": "5e038fa4-d33f-41a8-a088-242957c0c535",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Uri"
@@ -3655,12 +3659,12 @@
                       "$ref": "System#/components/schemas/Uri",
                       "name": "host",
                       "isOptional": false,
-                      "instanceGuid": "f3bbd187-9522-46e8-b73f-4937acc27476"
+                      "instanceGuid": "ceed9308-60f0-458d-8f81-6261c1d239eb"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "aad6374c-813c-4c0c-9aba-f740c5b8c52c",
+                      "instanceGuid": "062fe9a7-a806-42ec-92be-4d99f5118f14",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3702,12 +3706,12 @@
                       "$ref": "System.Security.Authentication.ExtendedProtection#/components/schemas/ChannelBindingKind",
                       "name": "kind",
                       "isOptional": false,
-                      "instanceGuid": "7b1722a7-354e-4c0a-a602-c30970b08fe0"
+                      "instanceGuid": "00f280f4-7548-4d9e-93e5-2dc05ae3d6e5"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "9fb4e845-d656-4e48-ba3e-0760ac96e091",
+                      "instanceGuid": "87a2457b-30d6-481e-b103-47008bd6ce9f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Security.Authentication.ExtendedProtection#/components/schemas/ChannelBinding"
@@ -3731,7 +3735,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "4833389e-e0e7-49b6-9251-c1c62af7d26f",
+                      "instanceGuid": "6a472877-60a6-4c80-9b8d-4610bb57ad04",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -3755,7 +3759,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8b95ef98-22ef-40fa-956b-1189001ffcdc",
+                      "instanceGuid": "7a21091a-4249-4f73-88bd-a1d13844d869",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -3781,12 +3785,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "ef427849-d0ab-4cc4-9ee6-d797a1f6ea55"
+                      "instanceGuid": "5daadf9a-b951-4e37-bdf5-305a21ba7f62"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "611d861b-e00e-42a0-84ad-8196e0709616",
+                      "instanceGuid": "caa88bf1-54e5-4f15-8800-8b49618b74d2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -3810,7 +3814,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e22c8c39-6d78-4a68-8fef-f38bb832bfff",
+                      "instanceGuid": "14ab4b46-03fb-453e-b656-39e61a6b513f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"

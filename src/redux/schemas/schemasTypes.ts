@@ -1,13 +1,11 @@
 
 export type HttpMethod = 'get' | 'post' | 'put' | 'delete' | 'patch' | 'options' | 'head' | 'trace';
 
-export type SupportedSchemaFormat = 'openapi-v3' | 'unsupported';
 
 export interface SchemaContainer {
     name: string;
     editable: boolean;
     flowCapable: boolean;
-    format: SupportedSchemaFormat;
     parsed?: WirePlotDocument;
 }
 
@@ -16,6 +14,11 @@ export interface SchemasSliceState {
 }
 
 
+export interface NamespaceMetadata {
+    name: string;
+    editable: boolean;
+    flowCapable: boolean;
+}
 
 
 
@@ -43,12 +46,11 @@ export interface WirePlotPropertyObject {
     type: string;
     kind: WirePlotSchemaKind;
     containerType: WirePlotContainerType;
-    format?: string;
-    title?: string;
-    description?: string;
+    title: string;
+    description: string;
     default?: unknown;
-    nullable?: boolean;
-    readOnly?: boolean;
+    nullable: boolean;
+    readOnly: boolean;
 }
 
 
@@ -58,11 +60,11 @@ export interface WirePlotPropertyObject {
 // ------------------------------
 
 export interface WirePlotSchemaObject {
-    assembly?: string; 
-    description?: string;
+    assembly: string; 
+    description: string;
     kind: WirePlotSchemaKind;
     methods: Record<string, WirePlotMethod>;
-    namespace?: string;
+    namespace: string;
     properties?: Record<string, WirePlotPropertyObject>;
     type: string;
     title: string;
@@ -81,7 +83,7 @@ export interface WirePlotMethodOverload {
     overloadId: string;
     name: string;
     methodKind: "instance" | "static";
-    description?: string;
+    description: string;
     signature: {
         parameters: WirePlotMethodParameter[];
         return: WirePlotMethodParameter[];

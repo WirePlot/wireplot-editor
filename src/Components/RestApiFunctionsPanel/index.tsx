@@ -21,7 +21,6 @@ export const RestApiFunctionsPanel: FC<EntityTreePanelProps> = ({
     namePrefix,
     validateName = (): boolean => true,
     getDropdownOptions,
-    panelHeight,
     panelHeaderExtraButtons
 }) => {
     const [editingState, setEditingState] = useState<Record<string, boolean>>({});
@@ -122,7 +121,7 @@ export const RestApiFunctionsPanel: FC<EntityTreePanelProps> = ({
     };
 
     return (
-        <Panels.Panel id="entity-selector" panelHeight={panelHeight}>
+        <Panels.Panel id="entity-selector">
             <Panels.Header>
                 <div style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{title}</div>
                 <div style={{ display: 'flex' }}>

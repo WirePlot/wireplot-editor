@@ -38,7 +38,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2460ee9f-709a-4ded-97b7-b1631d24963c",
+                      "instanceGuid": "7f319131-c219-4eb9-9cf3-edbab2039e36",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Security#/components/schemas/IPermission"
@@ -64,12 +64,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "b102f35a-0ca5-447d-8ac8-2ea5e67e46ba"
+                      "instanceGuid": "5a2bef6b-3aff-4193-8475-0e50265f9354"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "601913be-fd66-4597-b9f6-6e2323c63ae2",
+                      "instanceGuid": "6ab2c987-e274-4650-859e-9aca87699532",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -93,7 +93,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ea9c1c39-f4bc-4f2d-a8fc-15d669c097ff",
+                      "instanceGuid": "cdb068cc-6721-474b-8486-9175692580b4",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -119,12 +119,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "2b0831d5-f740-4a66-8cb8-d81b4c302ae6"
+                      "instanceGuid": "3130898a-8e79-48a5-924d-9668dd349ac0"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "3a2a77f0-9683-4f19-9616-909450dbeee0",
+                      "instanceGuid": "b7356c97-00eb-41d1-a595-27e6e46256fd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -148,7 +148,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b99d3312-4db9-477b-bf91-d405c25855ec",
+                      "instanceGuid": "3c43a591-5069-4208-8087-01a4b416bbcd",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -172,7 +172,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "7ff7ca56-d520-4c97-a855-6639a86c5f40",
+                      "instanceGuid": "5fcbe8c4-056b-4ef4-b1ee-df0ea9cd8833",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -196,7 +196,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "5042c42b-06f0-45e4-b048-255673b51e4b",
+                      "instanceGuid": "ff09457d-e55f-4d56-8db9-5babdde5373d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -212,13 +212,14 @@
       },
       "PermissionState": {
         "title": "Permission State",
-        "type": "integer",
+        "type": "PermissionState",
         "description": "Specifies whether a permission should have all or no access to resources at creation.",
+        "kind": "enum",
         "enum": [
           0,
           1
         ],
-        "x-enum-names": [
+        "enumNames": [
           "None",
           "Unrestricted"
         ],
@@ -261,7 +262,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a1967c2d-5e74-4175-94ee-94e809a1ac6b",
+                      "instanceGuid": "8c5c1a12-1583-4725-8e37-983eab1eadf3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Security#/components/schemas/IPermission"
@@ -287,12 +288,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "1b72a3af-73d1-433b-af78-76eb1aae5a29"
+                      "instanceGuid": "f7b832d3-9e91-4479-ab07-0cde615c141c"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ef1edb17-6e9b-4257-84fe-c8c7d0137003",
+                      "instanceGuid": "78f87340-e0d8-4843-8fb6-2c7e8a7ee99f",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -316,7 +317,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "e3ba24e5-d8d6-4b80-9c3a-f7e0397a5cc6",
+                      "instanceGuid": "af26399a-ed44-4186-8779-e768388ba09d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -342,12 +343,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "d7585dd4-28f9-4b80-9e51-a09fa3226a2b"
+                      "instanceGuid": "fd1f7e78-fb02-4aaf-a822-ceb5071bd8ec"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "bfbed4b1-f2ba-44ea-8956-b071d67e5320",
+                      "instanceGuid": "4aeeff9c-525e-459c-a327-f5d1d4e6a5d3",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -371,7 +372,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "8985aad4-4fd7-49b5-a0f2-d1fa979e8a3e",
+                      "instanceGuid": "519984a6-5432-4e3b-8b8a-1255f8df3f23",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -395,7 +396,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "a2fcb30c-d24a-4853-b913-707ac5b18319",
+                      "instanceGuid": "6f495bd3-c174-465f-9d74-5fc2bce228eb",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -419,7 +420,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "2c48de66-c051-4dc9-b858-41761fc6de3d",
+                      "instanceGuid": "6f033f63-e67f-43b9-84f7-a2a117751a27",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -509,7 +510,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "282ab49a-1739-4960-a442-de65e47b6ac4",
+                      "instanceGuid": "bdbe76a2-d091-4129-a296-0c077578aada",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System.Security#/components/schemas/IPermission"
@@ -535,12 +536,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "225c343f-3e0c-4e9f-8b54-6112c8730731"
+                      "instanceGuid": "48bfc4bb-601d-4e77-b20d-ac9627e65739"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "3a66fd6a-2ad9-47ae-acc8-33cb74c8e941",
+                      "instanceGuid": "48a6be3a-d693-4b3a-b152-9a47fc246ec2",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -564,7 +565,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b3cedaa9-b4bb-4258-b5d2-06f8f313b206",
+                      "instanceGuid": "ed6ec47e-cbe9-43d7-8a64-575867c2fd2c",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
@@ -590,12 +591,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "0c5b3a2a-7e65-4d04-b884-a438e170ef40"
+                      "instanceGuid": "a5eeca80-a519-4770-a13b-477a8b3ac8b4"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "32945bf5-d2ba-47f4-b575-a5e66bdf427d",
+                      "instanceGuid": "de042313-5751-4809-8a40-5090fd812afe",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -619,7 +620,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "26c81aa1-c3ff-49e2-9a08-cd312fc3d8c9",
+                      "instanceGuid": "851d21f8-2151-42f0-8841-7382bbf19501",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -643,7 +644,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "0ce73a33-620b-4538-9f20-090ac567e817",
+                      "instanceGuid": "755d72bf-6b21-4705-88b1-1acbe6c48c30",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -667,7 +668,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "ee75d1ba-ceb6-49bc-9850-82ae2e5dfe1d",
+                      "instanceGuid": "39006349-66d7-45bb-9d25-65e862f7b61d",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"

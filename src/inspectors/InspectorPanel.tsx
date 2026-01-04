@@ -23,7 +23,7 @@ export const InspectorPanel: FC<InspectorPanelProps> = ({ $ref }) => {
     }, [$ref]);
 
     return (
-        <Panels.Panel id="entity-selector" panelHeight={"400px"}>
+        <Panels.Panel id="entity-selector">
             <Panels.Header>
                 <div style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>Properties</div>
             </Panels.Header>

@@ -13,7 +13,7 @@ import { ButtonWithSvgIcon } from "../../FisUI/ButtonWithSvgIcon";
 import SvgAdd from "../../Icons/SvgIcons/SvgAdd";
 import SvgDeleteBin from "../../Icons/SvgIcons/SvgDeleteBin";
 import { SplitPanel } from "../common/SplitPanel";
-import { usePropertyRowStyles } from "../common/usePropertyRowStyles";
+import { createInspectorRowBuilder } from "../common/InspectorRowBuilder";
 
 
 interface ParameterListProps {
@@ -99,7 +99,6 @@ export const MethodOverloadInspector = ({ $ref }: { $ref: string }): JSX.Element
     const selectorMethodNames = useMemo(() => makeSelectMethodNamesByRef($ref), [$ref]);
     const methodNames: string[] = useAppSelector(selectorMethodNames);
 
-    const styles = usePropertyRowStyles();
     const [localName, setLocalName] = useState<string>(overloadMethod?.name ?? "");
 
     console.log("Rendering <Input> with key =", `method-${localName}`, "defaultValue=", localName);
@@ -172,39 +171,14 @@ export const MethodOverloadInspector = ({ $ref }: { $ref: string }): JSX.Element
             return [[], []];
         }
 
-        const { labelStyle, valueContainer, inputStyle } = styles;
         const left: JSX.Element[] = [];
         const right: JSX.Element[] = [];
-
-        left.push(<div key="left-name" style={labelStyle(0)}>Name</div>);
-        right.push(
-            <div key="right-name" style={valueContainer(0)}>
-                <Input
-                    key={`method-${localName}`}
-                    defaultValue={localName}
-                    onBlur={handleOnNameBlur}
-                    style={inputStyle}
-                    instanceGuid={$ref}
-                />
-
-            </div>
-        );
-        left.push(<div key="left-description" style={labelStyle(1)}>Description</div>);
-        right.push(
-            <div key="right-description" style={valueContainer(0)}>
-                <Input
-                    key={`description-${overloadMethod.description}`}
-                    defaultValue={overloadMethod.description ?? ""}
-                    onBlur={handleOnDescription}
-                    style={inputStyle}
-                    instanceGuid={$ref}
-                />
-            </div>
-        );
-
+        const rows = createInspectorRowBuilder(left, right,);
+        rows.pushInputRow("Name", localName, handleOnNameBlur);
+        rows.pushInputRow("Description", overloadMethod.description, handleOnDescription);
 
         return [left, right];
-    }, [overloadMethod, styles, localName, handleOnNameBlur, $ref, handleOnDescription]);
+    }, [overloadMethod, localName, handleOnNameBlur, $ref, handleOnDescription]);
 
 
     const handleParameterRename = (param: WirePlotMethodParameter, newName: string, parameterDirection: EParameterDirection): void => {

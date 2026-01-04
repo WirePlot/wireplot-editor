@@ -1,17 +1,15 @@
 import { FC, JSX, useMemo } from "react";
-import { SelectWithCategories, SelectWithCategoriesOptionGroup } from "../../FisUI/SelectWithCategories";
+import { SelectWithCategoriesOption, SelectWithCategoriesOptionGroup } from "../../FisUI/SelectWithCategories";
 import { renameSchemaProperty, selectSchemaDataTypeGroups, selectSchemaPropertyObject, updateSchemaProperty, WirePlotContainerType, WirePlotPropertyObject } from "../../redux/schemas";
 import { useDispatch } from "react-redux";
 import { useAppSelector } from "../../hooks";
 import { SplitPanel } from "../common/SplitPanel";
-import { usePropertyRowStyles } from "../common/usePropertyRowStyles";
 import { SchemaPropertyInspectorProps } from "./schemaPropertyInspectorTypes";
-
+import { createInspectorRowBuilder } from "../common/InspectorRowBuilder";
 
 export const SchemaPropertyInspector: FC<SchemaPropertyInspectorProps> = ({ namespace, schemaName, propertyName }) => {
     const dispatch = useDispatch();
-    const styles = usePropertyRowStyles();
-    const selectedProperty: WirePlotPropertyObject = useAppSelector((state) => selectSchemaPropertyObject(state, namespace, schemaName, propertyName));
+    const selectedProperty: WirePlotPropertyObject | null = useAppSelector((state) => selectSchemaPropertyObject(state, namespace, schemaName, propertyName));
     const schemaGroups: SelectWithCategoriesOptionGroup[] = useAppSelector(selectSchemaDataTypeGroups);
 
     const settings: JSX.Element[][] = useMemo(() => {
@@ -21,135 +19,84 @@ export const SchemaPropertyInspector: FC<SchemaPropertyInspectorProps> = ({ name
             return [left, right];
         }
 
-        const { labelStyle, valueContainer, inputStyle, checkboxStyle } = styles;
+        const handleTitleChange = (value: string): void => {
+            dispatch(renameSchemaProperty({
+                namespace: namespace,
+                schemaName: schemaName,
+                oldName: propertyName,
+                newName: value
+            }));
+        };
 
-        left.push(<div style={labelStyle(0)}>Name</div>);
-        right.push(
-            <div style={valueContainer(0)}>
-                <input
-                    defaultValue={selectedProperty.title}
-                    style={inputStyle}
-                    onBlur={(event) => {
-                        dispatch(renameSchemaProperty({
-                            namespace: namespace,
-                            schemaName: schemaName,
-                            oldName: propertyName,
-                            newName: event.target.value
-                        }));
-                    }}
-                />
-            </div>
-        );
+        const handleDescriptionChange = (value: string): void => {
+            dispatch(updateSchemaProperty({
+                namespace,
+                schemaName,
+                propertyName,
+                updatedProperty: {
+                    ...selectedProperty,
+                    description: value,
+                },
+            }));
+        };
 
-        left.push(<div style={labelStyle(1)}>Description</div>);
-        right.push(
-            <div style={valueContainer(1)}>
-                <input
-                    defaultValue={selectedProperty.description}
-                    style={inputStyle}
-                    onBlur={(event) => {
-                        const clonedSchema: WirePlotPropertyObject = { ...selectedProperty } as WirePlotPropertyObject;
-                        clonedSchema.description = event.target.value;
-                        dispatch(updateSchemaProperty({ namespace: namespace, schemaName: schemaName, propertyName: propertyName, updatedProperty: clonedSchema }));
-                    }}
-                />
-            </div>
-        );
+        const handleTypeChange = (value: SelectWithCategoriesOption): void => {
+            console.log(value);
+            // dispatch(
+            //     updateGlobalVariable({
+            //         ...globalVariable,
+            //         namespace: event.category,
+            //         schema: event.label,
+            //     })
+            // );
+        };
 
-        left.push(<div style={labelStyle(2)}>Type</div>);
-        console.log("schemaGroups", schemaGroups);
-        console.log("schemaName", selectedProperty.type);
-        right.push(
-            <div style={valueContainer(2)}>
-                <SelectWithCategories
-                    groups={schemaGroups}
-                    selected={selectedProperty.type}
-                    onChange={() => {
-                        // dispatch(
-                        //     updateGlobalVariable({
-                        //         ...globalVariable,
-                        //         namespace: event.category,
-                        //         schema: event.label,
-                        //     })
-                        // );
-                    }}
-                    style={{ width: "100%" }}
-                />
-            </div>
-        );
+        const handleNullableChange = (checked: boolean): void => {
+            dispatch(updateSchemaProperty({
+                namespace,
+                schemaName,
+                propertyName,
+                updatedProperty: {
+                    ...selectedProperty,
+                    nullable: checked,
+                },
+            }));
+        };
 
-        left.push(<div style={labelStyle(3)}>Is Read Only</div>);
-        right.push(
-            <div style={valueContainer(3)}>
-                <input
-                    type="checkbox"
-                    defaultChecked={selectedProperty.readOnly}
-                    style={checkboxStyle}
-                    onBlur={(event) => {
-                        const clonedSchema: WirePlotPropertyObject = { ...selectedProperty } as WirePlotPropertyObject;
-                        clonedSchema.readOnly = event.target.checked;
-                        dispatch(updateSchemaProperty({ namespace: namespace, schemaName: schemaName, propertyName: propertyName, updatedProperty: clonedSchema }));
-                    }}
-                />
-            </div>
-        );
+        const handleReadOnlyChange = (checked: boolean): void => {
+            dispatch(updateSchemaProperty({
+                namespace,
+                schemaName,
+                propertyName,
+                updatedProperty: {
+                    ...selectedProperty,
+                    readOnly: checked,
+                },
+            }));
+        };
 
-        left.push(<div style={labelStyle(4)}>Is Nullable</div>);
-        right.push(
-            <div style={valueContainer(4)}>
-                <input
-                    type="checkbox"
-                    defaultChecked={selectedProperty.nullable}
-                    style={checkboxStyle}
-                    onBlur={(event) => {
-                        const clonedSchema: WirePlotPropertyObject = { ...selectedProperty } as WirePlotPropertyObject;
-                        clonedSchema.nullable = event.target.checked;
-                        dispatch(updateSchemaProperty({ namespace: namespace, schemaName: schemaName, propertyName: propertyName, updatedProperty: clonedSchema }));
-                    }}
-                />
-            </div>
-        );
+        const handleContainerTypeChange = (newContainerType: WirePlotContainerType): void => {
+            const clonedSchema: WirePlotPropertyObject = { ...selectedProperty };
+            clonedSchema.containerType = newContainerType;
+            dispatch(updateSchemaProperty({
+                namespace,
+                schemaName,
+                propertyName,
+                updatedProperty: clonedSchema,
+            }));
+        }
 
-        left.push(<div style={labelStyle(5)}>Schema Kind</div>);
-        right.push(
-            <div style={valueContainer(5)}>
-                <div style={{ opacity: 0.7 }}>
-                    {selectedProperty.kind}
-                </div>
-            </div>
-        );
-
-
-        left.push(<div style={labelStyle(6)}>Container Type</div>);
-        right.push(
-            <div style={valueContainer(6)}>
-                <select
-                    value={selectedProperty.containerType}
-                    onChange={(event) => {
-                        const clonedSchema: WirePlotPropertyObject = { ...selectedProperty };
-                        clonedSchema.containerType = event.target.value as WirePlotContainerType;
-
-                        dispatch(updateSchemaProperty({
-                            namespace,
-                            schemaName,
-                            propertyName,
-                            updatedProperty: clonedSchema,
-                        }));
-                    }}
-                >
-                    <option value="None">None</option>
-                    <option value="Array">Array</option>
-                    <option value="List">List</option>
-                    <option value="Dictionary">Dictionary</option>
-                </select>
-            </div>
-        );
-
+        const rows = createInspectorRowBuilder(left, right,);
+        rows.pushInputRow("Name", selectedProperty.title, handleTitleChange);
+        rows.pushInputRow("Description", selectedProperty.description, handleDescriptionChange);
+        rows.pushSelectWithCategoriesRow("Type", selectedProperty.type, schemaGroups, handleTypeChange);
+        rows.pushCheckboxRow("Is Read Only", selectedProperty.readOnly ?? false, handleReadOnlyChange);
+        rows.pushCheckboxRow("Is Nullable", selectedProperty.nullable ?? false, handleNullableChange);
+        rows.pushReadOnlyRow("Schema Kind", selectedProperty.kind);
+        rows.pushSimpleSelectRow<WirePlotContainerType>("Container Type", selectedProperty.containerType, ["None", "Array", "List", "Dictionary"], handleContainerTypeChange);
 
         return [left, right];
-    }, [selectedProperty, styles, schemaGroups, dispatch, namespace, schemaName, propertyName]);
-
-
+    }, [selectedProperty,  schemaGroups, dispatch, namespace, schemaName, propertyName]);
 
 
     if (!selectedProperty) {

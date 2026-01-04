@@ -33,9 +33,9 @@ function App(): JSX.Element {
       //    LOAD SCHEMAS FROM PUBLIC FOLDER
       // -------------------------------------------------------------
       await dispatch(fetchSchemaFromFile({ path: 'OpenApiSchemas/Project.json', isEditable: true, flowCapable: true }));
-      await dispatch(fetchSchemaFromFile({ path: 'OpenApiSchemas/Generated/Sharepoint365.json', isEditable: true, flowCapable: false }));
-      await dispatch(fetchSchemaFromFile({ path: 'OpenApiSchemas/Generated/SAP.HANA.REST.API.json', isEditable: true, flowCapable: false }));
-      await dispatch(fetchSchemaFromFile({ path: 'OpenApiSchemas/Generated/WeatherService.json', isEditable: true, flowCapable: false }));
+      await dispatch(fetchSchemaFromFile({ path: 'OpenApiSchemas/Generated/Sharepoint365.json', isEditable: false, flowCapable: false }));
+      await dispatch(fetchSchemaFromFile({ path: 'OpenApiSchemas/Generated/SAP.HANA.REST.API.json', isEditable: false, flowCapable: false }));
+      await dispatch(fetchSchemaFromFile({ path: 'OpenApiSchemas/Generated/WeatherService.json', isEditable: false, flowCapable: false }));
 
 
       await dispatch(fetchSchemaFromFile({ path: 'OpenApiSchemas/Generated/System.json', isEditable: false, flowCapable: false }));

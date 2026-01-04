@@ -9,8 +9,9 @@
     "schemas": {
       "RequestCacheLevel": {
         "title": "Request Cache Level",
-        "type": "integer",
+        "type": "RequestCacheLevel",
         "description": "Specifies caching behavior for resources obtained using  and its derived classes.",
+        "kind": "enum",
         "enum": [
           0,
           1,
@@ -20,7 +21,7 @@
           5,
           6
         ],
-        "x-enum-names": [
+        "enumNames": [
           "Default",
           "BypassCache",
           "CacheOnly",
@@ -57,7 +58,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "cde33d81-3067-44ca-8500-eef360681d27",
+                      "instanceGuid": "3660d0a4-03c6-46c3-aff8-82608337ded8",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/String"
@@ -81,7 +82,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "d40f8ddf-023c-4ddc-8625-686ceffc247a",
+                      "instanceGuid": "f2f39159-93c5-42fe-b760-a1b7b7852be1",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Type"
@@ -107,12 +108,12 @@
                       "$ref": "System#/components/schemas/Object",
                       "name": "obj",
                       "isOptional": false,
-                      "instanceGuid": "b3ebbd0a-7984-4e33-a1b6-92698a44190b"
+                      "instanceGuid": "00320729-9762-4de3-97e3-10fbf01eb8ab"
                     }
                   ],
                   "return": [
                     {
-                      "instanceGuid": "ad458840-9da5-4c18-9cb5-df3b89f8dcad",
+                      "instanceGuid": "07c9422f-9477-4267-befe-9d3d7d3ab8ff",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Boolean"
@@ -136,7 +137,7 @@
                   "parameters": [],
                   "return": [
                     {
-                      "instanceGuid": "b047e3fd-8ef7-4d32-abe8-898260e23a7e",
+                      "instanceGuid": "b550b7af-0f58-43d4-a677-a6e7aed18f63",
                       "isOptional": false,
                       "name": "Return Value",
                       "$ref": "System#/components/schemas/Int32"
